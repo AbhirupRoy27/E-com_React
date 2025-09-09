@@ -44,8 +44,6 @@
   }
 
   .mobile-cards {
-    position: relative;
-    bottom: 50px;
     margin-top: 10px;
     display: flex;
     gap: 1rem;
