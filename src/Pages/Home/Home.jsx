@@ -5,9 +5,9 @@ const Rc = () => {
   return (
     <div className="rc-cards">
       <RecomentationCard text={'View your browsing history'} />
-      <RecomentationCard text={'see More'} />
+      <RecomentationCard text={'See more'} />
       <RecomentationCard text={'Explore All'} />
-      <RecomentationCard text={'Explore All'} />
+      <RecomentationCard text={'Keep Shopping'} />
     </div>
   )
 }

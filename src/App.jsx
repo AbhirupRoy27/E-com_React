@@ -6,10 +6,12 @@ import Sell from './Components/NavBar/NavComponents/Sell/Sell'
 import Home from './Pages/Home/Home'
 import SideBar from './Components/Sidebar/SideBar'
 import Books from './Components/NavBar/NavComponents/Books/Books'
-import NotFound from './Components/NotFound/NotFound'
+import NotFound from './Pages/NotFound/NotFound'
 import SearchBar from './Components/SearchBar/SearchBar'
 import Card from './Components/ProductCard/Card'
 import { SelectContextProvider } from './Contexts/SelectContext'
+import Products from './Pages/Products/Products'
+import Cart from './Pages/CartPage/Cart'
 
 const Layout = () => {
   const { num } = useAuth()
@@ -32,8 +34,11 @@ function App() {
           <Route path="Home" element={<Home />} />
           <Route path="sell" element={<Sell />} />
           <Route path="books" element={<Books />} />
+          <Route path="cart" element={<Cart />} />
 
-          <Route path="products" element={<Card />} />
+          <Route path="products" element={<Products />}>
+            <Route index element={<Card />} />
+          </Route>
 
           <Route path="*" element={<NotFound />} />
         </Route>

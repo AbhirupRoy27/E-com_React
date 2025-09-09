@@ -1,5 +1,5 @@
 import './NavBar.css'
-import { Link, Routes, Route, Outlet } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import navLinks from '../../Db/navLinks.json'
 import { useAuth } from '../../Contexts/ContextProvider'
 

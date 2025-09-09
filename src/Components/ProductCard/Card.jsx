@@ -3,6 +3,46 @@ import data from '../../Db/Products.json'
 
 const size = ['S', 'M', 'L', 'XL', 'XXL']
 
+const cart = (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    width="20"
+    height="28"
+    fill="currentColor"
+  >
+    <path
+      d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10 
+           0c-1.1 0-1.99.9-1.99 2S15.9 22 17 22s2-.9 2-2-.9-2-2-2zM7.16 
+           14l.84-2h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49A.996.996 
+           0 0019 3H6.21l-.94-2H1v2h2l3.6 
+           7.59-1.35 2.44C4.52 14.37 5.48 
+           16 7 16h12v-2H7.42c-.14 0-.25-.11-.26-.24z"
+    />
+  </svg>
+)
+
+const wishlist = (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    width="20"
+    height="28"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+  >
+    <path
+      d="M12.1 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5
+           2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 
+           4.5 2.09C13.09 3.81 14.76 3 16.5 
+           3 19.58 3 22 5.42 22 8.5c0 
+           3.78-3.4 6.86-8.65 11.54l-1.25 
+           1.31z"
+    />
+  </svg>
+)
+
 function Card() {
   // console.log(data)
   return (
@@ -11,10 +51,12 @@ function Card() {
         <div className="card-container" key={p.id}>
           <div className="product-name">
             <h2>
-              {p.name} {p.sex} T-shirt
+              {p.name} {p.sex} {p.producttype}
             </h2>
           </div>
-          <div className="product-image"></div>
+          <div className="product-image">
+            <img src={p.imageurl} />
+          </div>
           <div className="product-info">
             <div className="panic-text">
               {p.lessStock && <p>!! only few remaining</p>}
@@ -34,14 +76,10 @@ function Card() {
               </p>
             </div>
           </div>
-          <div className="product-size">
-            <div className="size-items">
-              {size.map((p, i) => (
-                <p key={i}>{p}</p>
-              ))}
-            </div>
+          <div className="product-buttons">
+            <AddButton text={'Wishlist'} icon={wishlist} />
+            <AddButton text={'Add to Cart'} icon={cart} />
           </div>
-          <div className="product-buttons"></div>
         </div>
       ))}
     </>
@@ -49,3 +87,25 @@ function Card() {
 }
 
 export default Card
+
+function AddButton({ text, icon }) {
+  return (
+    <>
+      <button>
+        {text} {icon}
+      </button>
+    </>
+  )
+}
+
+function SizeChart() {
+  return (
+    <div className="product-size">
+      <div className="size-items">
+        {size.map((p, i) => (
+          <p key={i}>{p}</p>
+        ))}
+      </div>
+    </div>
+  )
+}

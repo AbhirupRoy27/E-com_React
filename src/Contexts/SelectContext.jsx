@@ -4,10 +4,10 @@ import { createContext, useContext, useState } from 'react'
 const SelectContext = createContext()
 
 export const SelectContextProvider = ({ children }) => {
-  const [vehicle, setVehicle] = useState('Bike')
+  const [page, setPage] = useState('home')
 
   return (
-    <SelectContext.Provider value={{ vehicle, setVehicle }}>
+    <SelectContext.Provider value={{ page, setPage }}>
       {children}
     </SelectContext.Provider>
   )

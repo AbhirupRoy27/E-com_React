@@ -8,6 +8,7 @@
   background-color: #0f1111;
   height: 50px;
   color: aliceblue;
+  cursor: pointer;
 }
 
 .logo {
@@ -50,7 +51,7 @@
   width: 100%;
   padding: 0.2rem;
   border: 0;
-
+  border-radius: 0;
 }
 
 .search-button {
@@ -64,10 +65,24 @@
 
 .cart {
   width: 3%;
+  display: flex;
+  justify-content: center;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.cart p {
+  position: relative;
+  top: -8px;
+  left: 35px;
+  border-radius: 50%;
+  font-size: 14px;
+  color: white;
+  font-weight: 800;
+  font-family: Monaco;
 }
 
 .cart img {
-  margin-top: 5px;
   width: 30px;
   height: 30px;
 }
