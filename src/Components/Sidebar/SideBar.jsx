@@ -1,4 +1,4 @@
-import './SideBar.css'
+import './Sidebar.css'
 import { useAuth } from '../../Contexts/ContextProvider'
 import navLinks from '../../Db/navLinks.json'
 import { Link } from 'react-router-dom'
