@@ -1,0 +1,78 @@
+.cart-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-holder {
+  display: flex;
+  justify-content: start;
+  margin-bottom: 1rem;
+  margin-left: 200px;
+}
+
+.subtotal {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: rgb(17, 17, 47);
+}
+
+.subtotal button {
+  padding: 10px 30px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border: 0;
+  border-radius: 4px;
+}
+
+button :active {
+  box-shadow: 0 0 10px whitesmoke;
+}
+
+.subtotal h2 {
+  color: aliceblue;
+}
+
+@media (max-width: 550px) {
+
+  .cart-container {
+    margin-left: 0;
+  }
+
+  .card-holder {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+    margin-left: 0;
+  }
+
+  .subtotal button {
+    padding: 10px 15px;
+  }
+
+  .subtotal h2 {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 390px) {
+
+  .subtotal button {
+    padding: 6px 12px;
+  }
+
+  .subtotal h2 {
+    font-size: 19px;
+  }
+}
+
+@media (max-width: 350px) {
+
+  .subtotal h2 {
+    font-size: 16px;
+  }
+}

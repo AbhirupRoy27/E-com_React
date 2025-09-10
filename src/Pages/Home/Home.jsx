@@ -33,6 +33,10 @@ const MobileCards = () => {
         <h2>Keep Shopping for Audio</h2>
         <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img24/MSO5/Boat_PC_CC_758x608_2x._SY608_CB564383870_.jpg" />
       </div>
+      <div className="second-box">
+        <h2>Keep Shopping for Audio</h2>
+        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img24/MSO5/Boat_PC_CC_758x608_2x._SY608_CB564383870_.jpg" />
+      </div>
     </div>
   )
 }
