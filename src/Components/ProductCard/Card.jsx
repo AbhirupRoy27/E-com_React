@@ -1,9 +1,10 @@
 import './Card.css'
 import data from '../../Db/Products.json'
+import { useCart } from '../../Contexts/CartContext'
 
 const size = ['S', 'M', 'L', 'XL', 'XXL']
 
-const cart = (
+const carticon = (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 24 24"
@@ -44,6 +45,12 @@ const wishlist = (
 )
 
 function Card() {
+  const { cart, setCart, total, setTotal } = useCart()
+
+  const handleAddToCart = (d) => {
+    setCart([...cart, d])
+    setTotal(total + d.Cost)
+  }
   // console.log(data)
   return (
     <>
@@ -77,8 +84,10 @@ function Card() {
             </div>
           </div>
           <div className="product-buttons">
-            <AddButton text={'Wishlist'} icon={wishlist} />
-            <AddButton text={'Add to Cart'} icon={cart} />
+            <button onClick={() => handleAddToCart(p)}>
+              Add to Cart {carticon}
+            </button>
+            <button>Wishlist Item {wishlist}</button>
           </div>
         </div>
       ))}
@@ -87,16 +96,6 @@ function Card() {
 }
 
 export default Card
-
-function AddButton({ text, icon }) {
-  return (
-    <>
-      <button>
-        {text} {icon}
-      </button>
-    </>
-  )
-}
 
 function SizeChart() {
   return (

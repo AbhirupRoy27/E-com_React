@@ -1,11 +1,12 @@
-import Dropdown from './DropDown/Dropdown'
 import './Search.css'
 import SearchIcon from './Icons/Search/SearchIcon'
 import { useNavigate } from 'react-router-dom'
 import { useState } from 'react'
+import { useCart } from '../../Contexts/CartContext'
 
 export default function SearchBar() {
   const navigate = useNavigate()
+  const { cart } = useCart()
   return (
     <div className="search-container">
       <div className="logo" onClick={() => navigate('/')}>
@@ -16,7 +17,7 @@ export default function SearchBar() {
       </div>
       <Bar navigate={navigate} />
       <div className="cart" onClick={() => navigate('Cart')}>
-        <p>0</p>
+        <p>{cart.length}</p>
         <img src="cart.svg" />
       </div>
       <div className="account">Account</div>
@@ -29,13 +30,12 @@ function Bar({ navigate }) {
 
   const handleSearch = () => {
     searchInput ? navigate('/Products') : alert('What to Search ?')
+    setSearchInput('')
   }
 
   return (
     <div className="bar">
-      <div className="search-options">
-        <Dropdown />
-      </div>
+      <div className="search-options"></div>
       <div className="search-input">
         <input
           placeholder="Search Product.co"

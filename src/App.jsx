@@ -1,5 +1,5 @@
 import './App.css'
-import { useAuth } from './Contexts/ContextProvider'
+import { useSideBar } from './Contexts/SideBarContext'
 import NavBar from './Components/NavBar/NavBar'
 import { Outlet, Route, Routes } from 'react-router-dom'
 import Sell from './Components/NavBar/NavComponents/Sell/Sell'
@@ -14,12 +14,12 @@ import Products from './Pages/Products/Products'
 import Cart from './Pages/CartPage/Cart'
 
 const Layout = () => {
-  const { num } = useAuth()
+  const { sideBar } = useSideBar()
   return (
     <>
       <SearchBar />
       <NavBar />
-      {num && <SideBar />}
+      {sideBar && <SideBar />}
       <Outlet />
     </>
   )

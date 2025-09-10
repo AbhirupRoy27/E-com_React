@@ -1,13 +1,13 @@
 import './Sidebar.css'
-import { useAuth } from '../../Contexts/ContextProvider'
+import { useSideBar } from '../../Contexts/SideBarContext'
 import navLinks from '../../Db/navLinks.json'
 import { Link } from 'react-router-dom'
 
 export default function SideBar() {
-  const { num, setNum } = useAuth()
+  const { sideBar, isSideBar } = useSideBar()
 
   const handleExit = () => {
-    setNum(!num)
+    isSideBar(!sideBar)
   }
   return (
     <div className={`sidebar`}>
@@ -16,7 +16,7 @@ export default function SideBar() {
       </span>
 
       {navLinks.map((links) => (
-        <div key={links.id} className="sidebar-links">
+        <div key={links.id} className="sidebar-links" onClick={handleExit}>
           <Link to={`${links.name}`}>{links.name}</Link>
         </div>
       ))}

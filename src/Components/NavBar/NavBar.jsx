@@ -1,12 +1,12 @@
 import './NavBar.css'
 import { Link } from 'react-router-dom'
 import navLinks from '../../Db/navLinks.json'
-import { useAuth } from '../../Contexts/ContextProvider'
+import { useSideBar } from '../../Contexts/SideBarContext'
 
 export default function NavBar() {
-  const { num, setNum } = useAuth()
+  const { sideBar, isSideBar } = useSideBar()
   const hanfleBurger = () => {
-    setNum(!num)
+    isSideBar(!sideBar)
   }
 
   return (
