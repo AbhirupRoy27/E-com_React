@@ -31,10 +31,12 @@
 .search-input input {
   height: 40px;
   width: 100%;
-  padding: 0.2rem;
+  padding: 0.2rem 0.6rem;
   border: 0;
   border-top-left-radius: 6px;
   border-bottom-left-radius: 6px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 .search-button {

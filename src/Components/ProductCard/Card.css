@@ -3,19 +3,21 @@
   background-color: aliceblue;
   display: flex;
   flex-direction: column;
-  padding: 15px;
+  justify-content: space-evenly;
+  padding: 1%;
   border-radius: 10px;
+  min-height: 500px;
 }
 
 .product-name {
   color: black;
   padding: 5px 0px;
-  min-height: 65px;
+  /* min-height: 65px; */
 }
 
 .product-image img {
-  width: 270px;
-  height: 300px;
+  width: 100%;
+  height: 100%;
   border-radius: 5px;
 }
 
@@ -69,71 +71,23 @@
   letter-spacing: 1px;
   border-radius: 6px;
   background-color: rgba(183, 106, 106, 0.916);
-}
-
-/* 
-.product-size {
-  opacity: 0;
-  transition: all 1s ease-in-out;
-} 
-.product-size:hover {
-  opacity: 90;
-}
-
-.size-items {
-  display: flex;
-  gap: 10px;
-  text-align: center;
-  margin-top: 4px;
-  flex-wrap: wrap;
-}
-
-.size-items p {
-  width: 45px;
   color: black;
-  padding: 5px;
-  background-color: gray;
-  font-weight: 500;
-  border: 0;
-  border-radius: 4px;
 }
-   */
 
-@media (max-width: 400px) {
+@media (max-width: 1024px) {
   .card-container {
-    width: 185px;
-    padding: 6px;
-  }
-
-  .product-size {
-    opacity: 100;
-  }
-
-  .product-name {
-    font-size: 12px;
-  }
-
-  .product-image img {
-    width: 173px;
-    height: 200px;
-    border-radius: 5px;
-  }
-
-  .product-size {
-    flex-wrap: wrap;
+    width: 32%;
+    padding: 1%;
   }
 }
 
-/* 14 pro Specific Design */
 @media (max-width: 550px) {
   .card-container {
-    width: 205px;
-    padding: 4px;
+    width: 48%;
+    padding: 2%;
   }
 
-  .product-image img {
-    width: 193px;
-    height: 200px;
-    border-radius: 3px;
+  .product-name h2 {
+    font-size: 18px;
   }
 }
