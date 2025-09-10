@@ -12,7 +12,7 @@
 
 .subtotal {
   width: 100%;
-  position: absolute;
+  position: relative;
   bottom: 0;
   display: flex;
   justify-content: space-between;
@@ -26,6 +26,7 @@
   font-weight: 600;
   letter-spacing: 1px;
   border: 0;
+  color: black;
   border-radius: 4px;
 }
 

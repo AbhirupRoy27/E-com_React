@@ -1,6 +1,7 @@
 import './Card.css'
 import data from '../../Db/Products.json'
 import { useCart } from '../../Contexts/CartContext'
+import { useNavigate } from 'react-router-dom'
 
 const size = ['S', 'M', 'L', 'XL', 'XXL']
 
@@ -46,12 +47,16 @@ const wishlist = (
 
 function Card() {
   const { cart, setCart, total, setTotal } = useCart()
+  const navigate = useNavigate()
 
   const handleAddToCart = (d) => {
     setCart([...cart, d])
     setTotal(total + d.Cost)
   }
-  // console.log(data)
+
+  const handleGoToCart = () => {
+    navigate('/cart')
+  }
   return (
     <>
       {data.map((p) => (
@@ -84,9 +89,16 @@ function Card() {
             </div>
           </div>
           <div className="product-buttons">
-            <button onClick={() => handleAddToCart(p)}>
-              Add to Cart {carticon}
-            </button>
+            {cart.includes(p, 0) ? (
+              <button onClick={() => handleGoToCart()}>
+                Go to Cart {carticon}
+              </button>
+            ) : (
+              <button onClick={() => handleAddToCart(p)}>
+                Add to Cart {carticon}
+              </button>
+            )}
+
             <button>Wishlist Item {wishlist}</button>
           </div>
         </div>
