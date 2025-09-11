@@ -1,6 +1,10 @@
 import './CartCard.css'
+import { RemoveFromCart } from '../../../Db/utils/RemovefromCart'
+import { useCart } from '../../../Contexts/CartContext'
 
 function CartCard({ item }) {
+  const { cart, setCart, total, setTotal } = useCart()
+
   return (
     <div className="cart-card">
       <div className="item-left">
@@ -18,7 +22,20 @@ function CartCard({ item }) {
           <p>{item.Model}</p>
         </div>
         <h2>₹ {item.Cost}.00 </h2>
-        <button>Remove from Cart</button>
+        <button
+          onClick={() =>
+            RemoveFromCart({
+              id: item.id,
+              cart: cart,
+              setCart: setCart,
+              total: total,
+              setTotal: setTotal,
+              cost: item.Cost,
+            })
+          }
+        >
+          Remove from Cart
+        </button>
         <button id="wish-button">Move to Wishlist</button>
       </div>
     </div>
