@@ -1,3 +1,25 @@
+/* Extra CSS for App.jsx */
+.app-container {
+  min-height: 100vh;
+}
+
+.footer-container {
+  text-align: center;
+  padding: 1%;
+  background-color: #37475ad8;
+
+}
+
+.footer-container h1 {
+  font-size: 20px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  color: white;
+  font-family: Arial;
+}
+
+/* End */
+
 .home img {
   width: 100%;
 }
@@ -37,10 +59,6 @@
     gap: 0.8rem;
   }
 }
-
-
-
-
 
 /* Mobile only Design */
 @media (max-width: 550px) {

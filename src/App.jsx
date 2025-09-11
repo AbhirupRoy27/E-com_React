@@ -19,14 +19,19 @@ const Products = lazy(() => import('./Pages/Products/Products'))
 const Layout = () => {
   const { sideBar } = useSideBar()
   return (
-    <div className="app-container">
-      <SearchBar />
-      <NavBar />
-      {sideBar && <SideBar />}
-      <Suspense fallback={<h2>Loading....</h2>}>
-        <Outlet />
-      </Suspense>
-    </div>
+    <>
+      <div className="app-container">
+        <SearchBar />
+        <NavBar />
+        {sideBar && <SideBar />}
+        <Suspense fallback={<h2>Loading....</h2>}>
+          <Outlet />
+        </Suspense>
+      </div>
+      <div className="footer-container">
+        <h1>Links will come here</h1>
+      </div>
+    </>
   )
 }
 
@@ -38,7 +43,9 @@ function App() {
 
         <Route path="Home" element={<Home />} />
 
-        <Route path="sell" element={<Sell />} />
+        <Route path="sell" element={<Products />}>
+          <Route index element={<Card />} />
+        </Route>
         <Route path="books" element={<Books />} />
         <Route path="cart" element={<Cart />} />
 
