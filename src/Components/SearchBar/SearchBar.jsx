@@ -36,14 +36,17 @@ function Bar({ navigate }) {
   return (
     <div className="bar">
       <div className="search-options"></div>
-      <div className="search-input">
+      <div className="text-black text-sm font-semibold search-input">
         <input
           placeholder="Search Product.co"
           value={searchInput}
           onChange={(e) => setSearchInput(e.target.value)}
         />
       </div>
-      <div className="search-button" onClick={handleSearch}>
+      <div
+        className="flex items-center justify-center search-button"
+        onClick={handleSearch}
+      >
         <SearchIcon style={{ fontSize: '30px', color: 'black' }} />
       </div>
     </div>

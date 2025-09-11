@@ -2,7 +2,7 @@ import { useSideBar } from './Contexts/SideBarContext'
 import NavBar from './Components/NavBar/NavBar'
 import { Outlet, Route, Routes } from 'react-router-dom'
 import SearchBar from './Components/SearchBar/SearchBar'
-
+import './Pages/Home/home.css'
 import { lazy, Suspense } from 'react'
 
 const Home = lazy(() => import('./Pages/Home/Home'))
@@ -15,6 +15,7 @@ const NotFound = lazy(() => import('./Pages/NotFound/NotFound'))
 const Card = lazy(() => import('./Components/ProductCard/Card'))
 const Cart = lazy(() => import('./Pages/CartPage/Cart'))
 const Products = lazy(() => import('./Pages/Products/Products'))
+const FooterLinks = lazy(() => import('./Components/Footer/index'))
 
 const Layout = () => {
   const { sideBar } = useSideBar()
@@ -28,9 +29,9 @@ const Layout = () => {
           <Outlet />
         </Suspense>
       </div>
-      <div className="footer-container">
-        <h1>Links will come here</h1>
-      </div>
+      <Suspense fallback={<h2>Loading....</h2>}>
+        <FooterLinks />
+      </Suspense>
     </>
   )
 }

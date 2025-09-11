@@ -62,7 +62,7 @@ function Card() {
       {data.map((p) => (
         <div className="card-container" key={p.id}>
           <div className="product-name">
-            <h2>
+            <h2 className="text-2xl font-semibold">
               {p.name} {p.sex} {p.producttype}
             </h2>
           </div>
@@ -83,7 +83,13 @@ function Card() {
             <div className="amount-text">
               <h2>{p.Cost}</h2>
               <p>{p.discount}</p>
-              <p style={{ color: 'gray', textDecoration: 'line-through' }}>
+              <p
+                style={{
+                  color: 'gray',
+                  textDecoration: 'line-through',
+                  fontSize: 14,
+                }}
+              >
                 {p['original-price']}/-
               </p>
             </div>

@@ -46,6 +46,7 @@
 .amount-text h2 {
   color: black;
   font-weight: 700;
+  font-size: 20px;
 }
 
 .amount-text p {
@@ -88,6 +89,12 @@
   }
 
   .product-name h2 {
-    font-size: 18px;
+    font-size: 16px;
   }
+
+  .product-buttons button {
+    font-size: 14px
+  }
+
+  ;
 }

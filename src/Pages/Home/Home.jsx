@@ -1,5 +1,4 @@
 import RecomentationCard from './Cards/RC/RecomentationCard'
-import './home.css'
 
 const Rc = () => {
   return (
