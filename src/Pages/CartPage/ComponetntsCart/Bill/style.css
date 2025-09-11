@@ -1,0 +1,7 @@
+.bill-card hr {
+  margin: 1% 0%;
+  background-color: orangered;
+  height: 2px;
+  border: 0;
+  opacity: 50%;
+}

@@ -1,24 +1,41 @@
 .cart-container {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.cart-left {
+  width: 50%;
+}
+
+.cart-right {
+  border-radius: 6px;
+  min-height: 300px;
+  max-height: 600px;
+  width: 25%;
+  padding: 1%;
+  background-color: rgba(199, 194, 194, 0.243);
 }
 
 .card-holder {
+  width: 95%;
   display: flex;
   justify-content: start;
   margin-bottom: 1rem;
-  margin-left: 200px;
 }
 
 .subtotal {
-  width: 100%;
+  width: 90%;
   position: relative;
+  left: 100px;
   bottom: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 1%;
   background-color: rgb(17, 17, 47);
+  margin-top: 1%;
+  border-radius: 10px;
 }
 
 .subtotal button {
@@ -36,19 +53,29 @@ button :active {
 
 .subtotal h2 {
   color: aliceblue;
+  letter-spacing: 1px;
+  font-weight: 400;
 }
 
 @media (max-width: 550px) {
 
   .cart-container {
-    margin-left: 0;
+    flex-direction: column;
   }
 
   .card-holder {
+    width: 100%;
     display: flex;
     justify-content: center;
     margin-bottom: 1rem;
     margin-left: 0;
+  }
+
+  .subtotal {
+    border-radius: 0;
+    padding: 2%;
+    left: 0;
+    width: 100%;
   }
 
   .subtotal button {
@@ -56,8 +83,19 @@ button :active {
   }
 
   .subtotal h2 {
-    font-size: 22px;
+    font-size: 18px;
   }
+
+  .cart-left {
+    width: 100%;
+  }
+
+  .cart-right {
+    width: 100%;
+    padding: 2%;
+    text-align: center;
+  }
+
 }
 
 @media (max-width: 390px) {

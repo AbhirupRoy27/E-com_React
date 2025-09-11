@@ -1,6 +1,9 @@
+import { lazy } from 'react'
 import { useCart } from '../../Contexts/CartContext'
 import CartCard from './ComponetntsCart/CartCard'
 import './styles.css'
+
+const BillCard = lazy(() => import('./ComponetntsCart/Bill/BillCard'))
 
 function CartLayout() {
   return (
@@ -17,18 +20,36 @@ function Cart() {
 
   return (
     <>
-      <div className="cart-container">
+      {cart.length > 0 ? (
         <CartLayout />
-        {cart.map((item) => (
-          <div key={item.id} className="card-holder">
-            <CartCard item={item} />
+      ) : (
+        <h1 style={{ textAlign: 'center', padding: '10px', letterSpacing: 1 }}>
+          Cart is Empty..{' '}
+        </h1>
+      )}
+      <div className="cart-container">
+        <div className="cart-left">
+          {cart.map((item) => (
+            <div key={item.id} className="card-holder">
+              <CartCard item={item} />
+            </div>
+          ))}
+        </div>
+        {cart.length > 0 && (
+          <div className="cart-right">
+            <BillCard />
           </div>
-        ))}
+        )}
       </div>
-      <div className="subtotal">
-        <h2>The Cart Total is: {total} /-</h2>
-        <button>CheckOut</button>
-      </div>
+      {cart.length > 0 && (
+        <div className="subtotal">
+          <h2>
+            The Cart Total ({cart.length} {cart.length > 1 ? 'items' : 'item'}):{' '}
+            ₹{total}.00
+          </h2>
+          <button>CheckOut</button>
+        </div>
+      )}
     </>
   )
 }
