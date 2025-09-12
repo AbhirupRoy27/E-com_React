@@ -1,10 +1,22 @@
 .custom-cart-heading {
+  margin-top: 1%;
   padding: 1%;
 }
 
 .custom-button {
   padding: 1%;
   width: max-content;
+}
+
+@media (max-width: 550px) {
+  .custom-cart-heading {
+    margin-top: 2%;
+  }
+
+  .custom-button {
+    margin-top: 2%;
+    padding: 2%;
+  }
 }
 
 

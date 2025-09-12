@@ -27,7 +27,7 @@ function Cart() {
       ) : (
         <div className="flex flex-col items-center">
           <h1 className="text-center text-2xl font-semibold tracking-wide custom-cart-heading">
-            Cart is Empty..{' '}
+            Cart is Empty....
           </h1>
           <button
             onClick={() => navigate('/Products')}

@@ -3,10 +3,10 @@
   align-items: center;
   justify-content: space-around;
   font-Size: 20px;
-  padding: 1px;
+  padding: 1.5% 1%;
   gap: 1rem;
   background-color: #0f1111;
-  height: 50px;
+  height: 64px;
   color: aliceblue;
   cursor: pointer;
 }
