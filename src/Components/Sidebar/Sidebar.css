@@ -1,6 +1,7 @@
 .sidebar {
   position: fixed;
   left: 40%;
+  top: 0;
   background: #333;
   color: white;
   display: flex;
@@ -24,9 +25,9 @@
   rotate: 0deg;
 }
 
-  .exit:hover {
-    rotate: -90deg;
-  }
+.exit:hover {
+  rotate: -90deg;
+}
 
 .sidebar-links {
   display: flex;
