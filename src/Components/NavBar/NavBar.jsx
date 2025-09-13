@@ -1,13 +1,15 @@
 import './NavBar.css'
 import { Link } from 'react-router-dom'
-import navLinks from '../../Db/navLinks.json'
 import { useSideBar } from '../../Contexts/SideBarContext'
+import { useNavLinks } from '../../Contexts/NaclinkContext/NavLinksContext'
 
 export default function NavBar() {
   const { sideBar, isSideBar } = useSideBar()
   const hanfleBurger = () => {
     isSideBar(!sideBar)
   }
+
+  const { navLinkss } = useNavLinks()
 
   return (
     <div className="nav-bar">
@@ -20,7 +22,7 @@ export default function NavBar() {
         <div className="nav-button-text"> All</div>
       </div>
       <div className="nav-right">
-        {navLinks.map((links) => (
+        {navLinkss.map((links) => (
           <div key={links.id} className="nav-links">
             <Link to={`${links.name}`}>{links.name}</Link>
           </div>

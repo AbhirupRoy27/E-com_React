@@ -1,16 +1,15 @@
 .nav-bar {
   display: flex;
   background-color: #222F3D;
-  height: 49px;
 }
 
 .nav-right {
-  width: 90%;
+  padding: 0.3%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   font-weight: 700;
   font-family: Monaco;
-
 }
 
 .nav-left {
@@ -22,6 +21,7 @@
     display: flex;
     align-items: center;
     width: 10%;
+    padding: 2% 1%;
   }
 
   .nav-right {
@@ -45,7 +45,6 @@
 
 .my-nav-button span {
   background-color: aliceblue;
-
   width: 30px;
   height: 5px;
   margin-left: 10px;
@@ -55,12 +54,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 5px 0px 6px;
-  padding: 8px 5px;
-
+  padding: 0.5% 0.5%;
 }
 
 .nav-links a {
   text-decoration: none;
   color: aliceblue;
+  letter-spacing: 2px;
 }
