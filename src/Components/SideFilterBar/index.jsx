@@ -13,22 +13,22 @@ function FilterBar() {
         </p>
         <div className="pl-[10%]">
           <p className="mt-[10px] mb-[5px] font-semibold">Price</p>
-          {price.map((p) => (
-            <div className="flex gap-[0.3rem]">
+          {price.map((p, i) => (
+            <div className="flex gap-[0.3rem]" key={i}>
               <input type="checkbox" />
               <p className="p-[1%]">{p}</p>
             </div>
           ))}
           <p className="mt-[10px] mb-[5px] font-semibold">Discount</p>
-          {discount.map((p) => (
-            <div className="flex gap-[0.3rem]">
+          {discount.map((p, i) => (
+            <div className="flex gap-[0.3rem]" key={i}>
               <input type="checkbox" />
               <p className="p-[1%]">{p} %</p>
             </div>
           ))}
           <p className="mt-[10px] mb-[5px] font-semibold">Company</p>
-          {Company.map((p) => (
-            <div className="flex gap-[0.3rem]">
+          {Company.map((p, i) => (
+            <div className="flex gap-[0.3rem]" key={i}>
               <input type="checkbox" />
               <p className="p-[1%]">{p}</p>
             </div>

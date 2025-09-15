@@ -1,7 +1,7 @@
 import './Card.css'
-import data from '../../Db/Products.json'
 import { useCart } from '../../Contexts/CartContext'
 import { useNavigate } from 'react-router-dom'
+import { useProducts } from '../../Contexts/ProductContext'
 
 const size = ['S', 'M', 'L', 'XL', 'XXL']
 
@@ -47,6 +47,7 @@ const wishlist = (
 
 function Card() {
   const { cart, setCart, total, setTotal } = useCart()
+  const { filteredProducts } = useProducts()
   const navigate = useNavigate()
 
   const handleAddToCart = (d) => {
@@ -57,10 +58,13 @@ function Card() {
   const handleGoToCart = () => {
     navigate('/cart')
   }
-  return (
+
+  console.log(filteredProducts)
+
+  return filteredProducts?.length > 0 ? (
     <>
-      {data.map((p) => (
-        <div className=" 2xl: w-[290px] card-container" key={p.id}>
+      {filteredProducts.map((p) => (
+        <div className="flex 2xl:w-[290px] card-container" key={p.id}>
           <div className="product-name">
             <h2 className="text-2xl font-semibold">
               {p.name} {p.sex} {p.producttype}
@@ -110,6 +114,10 @@ function Card() {
         </div>
       ))}
     </>
+  ) : (
+    <h1 className="flex w-[100%] h-[80vh] justify-center items-center">
+      Sorry Can't Load
+    </h1>
   )
 }
 

@@ -15,23 +15,21 @@ const NotFound = lazy(() => import('./Pages/NotFound/NotFound'))
 const Card = lazy(() => import('./Components/ProductCard/Card'))
 const Cart = lazy(() => import('./Pages/CartPage/Cart'))
 const Products = lazy(() => import('./Pages/Products/Products'))
-const FooterLinks = lazy(() => import('./Components/Footer/index'))
 
 const Layout = () => {
   const { sideBar } = useSideBar()
   return (
     <>
-      <div className="app-container">
+      <div className="app-container min-h-[100vh]">
         <SearchBar />
         <NavBar />
         {sideBar && <SideBar />}
-        <Suspense fallback={<h2>Loading....</h2>}>
-          <Outlet />
-        </Suspense>
+        <div className="h-[90vh]">
+          <Suspense fallback={<h2>Loading....</h2>}>
+            <Outlet />
+          </Suspense>
+        </div>
       </div>
-      <Suspense fallback={<h2>Loading....</h2>}>
-        <FooterLinks />
-      </Suspense>
     </>
   )
 }

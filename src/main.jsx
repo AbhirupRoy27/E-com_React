@@ -6,15 +6,18 @@ import { SideBarProvider } from './Contexts/SideBarContext.jsx'
 import { CartProvider } from './Contexts/CartContext.jsx'
 import { NavLinksProvider } from './Contexts/NaclinkContext/NavLinksContext.jsx'
 import { BrowserRouter } from 'react-router-dom'
+import { ProductProvider } from './Contexts/ProductContext.jsx'
 
 createRoot(document.getElementById('root')).render(
   // <StrictMode>
   <SideBarProvider>
     <CartProvider>
       <NavLinksProvider>
-        <BrowserRouter>
-          <App />
-        </BrowserRouter>
+        <ProductProvider>
+          <BrowserRouter>
+            <App />
+          </BrowserRouter>
+        </ProductProvider>
       </NavLinksProvider>
     </CartProvider>
   </SideBarProvider>

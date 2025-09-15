@@ -1,6 +1,6 @@
 import RecomentationCard from './Cards/RC/RecomentationCard'
 
-const Rc = () => {
+const RCards = () => {
   return (
     <div className="rc-cards">
       <RecomentationCard text={'View your browsing history'} />
@@ -43,10 +43,10 @@ const MobileCards = () => {
 export default function Home() {
   return (
     <>
-      <div className="home">
+      <div className="home h-[90vh]">
         <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IN/Prime/GIF/1/Jupiter25_H1_Prime_PC_2x_1._CB801695360_.jpg" />
       </div>
-      <Rc />
+      <RCards />
       <MobileCards />
     </>
   )

@@ -5,9 +5,3 @@
   padding: 1%;
   background-color: rgba(62, 62, 62, 0.212);
 }
-
-@media (max-width: 550px) {
-  .products-container {
-    justify-content: center;
-  }
-}
