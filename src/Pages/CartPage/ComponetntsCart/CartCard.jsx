@@ -1,4 +1,3 @@
-import './CartCard.css'
 import { RemoveFromCart } from '../../../Db/utils/RemovefromCart'
 import { useCart } from '../../../Contexts/CartContext'
 

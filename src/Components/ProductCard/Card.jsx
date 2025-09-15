@@ -57,8 +57,6 @@ function Card() {
     navigate('/cart')
   }
 
-  console.log(filteredProducts)
-
   return filteredProducts?.length > 0 ? (
     <>
       {filteredProducts.map((p) => (

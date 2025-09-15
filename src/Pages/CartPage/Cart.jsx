@@ -1,7 +1,7 @@
 import { lazy, Suspense } from 'react'
 import { useCart } from '../../Contexts/CartContext'
 import CartCard from './ComponetntsCart/CartCard'
-import './styles.css'
+// import './styles.css'
 import { useNavigate } from 'react-router-dom'
 
 const BillCard = lazy(() => import('./ComponetntsCart/Bill/BillCard'))
@@ -9,7 +9,7 @@ const BillCard = lazy(() => import('./ComponetntsCart/Bill/BillCard'))
 function CartLayout() {
   return (
     <>
-      <h1 className="text-center tracking-wide text-2xl font-semibold custom-cart-heading mt-[1%] mb-[1%]">
+      <h1 className="text-center tracking-wide text-2xl font-semibold custom-cart-heading mt-[1%] ">
         Cart Items
       </h1>
     </>

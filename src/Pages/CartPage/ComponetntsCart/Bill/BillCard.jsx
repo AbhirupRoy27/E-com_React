@@ -1,5 +1,3 @@
-import './style.css'
-
 function BillCard({ total }) {
   return (
     <div className="bill-card ">

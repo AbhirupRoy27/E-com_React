@@ -1,8 +1,8 @@
-import RecomentationCard from './Cards/RC/RecomentationCard'
+import RecomentationCard from './Cards/RecomentationCard'
 
 const RCards = () => {
   return (
-    <div className="hidden absolute top-[410px] left-[35px] sm:flex gap-[1rem] flex-wrap md:top-[262px] md:left-[15px] lg:top-[300px] xl:top-[330px] 2xl:top-[405px] 2xl:left-[40px] ">
+    <div className="hidden sm:flex gap-[1rem] flex-wrap 2xl:justify-center">
       <RecomentationCard text={'View your browsing history'} />
       <RecomentationCard text={'See more'} />
       <RecomentationCard text={'Explore All'} />
@@ -77,7 +77,7 @@ const VideoCard = () => {
 export default function Home() {
   return (
     <>
-      <div className="">
+      <div className="object-fill sm:h-[30vh] sm:overflow-hidden">
         <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IN/Prime/GIF/1/Jupiter25_H1_Prime_PC_2x_1._CB801695360_.jpg" />
       </div>
       <RCards />
