@@ -3,3 +3,9 @@
 * {
   box-sizing: border-box;
 }
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
