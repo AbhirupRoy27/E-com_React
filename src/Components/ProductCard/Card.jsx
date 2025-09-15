@@ -60,7 +60,7 @@ function Card() {
   return (
     <>
       {data.map((p) => (
-        <div className="card-container" key={p.id}>
+        <div className=" 2xl: w-[290px] card-container" key={p.id}>
           <div className="product-name">
             <h2 className="text-2xl font-semibold">
               {p.name} {p.sex} {p.producttype}
