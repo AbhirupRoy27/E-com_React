@@ -2,7 +2,7 @@ import RecomentationCard from './Cards/RC/RecomentationCard'
 
 const RCards = () => {
   return (
-    <div className="hidden absolute top-[410px] left-[35px] sm:flex gap-[1rem] flex-wrap md:top-[262px] md:left-[15px] lg:top-[300px] 2xl:top-[430px] 2xl:left-[40px] ">
+    <div className="hidden absolute top-[410px] left-[35px] sm:flex gap-[1rem] flex-wrap md:top-[262px] md:left-[15px] lg:top-[300px] xl:top-[330px] 2xl:top-[405px] 2xl:left-[40px] ">
       <RecomentationCard text={'View your browsing history'} />
       <RecomentationCard text={'See more'} />
       <RecomentationCard text={'Explore All'} />
@@ -13,7 +13,7 @@ const RCards = () => {
 
 const MobileCards = () => {
   return (
-    <div className="p-[1%] flex gap-[0.5rem] overflow-x-auto no-scrollbar sm:hidden">
+    <div className="p-[1%] flex gap-[0.5rem] overflow-x-auto no-scrollbar overflow-y-hidden sm:hidden">
       <div className=" flex justify-around p-[2%] bg-gray-200 rounded-md card-tems min-w-[250px] min-h-fit">
         <div className="flex flex-col justify-center items-center gap-[0.3rem] min-w-[100px] text-center">
           <img
@@ -77,15 +77,13 @@ const VideoCard = () => {
 export default function Home() {
   return (
     <>
-      <div className=" object-cover">
+      <div className="">
         <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IN/Prime/GIF/1/Jupiter25_H1_Prime_PC_2x_1._CB801695360_.jpg" />
       </div>
       <RCards />
       <MobileCards />
-      <div className="min-h-[30%] lg:min-h-[20%]"></div>
 
       <VideoCard />
-      <div>Hello</div>
     </>
   )
 }

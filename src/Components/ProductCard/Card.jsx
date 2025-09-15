@@ -1,9 +1,7 @@
-import './Card.css'
+// import './Card.css'
 import { useCart } from '../../Contexts/CartContext'
 import { useNavigate } from 'react-router-dom'
 import { useProducts } from '../../Contexts/ProductContext'
-
-const size = ['S', 'M', 'L', 'XL', 'XXL']
 
 const carticon = (
   <svg
@@ -64,29 +62,34 @@ function Card() {
   return filteredProducts?.length > 0 ? (
     <>
       {filteredProducts.map((p) => (
-        <div className="flex 2xl:w-[290px] card-container" key={p.id}>
-          <div className="product-name">
-            <h2 className="text-2xl font-semibold">
+        <div
+          className="bg-blue-100 flex flex-col justify-around p-[2%] sm:p-[1%] rounded-md w-[49%] sm:w-[23%] h-max"
+          key={p.id}
+        >
+          <div className="text-black pt-[5px] pb-[5px]">
+            <h2 className=" text-xmlnsl sm:text-2xl font-semibold">
               {p.name} {p.sex} {p.producttype}
             </h2>
           </div>
-          <div className="product-image">
-            <img src={p.imageurl} />
-          </div>
-          <div className="product-info">
-            <div className="panic-text">
+          <img
+            src={p.imageurl}
+            className="rounded-lg max-w-[190] max-h-[217] sm:w-full sm:max-h-[300px]"
+          />
+          <div className="min-h-[170px] flex flex-col gap-[0.5rem] justify-around">
+            <div className="text-red-900">
               {p.lessStock && <p>!! only few remaining</p>}
             </div>
             <div
-              className="product-text"
+              className="flex items-start flex-col"
               style={{ marginTop: p.lessStock ? 0 : 18.5 }}
             >
-              <h3>{p.name}</h3>
-              <p>{p.Model}</p>
+              <h3 className="font-semibold">{p.name}</h3>
+              <p className="pb-[1%] text-gray-700">{p.Model}</p>
             </div>
-            <div className="amount-text">
-              <h2>{p.Cost}</h2>
-              <p>{p.discount}</p>
+
+            <div className="flex gap-[0.5rem] items-center mb-[2%] sm:mb-[1%]">
+              <h2 className="font-semibold text-xl">{p.Cost}</h2>
+              <p className="text-green-700">{p.discount}</p>
               <p
                 style={{
                   color: 'gray',
@@ -98,18 +101,27 @@ function Card() {
               </p>
             </div>
           </div>
-          <div className="product-buttons">
+
+          <div className="text-xl flex flex-col gap-[0.4rem] ">
             {cart.includes(p, 0) ? (
-              <button onClick={() => handleGoToCart()}>
+              <button
+                onClick={() => handleGoToCart()}
+                className="w-full flex gap-[1rem] pt-[8px] pb-[8px] items-center justify-center border-0 font-semibold rounded-md bg-[rgba(183,106,106,0.916)]"
+              >
                 Go to Cart {carticon}
               </button>
             ) : (
-              <button onClick={() => handleAddToCart(p)}>
+              <button
+                onClick={() => handleAddToCart(p)}
+                className="w-full flex gap-[1rem] pt-[8px] pb-[8px] items-center justify-center border-0 font-semibold rounded-md bg-[rgba(183,106,106,0.916)]"
+              >
                 Add to Cart {carticon}
               </button>
             )}
 
-            <button>Wishlist Item {wishlist}</button>
+            <button className="w-full flex gap-[1rem] pt-[8px] pb-[8px] items-center justify-center border-0 font-semibold rounded-md bg-[rgba(183,106,106,0.916)]">
+              Wishlist Item {wishlist}
+            </button>
           </div>
         </div>
       ))}
@@ -122,15 +134,3 @@ function Card() {
 }
 
 export default Card
-
-function SizeChart() {
-  return (
-    <div className="product-size">
-      <div className="size-items">
-        {size.map((p, i) => (
-          <p key={i}>{p}</p>
-        ))}
-      </div>
-    </div>
-  )
-}

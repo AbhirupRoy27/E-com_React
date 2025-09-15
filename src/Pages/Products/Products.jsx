@@ -17,7 +17,7 @@ function Products() {
   }
 
   return (
-    <div className="w-full flex">
+    <div className="w-full flex ">
       <div className="hidden sm:block p-[1%] bg-yellow-50">
         <Suspense>
           <FilterBar />
