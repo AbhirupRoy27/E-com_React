@@ -8,7 +8,7 @@ function BCard({ books }) {
       <div className="flex flex-col w-[49%] sm:w-[19%] bg-gray-100 p-2 h-max gap-[0.4rem]">
         {isDesc ? (
           <div className="min-h-[493.9px] sm:min-h-[493.9px] bg-gray-200 p-3 rounded-md">
-            <p className="mt-[10px] tracking-[1px]">{books.description}</p>
+            <p className="text-[14px] sm:tracking-[1px]">{books.description}</p>
             <p
               onClick={() => setIsDesc(!isDesc)}
               className="mt-[1rem] font-[600] text-red-900 tracking-[1px] ml-2 text-xl"
