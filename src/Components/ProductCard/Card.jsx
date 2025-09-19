@@ -61,7 +61,7 @@ function Card() {
     <>
       {filteredProducts.map((p) => (
         <div
-          className="bg-blue-100 flex flex-col justify-around p-[2%] sm:p-[1%] rounded-md w-[48%] sm:w-[23%] h-max"
+          className="bg-blue-100 flex flex-col justify-around p-[2%] sm:p-[1%] rounded-md w-[48.5%] sm:w-[23%] h-max"
           key={p.id}
         >
           <div className="text-black pt-[5px] pb-[5px]">
@@ -71,7 +71,7 @@ function Card() {
           </div>
           <img
             src={p.imageurl}
-            className="rounded-lg max-w-[190] max-h-[217] sm:w-full sm:max-h-[300px]"
+            className="rounded-lg  sm:w-full sm:max-h-[300px]"
           />
           <div className="min-h-[170px] flex flex-col gap-[0.5rem] justify-around">
             <div className="text-red-900">
