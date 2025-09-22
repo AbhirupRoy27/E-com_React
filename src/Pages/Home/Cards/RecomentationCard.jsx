@@ -13,7 +13,7 @@ const images = [
 
 function RecomentationCard({ text }) {
   return (
-    <div className="flex flex-col w-[340px] p-[1%] bg-[rgba(211,211,211,0.79)] gap-[0.4rem] flex-wrap mt-4">
+    <div className="flex flex-col w-[316px] p-[1%] bg-[rgba(211,211,211,0.30)] gap-[0.4rem] flex-wrap mt-4 mb-4">
       <h2 className="mb-[2%] font-semibold">Keep Shoping For</h2>
       <div className="flex gap-[0.5rem]">
         <div className="w-[48%] h-[200px]">

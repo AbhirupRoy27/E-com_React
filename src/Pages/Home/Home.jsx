@@ -1,4 +1,5 @@
 import RecomentationCard from './Cards/RecomentationCard'
+import TopDeals from './Components/TopDeals'
 
 const RCards = () => {
   return (
@@ -80,10 +81,12 @@ export default function Home() {
       <div className="object-fill sm:h-[30vh] sm:overflow-hidden">
         <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IN/Prime/GIF/1/Jupiter25_H1_Prime_PC_2x_1._CB801695360_.jpg" />
       </div>
-      <RCards />
-      <MobileCards />
-
-      <VideoCard />
+      <MobileCards /> {/* For Mobile */}
+      <VideoCard /> {/* For Mobile */}
+      <div className="sm:pl-[4%] sm:pr-[4%] mt-3">
+        <RCards />
+        <TopDeals />
+      </div>
     </>
   )
 }
