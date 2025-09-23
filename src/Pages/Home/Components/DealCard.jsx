@@ -1,11 +1,11 @@
 import React from 'react'
 
 function DealCard({ deals }) {
-  console.log(deals)
+  // console.log(deals)
   return (
     <div className="mb-4">
       <div className="bg-white min-w-[250px] min-h-[250px] p-2">
-        <img src="" alt="Loading..." />
+        <img src="#" alt="Loading..." />
       </div>
       <div className="bg-gray-300 min-w-[100px] min-h-[100px] p-2">
         <div className="flex gap-2 text-xl sm:text-sm  items-center justify-between">
