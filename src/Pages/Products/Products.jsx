@@ -41,7 +41,7 @@ function Products() {
       </div>
       <div className="flex w-full h-full flex-col bg-[rgba(62,62,62,0.212)] ">
         <BrandDropList />
-        <div className="flex flex-wrap gap-[0.5rem] pl-[1%] sm:pl-[3%] min-h-[90vh]">
+        <div className="flex flex-wrap gap-2 p-1 sm:p-2 sm:pl-[3%] sm:pr-[3%] min-h-[90vh] mb-4">
           <Outlet />
         </div>
       </div>
