@@ -60,72 +60,62 @@ function Card() {
   return filteredProducts?.length > 0 ? (
     <>
       {filteredProducts.map((p) => (
-        <div
-          className="bg-blue-100 flex flex-col justify-around p-[2%] sm:p-[1%] rounded-md w-[48.5%] sm:w-[23%] h-max"
-          key={p.id}
-        >
-          <div className="text-black pt-[5px] pb-[5px]">
-            <h2 className=" text-xmlnsl sm:text-2xl font-semibold">
-              {p.name} {p.sex} {p.producttype}
-            </h2>
-          </div>
-          <img
-            src={p.imageurl}
-            className="rounded-lg  sm:w-full sm:max-h-[300px]"
-          />
-          <div className="min-h-[170px] flex flex-col gap-[0.5rem] justify-around">
-            <div className="text-red-900">
+        <>
+          <div
+            key={p.id}
+            className="bg-blue-100 2xl:w-[19.5%] xl:w-[24%] md:w-[32%] p-2 sm:p-2 w-[48.5%] h-max rounded-md"
+          >
+            <div className="text-black sm:pt-2 pb-2 min-h-[60px]">
+              <h2 className="text-xmlnsl text-md lg:text-2xl font-semibold">
+                {p.name} {p.sex} {p.producttype}
+              </h2>
+            </div>
+            <div className="w-full h-[250px] sm:h-[220px] md:h-[300px]">
+              <img src={p.imageurl} className="rounded-lg w-full h-full" />
+            </div>
+            <div className="text-red-900 min-h-[24px] text-sm ">
               {p.lessStock && <p>!! only few remaining</p>}
             </div>
-            <div
-              className="flex items-start flex-col"
-              style={{ marginTop: p.lessStock ? 0 : 18.5 }}
-            >
+            <div className="min-h-[98px]">
               <h3 className="font-semibold">{p.name}</h3>
-              <p className="pb-[1%] text-gray-700">{p.Model}</p>
+              <p className="pb-1 text-gray-700 text-sm sm:text-lg">{p.Model}</p>
             </div>
+            <div className="flex flex-col sm:flex-row sm:gap-2 sm:items-center mb-2 ">
+              <h2 className="font-bold text-lg lg:text-2xl">Rs. {p.Cost}</h2>
+              <div className="flex gap-2">
+                <p className=" font-semibold text-green-700">{p.discount}</p>
+                <p className="text-gray-700 line-through text-md">
+                  {p['original-price']}/-
+                </p>
+              </div>
+            </div>
+            <div className="text-xl flex flex-col gap-[0.4rem] ">
+              {cart.includes(p, 0) ? (
+                <button
+                  onClick={() => handleGoToCart()}
+                  className="w-full flex gap-[1rem] pt-[8px] pb-[8px] items-center justify-center border-0 font-semibold rounded-md bg-[rgba(183,106,106,0.916)]"
+                >
+                  Go to Cart {carticon}
+                </button>
+              ) : (
+                <button
+                  onClick={() => handleAddToCart(p)}
+                  className="w-full flex gap-[1rem] pt-[8px] pb-[8px] items-center justify-center border-0 font-semibold rounded-md bg-[rgba(183,106,106,0.916)]"
+                >
+                  Add to Cart {carticon}
+                </button>
+              )}
 
-            <div className="flex gap-[0.5rem] items-center mb-[2%] sm:mb-[1%]">
-              <h2 className="font-semibold text-xl">{p.Cost}</h2>
-              <p className="text-green-700">{p.discount}</p>
-              <p
-                style={{
-                  color: 'gray',
-                  textDecoration: 'line-through',
-                  fontSize: 14,
-                }}
-              >
-                {p['original-price']}/-
-              </p>
+              <button className="w-full flex gap-[1rem] pt-[8px] pb-[8px] items-center justify-center border-0 font-semibold rounded-md bg-[rgba(183,106,106,0.916)]">
+                Wishlist Item {wishlist}
+              </button>
             </div>
           </div>
-
-          <div className="text-xl flex flex-col gap-[0.4rem] ">
-            {cart.includes(p, 0) ? (
-              <button
-                onClick={() => handleGoToCart()}
-                className="w-full flex gap-[1rem] pt-[8px] pb-[8px] items-center justify-center border-0 font-semibold rounded-md bg-[rgba(183,106,106,0.916)]"
-              >
-                Go to Cart {carticon}
-              </button>
-            ) : (
-              <button
-                onClick={() => handleAddToCart(p)}
-                className="w-full flex gap-[1rem] pt-[8px] pb-[8px] items-center justify-center border-0 font-semibold rounded-md bg-[rgba(183,106,106,0.916)]"
-              >
-                Add to Cart {carticon}
-              </button>
-            )}
-
-            <button className="w-full flex gap-[1rem] pt-[8px] pb-[8px] items-center justify-center border-0 font-semibold rounded-md bg-[rgba(183,106,106,0.916)]">
-              Wishlist Item {wishlist}
-            </button>
-          </div>
-        </div>
+        </>
       ))}
     </>
   ) : (
-    <h1 className="flex w-[100%] h-[80vh] justify-center items-center">
+    <h1 className="flex w-[100%] h-[80vh] justify-center items-center text-2xl">
       Sorry Can't Load
     </h1>
   )
