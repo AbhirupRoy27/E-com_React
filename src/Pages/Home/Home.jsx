@@ -1,50 +1,43 @@
-import RecomentationCard from './Cards/RecomentationCard'
 import TopDeals from './Components/TopDeals'
-
-const RCards = () => {
-  return (
-    <div className="hidden sm:flex gap-[1rem] flex-wrap 2xl:justify-center">
-      <RecomentationCard text={'View your browsing history'} />
-      <RecomentationCard text={'See more'} />
-      <RecomentationCard text={'Explore All'} />
-      <RecomentationCard text={'Keep Shopping'} />
-    </div>
-  )
-}
+import icons from '../../Db/icons.json'
 
 const MobileCards = () => {
   return (
-    <div className="p-[1%] flex gap-[0.5rem] overflow-x-auto no-scrollbar overflow-y-hidden sm:hidden">
-      <div className=" flex justify-around p-[2%] bg-gray-200 rounded-md card-tems min-w-[250px] min-h-fit">
+    <div className="p-[1%] flex gap-2 overflow-x-auto no-scrollbar overflow-y-hidden sm:hidden ">
+      <div className=" flex justify-around p-[2%] bg-gradient-to-br from-gray-400 to-slate-100 rounded-md card-tems min-w-[250px] min-h-fit shadow-md shadow-black/20 ">
         <div className="flex flex-col justify-center items-center gap-[0.3rem] min-w-[100px] text-center">
           <img
             alt="a-pay"
-            className="bg-black rounded-full w-[50px] h-[50px]"
+            src={icons[3].link}
+            className="bg-white border rounded-full w-[50px] h-[50px] p-1 shadow-md shadow-black/40 "
           />
-          <p className="text-[18px] mb-[20px] font-semibold whitespace-nowrap">
-            A-pay
+          <p className="text-[18px] mb-[10px] font-semibold whitespace-nowrap">
+            Flights
           </p>
           <img
             alt="a-pay"
-            className="bg-yellow-400 rounded-full w-[50px] h-[50px]"
+            src={icons[2].link}
+            className="bg-yellow-400 rounded-full w-[50px] h-[50px] p-1 shadow-md shadow-black/40 "
           />
-          <p className="text-[18px] mb-[20px] font-semibold whitespace-nowrap">
-            Send Money
+          <p className="text-[18px] mb-[10px] font-semibold whitespace-nowrap">
+            Movie
           </p>
         </div>
         <div className="flex flex-col justify-center items-center gap-[0.5rem] w-[100px] text-center">
           <img
             alt="a-pay"
-            className="bg-yellow-400 rounded-full w-[50px] h-[50px]"
+            src={icons[1].link}
+            className="bg-yellow-400 rounded-full w-[50px] h-[50px] p-1 shadow-md shadow-black/40 "
           />
-          <p className="text-[18px] mb-[20px] font-semibold whitespace-nowrap">
+          <p className="text-[16px] mb-[10px] font-semibold whitespace-nowrap">
             Sacn any QR
           </p>
           <img
             alt="a-pay"
-            className="bg-yellow-400 rounded-full w-[50px] h-[50px]"
+            src={icons[0].link}
+            className="bg-white rounded-full w-[50px] h-[50px] p-1 shadow-md shadow-black/40 "
           />
-          <p className="text-[18px] mb-[20px] font-semibold whitespace-nowrap">
+          <p className="text-[18px] mb-[10px] font-semibold whitespace-nowrap">
             Recharge
           </p>
         </div>
@@ -69,8 +62,10 @@ const MobileCards = () => {
 
 const VideoCard = () => {
   return (
-    <div className="bg-blue-50 min-h-[30%] mt-[1%] flex justify-start items-start p-[2%] sm:hidden ">
-      <p className="text-2xl">Video Comes Here!</p>
+    <div className="bg-gradient-to-tr from-red-300 to-red-900 min-h-[30%] mt-2 flex justify-center items-center p-2 sm:hidden ">
+      <p className="text-3xl bg-gradient-to-tr from-zinc-900 to-stone-900 bg-clip-text text-transparent font-bold shadow-md shadow-black/20 p-2">
+        Video Comes Here!
+      </p>
     </div>
   )
 }
@@ -83,8 +78,7 @@ export default function Home() {
       </div>
       <MobileCards /> {/* For Mobile */}
       <VideoCard /> {/* For Mobile */}
-      <div className="sm:pl-[4%] sm:pr-[4%] mt-3">
-        <RCards />
+      <div className="sm:pl-[4%] sm:pr-[4%] mt-3 mb-3">
         <TopDeals />
       </div>
     </>
