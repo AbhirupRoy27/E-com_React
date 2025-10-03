@@ -20,7 +20,10 @@ export default function SearchBar() {
         </div>
         <Bar navigate={navigate} />
         <div className="flex p-1 gap-2 md:gap-6">
-          <div className="flex text-white items-center md:gap-2 cursor-pointer active:opacity-75">
+          <div
+            className="flex text-white items-center md:gap-2 cursor-pointer active:opacity-75"
+            onClick={() => navigate('Cart')}
+          >
             <img className="max-h-[30px]" src="cart.svg" />
             <p className="hidden md:flex ">Cart</p>
           </div>
@@ -57,41 +60,6 @@ function Bar({ navigate }) {
         onClick={handleSearch}
       >
         <SearchIcon />
-      </div>
-    </div>
-  )
-}
-
-function SearchBar2({ cart, navigate }) {
-  return (
-    <div className="w-full flex items-center justify-between sm:justify-around text-xl gap-3 max-h-[2%] bg-[#0f1111] cursor-pointer p-2">
-      <div
-        className="hidden md:flex active:scale-102 active:opacity-75 font-bold text-[#fff]"
-        onClick={() => navigate('/')}
-      >
-        ManGrove.co
-      </div>
-      <div className="hidden md:flex">
-        <p className="text-[#fff]">Location</p>
-      </div>
-      <Bar navigate={navigate} />
-      <div className="flex w-[70%] justify-around items-center">
-        <div
-          className="flex justify-center mt-1 cursor-pointer"
-          onClick={() => navigate('Cart')}
-        >
-          <p className="relative top-[-12px] left-[35px] font-extrabold text-[#fff]">
-            {cart.length}
-          </p>
-          <img className="max-h-[30px]" src="cart.svg" />
-        </div>
-        <div className="hidden lg:flex text-[#fff]">
-          <img className="max-h-[30px] mr-2" src="account.svg" />
-          Account
-        </div>
-        <div className="lg:hidden">
-          <img className="max-h-[30px]" src="account.svg" />
-        </div>
       </div>
     </div>
   )
