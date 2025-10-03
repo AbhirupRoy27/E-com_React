@@ -3,7 +3,7 @@ import './SearchIcon.css'
 const SearchIcon = (props) => (
   <svg
     viewBox="0 0 512 512"
-    height="1em"
+    height="25px"
     fill="none"
     stroke="currentColor"
     strokeWidth="42"
