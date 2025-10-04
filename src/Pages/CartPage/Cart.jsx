@@ -31,7 +31,7 @@ function Cart() {
           </h1>
           <button
             onClick={() => navigate('/Products')}
-            className="bg-blue-950 text-white rounded-md mt-[2%]  p-[1.5%] sm: p-[2%]"
+            className="bg-blue-950 text-white rounded-md mt-[2%] p-[2%] text-md md:p-[1%]"
           >
             Continue Shopping
           </button>

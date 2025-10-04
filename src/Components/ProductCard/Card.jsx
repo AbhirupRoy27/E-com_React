@@ -1,4 +1,3 @@
-// import './Card.css'
 import { useCart } from '../../Contexts/CartContext'
 import { useNavigate } from 'react-router-dom'
 import { useProducts } from '../../Contexts/ProductContext'
@@ -65,22 +64,29 @@ function Card() {
             key={p.id}
             className="bg-blue-100 2xl:w-[19.5%] xl:w-[24%] md:w-[32%] p-2 sm:p-2 w-[48.5%] h-max rounded-md"
           >
-            <div className="text-black sm:pt-2 pb-2 min-h-[60px]">
-              <h2 className="text-xmlnsl text-md lg:text-2xl font-semibold">
+            <div className="text-black sm:pt-2 pb-2 min-h-[40px] flex items-center">
+              <h2 className=" text-md lg:text-xl font-semibold ">
                 {p.name} {p.sex} {p.producttype}
               </h2>
             </div>
             <div className="w-full h-[250px] sm:h-[220px] md:h-[300px]">
-              <img src={p.imageurl} className="rounded-lg w-full h-full" />
+              <img
+                src={p.imageurl}
+                className="rounded-lg w-full h-full"
+                onClick={() => navigate(`product-item/${p.id}`)}
+              />
             </div>
             <div className="text-red-900 min-h-[24px] text-sm ">
               {p.lessStock && <p>!! only few remaining</p>}
             </div>
             <div className="min-h-[98px]">
               <h3 className="font-semibold">{p.name}</h3>
-              <p className="pb-1 text-gray-700 text-sm sm:text-lg">{p.Model}</p>
+              <p className="pb-1 text-gray-700 text-sm sm:text-md">{p.Model}</p>
             </div>
-            <div className="flex flex-col sm:flex-row sm:gap-2 sm:items-center mb-2 ">
+            <div
+              className="flex flex-col sm:flex-row sm:gap-2 sm:items-center mb-2 "
+              onClick={() => navigate(`product-item/${p.id}`)}
+            >
               <h2 className="font-bold text-lg lg:text-2xl">Rs. {p.Cost}</h2>
               <div className="flex gap-2">
                 <p className=" font-semibold text-green-700">{p.discount}</p>

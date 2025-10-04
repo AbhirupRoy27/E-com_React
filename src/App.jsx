@@ -4,6 +4,7 @@ import { Outlet, Route, Routes } from 'react-router-dom'
 import SearchBar from './Components/SearchBar/SearchBar'
 import { lazy, Suspense } from 'react'
 import TopDeal from './Pages/TopDeals/TopDeal'
+import Item from './Pages/Products/Item'
 
 const Home = lazy(() => import('./Pages/Home/Home'))
 const Sell = lazy(() => import('./Components/NavBar/NavComponents/Sell/Sell'))
@@ -51,6 +52,7 @@ function App() {
 
         <Route path="products" element={<Products />}>
           <Route index element={<Card />} />
+          <Route path="product-item/:id" element={<Item />} />
         </Route>
 
         <Route path="*" element={<NotFound />} />
