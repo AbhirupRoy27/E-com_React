@@ -5,6 +5,7 @@ import SearchBar from './Components/SearchBar/SearchBar'
 import { lazy, Suspense } from 'react'
 import TopDeal from './Pages/TopDeals/TopDeal'
 import Item from './Pages/Products/Item'
+import Footer from './Components/Footer/Footer'
 
 const Home = lazy(() => import('./Pages/Home/Home'))
 const Sell = lazy(() => import('./Components/NavBar/NavComponents/Sell/Sell'))
@@ -25,11 +26,12 @@ const Layout = () => {
         <SearchBar />
         <NavBar />
         {sideBar && <SideBar />}
-        <div className="h-[90vh] ">
+        <div className="py-5">
           <Suspense fallback={<h2>Loading....</h2>}>
             <Outlet />
           </Suspense>
         </div>
+        <Footer />
       </div>
     </>
   )

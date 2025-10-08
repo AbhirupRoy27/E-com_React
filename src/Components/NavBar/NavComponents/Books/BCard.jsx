@@ -5,7 +5,7 @@ function BCard({ books }) {
 
   return (
     <>
-      <div className="flex flex-col w-[49%] sm:w-[19%] bg-gray-100 p-2 h-max gap-[0.4rem]">
+      <div className="flex flex-col w-[49%] sm:w-[19%] bg-gray-100 p-2 h-max gap-[0.4rem] rounded">
         {isDesc ? (
           <div className="min-h-[493.9px] sm:min-h-[493.9px] bg-gray-200 p-3 rounded-md">
             <p className="text-[14px] sm:tracking-[1px]">{books.description}</p>

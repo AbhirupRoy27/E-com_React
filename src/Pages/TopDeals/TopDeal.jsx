@@ -4,9 +4,6 @@ function TopDeal() {
   return (
     <>
       <div>
-        <p className="text-3xl text-center pt-4 font-extrabold mb-5">
-          Top Deals
-        </p>
         <div className="w-full h-full flex gap-[2%] sm:gap-[1%] flex-col sm:flex-row">
           <div className="p-[1%] w-[99%] sm:w-[33%] hover:scale-101">
             <div className="bg-[url('/mobile.png')] opacity:90 sm:opacity-75 hover:opacity-100 bg-cover bg-center h-[250px] rounded-md flex justify-center items-center">
