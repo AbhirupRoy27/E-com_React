@@ -6,6 +6,8 @@ import { lazy, Suspense } from 'react'
 import TopDeal from './Pages/TopDeals/TopDeal'
 import Item from './Pages/Products/Item'
 import Footer from './Components/Footer/Footer'
+import Login from './Pages/Account/Login/Login'
+import Signup from './Pages/Account/Signup/Signup'
 
 const Home = lazy(() => import('./Pages/Home/Home'))
 const Sell = lazy(() => import('./Components/NavBar/NavComponents/Sell/Sell'))
@@ -40,6 +42,8 @@ const Layout = () => {
 function App() {
   return (
     <Routes>
+      <Route path="/login" element={<Login />} />
+      <Route path="/signup" element={<Signup />} />
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
 
