@@ -8,6 +8,7 @@ import Item from './Pages/Products/Item'
 import Footer from './Components/Footer/Footer'
 import Login from './Pages/Account/Login/Login'
 import Signup from './Pages/Account/Signup/Signup'
+import Index from './Components/ProtectedRoute/Index'
 
 const Home = lazy(() => import('./Pages/Home/Home'))
 const Sell = lazy(() => import('./Components/NavBar/NavComponents/Sell/Sell'))
@@ -44,7 +45,14 @@ function App() {
     <Routes>
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
-      <Route path="/" element={<Layout />}>
+      <Route
+        path="/"
+        element={
+          <Index>
+            <Layout />
+          </Index>
+        }
+      >
         <Route index element={<Home />} />
 
         <Route path="Home" element={<Home />} />

@@ -7,6 +7,7 @@ import { CartProvider } from './Contexts/CartContext.jsx'
 import { NavLinksProvider } from './Contexts/NaclinkContext/NavLinksContext.jsx'
 import { BrowserRouter } from 'react-router-dom'
 import { ProductProvider } from './Contexts/ProductContext.jsx'
+import { AuthProvider } from './Contexts/Auth/AuthContext.jsx'
 
 createRoot(document.getElementById('root')).render(
   // <StrictMode>
@@ -15,7 +16,9 @@ createRoot(document.getElementById('root')).render(
       <NavLinksProvider>
         <ProductProvider>
           <BrowserRouter>
-            <App />
+            <AuthProvider>
+              <App />
+            </AuthProvider>
           </BrowserRouter>
         </ProductProvider>
       </NavLinksProvider>

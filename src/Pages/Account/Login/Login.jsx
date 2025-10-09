@@ -2,6 +2,7 @@ import { useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 import { handleLogin, handleEmail } from '../utils/handleClick'
 import Logo from '../utils/Logo'
+import { useAuth } from '../../../Contexts/Auth/AuthContext'
 
 function Login() {
   const navigate = useNavigate()
@@ -9,13 +10,14 @@ function Login() {
     email: '',
     pass: '',
   })
+  const { isLogin, setIsLogin } = useAuth()
 
   return (
     <div className="bg-gradient-to-br from-slate-300 to-slate-50 h-[100vh] flex justify-center items-center flex-col">
       <Logo />
       <form
         className="bg-white rounded-md w-[95vw] md:w-max md:p-4"
-        onSubmit={(e) => handleLogin(e, navigate, cred)}
+        onSubmit={(e) => handleLogin(e, navigate, cred, isLogin, setIsLogin)}
       >
         <p className="text-center py-4 text-3xl font-bold bg-gradient-to-br from-slate-500 to-slate-900 bg-clip-text text-transparent tracking-wide">
           Login

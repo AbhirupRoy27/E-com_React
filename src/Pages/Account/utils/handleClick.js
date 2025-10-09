@@ -1,9 +1,10 @@
-export const handleLogin = (e, navigate, cred) => {
+export const handleLogin = (e, navigate, cred, isLogin, setIsLogin) => {
   e.preventDefault()
   try {
     if (cred && cred.email.length > 0) {
       if (cred.pass.length > 0) {
         setTimeout(() => {
+          setIsLogin(!isLogin)
           navigate('/')
         }, 1000)
       } else {

@@ -51,67 +51,65 @@ function Card() {
   return filteredProducts?.length > 0 ? (
     <>
       {filteredProducts.map((p) => (
-        <>
-          <div
-            key={p.id}
-            className="bg-blue-100 2xl:w-[19.5%] xl:w-[24%] md:w-[32%] p-2 sm:p-2 w-[48.5%] h-max rounded-md"
-          >
-            <div className="text-black sm:pt-2 pb-2 min-h-[40px] flex items-center">
-              <h2 className=" text-md lg:text-xl font-semibold ">
-                {p.name} {p.sex} {p.producttype}
-              </h2>
-            </div>
-            <div className="w-full h-[250px] sm:h-[220px] md:h-[300px]">
-              <img
-                src={p.imageurl}
-                className="rounded-lg w-full h-full"
-                onClick={() => navigate(`product-item/${p.id}`)}
-              />
-            </div>
-            <div className="text-red-900 min-h-[24px] text-sm ">
-              {p.lessStock && <p>!! only few remaining</p>}
-            </div>
-            <div className="min-h-[98px]">
-              <h3 className="font-semibold">{p.name}</h3>
-              <p className="pb-1 text-gray-700 text-sm sm:text-md">{p.Model}</p>
-            </div>
-            <div
-              className="flex flex-col sm:flex-row sm:gap-2 sm:items-center mb-2 "
+        <div
+          key={p.id}
+          className="bg-blue-100 2xl:w-[19.5%] xl:w-[24%] md:w-[32%] p-2 sm:p-2 w-[48.5%] h-max rounded-md"
+        >
+          <div className="text-black sm:pt-2 pb-2 min-h-[40px] flex items-center">
+            <h2 className=" text-md lg:text-xl font-semibold ">
+              {p.name} {p.sex} {p.producttype}
+            </h2>
+          </div>
+          <div className="w-full h-[250px] sm:h-[220px] md:h-[300px]">
+            <img
+              src={p.imageurl}
+              className="rounded-lg w-full h-full"
               onClick={() => navigate(`product-item/${p.id}`)}
-            >
-              <h2 className="font-bold text-lg lg:text-2xl">Rs. {p.Cost}</h2>
-              <div className="flex gap-2">
-                <p className=" font-semibold text-green-700">{p.discount}</p>
-                <p className="text-gray-700 line-through text-md">
-                  {p['original-price']}/-
-                </p>
-              </div>
-            </div>
-            <div className="text-xl flex flex-col gap-[0.4rem] ">
-              {cart.includes(p, 0) ? (
-                <button
-                  onClick={() => handleGoToCart(navigate)}
-                  className="w-full flex gap-[1rem] pt-[8px] pb-[8px] items-center justify-center border-0 font-semibold rounded-md bg-[rgba(183,106,106,0.916)]"
-                >
-                  Go to Cart {carticon}
-                </button>
-              ) : (
-                <button
-                  onClick={() =>
-                    handleAddToCart(p, cart, setCart, setTotal, total)
-                  }
-                  className="w-full flex gap-[1rem] pt-[8px] pb-[8px] items-center justify-center border-0 font-semibold rounded-md bg-[rgba(183,106,106,0.916)]"
-                >
-                  Add to Cart {carticon}
-                </button>
-              )}
-
-              <button className="w-full flex gap-[1rem] pt-[8px] pb-[8px] items-center justify-center border-0 font-semibold rounded-md bg-[rgba(183,106,106,0.916)]">
-                Wishlist Item {wishlist}
-              </button>
+            />
+          </div>
+          <div className="text-red-900 min-h-[24px] text-sm ">
+            {p.lessStock && <p>!! only few remaining</p>}
+          </div>
+          <div className="min-h-[98px]">
+            <h3 className="font-semibold">{p.name}</h3>
+            <p className="pb-1 text-gray-700 text-sm sm:text-md">{p.Model}</p>
+          </div>
+          <div
+            className="flex flex-col sm:flex-row sm:gap-2 sm:items-center mb-2 "
+            onClick={() => navigate(`product-item/${p.id}`)}
+          >
+            <h2 className="font-bold text-lg lg:text-2xl">Rs. {p.Cost}</h2>
+            <div className="flex gap-2">
+              <p className=" font-semibold text-green-700">{p.discount}</p>
+              <p className="text-gray-700 line-through text-md">
+                {p['original-price']}/-
+              </p>
             </div>
           </div>
-        </>
+          <div className="text-xl flex flex-col gap-[0.4rem] ">
+            {cart.includes(p, 0) ? (
+              <button
+                onClick={() => handleGoToCart(navigate)}
+                className="w-full flex gap-[1rem] pt-[8px] pb-[8px] items-center justify-center border-0 font-semibold rounded-md bg-[rgba(183,106,106,0.916)]"
+              >
+                Go to Cart {carticon}
+              </button>
+            ) : (
+              <button
+                onClick={() =>
+                  handleAddToCart(p, cart, setCart, setTotal, total)
+                }
+                className="w-full flex gap-[1rem] pt-[8px] pb-[8px] items-center justify-center border-0 font-semibold rounded-md bg-[rgba(183,106,106,0.916)]"
+              >
+                Add to Cart {carticon}
+              </button>
+            )}
+
+            <button className="w-full flex gap-[1rem] pt-[8px] pb-[8px] items-center justify-center border-0 font-semibold rounded-md bg-[rgba(183,106,106,0.916)]">
+              Wishlist Item {wishlist}
+            </button>
+          </div>
+        </div>
       ))}
     </>
   ) : (
