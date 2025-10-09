@@ -27,7 +27,10 @@ export default function SearchBar() {
             <img className="max-h-[30px]" src="cart.svg" />
             <p className="hidden md:flex ">Cart</p>
           </div>
-          <div className="flex text-white items-center md:gap-2 cursor-pointer md:mr-5 active:opacity-75">
+          <div
+            className="flex text-white items-center md:gap-2 cursor-pointer md:mr-5 active:opacity-75"
+            onClick={() => navigate('/login')}
+          >
             <img className="max-h-[30px]" src="account.svg" />
             <p className="hidden md:flex">Account</p>
           </div>
