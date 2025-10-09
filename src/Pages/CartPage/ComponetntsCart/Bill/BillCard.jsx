@@ -1,6 +1,6 @@
 function BillCard({ total }) {
   return (
-    <div className="bill-card ">
+    <div className="bill-card md:min-w-[350px]">
       <p className="border-b-[2px] p-[2%] text-2xl font-semibold tracking-wide">
         Order Details
       </p>

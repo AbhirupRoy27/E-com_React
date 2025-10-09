@@ -30,7 +30,7 @@ export default function NavBar() {
         {navLinkss.map((links) => (
           <div
             key={links.id}
-            className="nav-links text-[#f0f8ff] tracking-widest"
+            className="text-[#f0f8ff] tracking-widest active:scale-103"
           >
             <Link to={`${links.name}`}>{links.name}</Link>
           </div>

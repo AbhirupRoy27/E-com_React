@@ -5,14 +5,24 @@ function CartCard({ item }) {
   const { cart, setCart, total, setTotal } = useCart()
 
   return (
-    <div className="flex flex-col bg-blue-50 p-[3%] gap-[0.5rem]">
-      <h2 className="item-heading text-2xl tracking-wide font-semibold">
+    <div className="flex flex-col bg-blue-50 p-2 sm:p-4 gap-[0.5rem] lg:min-w-[700px] ">
+      <h2 className="item-heading text-xl tracking-wide font-semibold w-full">
         {item.name} {item.sex} {item.producttype}
       </h2>
 
-      <div className="flex gap-[0.5rem]">
-        <img src={item.imageurl} className="rounded-md w-[50%]" />
-        <div className="flex flex-col w-full gap-[0.5rem]">
+      <div className="flex gap-[1rem] w-full flex-col lg:flex-row">
+        {/* <div className="w-[50%] max-h-[350px] object-scale-down">
+          <img src={item.imageurl} className="rounded-md  " />
+        </div> */}
+        <div class="lg:w-[40%] h-74 overflow-hidden flex justify-center rounded">
+          <img
+            src={item.imageurl}
+            alt="Example"
+            class="max-w-full max-h-full object-cover rounded"
+          />
+        </div>
+
+        <div className="flex flex-col gap-[0.5rem]">
           <div className="">
             <p className="text-xl font-semibold">{item.name}</p>
             <p>{item.Model}</p>
