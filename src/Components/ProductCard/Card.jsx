@@ -1,6 +1,7 @@
 import { useCart } from '../../Contexts/CartContext'
 import { useNavigate } from 'react-router-dom'
 import { useProducts } from '../../Contexts/ProductContext'
+import { handleAddToCart, handleGoToCart } from './utils/handleClicks'
 
 const carticon = (
   <svg
@@ -47,15 +48,6 @@ function Card() {
   const { filteredProducts } = useProducts()
   const navigate = useNavigate()
 
-  const handleAddToCart = (d) => {
-    setCart([...cart, d])
-    setTotal(total + d.Cost)
-  }
-
-  const handleGoToCart = () => {
-    navigate('/cart')
-  }
-
   return filteredProducts?.length > 0 ? (
     <>
       {filteredProducts.map((p) => (
@@ -98,14 +90,16 @@ function Card() {
             <div className="text-xl flex flex-col gap-[0.4rem] ">
               {cart.includes(p, 0) ? (
                 <button
-                  onClick={() => handleGoToCart()}
+                  onClick={() => handleGoToCart(navigate)}
                   className="w-full flex gap-[1rem] pt-[8px] pb-[8px] items-center justify-center border-0 font-semibold rounded-md bg-[rgba(183,106,106,0.916)]"
                 >
                   Go to Cart {carticon}
                 </button>
               ) : (
                 <button
-                  onClick={() => handleAddToCart(p)}
+                  onClick={() =>
+                    handleAddToCart(p, cart, setCart, setTotal, total)
+                  }
                   className="w-full flex gap-[1rem] pt-[8px] pb-[8px] items-center justify-center border-0 font-semibold rounded-md bg-[rgba(183,106,106,0.916)]"
                 >
                   Add to Cart {carticon}
