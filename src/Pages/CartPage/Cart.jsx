@@ -25,7 +25,7 @@ function Cart() {
       {cart.length > 0 ? (
         <CartLayout />
       ) : (
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center justify-center min-h-[90vh]">
           <h1 className="text-center text-2xl font-semibold tracking-wide mt-[2%] sm: mt-[3%]">
             Cart is Empty....
           </h1>

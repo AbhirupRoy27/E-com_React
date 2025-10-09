@@ -9,8 +9,7 @@ export const NavLinksProvider = ({ children }) => {
   useEffect(() => {
     const test = async () => {
       const res = await fetch('https://abhiruptempdata.vercel.app/api/navlinks')
-      const data = await res.json()
-      setNavLinkss(data)
+      setNavLinkss(await res.json())
     }
     test()
   }, [])

@@ -26,7 +26,7 @@ const Layout = () => {
         <SearchBar />
         <NavBar />
         {sideBar && <SideBar />}
-        <div className="py-5">
+        <div className="">
           <Suspense fallback={<h2>Loading....</h2>}>
             <Outlet />
           </Suspense>
