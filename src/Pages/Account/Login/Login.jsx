@@ -38,7 +38,7 @@ function Login() {
               name="email"
             />
           </div>
-          <div className="flex gap-2 min-w-[310px] md:min-w-[380px] items-center justify-between">
+          <div className="flex gap-2 w-full min-w-[310px] md:min-w-[380px] items-center justify-between p-1 md:p-0">
             <label htmlFor="Password" className="font-semibold ">
               Password
             </label>

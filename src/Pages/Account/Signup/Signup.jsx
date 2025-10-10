@@ -30,7 +30,7 @@ function Signup() {
               name="email"
             />
           </div>
-          <div className="flex gap-2 min-w-[310px] md:min-w-[380px] items-center justify-between">
+          <div className="flex gap-2 w-full min-w-[310px] md:min-w-[380px] items-center justify-between">
             <label>Password</label>
             <input
               placeholder="Enter Password"
@@ -42,7 +42,7 @@ function Signup() {
               minLength={6}
             />
           </div>
-          <div className="flex gap-2 min-w-[310px] md:min-w-[380px] items-center justify-between">
+          <div className="flex gap-2 w-full min-w-[310px] md:min-w-[380px] items-center justify-between">
             <label>Password</label>
             <input
               placeholder="Enter Password Again"
@@ -54,11 +54,15 @@ function Signup() {
               minLength={6}
             />
           </div>
-          <div className="flex justify-end w-full mr-5 text-sm p-1 tracking-widest ">
-            <p onClick={() => setShowPass(!showPass)}>
-              {showPass ? <b className="text-red-600">Hide</b> : 'Show'}
-            </p>
-          </div>
+          {cred.pass.length > 0 || cred.rePass.length > 0 ? (
+            <div className="flex justify-end w-full mr-5 text-sm p-1 tracking-widest ">
+              <p onClick={() => setShowPass(!showPass)}>
+                {showPass ? <b className="text-red-600">Hide</b> : 'Show'}
+              </p>
+            </div>
+          ) : (
+            ''
+          )}
         </div>
         <div className="py-2 flex justify-center">
           <button
