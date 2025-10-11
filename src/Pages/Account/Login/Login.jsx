@@ -16,21 +16,21 @@ function Login() {
     <div className="bg-gradient-to-br from-slate-300 to-slate-50 h-[100vh] flex justify-center items-center flex-col">
       <Logo />
       <form
-        className="bg-white rounded-md w-[95vw] md:w-max md:p-4"
+        className="bg-white rounded-md w-[95vw] md:w-max md:p-4 lg:p-6 xl:p-8"
         onSubmit={(e) => handleLogin(e, navigate, cred, isLogin, setIsLogin)}
       >
         <p className="text-center py-4 text-3xl font-bold bg-gradient-to-br from-slate-500 to-slate-900 bg-clip-text text-transparent tracking-wide">
           Login
         </p>
-        <div className="p-2 md:p-4 flex flex-col gap-2 items-center justify-between">
-          <div className="flex gap-2 w-full items-center justify-between p-1 md:p-0">
+        <div className=" flex flex-col gap-2 items-center justify-between mb-4 ">
+          <div className="flex md:w-full md:flex-row flex-col md:items-center md:justify-between gap-1 sm:gap-2">
             <label htmlFor="name" className="font-semibold tracking-wide">
               Email
             </label>
             <input
               id="name"
               placeholder="Enter Email"
-              className="w-[270px] p-2 bg-slate-100 rounded tracking-widest"
+              className="w-[290px] p-2 bg-slate-100 rounded tracking-widest"
               maxLength={23}
               type="email"
               value={cred.email}
@@ -38,14 +38,14 @@ function Login() {
               name="email"
             />
           </div>
-          <div className="flex gap-2 w-full min-w-[310px] md:min-w-[380px] items-center justify-between p-1 md:p-0">
+          <div className="flex md:flex-row flex-col md:items-center md:justify-between gap-1 sm:gap-2">
             <label htmlFor="Password" className="font-semibold ">
               Password
             </label>
             <input
               id="Password"
               placeholder="Enter Password"
-              className="w-[270px] p-2 bg-slate-100 rounded tracking-wide"
+              className="w-[290px] p-2 bg-slate-100 rounded tracking-wide"
               minLength={6}
               type="password"
               value={cred.pass}

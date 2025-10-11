@@ -19,38 +19,41 @@ function Signup() {
       >
         <p className="text-center py-4 text-2xl tracking-wide">Sign Up</p>
         <div className="p-2 md:p-4 flex flex-col gap-2 items-center justify-between">
-          <div className="flex gap-2 w-full items-center justify-between p-1 md:p-0">
+          <div className="flex flex-col md:flex-row gap-2 md:items-center md:justify-between md:w-full p-1 md:p-0">
             <label>Email</label>
             <input
               placeholder="Enter Email"
-              className="w-[270px] p-2 bg-slate-100 rounded tracking-wide"
+              className="w-[290px] p-2 bg-slate-100 rounded tracking-wide"
               type="email"
+              maxLength={30}
               value={cred.email}
               onChange={(e) => handleEmail(e, setCred)}
               name="email"
             />
           </div>
-          <div className="flex gap-2 w-full min-w-[310px] md:min-w-[380px] items-center justify-between">
+          <div className="flex flex-col md:flex-row gap-1 md:gap-2 md:items-center md:justify-between md:min-w-[380px] ">
             <label>Password</label>
             <input
               placeholder="Enter Password"
-              className="w-[270px] p-2 bg-slate-100 rounded tracking-wide"
+              className="w-[290px] p-2 bg-slate-100 rounded tracking-wide"
               type={showPass ? 'text' : 'password'}
               value={cred.pass}
               onChange={(e) => handleEmail(e, setCred)}
               name="pass"
+              maxLength={30}
               minLength={6}
             />
           </div>
-          <div className="flex gap-2 w-full min-w-[310px] md:min-w-[380px] items-center justify-between">
+          <div className="flex flex-col md:flex-row gap-1 md:gap-2 md:items-center md:justify-between md:min-w-[380px]">
             <label>Password</label>
             <input
               placeholder="Enter Password Again"
-              className="w-[270px] p-2 bg-slate-100 rounded tracking-wide"
+              className="w-[290px] p-2 bg-slate-100 rounded tracking-wide"
               type={showPass ? 'text' : 'password'}
               value={cred.rePass}
               onChange={(e) => handleEmail(e, setCred)}
               name="rePass"
+              maxLength={30}
               minLength={6}
             />
           </div>
