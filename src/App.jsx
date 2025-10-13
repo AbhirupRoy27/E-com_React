@@ -4,7 +4,7 @@ import { Outlet, Route, Routes } from 'react-router-dom'
 import SearchBar from './Components/SearchBar/SearchBar'
 import { lazy, Suspense } from 'react'
 import TopDeal from './Pages/TopDeals/TopDeal'
-import Item from './Pages/Products/Item'
+import Item from './Pages/Products/prodduct_Item/Item'
 import Footer from './Components/Footer/Footer'
 import Login from './Pages/Account/Login/Login'
 import Signup from './Pages/Account/Signup/Signup'
@@ -29,7 +29,7 @@ const Layout = () => {
         <SearchBar />
         <NavBar />
         {sideBar && <SideBar />}
-        <div className="">
+        <div className="min-h-[95lvh]">
           <Suspense fallback={<h2>Loading....</h2>}>
             <Outlet />
           </Suspense>
@@ -66,8 +66,8 @@ function App() {
 
         <Route path="products" element={<Products />}>
           <Route index element={<Card />} />
-          <Route path="product-item/:id" element={<Item />} />
         </Route>
+        <Route path="product-item/:id" element={<Item />} />
 
         <Route path="*" element={<NotFound />} />
       </Route>

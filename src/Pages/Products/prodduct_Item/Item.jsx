@@ -1,10 +1,10 @@
 import { useParams } from 'react-router-dom'
-import Products from '../../Db/Products.json'
+import Products from '../../../Db/Products.json'
 import {
   handleAddToCart,
   handleGoToCart,
-} from '../../Components/ProductCard/utils/handleClicks'
-import { useCart } from '../../Contexts/CartContext'
+} from '../../../Components/ProductCard/utils/handleClicks'
+import { useCart } from '../../../Contexts/CartContext'
 import { useNavigate } from 'react-router-dom'
 
 const size = ['S', 'M', 'L', 'XL', '2XL']
@@ -17,7 +17,7 @@ function Item() {
   const filterItem = Products.filter((i) => i.id === Number(id))
 
   return (
-    <div className="bg-blue-50 w-full h-max p-3 flex flex-col gap-2 ">
+    <div className="bg-blue-50 w-full min-h-[95vh] p-3 sm:px-10 md:px-20 lg:px-30 flex flex-col gap-2 ">
       <h1 className="font-semibold text-2xl tracking-wider">
         {filterItem[0].productName}
       </h1>

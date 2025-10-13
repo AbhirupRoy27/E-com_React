@@ -64,7 +64,7 @@ function Card() {
             <img
               src={p.imageurl}
               className="rounded-lg w-full h-full"
-              onClick={() => navigate(`product-item/${p.id}`)}
+              onClick={() => navigate(`/product-item/${p.id}`)}
             />
           </div>
           <div className="text-red-900 min-h-[24px] text-sm ">
@@ -76,7 +76,7 @@ function Card() {
           </div>
           <div
             className="flex flex-col sm:flex-row sm:gap-2 sm:items-center mb-2 "
-            onClick={() => navigate(`product-item/${p.id}`)}
+            onClick={() => navigate(`/product-item/${p.id}`)}
           >
             <h2 className="font-bold text-lg lg:text-2xl">Rs. {p.Cost}</h2>
             <div className="flex gap-2">
