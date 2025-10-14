@@ -9,7 +9,7 @@ const MobileCards = () => {
           <img
             alt="Flights"
             src={icons[3].link}
-            className="bg-white border rounded-full w-[50px] h-[50px] p-1 shadow-md shadow-black/40 "
+            className="bg-white border rounded-full w-[50px] h-[50px] p-1 shadow-md shadow-black/40 object-cover"
           />
           <p className="text-[18px] mb-[10px] font-semibold whitespace-nowrap">
             Flights
@@ -73,11 +73,14 @@ const VideoCard = () => {
 export default function Home() {
   return (
     <>
-      <div className="object-fill sm:h-[30vh] sm:overflow-hidden">
-        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IN/Prime/GIF/1/Jupiter25_H1_Prime_PC_2x_1._CB801695360_.jpg" />
+      <div className="object-fill sm:h-max sm:overflow-hidden">
+        <img
+          src="https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760429549/Screenshot_2025-10-14_at_1.41.48_PM_gtjs83.png"
+          className="object-cover"
+        />
       </div>
       <MobileCards /> {/* For Mobile */}
-      <VideoCard /> {/* For Mobile */}
+      {/* <VideoCard /> For Mobile */}
       <div className="sm:pl-[4%] sm:pr-[4%] mt-3 mb-3">
         <TopDeals />
       </div>

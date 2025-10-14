@@ -29,7 +29,7 @@ const Layout = () => {
         <SearchBar />
         <NavBar />
         {sideBar && <SideBar />}
-        <div className="min-h-[95lvh]">
+        <div className="min-h-max">
           <Suspense fallback={<h2>Loading....</h2>}>
             <Outlet />
           </Suspense>
