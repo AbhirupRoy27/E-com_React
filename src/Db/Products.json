@@ -7,6 +7,20 @@
     "productName": "Nike jorden X-2321 Shoe",
     "discount": "50%",
     "imageurl": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1758906793/Gemini_Generated_Image_m3z37xm3z37xm3z3_rgzbbm.png",
+    "sideUrl": [
+      {
+        "id": 101,
+        "sideUrl1": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760424880/Untitled_design_nhrcce.jpg"
+      },
+      {
+        "id": 102,
+        "sideUrl1": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760375486/Screenshot_2025-10-13_at_10.40.41_PM_rdojix.png"
+      },
+      {
+        "id": 103,
+        "sideUrl1": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760420882/Right_yjiatd.jpg"
+      }
+    ],
     "original-price": 1400,
     "sex": "Female",
     "lessStock": false,
@@ -20,6 +34,20 @@
     "productName": "Zudio male Casual Shoe",
     "discount": "48%",
     "imageurl": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1758907479/ChatGPT_Image_Sep_26_2025_10_54_12_PM_uw2neh.png",
+    "sideUrl": [
+      {
+        "id": 101,
+        "sideUrl1": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760375485/Screenshot_2025-10-13_at_10.41.10_PM_obl6qd.png"
+      },
+      {
+        "id": 102,
+        "sideUrl1": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760375486/Screenshot_2025-10-13_at_10.40.41_PM_rdojix.png"
+      },
+      {
+        "id": 103,
+        "sideUrl1": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760420882/Right_yjiatd.jpg"
+      }
+    ],
     "original-price": 5200,
     "sex": "Male",
     "lessStock": true,
@@ -28,14 +56,26 @@
   {
     "id": 3,
     "name": "Nike",
-    "Cost": 6800,
+    "Cost": 680,
     "Model": "Men Solid Round Neck Pure Cotton White T-Shirt",
     "productName": "Men Solid Round Neck Pure Cotton White T-Shirt",
     "discount": "52%",
     "imageurl": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1759561396/Screenshot_2025-10-04_at_12.33.03_PM_sib4nj.png",
-    "sideUrl1": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760375485/Screenshot_2025-10-13_at_10.41.10_PM_obl6qd.png",
-    "sideUrl2": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760375486/Screenshot_2025-10-13_at_10.40.41_PM_rdojix.png",
-    "original-price": 14000,
+    "sideUrl": [
+      {
+        "id": 101,
+        "sideUrl1": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760375485/Screenshot_2025-10-13_at_10.41.10_PM_obl6qd.png"
+      },
+      {
+        "id": 102,
+        "sideUrl1": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760375486/Screenshot_2025-10-13_at_10.40.41_PM_rdojix.png"
+      },
+      {
+        "id": 103,
+        "sideUrl1": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760420882/Right_yjiatd.jpg"
+      }
+    ],
+    "original-price": 1400,
     "sex": "Male",
     "lessStock": true,
     "producttype": "T-shirt"
@@ -48,6 +88,20 @@
     "productName": "Zudio male Casual Shoe",
     "discount": "80%",
     "imageurl": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1752359370/samples/shoe.jpg",
+    "sideUrl": [
+      {
+        "id": 101,
+        "sideUrl1": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760375485/Screenshot_2025-10-13_at_10.41.10_PM_obl6qd.png"
+      },
+      {
+        "id": 102,
+        "sideUrl1": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760375486/Screenshot_2025-10-13_at_10.40.41_PM_rdojix.png"
+      },
+      {
+        "id": 103,
+        "sideUrl1": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760420882/Right_yjiatd.jpg"
+      }
+    ],
     "original-price": 1400,
     "sex": "Male",
     "lessStock": false,
@@ -61,6 +115,20 @@
     "productName": "Zudio male Casual Shoe",
     "discount": "50%",
     "imageurl": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1758908062/Screenshot_2025-09-26_at_11.03.40_PM_tqerut.png",
+    "sideUrl": [
+      {
+        "id": 101,
+        "sideUrl1": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760375485/Screenshot_2025-10-13_at_10.41.10_PM_obl6qd.png"
+      },
+      {
+        "id": 102,
+        "sideUrl1": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760375486/Screenshot_2025-10-13_at_10.40.41_PM_rdojix.png"
+      },
+      {
+        "id": 103,
+        "sideUrl1": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760420882/Right_yjiatd.jpg"
+      }
+    ],
     "original-price": 2400,
     "sex": "Female",
     "lessStock": true,
@@ -74,6 +142,20 @@
     "productName": "Zudio male Casual Shoe",
     "discount": "52%",
     "imageurl": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1758907941/Gemini_Generated_Image_zieoxbzieoxbzieo_hwsot5.png",
+    "sideUrl": [
+      {
+        "id": 101,
+        "sideUrl1": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760375485/Screenshot_2025-10-13_at_10.41.10_PM_obl6qd.png"
+      },
+      {
+        "id": 102,
+        "sideUrl1": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760375486/Screenshot_2025-10-13_at_10.40.41_PM_rdojix.png"
+      },
+      {
+        "id": 103,
+        "sideUrl1": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760420882/Right_yjiatd.jpg"
+      }
+    ],
     "original-price": 14000,
     "sex": "Male",
     "lessStock": true,
@@ -87,6 +169,20 @@
     "productName": "Zudio male Casual Shoe",
     "discount": "80%",
     "imageurl": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1758906831/ChatGPT_Image_Sep_26_2025_10_43_29_PM_oh36de.png",
+    "sideUrl": [
+      {
+        "id": 101,
+        "sideUrl1": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760375485/Screenshot_2025-10-13_at_10.41.10_PM_obl6qd.png"
+      },
+      {
+        "id": 102,
+        "sideUrl1": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760375486/Screenshot_2025-10-13_at_10.40.41_PM_rdojix.png"
+      },
+      {
+        "id": 103,
+        "sideUrl1": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760420882/Right_yjiatd.jpg"
+      }
+    ],
     "original-price": 1400,
     "sex": "Male",
     "lessStock": false,
@@ -100,6 +196,20 @@
     "productName": "Puma Women Casual Shoe",
     "discount": "50%",
     "imageurl": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1752359370/samples/shoe.jpg",
+    "sideUrl": [
+      {
+        "id": 101,
+        "sideUrl1": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760375485/Screenshot_2025-10-13_at_10.41.10_PM_obl6qd.png"
+      },
+      {
+        "id": 102,
+        "sideUrl1": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760375486/Screenshot_2025-10-13_at_10.40.41_PM_rdojix.png"
+      },
+      {
+        "id": 103,
+        "sideUrl1": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760420882/Right_yjiatd.jpg"
+      }
+    ],
     "original-price": 2400,
     "sex": "Female",
     "lessStock": true,
@@ -113,6 +223,20 @@
     "productName": "Zudio male Casual Shoe",
     "discount": "80%",
     "imageurl": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1758906400/ChatGPT_Image_Sep_26_2025_10_35_56_PM_pow4j6.png",
+    "sideUrl": [
+      {
+        "id": 101,
+        "sideUrl1": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760375485/Screenshot_2025-10-13_at_10.41.10_PM_obl6qd.png"
+      },
+      {
+        "id": 102,
+        "sideUrl1": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760375486/Screenshot_2025-10-13_at_10.40.41_PM_rdojix.png"
+      },
+      {
+        "id": 103,
+        "sideUrl1": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760420882/Right_yjiatd.jpg"
+      }
+    ],
     "original-price": 1400,
     "sex": "Male",
     "lessStock": false,
@@ -126,6 +250,20 @@
     "productName": "Zudio male Casual Shoe",
     "discount": "50%",
     "imageurl": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1759561252/Screenshot_2025-10-04_at_12.30.36_PM_aiwlib.png",
+    "sideUrl": [
+      {
+        "id": 101,
+        "sideUrl1": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760375485/Screenshot_2025-10-13_at_10.41.10_PM_obl6qd.png"
+      },
+      {
+        "id": 102,
+        "sideUrl1": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760375486/Screenshot_2025-10-13_at_10.40.41_PM_rdojix.png"
+      },
+      {
+        "id": 103,
+        "sideUrl1": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760420882/Right_yjiatd.jpg"
+      }
+    ],
     "original-price": 1100,
     "sex": "",
     "lessStock": true,
@@ -139,6 +277,20 @@
     "productName": "Zudio male Casual Shoe",
     "discount": "48%",
     "imageurl": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1758907479/ChatGPT_Image_Sep_26_2025_10_54_12_PM_uw2neh.png",
+    "sideUrl": [
+      {
+        "id": 101,
+        "sideUrl1": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760375485/Screenshot_2025-10-13_at_10.41.10_PM_obl6qd.png"
+      },
+      {
+        "id": 102,
+        "sideUrl1": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760375486/Screenshot_2025-10-13_at_10.40.41_PM_rdojix.png"
+      },
+      {
+        "id": 103,
+        "sideUrl1": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760420882/Right_yjiatd.jpg"
+      }
+    ],
     "original-price": 10400,
     "sex": "Male",
     "lessStock": true,
@@ -152,6 +304,20 @@
     "productName": "Zudio male Casual Shoe",
     "discount": "80%",
     "imageurl": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1758907679/ChatGPT_Image_Sep_26_2025_10_57_33_PM_g0v1bl.png",
+    "sideUrl": [
+      {
+        "id": 101,
+        "sideUrl1": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760375485/Screenshot_2025-10-13_at_10.41.10_PM_obl6qd.png"
+      },
+      {
+        "id": 102,
+        "sideUrl1": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760375486/Screenshot_2025-10-13_at_10.40.41_PM_rdojix.png"
+      },
+      {
+        "id": 103,
+        "sideUrl1": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760420882/Right_yjiatd.jpg"
+      }
+    ],
     "original-price": 1400,
     "sex": "Male",
     "lessStock": false,
@@ -165,6 +331,20 @@
     "productName": "Zudio male Casual Shoe",
     "discount": "80%",
     "imageurl": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1759562668/Screenshot_2025-10-04_at_12.54.13_PM_zau72g.png",
+    "sideUrl": [
+      {
+        "id": 101,
+        "sideUrl1": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760375485/Screenshot_2025-10-13_at_10.41.10_PM_obl6qd.png"
+      },
+      {
+        "id": 102,
+        "sideUrl1": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760375486/Screenshot_2025-10-13_at_10.40.41_PM_rdojix.png"
+      },
+      {
+        "id": 103,
+        "sideUrl1": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760420882/Right_yjiatd.jpg"
+      }
+    ],
     "original-price": 1400,
     "sex": "Male",
     "lessStock": false,

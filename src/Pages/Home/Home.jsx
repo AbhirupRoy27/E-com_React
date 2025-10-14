@@ -7,7 +7,7 @@ const MobileCards = () => {
       <div className=" flex justify-around p-[2%] bg-gradient-to-br from-gray-400 to-slate-100 rounded-md card-tems min-w-[250px] min-h-fit shadow-md shadow-black/20 ">
         <div className="flex flex-col justify-center items-center gap-[0.3rem] min-w-[100px] text-center">
           <img
-            alt="a-pay"
+            alt="Flights"
             src={icons[3].link}
             className="bg-white border rounded-full w-[50px] h-[50px] p-1 shadow-md shadow-black/40 "
           />
@@ -15,7 +15,7 @@ const MobileCards = () => {
             Flights
           </p>
           <img
-            alt="a-pay"
+            alt="Movie"
             src={icons[2].link}
             className="bg-yellow-400 rounded-full w-[50px] h-[50px] p-1 shadow-md shadow-black/40 "
           />
@@ -25,7 +25,7 @@ const MobileCards = () => {
         </div>
         <div className="flex flex-col justify-center items-center gap-[0.5rem] w-[100px] text-center">
           <img
-            alt="a-pay"
+            alt="Sacn any QR"
             src={icons[1].link}
             className="bg-yellow-400 rounded-full w-[50px] h-[50px] p-1 shadow-md shadow-black/40 "
           />

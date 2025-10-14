@@ -1,10 +1,10 @@
-import { lazy, Suspense } from 'react'
+import { lazy, Suspense, useState } from 'react'
 import { Outlet } from 'react-router-dom'
 import { useProducts } from '../../Contexts/ProductContext'
 
 const FilterBar = lazy(() => import('../../Components/SideFilterBar/index'))
 
-const BrandDropList = () => {
+export const BrandDropList = () => {
   const { setFilteredProducts, products } = useProducts()
 
   const handleBs = (e) => {
@@ -15,13 +15,13 @@ const BrandDropList = () => {
     )
   }
   return (
-    <div className="flex items-center gap-[0.4rem] p-[1rem] ">
+    <div className="flex sm:flex-col items-center sm:items-start gap-[0.4rem] ">
       <p className="font-semibold ">Select Brand:</p>
       <select
         className="p-[0.4rem] min-w-[100px] font-semibold focus:outline-none focus:ring-0 focus:border-transparent bg-[rgba(62,62,62,0.212)] rounded-md"
         onChange={handleBs}
       >
-        <option default>All</option>
+        <option defaultValue={'All'}>All</option>
         <option>Zudio</option>
         <option>Puma</option>
         <option>Nike</option>
@@ -32,15 +32,35 @@ const BrandDropList = () => {
 }
 
 function Products() {
+  const [devComplete, setDevComplete] = useState(false)
   return (
     <div className="w-full flex ">
-      <div className="hidden sm:block p-[2%] bg-yellow-50">
+      <div className="hidden sm:block p-[1%] bg-yellow-50">
         <Suspense>
-          <FilterBar />
+          {devComplete ? (
+            <>
+              <p
+                className="text-[13px] mb-3"
+                onClick={() => setDevComplete(!devComplete)}
+              >
+                / Close
+              </p>
+              <FilterBar />
+            </>
+          ) : (
+            <p
+              className="min-w-[150px] font-bold"
+              onClick={() => setDevComplete(!devComplete)}
+            >
+              Filters
+            </p>
+          )}
         </Suspense>
       </div>
       <div className="flex w-full h-full flex-col bg-[rgba(62,62,62,0.212)] ">
-        <BrandDropList />
+        <div className="sm:hidden p-2 flex gap-2">
+          <BrandDropList />
+        </div>
         <div className="flex flex-wrap gap-2 p-1 sm:p-2 sm:pl-[3%] sm:pr-[3%] min-h-[90vh] mb-4">
           <Outlet />
         </div>
