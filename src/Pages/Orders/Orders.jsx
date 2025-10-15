@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 function Orders() {
-  const [orders, setOrders] = useState('')
-  setOrders('Make Your First Order with NextGen')
+  const [orders, setOrders] = useState('Make Your First Order with NextGen')
+  // setOrders('Make Your First Order with NextGen')
   const navigate = useNavigate()
   return (
     <div className="min-h-[85vh] flex justify-center items-center flex-col">
