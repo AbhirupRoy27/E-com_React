@@ -5,11 +5,13 @@ const navLinksContext = createContext()
 
 export const NavLinksProvider = ({ children }) => {
   const [navLinkss, setNavLinkss] = useState([])
+  const [loading, isLoading] = useState(true)
 
   useEffect(() => {
     const test = async () => {
       const res = await fetch('https://abhiruptempdata.vercel.app/api/navlinks')
       setNavLinkss(await res.json())
+      isLoading(!loading)
     }
     test()
   }, [])
@@ -32,7 +34,7 @@ export const NavLinksProvider = ({ children }) => {
   // }, [])
 
   return (
-    <navLinksContext.Provider value={{ navLinkss }}>
+    <navLinksContext.Provider value={{ navLinkss, loading }}>
       {children}
     </navLinksContext.Provider>
   )

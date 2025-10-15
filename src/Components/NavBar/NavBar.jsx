@@ -8,7 +8,7 @@ export default function NavBar() {
     isSideBar(!sideBar)
   }
 
-  const { navLinkss } = useNavLinks()
+  const { navLinkss, loading } = useNavLinks()
 
   return (
     <div className="flex bg-[#222F3D]">
@@ -27,14 +27,22 @@ export default function NavBar() {
         </div>
       </div>
       <div className="hidden sm:p-[0.7%] sm:w-full sm:flex sm:justify-between font-bold ">
-        {navLinkss.map((links) => (
-          <div
-            key={links.id}
-            className="text-[#f0f8ff] tracking-widest active:scale-103"
-          >
-            <Link to={`${links.name}`}>{links.name}</Link>
-          </div>
-        ))}
+        {loading ? (
+          <p className="text-[#f0f8ff] tracking-widest text-center w-full">
+            Loading...
+          </p>
+        ) : (
+          <>
+            {navLinkss.map((links) => (
+              <div
+                key={links.id}
+                className="text-[#f0f8ff] tracking-widest active:scale-103"
+              >
+                <Link to={`${links.name}`}>{links.name}</Link>
+              </div>
+            ))}
+          </>
+        )}
       </div>
     </div>
   )

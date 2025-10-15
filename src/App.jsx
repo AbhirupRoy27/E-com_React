@@ -9,7 +9,7 @@ import Footer from './Components/Footer/Footer'
 import Login from './Pages/Account/Login/Login'
 import Signup from './Pages/Account/Signup/Signup'
 import Index from './Components/ProtectedRoute/Index'
-import BestSellers from './Pages/BestSellers/BestSellers'
+// import BestSellers from './Pages/BestSellers/BestSellers'
 import Orders from './Pages/Orders/Orders'
 
 const Home = lazy(() => import('./Pages/Home/Home'))
@@ -66,7 +66,7 @@ function App() {
         <Route path="cart" element={<Cart />} />
         <Route path="top deals" element={<TopDeal />} />
         <Route path="orders" element={<Orders />} />
-        <Route path="best sellers" element={<BestSellers />} />
+        {/* <Route path="best sellers" element={<BestSellers />} /> */}
 
         <Route path="products" element={<Products />}>
           <Route index element={<Card />} />
