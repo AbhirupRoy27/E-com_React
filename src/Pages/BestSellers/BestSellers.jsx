@@ -24,7 +24,8 @@ function BestSellers() {
           throw new Error(`HTTP error! status: ${res.status}`)
         }
         const data = await res.json()
-        setBooks(data) // store data in state
+        setBooks(data)
+        // setBooks(data.allBooks) // store data in state
         isLoading(false)
       } catch (err) {
         console.error('Custom Error', err)
@@ -55,7 +56,7 @@ function BestSellers() {
           )}
         </div>
       )}
-      <Page setSearchParams={setSearchParams} />
+      <Page setSearchParams={setSearchParams} onPage={currentPage} />
     </>
   )
 }

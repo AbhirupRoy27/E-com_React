@@ -1,12 +1,8 @@
-import React, { useState } from 'react'
 const page = [1, 2, 3]
 
-function Page({ setSearchParams }) {
-  const [onPage, setOnPage] = useState(1)
-
+function Page({ setSearchParams, onPage }) {
   const handleClick = (page) => {
     setSearchParams({ page })
-    setOnPage(page)
   }
 
   return (

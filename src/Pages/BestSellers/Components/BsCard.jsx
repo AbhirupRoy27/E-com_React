@@ -12,7 +12,7 @@ function BsCard({ books }) {
         className="bg-white h-[25rem] w-full"
       />
       <p>Book Rating</p>
-      <p className="h-max md:h-18 py-1 text-sm sm:text-lg">
+      <p className="h-max md:h-18 py-1 text-sm sm:text-md">
         {books.description}
       </p>
       <span>
@@ -27,7 +27,7 @@ function BsCard({ books }) {
         </span>
       </div>
       <div className="py-2">
-        <button className="bg-white/20 py-1 hover:scale-101 w-[99%] rounded-full bg-yellow-400 ease-in-out tracking-[1px]">
+        <button className="bg-white/20 py-1 hover:scale-101 w-[99%] rounded-full border border-yellow-400 hover:bg-yellow-400 ease-in-out tracking-[1px]">
           Buy Now
         </button>
       </div>
