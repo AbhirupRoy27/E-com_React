@@ -2,17 +2,17 @@ import React from 'react'
 
 function BsCard({ books }) {
   return (
-    <div className="bg-slate-50 w-[49%] sm:w-[33%] md:w-[24%] xl:w-[19%] mt-2 p-1">
+    <div className="bg-slate-50 w-[49%] sm:w-[33%] lg:w-[24%] xl:w-[19%] mt-2 p-1">
       <p className="h-15 mb-2 sm:text-lg md:text-xl tracking-[1px] flex items-end">
         {books.title}
       </p>
       <img
         src={books.coverImage}
         alt="Loading"
-        className="bg-white h-[25rem] w-full"
+        className="bg-white h-[20rem] sm:h-[30rem] w-full"
       />
       <p>Book Rating</p>
-      <p className="h-max md:h-18 py-1 text-sm sm:text-md">
+      <p className="h-max md:h-18 py-1 text-sm sm:text-md lg:text-[15px]">
         {books.description}
       </p>
       <span>
@@ -27,7 +27,7 @@ function BsCard({ books }) {
         </span>
       </div>
       <div className="py-2">
-        <button className="bg-white/20 py-1 hover:scale-101 w-[99%] rounded-full border border-yellow-400 hover:bg-yellow-400 ease-in-out tracking-[1px]">
+        <button className="bg-white/20 py-1 active:bg-yellow-400 sm:active:bg-yellow-500 sm:active:scale-102 hover:bg-yellow-400 w-[99%] rounded-full border border-yellow-400 hover:bg-yellow-400 ease-in-out tracking-[1px]">
           Buy Now
         </button>
       </div>

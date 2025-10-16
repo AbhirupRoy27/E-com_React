@@ -3,6 +3,7 @@ const page = [1, 2, 3]
 function Page({ setSearchParams, onPage }) {
   const handleClick = (page) => {
     setSearchParams({ page })
+    window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
   return (
