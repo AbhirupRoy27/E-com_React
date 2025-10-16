@@ -25,10 +25,9 @@ function Item() {
   return (
     <div className="w-[100%] bg-blue-50 h-max overflow-hidden ">
       <p
-        className="hidden sm:block px-30 sm:pt-4 sm:pb-2 font-semibold"
+        className="hidden sm:block sm:px-10 sm:pt-4 sm:pb-2 font-semibold"
         onClick={() => navigate('/Products')}
       >
-        {' '}
         / Go Back
       </p>
       <div className="flex flex-col sm:flex-row w-[100%] h-[100vh] sm:h-[900px] sm:px-[3%] md:px-[5%] lg:px-[7%] xl:px-[9%] 2xl:px-[11%]">
@@ -40,7 +39,7 @@ function Item() {
           />
         </div>
         <SideImages filterItem={filterItem} setImg={setImg} />
-        <div className="w-full h-[25%] sm:h-[90%] p-[2%] flex flex-col gap-2">
+        <div className="w-full h-[25%] sm:h-[90%] px-[1%] py-[0%] flex flex-col gap-2">
           <div className="">
             <p className="sm:text-xl inline-block">
               <b className="mr-1">{filterItem[0].name}</b>

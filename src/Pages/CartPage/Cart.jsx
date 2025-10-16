@@ -3,26 +3,27 @@ import { useCart } from '../../Contexts/CartContext'
 import CartCard from './ComponetntsCart/CartCard'
 // import './styles.css'
 import { useNavigate } from 'react-router-dom'
+import EmptyCart from './ComponetntsCart/EmptyCart'
 
 const BillCard = lazy(() => import('./ComponetntsCart/Bill/BillCard'))
 
 function CartLayout({ cart, total }) {
   return (
     <>
-      <h1 className="text-center tracking-wide text-2xl font-semibold custom-cart-heading mt-[1%] ">
+      <h1 className="text-center tracking-wide text-2xl font-semibold custom-cart-heading py-[1%] ">
         Cart Items
       </h1>
-      <div className=" flex flex-col justify-center gap-[2rem] p-[2%] sm:flex-row w-full min-h-[85vh]">
-        <div className="flex flex-col gap-[1rem] sm:w-[100%]">
+      <div className=" flex flex-col md:flex-row justify-center gap-2 items-center sm:items-start px-[1%] lg:px-[2%] 2xl:px-[12%]">
+        <div className="flex flex-col gap-[0.6rem] mb-2">
           {cart.map((item) => (
-            <div key={item.id} className="w-full flex justify-center">
+            <div key={item.id} className="flex justify-center">
               <CartCard item={item} />
             </div>
           ))}
         </div>
         {cart.length > 0 && (
           <Suspense>
-            <div className="flex justify-start rounded-md bg-gray-100 h-[100%] p-[1%]">
+            <div className="flex justify-center w-full md:w-max rounded-md bg-gray-100 h-[100%] p-[1%] my-[2%] md:my-0">
               <BillCard total={total} />
             </div>
           </Suspense>
@@ -41,17 +42,7 @@ function Cart() {
       {cart.length > 0 ? (
         <CartLayout cart={cart} total={total} />
       ) : (
-        <div className="flex flex-col items-center justify-center min-h-[85vh] bg-gradient-to-br from-slate-300 to-slate-50">
-          <h1 className="text-center text-2xl font-semibold tracking-wide mt-[2%] sm: mt-[3%]">
-            Cart is Empty....
-          </h1>
-          <button
-            onClick={() => navigate('/Products')}
-            className="bg-blue-950 text-white rounded-md mt-[2%] p-[2%] text-md md:p-[1%]"
-          >
-            Continue Shopping
-          </button>
-        </div>
+        <EmptyCart navigate={navigate} />
       )}
     </>
   )

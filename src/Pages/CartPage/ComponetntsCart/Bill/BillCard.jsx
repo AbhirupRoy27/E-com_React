@@ -1,21 +1,21 @@
 function BillCard({ total }) {
   return (
-    <div className="bill-card md:min-w-[350px]">
-      <p className="border-b-[2px] p-[2%] text-2xl font-semibold tracking-wide">
+    <div className="min-w-[310px]">
+      <p className="border-b-[2px] py-[2%] text-2xl font-semibold tracking-wide">
         Order Details
       </p>
 
-      <div className="flex justify-between p-[3%]">
+      <div className="flex justify-between py-[3%]">
         <p>Cart Total: </p>
         <p>Rs. {total}.00</p>
       </div>
 
-      <div className="flex justify-between p-[3%]">
+      <div className="flex justify-between py-[3%]">
         <p>Delivery Charge: </p>
         <p>Rs. 40.00</p>
       </div>
 
-      <div className="flex justify-between border-t-[2px] p-[2%] text-2xl font-semibold tracking-wide">
+      <div className="flex justify-between border-t-[2px] py-[2%] text-2xl font-semibold tracking-wide">
         <p>Total :</p>
         <p>Rs. {total + 40}.00</p>
       </div>
