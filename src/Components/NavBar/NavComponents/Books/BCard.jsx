@@ -44,7 +44,7 @@ function BCard({ books }) {
               <p>Total Pages</p>
             </div>
             <button
-              className="bg-yellow-300 p-3 mt-[6px] rounded-md font-semibold tracking-[1px] opacity-60"
+              className="bg-yellow-300 p-3 mt-[6px] rounded-md font-semibold tracking-[1px] "
               disabled
             >
               Read now

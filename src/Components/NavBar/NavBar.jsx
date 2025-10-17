@@ -3,10 +3,7 @@ import { useSideBar } from '../../Contexts/SideBarContext'
 import { useNavLinks } from '../../Contexts/NaclinkContext/NavLinksContext'
 
 export default function NavBar() {
-  const { sideBar, isSideBar } = useSideBar()
-  const hanfleBurger = () => {
-    isSideBar(!sideBar)
-  }
+  const { isSideBar } = useSideBar()
 
   const { navLinkss, loading } = useNavLinks()
 
@@ -16,7 +13,7 @@ export default function NavBar() {
         <div
           className="flex flex-col justify-center gap-[0.1rem] ml-[10px]"
           role="button"
-          onClick={hanfleBurger}
+          onClick={() => isSideBar(true)}
         >
           <span className="bg-[#f0f8ff] w-[30px] h-[5px]"></span>
           <span className="bg-[#f0f8ff] w-[30px] h-[5px]"></span>

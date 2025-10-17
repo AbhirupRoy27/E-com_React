@@ -16,15 +16,18 @@ const VideoCard = () => {
 export default function Home() {
   return (
     <>
-      <div className="h-[130px] sm:h-max sm:overflow-hidden">
+      <div className="h-[200px] sm:h-max sm:overflow-hidden">
         <img
           src="https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760429549/Screenshot_2025-10-14_at_1.41.48_PM_gtjs83.png"
-          className="object-full h-full"
+          className="hidden sm:block object-full h-full"
+        />
+        <img
+          src="https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760711226/DiwaliBanner_fn5acq.png"
+          className="sm:hidden object-full w-full h-full shadow-md shadow-black/10"
         />
       </div>
       <MobileCards /> {/* For Mobile */}
       {/* <VideoCard /> For Mobile */}
-      <div className="sm:px-[4%] mt-3 mb-3">{/* <TopDeals /> */}</div>
       <>
         <DiwaliLaptop />
         <BooksHomeCard />

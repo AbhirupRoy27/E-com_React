@@ -1,4 +1,3 @@
-import { useSideBar } from './Contexts/SideBarContext'
 import NavBar from './Components/NavBar/NavBar'
 import { Outlet, Route, Routes } from 'react-router-dom'
 import SearchBar from './Components/SearchBar/SearchBar'
@@ -24,13 +23,14 @@ const Cart = lazy(() => import('./Pages/CartPage/Cart'))
 const Products = lazy(() => import('./Pages/Products/Products'))
 
 const Layout = () => {
-  const { sideBar } = useSideBar()
   return (
     <>
       <div className="">
         <SearchBar />
+
         <NavBar />
-        {sideBar && <SideBar />}
+        <SideBar />
+
         <div className="min-h-[85vh]">
           <Suspense fallback={<h2>Loading....</h2>}>
             <Outlet />
