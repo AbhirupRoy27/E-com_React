@@ -31,7 +31,7 @@ const Layout = () => {
         <SearchBar />
         <NavBar />
         {sideBar && <SideBar />}
-        <div className="min-h-max">
+        <div className="min-h-[85vh]">
           <Suspense fallback={<h2>Loading....</h2>}>
             <Outlet />
           </Suspense>
