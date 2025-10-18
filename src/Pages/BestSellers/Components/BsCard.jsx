@@ -1,19 +1,24 @@
 import React from 'react'
 
 function BsCard({ books }) {
+  const truncateText = (text, length = 55) => {
+    if (!text) return ''
+    return text.length > length ? text.substring(0, length) + '...' : text
+  }
+
   return (
     <div className="bg-slate-50 w-[49%] sm:w-[33%] lg:w-[24%] xl:w-[19%] mt-2 p-1">
-      <p className="h-15 mb-2 sm:text-lg md:text-xl tracking-[1px] flex items-end">
-        {books.title}
-      </p>
       <img
         src={books.coverImage}
         alt="Loading"
-        className="bg-white h-[20rem] sm:h-[30rem] w-full"
+        className="bg-white h-[20rem] sm:h-[30rem] w-full mb-1"
       />
-      <p>Book Rating</p>
-      <p className="h-max md:h-18 py-1 text-sm sm:text-md lg:text-[15px]">
-        {books.description}
+      <p className="h-14 sm:text-lg md:text-lg tracking-[1px] flex ">
+        {books.title}
+      </p>
+      {/* <p>Book Rating</p> */}
+      <p className="h-max py-1 text-sm sm:text-md lg:text-[15px]">
+        {truncateText(books.description)}
       </p>
       <span>
         by

@@ -1,11 +1,11 @@
-import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { useSideBar } from '../../Contexts/SideBarContext'
 import { useNavLinks } from '../../Contexts/NaclinkContext/NavLinksContext'
 
 export default function NavBar() {
   const { isSideBar } = useSideBar()
-
   const { navLinkss, loading } = useNavLinks()
+  const navigate = useNavigate()
 
   return (
     <div className="flex bg-[#222F3D]">
@@ -15,9 +15,9 @@ export default function NavBar() {
           role="button"
           onClick={() => isSideBar(true)}
         >
-          <span className="bg-[#f0f8ff] w-[30px] h-[5px]"></span>
-          <span className="bg-[#f0f8ff] w-[30px] h-[5px]"></span>
-          <span className="bg-[#f0f8ff] w-[30px] h-[5px]"></span>
+          {[1, 2, 3].map((s, i) => (
+            <span className="bg-[#f0f8ff] w-[30px] h-[5px]" key={i}></span>
+          ))}
         </div>
         <div className="font-bold ml-[10px] nav-button-text text-[#f0f8ff] tracking-widest">
           All
@@ -34,8 +34,9 @@ export default function NavBar() {
               <div
                 key={links.id}
                 className="text-[#f0f8ff] tracking-widest active:scale-103"
+                onClick={() => navigate(`${links.name}`)}
               >
-                <Link to={`${links.name}`}>{links.name}</Link>
+                <p>{links.name}</p>
               </div>
             ))}
           </>
