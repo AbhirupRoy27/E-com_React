@@ -14,9 +14,6 @@ import Orders from './Pages/Orders/Orders'
 const Home = lazy(() => import('./Pages/Home/Home'))
 const Sell = lazy(() => import('./Components/NavBar/NavComponents/Sell/Sell'))
 const SideBar = lazy(() => import('./Components/Sidebar/SideBar'))
-const Books = lazy(() =>
-  import('./Components/NavBar/NavComponents/Books/Books')
-)
 const NotFound = lazy(() => import('./Pages/NotFound/NotFound'))
 const Card = lazy(() => import('./Components/ProductCard/Card'))
 const Cart = lazy(() => import('./Pages/CartPage/Cart'))
@@ -62,7 +59,7 @@ function App() {
         <Route path="sell" element={<Products />}>
           <Route index element={<Card />} />
         </Route>
-        <Route path="books" element={<Books />} />
+
         <Route path="cart" element={<Cart />} />
         <Route path="top deals" element={<TopDeal />} />
         <Route path="orders" element={<Orders />} />

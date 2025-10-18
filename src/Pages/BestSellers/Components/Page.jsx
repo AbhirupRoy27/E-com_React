@@ -1,4 +1,4 @@
-const page = [1, 2, 3]
+const page = [1, 2, 3, 4]
 
 function Page({ setSearchParams, onPage }) {
   const handleClick = (page) => {
@@ -7,7 +7,7 @@ function Page({ setSearchParams, onPage }) {
   }
 
   return (
-    <div className="flex justify-center py-4 mt-4 items-center bg-gray-100">
+    <div className="flex justify-center py-4 items-center bg-gray-100">
       <div className="flex justify-around gap-2 p-2 px-6 rounded-lg">
         {page.map((p, i) => (
           <p

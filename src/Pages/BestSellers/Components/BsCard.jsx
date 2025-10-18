@@ -7,13 +7,13 @@ function BsCard({ books }) {
   }
 
   return (
-    <div className="bg-slate-50 w-[49%] sm:w-[33%] lg:w-[24%] xl:w-[19%] mt-2 p-1">
+    <div className="bg-slate-50 w-[50%] sm:w-[33%] xl:w-[24%] 2xl:w-[20%] mt-2 p-1">
       <img
         src={books.coverImage}
         alt="Loading"
         className="bg-white h-[20rem] sm:h-[30rem] w-full mb-1"
       />
-      <p className="h-14 sm:text-lg md:text-lg tracking-[1px] flex ">
+      <p className="h-14 text-[16px] tracking-[1px] sm:text-[14px] sm:tracking-0 xl:text-[16px] flex ">
         {books.title}
       </p>
       {/* <p>Book Rating</p> */}
@@ -22,7 +22,7 @@ function BsCard({ books }) {
       </p>
       <span>
         by
-        <p className="inline text-sky-600 hover:text-black text-sm ml-1">
+        <p className="inline h-max text-sky-600 hover:text-black text-[14px] ml-1">
           {books.author}
         </p>
       </span>
