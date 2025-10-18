@@ -25,7 +25,7 @@ function FilterItem({ filter }) {
             height="20px"
             viewBox="0 0 16 35"
             xmlns="http://www.w3.org/2000/svg"
-            onClick={(e) => e.stopPropagation()}
+            style={{ pointerEvents: 'none' }}
           >
             <g transform="translate(2, 0)">
               <path

@@ -10,6 +10,8 @@ import Signup from './Pages/Account/Signup/Signup'
 import Index from './Components/ProtectedRoute/Index'
 import BestSellers from './Pages/BestSellers/BestSellers'
 import Orders from './Pages/Orders/Orders'
+import Feedback from './Pages/Feedback/Feedback'
+import GiftCards from './Pages/GiftCards/GiftCards'
 
 const Home = lazy(() => import('./Pages/Home/Home'))
 const Sell = lazy(() => import('./Components/NavBar/NavComponents/Sell/Sell'))
@@ -28,7 +30,7 @@ const Layout = () => {
         <NavBar />
         <SideBar />
 
-        <div className="min-h-[85vh]">
+        <div className="min-h-[83vh]">
           <Suspense fallback={<h2>Loading....</h2>}>
             <Outlet />
           </Suspense>
@@ -53,23 +55,31 @@ function App() {
         }
       >
         <Route index element={<Home />} />
-
         <Route path="Home" element={<Home />} />
-
         <Route path="sell" element={<Products />}>
           <Route index element={<Card />} />
         </Route>
-
         <Route path="cart" element={<Cart />} />
         <Route path="top deals" element={<TopDeal />} />
         <Route path="orders" element={<Orders />} />
-        <Route path="best sellers" element={<BestSellers />} />
-
         <Route path="products" element={<Products />}>
           <Route index element={<Card />} />
         </Route>
-        <Route path="product-item/:id" element={<Item />} />
+        <Route path="best sellers" element={<BestSellers />} />
 
+        {/* Under Dev: */}
+        {/*
+        <Route
+          path="FeedBack"
+          element={
+            <Suspense fallback={<p>Loading...</p>}>
+              <Feedback />
+            </Suspense>
+          }
+        /> */}
+
+        <Route path="Gift Cards" element={<GiftCards />} />
+        <Route path="product-item/:id" element={<Item />} />
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>
