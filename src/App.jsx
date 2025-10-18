@@ -10,7 +10,7 @@ import Signup from './Pages/Account/Signup/Signup'
 import Index from './Components/ProtectedRoute/Index'
 import BestSellers from './Pages/BestSellers/BestSellers'
 import Orders from './Pages/Orders/Orders'
-import Feedback from './Pages/Feedback/Feedback'
+// import Feedback from './Pages/Feedback/Feedback'
 import GiftCards from './Pages/GiftCards/GiftCards'
 
 const Home = lazy(() => import('./Pages/Home/Home'))
