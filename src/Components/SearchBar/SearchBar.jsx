@@ -13,7 +13,7 @@ export default function SearchBar() {
           className="hidden lg:flex active:scale-102 active:opacity-75 font-bold text-[#fff] text-md lg:text-xl cursor-pointer"
           onClick={() => navigate('/')}
         >
-          ManGrove
+          NextGen
         </div>
         <div className="hidden xl:flex text-white cursor-pointer text-xl">
           Location
@@ -24,14 +24,20 @@ export default function SearchBar() {
             className="flex text-white items-center md:gap-2 cursor-pointer active:opacity-75"
             onClick={() => navigate('Cart')}
           >
-            <img className="max-h-[30px]" src="cart.svg" />
+            <img
+              className="max-h-[30px]"
+              src="https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760806250/cart_enj1xf.svg"
+            />
             <p className="hidden md:flex ">Cart</p>
           </div>
           <div
             className="flex text-white items-center md:gap-2 cursor-pointer md:mr-5 active:opacity-75"
             onClick={() => navigate('/login')}
           >
-            <img className="max-h-[30px]" src="account.svg" />
+            <img
+              className="max-h-[30px]"
+              src="https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760806250/account_c9nkzm.svg"
+            />
             <p className="hidden md:flex">Account</p>
           </div>
         </div>

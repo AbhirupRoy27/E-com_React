@@ -1,7 +1,11 @@
 import { useCart } from '../../Contexts/CartContext'
 import { useNavigate } from 'react-router-dom'
 import { useProducts } from '../../Contexts/ProductContext'
-import { handleAddToCart, handleGoToCart } from './utils/handleClicks'
+import {
+  handleAddToCart,
+  handleGoToCart,
+  handleItemPage,
+} from './utils/handleClicks'
 
 const carticon = (
   <svg
@@ -53,7 +57,7 @@ function Card() {
       {filteredProducts.map((p) => (
         <div
           key={p.id}
-          className="bg-blue-100 2xl:w-[19.5%] xl:w-[24%] md:w-[32%] p-2 sm:p-2 w-[48.5%] h-max rounded-md"
+          className="bg-slate-100 2xl:w-[19.5%] xl:w-[24%] md:w-[32%] p-2 sm:p-2 w-[48.5%] h-max rounded-md"
         >
           <div className="text-black sm:pt-2 pb-2 min-h-[40px] flex items-center">
             <h2 className=" text-md lg:text-xl font-semibold ">
@@ -64,23 +68,39 @@ function Card() {
             <img
               src={p.imageurl}
               className="rounded-lg w-full h-full"
-              onClick={() => navigate(`/product-item/${p.id}`)}
+              onClick={() => handleItemPage(p, navigate)}
             />
           </div>
           <div className="text-red-900 min-h-[24px] text-sm ">
             {p.lessStock && <p>!! only few remaining</p>}
           </div>
-          <div className="min-h-[98px]">
+          <div
+            className="min-h-[96px]"
+            onClick={() => handleItemPage(p, navigate)}
+          >
             <h3 className="font-semibold">{p.name}</h3>
-            <p className="pb-1 text-gray-700 text-sm sm:text-md">{p.Model}</p>
+            <p className="pb-1 text-gray-600 text-sm sm:text-md">
+              {p.Model.substring(0, 45)}
+              <b
+                role="button"
+                onClick={() => handleItemPage(p, navigate)}
+                className="text-black"
+              >
+                ...more
+              </b>
+            </p>
           </div>
           <div
-            className="flex flex-col sm:flex-row sm:gap-2 sm:items-center mb-2 "
+            className="flex gap-2 mb-2"
             onClick={() => navigate(`/product-item/${p.id}`)}
           >
-            <h2 className="font-bold text-lg lg:text-2xl">Rs. {p.Cost}</h2>
-            <div className="flex gap-2">
-              <p className=" font-semibold text-green-700">{p.discount}</p>
+            <h2 className="w-max inline text-sm">
+              Rs. <b className="text-lg lg:text-2xl">{p.Cost}</b>.00
+            </h2>
+            <div className="flex gap-2 items-end">
+              <p className="text-red-600 text-lg lg:text-2xl font-light">
+                -{p.discount}
+              </p>
               <p className="text-gray-700 line-through text-md">
                 {p['original-price']}/-
               </p>
@@ -90,22 +110,22 @@ function Card() {
             {cart.includes(p, 0) ? (
               <button
                 onClick={() => handleGoToCart(navigate)}
-                className="w-full flex gap-[1rem] pt-[8px] pb-[8px] items-center justify-center border-0 font-semibold rounded-md bg-[rgba(183,106,106,0.916)]"
+                className="w-full flex gap-[1rem] py-[8px] items-center justify-center border-0 font-semibold rounded-md bg-yellow-400"
               >
                 Go to Cart {carticon}
               </button>
             ) : (
               <button
                 onClick={() =>
-                  handleAddToCart(p, cart, setCart, setTotal, total)
+                  handleAddToCart(p, cart, setCart, setTotal, total, navigate)
                 }
-                className="w-full flex gap-[1rem] pt-[8px] pb-[8px] items-center justify-center border-0 font-semibold rounded-md bg-[rgba(183,106,106,0.916)]"
+                className="w-full flex gap-[1rem] py-[8px] items-center justify-center border-0 font-semibold rounded-md bg-yellow-400"
               >
                 Add to Cart {carticon}
               </button>
             )}
 
-            <button className="w-full flex gap-[1rem] pt-[8px] pb-[8px] items-center justify-center border-0 font-semibold rounded-md bg-[rgba(183,106,106,0.916)]">
+            <button className="w-full flex gap-[1rem] py-[8px] items-center justify-center border-0 font-semibold rounded-md bg-amber-600">
               Wishlist Item {wishlist}
             </button>
           </div>
