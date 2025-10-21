@@ -1,10 +1,14 @@
-import SearchIcon from './Icons/Search/SearchIcon'
 import { useNavigate } from 'react-router-dom'
-import { useState } from 'react'
+import Bar from './Components/Search/Bar'
+import { handleDropDown } from './Utils/handleClicks'
+import { useAuth } from '../../Contexts/Auth/AuthContext'
+
 // import { useCart } from '../../Contexts/CartContext'
 
 export default function SearchBar() {
   const navigate = useNavigate()
+  const { setIsLogout } = useAuth()
+
   // const { cart } = useCart()
   return (
     <>
@@ -31,45 +35,36 @@ export default function SearchBar() {
             <p className="hidden md:flex ">Cart</p>
           </div>
           <div
-            className="flex text-white items-center md:gap-2 cursor-pointer md:mr-5 active:opacity-75"
-            onClick={() => navigate('/login')}
+            className={`relative flex text-white items-center md:gap-2 cursor-pointer md:mr-5 group`}
           >
             <img
               className="max-h-[30px]"
               src="https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760806250/account_c9nkzm.svg"
+              alt="Account"
             />
             <p className="hidden md:flex">Account</p>
+            <div
+              className="hidden group-hover:block bg-gray-100 text-black
+              absolute top-full right-0 bg-white rounded min-w-[200px] shadow-lg"
+            >
+              <p className="py-2 bg-slate-700 pl-2 rounded-t text-white">
+                Account Name
+              </p>
+              <ol>
+                {['Orders', 'WishList', 'Setting', 'Logout'].map((item, i) => (
+                  <li
+                    key={i}
+                    className="py-2 text-slate-700 hover:bg-gray-100 pl-2 cursor-pointer hover:font-semibold active:scale-101"
+                    onClick={() => handleDropDown(navigate, item, setIsLogout)}
+                  >
+                    {item}
+                  </li>
+                ))}
+              </ol>
+            </div>
           </div>
         </div>
       </div>
     </>
-  )
-}
-
-function Bar({ navigate }) {
-  const [searchInput, setSearchInput] = useState('')
-
-  const handleSearch = () => {
-    searchInput ? navigate('/Products') : alert('What to Search ?')
-    setSearchInput('')
-  }
-
-  return (
-    <div className="min-w-[80%] md:min-w-[60%] flex p-[0.2rem]">
-      <div className="w-[85%] md:w-[90%] text-black text-sm font-semibold search-input">
-        <input
-          placeholder="Search for Product on ManGrove"
-          value={searchInput}
-          onChange={(e) => setSearchInput(e.target.value)}
-          className="bg-blue-50 p-2 w-full rounded-tl-sm rounded-bl-sm"
-        />
-      </div>
-      <div
-        className="w-[15%] md:w-[10%] flex items-center justify-center search-button bg-[#febd68] min-w-[20px] rounded-tr-sm rounded-br-sm cursor-pointer"
-        onClick={handleSearch}
-      >
-        <SearchIcon />
-      </div>
-    </div>
   )
 }

@@ -1,5 +1,5 @@
 import NavBar from './Components/NavBar/NavBar'
-import { Outlet, Route, Routes } from 'react-router-dom'
+import { Outlet, Route, Routes, useNavigate } from 'react-router-dom'
 import SearchBar from './Components/SearchBar/SearchBar'
 import { lazy, Suspense } from 'react'
 import TopDeal from './Pages/TopDeals/TopDeal'
@@ -12,6 +12,8 @@ import BestSellers from './Pages/BestSellers/BestSellers'
 import Orders from './Pages/Orders/Orders'
 // import Feedback from './Pages/Feedback/Feedback'
 import GiftCards from './Pages/GiftCards/GiftCards'
+import { useAuth } from './Contexts/Auth/AuthContext'
+import Logout from './Pages/Account/Logout/Logout'
 
 const Home = lazy(() => import('./Pages/Home/Home'))
 const Sell = lazy(() => import('./Components/NavBar/NavComponents/Sell/Sell'))
@@ -22,6 +24,8 @@ const Cart = lazy(() => import('./Pages/CartPage/Cart'))
 const Products = lazy(() => import('./Pages/Products/Products'))
 
 const Layout = () => {
+  const { isLogout, setIsLogout } = useAuth()
+  const navigate = useNavigate()
   return (
     <>
       <div className="">
@@ -37,6 +41,7 @@ const Layout = () => {
         </div>
         <Footer />
       </div>
+      {isLogout && <Logout setIsLogout={setIsLogout} navigate={navigate} />}
     </>
   )
 }

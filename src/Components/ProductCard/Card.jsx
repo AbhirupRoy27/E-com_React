@@ -60,7 +60,7 @@ function Card() {
           className="bg-slate-100 2xl:w-[19.5%] xl:w-[24%] md:w-[32%] p-2 sm:p-2 w-[48.5%] h-max rounded-md"
         >
           <div className="text-black sm:pt-2 pb-2 min-h-[40px] flex items-center">
-            <h2 className=" text-md lg:text-xl font-semibold ">
+            <h2 className=" text-md lg:text-xl min-h-[5.5vh] font-semibold ">
               {p.name} {p.sex} {p.producttype}
             </h2>
           </div>
@@ -75,10 +75,9 @@ function Card() {
             {p.lessStock && <p>!! only few remaining</p>}
           </div>
           <div
-            className="min-h-[96px]"
+            className="min-h-[8vh] "
             onClick={() => handleItemPage(p, navigate)}
           >
-            <h3 className="font-semibold">{p.name}</h3>
             <p className="pb-1 text-gray-600 text-sm sm:text-md">
               {p.Model.substring(0, 45)}
               <b
@@ -91,18 +90,21 @@ function Card() {
             </p>
           </div>
           <div
-            className="flex gap-2 mb-2"
+            className="flex gap-1 mb-2 items-end mr-1 flex-wrap"
             onClick={() => navigate(`/product-item/${p.id}`)}
           >
-            <h2 className="w-max inline text-sm">
-              Rs. <b className="text-lg lg:text-2xl">{p.Cost}</b>.00
-            </h2>
-            <div className="flex gap-2 items-end">
-              <p className="text-red-600 text-lg lg:text-2xl font-light">
+            <div>
+              <p className="text-red-600 text-lg lg:text-xl font-light">
                 -{p.discount}
               </p>
-              <p className="text-gray-700 line-through text-md">
-                {p['original-price']}/-
+            </div>
+
+            <div className="flex gap-1 items-center">
+              <h2 className="w-max text-sm">
+                ₹<b className="text-lg lg:text-2xl">{p.Cost}</b>.00
+              </h2>
+              <p className="text-gray-600 line-through text-[12px] mt-1">
+                ₹{p['original-price']}.00
               </p>
             </div>
           </div>
@@ -110,7 +112,7 @@ function Card() {
             {cart.includes(p, 0) ? (
               <button
                 onClick={() => handleGoToCart(navigate)}
-                className="w-full flex gap-[1rem] py-[8px] items-center justify-center border-0 font-semibold rounded-md bg-yellow-400"
+                className="w-full text-sm flex gap-[1rem] py-[8px] items-center justify-center border-0 font-semibold rounded-md bg-yellow-400"
               >
                 Go to Cart {carticon}
               </button>
@@ -119,13 +121,13 @@ function Card() {
                 onClick={() =>
                   handleAddToCart(p, cart, setCart, setTotal, total, navigate)
                 }
-                className="w-full flex gap-[1rem] py-[8px] items-center justify-center border-0 font-semibold rounded-md bg-yellow-400"
+                className="w-full text-sm flex gap-[1rem] py-[8px] items-center justify-center border-0 font-semibold rounded-md bg-yellow-400"
               >
                 Add to Cart {carticon}
               </button>
             )}
 
-            <button className="w-full flex gap-[1rem] py-[8px] items-center justify-center border-0 font-semibold rounded-md bg-amber-600">
+            <button className="w-full text-sm flex gap-[1rem] py-[8px] items-center justify-center border-0 font-semibold rounded-md bg-amber-600">
               Wishlist Item {wishlist}
             </button>
           </div>

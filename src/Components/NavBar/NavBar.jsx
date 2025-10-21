@@ -1,10 +1,9 @@
+import navlinks from '../../Db/NavLinks.json'
 import { useNavigate } from 'react-router-dom'
 import { useSideBar } from '../../Contexts/SideBarContext'
-import { useNavLinks } from '../../Contexts/NaclinkContext/NavLinksContext'
 
 export default function NavBar() {
   const { isSideBar } = useSideBar()
-  const { navLinkss, loading } = useNavLinks()
   const navigate = useNavigate()
 
   return (
@@ -24,23 +23,15 @@ export default function NavBar() {
         </div>
       </div>
       <div className="hidden sm:p-[0.7%] sm:w-full sm:flex sm:justify-between font-bold ">
-        {loading ? (
-          <p className="text-[#f0f8ff] tracking-widest text-center w-full">
-            Loading...
-          </p>
-        ) : (
-          <>
-            {navLinkss.map((links) => (
-              <div
-                key={links.id}
-                className="text-[#f0f8ff] tracking-widest active:scale-103"
-                onClick={() => navigate(`${links.name}`)}
-              >
-                <p>{links.name}</p>
-              </div>
-            ))}
-          </>
-        )}
+        {navlinks.map((links) => (
+          <div
+            key={links.id}
+            className="text-[#f0f8ff] tracking-widest active:scale-103"
+            onClick={() => navigate(`${links.name}`)}
+          >
+            <p>{links.name}</p>
+          </div>
+        ))}
       </div>
     </div>
   )
