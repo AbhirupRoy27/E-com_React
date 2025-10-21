@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "Nike",
-    "Cost": 700,
+    "price": 700,
     "Model": "Female Solid Polo Neck Pure Cotton White T-Shirt",
     "productName": "Nike jorden X-2321 Shoe",
     "discount": "50%",
@@ -29,7 +29,7 @@
   {
     "id": 2,
     "name": "Zara",
-    "Cost": 2500,
+    "price": 2500,
     "Model": "Women’s designer stiletto heels | Trending Design ",
     "productName": "Zudio male Casual Shoe",
     "discount": "48%",
@@ -56,7 +56,7 @@
   {
     "id": 3,
     "name": "Nike",
-    "Cost": 680,
+    "price": 680,
     "Model": "Men Solid Round Neck Pure Cotton White T-Shirt",
     "productName": "Men Solid Round Neck Pure Cotton White T-Shirt",
     "discount": "52%",
@@ -83,7 +83,7 @@
   {
     "id": 4,
     "name": "Zudio",
-    "Cost": 380,
+    "price": 380,
     "Model": "2714 Men Solid Round Neck Cotton Blend White T-Shirt",
     "productName": "Zudio male Casual Shoe",
     "discount": "80%",
@@ -110,7 +110,7 @@
   {
     "id": 5,
     "name": "Puma",
-    "Cost": 1200,
+    "price": 1200,
     "Model": "Female Solid Round Neck Cotton Blend White T-Shirt",
     "productName": "Zudio male Casual Shoe",
     "discount": "50%",
@@ -137,7 +137,7 @@
   {
     "id": 6,
     "name": "Nike",
-    "Cost": 6800,
+    "price": 6800,
     "Model": "Men Solid Round Neck Pure Cotton White T-Shirt",
     "productName": "Zudio male Casual Shoe",
     "discount": "52%",
@@ -164,7 +164,7 @@
   {
     "id": 7,
     "name": "Zudio",
-    "Cost": 380,
+    "price": 380,
     "Model": "2714 Running Shoes For Men (Cream, 8)",
     "productName": "Zudio male Casual Shoe",
     "discount": "80%",
@@ -191,7 +191,7 @@
   {
     "id": 8,
     "name": "Puma",
-    "Cost": 1200,
+    "price": 1200,
     "Model": "Women’s Solid Lightweight Lace-Up Casual Sneakers with Breathable Fabric Upper",
     "productName": "Puma Women Casual Shoe",
     "discount": "50%",
@@ -218,7 +218,7 @@
   {
     "id": 9,
     "name": "Zudio",
-    "Cost": 380,
+    "price": 380,
     "Model": "2714 Men Solid Round Neck Cotton Blend White T-Shirt",
     "productName": "Zudio male Casual Shoe",
     "discount": "80%",
@@ -245,7 +245,7 @@
   {
     "id": 10,
     "name": "Muscle Max",
-    "Cost": 2200,
+    "price": 2200,
     "Model": "Whey Protein Isolate, 27g of Protein per Scoop",
     "productName": "Zudio male Casual Shoe",
     "discount": "50%",
@@ -272,7 +272,7 @@
   {
     "id": 11,
     "name": "Addidas",
-    "Cost": 5200,
+    "price": 5200,
     "Model": "Women’s designer stiletto heels | Trending Design ",
     "productName": "Zudio male Casual Shoe",
     "discount": "48%",
@@ -299,7 +299,7 @@
   {
     "id": 12,
     "name": "Zudio",
-    "Cost": 380,
+    "price": 380,
     "Model": "2714 Men Cream Blend Sneakers",
     "productName": "Zudio male Casual Shoe",
     "discount": "80%",
@@ -326,7 +326,7 @@
   {
     "id": 13,
     "name": "Zudio",
-    "Cost": 380,
+    "price": 380,
     "Model": "Women’s Solid Lightweight Lace-Up Casual Sneakers with Breathable Fabric Upper",
     "productName": "Zudio male Casual Shoe",
     "discount": "80%",

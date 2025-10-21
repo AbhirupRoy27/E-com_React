@@ -87,7 +87,14 @@ function Item() {
             ) : (
               <button
                 onClick={() =>
-                  handleAddToCart(filterItem[0], cart, setCart, setTotal, total)
+                  handleAddToCart(
+                    filterItem[0],
+                    cart,
+                    setCart,
+                    setTotal,
+                    total,
+                    navigate
+                  )
                 }
                 className="border border-yellow-400 py-2 px-1 rounded w-[49%]"
               >

@@ -10,23 +10,26 @@ function CartCard({ item }) {
         {item.name} {item.sex} {item.producttype}
       </h2>
 
-      <div className="flex gap-2 flex-col sm:flex-row ">
-        <div className="lg:w-[40%] h-55 sm:h-60 md:h-62 lg:h-74 overflow-hidden flex rounded">
+      <div className="flex gap-2 flex-col sm:flex-row px-4">
+        <div className="w-max h-55 sm:h-60 md:h-62 lg:h-74 flex rounded">
           <img
-            src={item.imageurl}
+            src={item.imageurl || item.coverImage}
             alt="Example"
-            className="w-full object-contain md:object-cover rounded"
+            className="min-w-[180px] max-w-[180px] w-full object-contain bg-white rounded"
           />
         </div>
 
-        <div className="flex flex-col gap-[0.5rem]">
+        <div className="min-w-[414px] flex flex-col gap-[0.5rem] p-2">
           <div className="pt-2">
-            <p className="font-semibold inline mr-1">{item.name}</p>
-            <p className="inline">{item.Model}</p>
+            <p className="font-semibold inline mr-1">
+              {item.name || item.title}
+            </p>
+            <p className="inline">{item.Model || `by, ${item.author}`}</p>
           </div>
           <span className="py-[1%] ">
-            <p className="font-semibold text-xl inline">₹ {item.Cost}</p>
-            <p className="inline">.00</p>
+            <p className="font-semibold text-xl inline">
+              ₹ {item.Cost || item.price}
+            </p>
           </span>
           <button
             onClick={() =>
@@ -36,7 +39,7 @@ function CartCard({ item }) {
                 setCart: setCart,
                 total: total,
                 setTotal: setTotal,
-                cost: item.Cost,
+                cost: item.price,
               })
             }
             className="bg-transparent border border-rose-900 font-semibold rounded-full py-[2%]"

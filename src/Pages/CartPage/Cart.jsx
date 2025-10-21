@@ -10,13 +10,10 @@ const BillCard = lazy(() => import('./ComponetntsCart/Bill/BillCard'))
 function CartLayout({ cart, total }) {
   return (
     <>
-      <h1 className="text-center tracking-wide text-2xl font-semibold custom-cart-heading py-[1%] ">
-        Cart Items
-      </h1>
-      <div className=" flex flex-col md:flex-row justify-center gap-2 items-center sm:items-start px-[1%] lg:px-[2%] 2xl:px-[12%]">
+      <div className=" flex flex-col md:flex-row justify-center gap-2 items-center sm:items-start px-[1%] lg:px-[2%] 2xl:px-[12%] mt-4">
         <div className="flex flex-col gap-[0.6rem] mb-2">
           {cart.map((item) => (
-            <div key={item.id} className="flex justify-center">
+            <div key={item.id || item._id} className="flex justify-center">
               <CartCard item={item} />
             </div>
           ))}

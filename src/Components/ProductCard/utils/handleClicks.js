@@ -7,7 +7,7 @@ export const handleAddToCart = (
   navigate
 ) => {
   setCart([...cart, d])
-  setTotal(total + d.Cost)
+  setTotal(total + d.price)
   navigate('/cart')
 }
 

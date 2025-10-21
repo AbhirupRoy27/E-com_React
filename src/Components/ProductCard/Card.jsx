@@ -101,7 +101,7 @@ function Card() {
 
             <div className="flex gap-1 items-center">
               <h2 className="w-max text-sm">
-                ₹<b className="text-lg lg:text-2xl">{p.Cost}</b>.00
+                ₹<b className="text-lg lg:text-2xl">{p.price}</b>.00
               </h2>
               <p className="text-gray-600 line-through text-[12px] mt-1">
                 ₹{p['original-price']}.00
