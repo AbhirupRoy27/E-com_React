@@ -1,6 +1,6 @@
 import FilterItem from '../BestSellers/Components/FilterItem'
-import FourBox from './Componets/FourBox'
 import Logo from './Componets/Logo'
+import BigCard from './Componets/FourBox'
 
 function GiftCards() {
   return (
@@ -20,28 +20,13 @@ function GiftCards() {
               </div>
             ))}
           </div>
-          <div className="flex flex-col overflow-hidden">
+          <div className="flex flex-col overflow-hidden w-full">
             <Logo />
             <BigCard />
           </div>
         </div>
       </div>
     </>
-  )
-}
-
-const BigCard = () => {
-  return (
-    <div className="flex-1 max-h-max p-1 sm:p-2 flex justify-center flex-wrap sm:flex-nowrap mt-4 gap-[1%] sm:gap-[0.5%] overflow-scroll no-scrollbar">
-      {[1, 2, 3, 4].map((p, i) => (
-        <div
-          key={i}
-          className="bg-gray-100 flex flex-col border text-sm font-semibold mb-2 rounded-3xl max-w-[49%] min-h-[100px] max-h-[120px] sm:min-h-[15vh] sm:max-h-[25vh]"
-        >
-          <FourBox text={p} />
-        </div>
-      ))}
-    </div>
   )
 }
 
