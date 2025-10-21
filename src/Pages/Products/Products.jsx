@@ -1,6 +1,7 @@
 import { lazy, Suspense, useState } from 'react'
 import { Outlet } from 'react-router-dom'
 import { useProducts } from '../../Contexts/ProductContext'
+import Page from '../../Components/PageNavigation/Page'
 
 const FilterBar = lazy(() => import('../../Components/SideFilterBar/index'))
 
@@ -64,6 +65,7 @@ function Products() {
         <div className="flex flex-wrap gap-2 p-1 sm:p-2 sm:pl-[3%] sm:pr-[3%] min-h-[90vh] mb-4">
           <Outlet />
         </div>
+        <Page />
       </div>
     </div>
   )

@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom'
-import { handleSignup, handleEmail } from '../utils/handleClick'
+import { handleSignup, handleEmail } from '../../../Utils/Account/handleClick'
 import { useState } from 'react'
 
 function Signup() {

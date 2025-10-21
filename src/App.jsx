@@ -16,12 +16,14 @@ import { useAuth } from './Contexts/Auth/AuthContext'
 import Logout from './Pages/Account/Logout/Logout'
 
 const Home = lazy(() => import('./Pages/Home/Home'))
-const Sell = lazy(() => import('./Components/NavBar/NavComponents/Sell/Sell'))
 const SideBar = lazy(() => import('./Components/Sidebar/SideBar'))
 const NotFound = lazy(() => import('./Pages/NotFound/NotFound'))
 const Card = lazy(() => import('./Components/ProductCard/Card'))
 const Cart = lazy(() => import('./Pages/CartPage/Cart'))
 const Products = lazy(() => import('./Pages/Products/Products'))
+const BestSellersItem = lazy(() =>
+  import('./Pages/BestSellers/Pages/BestSellerItem')
+)
 
 const Layout = () => {
   const { isLogout, setIsLogout } = useAuth()
@@ -71,6 +73,20 @@ function App() {
           <Route index element={<Card />} />
         </Route>
         <Route path="best sellers" element={<BestSellers />} />
+        <Route
+          path="best sellers/:title"
+          element={
+            <Suspense
+              fallback={
+                <p className="flex justify-center items-center text-2xl min-h-[85vh] tracking-[1px]">
+                  Loading....
+                </p>
+              }
+            >
+              <BestSellersItem />
+            </Suspense>
+          }
+        />
 
         {/* Under Dev: */}
         {/*

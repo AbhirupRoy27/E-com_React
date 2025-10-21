@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import { useState } from 'react'
-import { handleLogin, handleEmail } from '../utils/handleClick'
-import Logo from '../utils/Logo'
+import { handleLogin, handleEmail } from '../../../Utils/Account/handleClick'
+import Logo from '../../../Components/Account/Logo'
 import { useAuth } from '../../../Contexts/Auth/AuthContext'
 
 function Login() {

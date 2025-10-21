@@ -1,39 +1,11 @@
-import React, { useState, useEffect } from 'react'
 import BsCard from './Components/BsCard'
-import { useSearchParams } from 'react-router-dom'
 import NoBooks from './Components/NoBooks'
-import Page from './Components/Page'
+import Page from '../../Components/PageNavigation/Page'
 import FilterItem from './Components/FilterItem'
+import { useBestSellers } from '../../Contexts/BooksContext'
 
 function BestSellers() {
-  const [books, setBooks] = useState([])
-  const [loading, isLoading] = useState(true)
-  const [searchParams, setSearchParams] = useSearchParams()
-
-  const currentPage = Number(searchParams.get('page')) || 1
-
-  useEffect(() => {
-    const fetchBooks = async () => {
-      try {
-        if (loading === false) {
-          isLoading(true)
-        }
-        const res = await fetch(
-          `https://abhi-ecomserver.vercel.app/api/books?page=${currentPage}&limit=10`
-        )
-        if (!res.ok) {
-          throw new Error(`HTTP error! status: ${res.status}`)
-        }
-        const data = await res.json()
-        setBooks(data.allBooks) // store data in state
-        isLoading(false)
-      } catch (err) {
-        console.error('Custom Error', err)
-      }
-    }
-
-    fetchBooks()
-  }, [currentPage])
+  const { loading, books, currentPage, setSearchParams } = useBestSellers()
 
   return (
     <>

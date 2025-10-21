@@ -8,6 +8,7 @@ import { NavLinksProvider } from './Contexts/NaclinkContext/NavLinksContext.jsx'
 import { BrowserRouter } from 'react-router-dom'
 import { ProductProvider } from './Contexts/ProductContext.jsx'
 import { AuthProvider } from './Contexts/Auth/AuthContext.jsx'
+import { BooksProvider } from './Contexts/BooksContext.jsx'
 
 createRoot(document.getElementById('root')).render(
   // <StrictMode>
@@ -17,7 +18,9 @@ createRoot(document.getElementById('root')).render(
         <ProductProvider>
           <BrowserRouter>
             <AuthProvider>
-              <App />
+              <BooksProvider>
+                <App />
+              </BooksProvider>
             </AuthProvider>
           </BrowserRouter>
         </ProductProvider>

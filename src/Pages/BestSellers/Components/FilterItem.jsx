@@ -1,4 +1,4 @@
-import { handleFilter } from '../Utils/handleFilter'
+import { handleFilter } from '../../../Utils/BestSellers/handleFilter'
 import { useState } from 'react'
 
 function FilterItem({ filter }) {
