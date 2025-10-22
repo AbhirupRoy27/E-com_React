@@ -6,6 +6,6 @@ export const RemoveFromCart = ({
   setTotal,
   cost,
 }) => {
-  setCart(cart.filter((i) => i.id !== id))
+  setCart(cart.filter((i) => i._id !== id))
   setTotal(total - cost)
 }

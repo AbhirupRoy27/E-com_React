@@ -1,4 +1,4 @@
-import { RemoveFromCart } from '../../../Db/utils/RemovefromCart'
+import { RemoveFromCart } from '../../../Utils/Cart/RemovefromCart'
 import { useCart } from '../../../Contexts/CartContext'
 
 function CartCard({ item }) {
@@ -34,7 +34,7 @@ function CartCard({ item }) {
           <button
             onClick={() =>
               RemoveFromCart({
-                id: item.id,
+                id: item.id || item._id,
                 cart: cart,
                 setCart: setCart,
                 total: total,

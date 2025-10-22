@@ -11,7 +11,7 @@ function MobileButtons({
   total,
 }) {
   return (
-    <div className="bg-white flex gap-2 w-full p-2 h-[6%] sm:hidden fixed bottom-0">
+    <div className="flex gap-2 w-full p-2 h-[6%] sm:hidden bottom-0">
       {cart && cart.includes(filterItem[0], 0) ? (
         <button
           onClick={() => handleGoToCart(navigate)}

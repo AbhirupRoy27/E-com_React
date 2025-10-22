@@ -2,7 +2,7 @@ import React from 'react'
 
 function SideImages({ filterItem, setImg }) {
   return (
-    <div className="w-full sm:w-[8%] h-[15%] sm:h-[7%] flex sm:flex-col items-center gap-2 mt-2  p-2 sm:p-0">
+    <div className="w-full sm:w-[100px] h-[100px] flex sm:flex-col items-center gap-2 mt-2  p-2 sm:p-0">
       <img
         src={filterItem[0].imageurl}
         alt="Loading...."

@@ -24,5 +24,5 @@ export const handleItemPage = (p, navigate) => {
     top: 0,
     behavior: 'smooth',
   })
-  navigate(`/product-item/${p.id}`)
+  navigate(`/product-item/${p._id}`)
 }

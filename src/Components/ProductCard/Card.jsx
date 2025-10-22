@@ -56,7 +56,7 @@ function Card() {
     <>
       {filteredProducts.map((p) => (
         <div
-          key={p.id}
+          key={p._id}
           className="bg-slate-100 2xl:w-[19.5%] xl:w-[24%] md:w-[32%] p-2 sm:p-2 w-[48.5%] h-max rounded-md"
         >
           <div className="text-black sm:pt-2 pb-2 min-h-[40px] flex items-center">
@@ -91,7 +91,7 @@ function Card() {
           </div>
           <div
             className="flex gap-1 mb-2 items-end mr-1 flex-wrap"
-            onClick={() => navigate(`/product-item/${p.id}`)}
+            onClick={() => navigate(`/product-item/${p._id}`)}
           >
             <div>
               <p className="text-red-600 text-lg lg:text-xl font-light">

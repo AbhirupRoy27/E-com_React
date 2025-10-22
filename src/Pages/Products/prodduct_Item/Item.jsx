@@ -17,25 +17,25 @@ function Item() {
 
   const navigate = useNavigate()
 
-  const filterItem = Products.filter((i) => i.id === Number(id))
+  const filterItem = Products.filter((i) => i._id === Number(id))
 
   const [img, setImg] = useState(filterItem[0].imageurl)
   const discount = filterItem[0].discount.split('%')
 
   return (
-    <div className="w-[100%] bg-blue-50 h-max overflow-hidden ">
+    <div className="w-[100%] bg-blue-50 h-max overflow-hidden  min-w-[344px]">
       <p
         className="hidden sm:block sm:px-10 sm:pt-4 sm:pb-2 font-semibold"
         onClick={() => navigate('/Products')}
       >
         / Go Back
       </p>
-      <div className="flex flex-col sm:flex-row w-[100%] h-[100vh] sm:h-[900px] sm:px-[3%] md:px-[5%] lg:px-[7%] xl:px-[9%] 2xl:px-[11%]">
+      <div className="flex flex-col sm:flex-row w-[100%] min-h-[85vh] sm:px-[3%] md:px-[5%] lg:px-[7%] xl:px-[9%] 2xl:px-[11%]">
         <div className=" md:w-[55%] lg:w-[45%] h-[55%] sm:p-2  ">
           <img
             src={img}
             alt="Loading...."
-            className="w-[100%] h-full sm:h-[100%] bg-white sm:rounded-md"
+            className="w-[100%] h-[50vh] sm:h-[100%] bg-white sm:rounded-md"
           />
         </div>
         <SideImages filterItem={filterItem} setImg={setImg} />
@@ -58,10 +58,13 @@ function Item() {
               -{filterItem[0].discount}
             </p>
             <p className="text-xl sm:text-2xl font-semibold ">
-              Rs. <b>{filterItem[0].Cost}</b>.00
+              Rs. <b>{filterItem[0].price}</b>
             </p>
-            <p className="text-md sm:text-lg line-through">
-              {filterItem[0]['original-price']}.00
+            <p className="text-md ">
+              M.R.P.{' '}
+              <span className="line-through">
+                {filterItem[0]['original-price']}
+              </span>
             </p>
           </div>
           <div className="flex gap-2 p-2 min-h-[50px]">
