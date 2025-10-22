@@ -1,4 +1,3 @@
-import TopDeals from './Components/TopDeals'
 import BooksHomeCard from './mobileView/BooksHomeCard'
 import DiwaliLaptop from './mobileView/DiwaliLaptop'
 import MobileCards from './mobileView/MobileCards'

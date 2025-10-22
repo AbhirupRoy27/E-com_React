@@ -3,7 +3,7 @@ import RightCompo from './Componets/RightCompo'
 
 function Feedback() {
   return (
-    <div className="flex flex-col md:flex-row">
+    <div className="flex flex-col md:flex-row min-w-[344px]">
       <LeftCompo />
       <RightCompo />
     </div>
