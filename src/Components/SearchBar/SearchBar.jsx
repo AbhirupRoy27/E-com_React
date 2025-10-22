@@ -2,12 +2,15 @@ import { useNavigate } from 'react-router-dom'
 import Bar from './Components/Search/Bar'
 import { handleDropDown } from './Utils/handleClicks'
 import { useAuth } from '../../Contexts/Auth/AuthContext'
+import { useState } from 'react'
 
 // import { useCart } from '../../Contexts/CartContext'
 
 export default function SearchBar() {
   const navigate = useNavigate()
   const { setIsLogout } = useAuth()
+  const [open, setOpen] = useState(false)
+  console.log(open)
 
   // const { cart } = useCart()
   return (
@@ -41,11 +44,16 @@ export default function SearchBar() {
               className="max-h-[30px]"
               src="https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760806250/account_c9nkzm.svg"
               alt="Account"
+              onClick={() => setOpen(!open)}
             />
-            <p className="hidden md:flex">Account</p>
+            <p className="hidden md:flex" onClick={() => setOpen(!open)}>
+              Account
+            </p>
             <div
-              className="hidden group-hover:block bg-gray-100 text-black
-              absolute top-full right-0 bg-white rounded min-w-[200px] shadow-lg"
+              className={`${
+                open ? 'block' : 'hidden'
+              } sm:group-hover:block bg-gray-100 text-black
+              absolute top-full right-0 bg-white rounded min-w-[200px] shadow-lg`}
             >
               <p className="py-2 bg-slate-700 pl-2 rounded-t text-white">
                 Account Name
@@ -55,7 +63,9 @@ export default function SearchBar() {
                   <li
                     key={i}
                     className="py-2 text-slate-700 hover:bg-gray-100 pl-2 cursor-pointer hover:font-semibold active:scale-101"
-                    onClick={() => handleDropDown(navigate, item, setIsLogout)}
+                    onClick={() =>
+                      handleDropDown(navigate, item, setIsLogout, setOpen)
+                    }
                   >
                     {item}
                   </li>
