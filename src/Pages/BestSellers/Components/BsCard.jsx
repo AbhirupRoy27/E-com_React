@@ -1,5 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import handleItem from '../../../Utils/BestSellers/handleItem'
+import { handleBuy } from '../../../Utils/BuyNow/handleClicks'
+import { useBuy } from '../../../Contexts/BuyContext'
 
 function BsCard({ books }) {
   const truncateText = (text, length = 55) => {
@@ -8,6 +10,7 @@ function BsCard({ books }) {
   }
 
   const navigate = useNavigate()
+  const { setItem } = useBuy()
 
   return (
     <div className="bg-slate-50 w-[50%] sm:w-[33%] xl:w-[24%] 2xl:w-[20%] mt-2 p-1">
@@ -43,7 +46,7 @@ function BsCard({ books }) {
       <div className="py-2">
         <button
           className="bg-white/20 py-1 active:bg-yellow-400 sm:active:bg-yellow-500 sm:active:scale-102 hover:bg-yellow-400 w-[99%] rounded-full border border-yellow-400 hover:bg-yellow-400 ease-in-out tracking-[1px]"
-          onClick={() => prompt('hello')}
+          onClick={() => handleBuy(navigate, books, setItem)}
         >
           Buy Now
         </button>

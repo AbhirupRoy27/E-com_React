@@ -24,6 +24,7 @@ const Products = lazy(() => import('./Pages/Products/Products'))
 const BestSellersItem = lazy(() =>
   import('./Pages/BestSellers/Pages/BestSellerItem')
 )
+const BuyNow = lazy(() => import('./Pages/BuyNow/BuyNow'))
 
 const Layout = () => {
   const { isLogout, setIsLogout } = useAuth()
@@ -53,6 +54,20 @@ function App() {
     <Routes>
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
+      <Route
+        path="buy now"
+        element={
+          <Suspense
+            fallback={
+              <p className="flex justify-center items-center text-2xl min-h-[85vh] tracking-[1px]">
+                Loading....
+              </p>
+            }
+          >
+            <BuyNow />
+          </Suspense>
+        }
+      />
       <Route
         path="/"
         element={

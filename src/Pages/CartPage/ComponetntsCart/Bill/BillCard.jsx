@@ -1,4 +1,7 @@
+import { useNavigate } from 'react-router-dom'
+
 function BillCard({ total }) {
+  const navigate = useNavigate()
   return (
     <div className="min-w-[310px]">
       <p className="border-b-[2px] py-[2%] text-2xl font-semibold tracking-wide">
@@ -21,7 +24,10 @@ function BillCard({ total }) {
       </div>
 
       <div className="flex justify-end  mt-[7%]">
-        <button className="bg-yellow-400 p-[2%] font-medium tracking-wide rounded-lg">
+        <button
+          className="bg-yellow-400 p-[2%] font-medium tracking-wide rounded-lg"
+          onClick={() => navigate('/buy now')}
+        >
           CheckOut
         </button>
       </div>

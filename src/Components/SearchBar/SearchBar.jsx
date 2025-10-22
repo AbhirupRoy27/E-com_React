@@ -10,7 +10,6 @@ export default function SearchBar() {
   const navigate = useNavigate()
   const { setIsLogout } = useAuth()
   const [open, setOpen] = useState(false)
-  console.log(open)
 
   // const { cart } = useCart()
   return (

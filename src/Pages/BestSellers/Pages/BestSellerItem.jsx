@@ -164,7 +164,10 @@ function BestSellerItem() {
                     </button>
                   )}
 
-                  <button className="bg-amber-500/90 active:bg-yellow-600 rounded-full py-1 font-semibold">
+                  <button
+                    className="bg-amber-500/90 active:bg-yellow-600 rounded-full py-1 font-semibold"
+                    onClick={() => navigate('/buy now')}
+                  >
                     Buy Now
                   </button>
                 </div>

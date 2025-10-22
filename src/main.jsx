@@ -9,6 +9,7 @@ import { BrowserRouter } from 'react-router-dom'
 import { ProductProvider } from './Contexts/ProductContext.jsx'
 import { AuthProvider } from './Contexts/Auth/AuthContext.jsx'
 import { BooksProvider } from './Contexts/BooksContext.jsx'
+import { BuyContextProvider } from './Contexts/BuyContext.jsx'
 
 createRoot(document.getElementById('root')).render(
   // <StrictMode>
@@ -19,7 +20,9 @@ createRoot(document.getElementById('root')).render(
           <BrowserRouter>
             <AuthProvider>
               <BooksProvider>
-                <App />
+                <BuyContextProvider>
+                  <App />
+                </BuyContextProvider>
               </BooksProvider>
             </AuthProvider>
           </BrowserRouter>
