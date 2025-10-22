@@ -10,8 +10,8 @@ function CartCard({ item }) {
         {item.name} {item.sex} {item.producttype}
       </h2>
 
-      <div className="flex gap-2 flex-col sm:flex-row px-4">
-        <div className="w-max h-55 sm:h-60 md:h-62 lg:h-74 flex rounded">
+      <div className="flex gap-1 flex-col lg:flex-row px-2">
+        <div className="min-w-max h-55 sm:h-60 md:h-62 lg:h-74 flex rounded justify-center">
           <img
             src={item.imageurl || item.coverImage}
             alt="Example"
@@ -19,7 +19,7 @@ function CartCard({ item }) {
           />
         </div>
 
-        <div className="min-w-[414px] flex flex-col gap-[0.5rem] p-2">
+        <div className="min-w-full sm:min-w-[414px] flex flex-col gap-[0.5rem] p-2">
           <div className="pt-2">
             <p className="font-semibold inline mr-1">
               {item.name || item.title}

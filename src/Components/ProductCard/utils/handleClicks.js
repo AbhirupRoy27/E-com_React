@@ -9,6 +9,10 @@ export const handleAddToCart = (
   setCart([...cart, d])
   setTotal(total + d.price)
   navigate('/cart')
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  })
 }
 
 export const handleGoToCart = (navigate) => {

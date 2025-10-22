@@ -30,7 +30,7 @@ function BestSellerItem() {
   return (
     <>
       {book.length > 0 && (
-        <div className="bg-gray-100 min-h-[85vh] px-[2%] sm:px-[3%] pt-[4%] flex gap-2 flex-col sm:flex-row justify-center overflow-scroll lg:overflow-hidden">
+        <div className="bg-gray-100 min-w-[344px] min-h-[85vh] px-[2%] sm:px-[3%] pt-[4%] flex gap-2 flex-col sm:flex-row justify-center overflow-scroll lg:overflow-hidden ">
           <img
             src={book[0].coverImage}
             alt="Product Image"
@@ -78,8 +78,8 @@ function BestSellerItem() {
                 </span>
               </div>
             </div>
-            <div className="min-w-full lg:min-w-[284px] max-w-[20vw] min-h-[50vh] max-h-[50vh] p-2 mt-2 lg:mt-2 bg-gray-200 rounded">
-              <div className="bg-slate-50 p-1 min-h-full rounded">
+            <div className="min-w-full lg:min-w-[284px] max-w-[20vw] sm:min-h-[50vh] max-h-[50vh] p-2 my-2 lg:mt-2 bg-gray-200 rounded">
+              <div className="bg-slate-50 p-1 min-h-full  rounded">
                 <div className="border-b border-gray-300 pt-2 pb-2 px-1 md:px-3">
                   <span className="text-xl text-red-800">-{Discount}%</span>
                   <span className="text-2xl">
@@ -139,21 +139,31 @@ function BestSellerItem() {
                   </p>
                 </div>
                 <div className="flex flex-col w-full mt-10 gap-2">
-                  <button
-                    className="bg-yellow-400 active:bg-yellow-500 rounded-full py-1 font-semibold"
-                    onClick={() =>
-                      handleAddToCart(
-                        book[0],
-                        cart,
-                        setCart,
-                        setTotal,
-                        total,
-                        navigate
-                      )
-                    }
-                  >
-                    {cart.includes(book[0], 0) ? 'Go to Cart' : 'Add to Cart'}
-                  </button>
+                  {cart.includes(book[0], 0) ? (
+                    <button
+                      className="bg-yellow-400 active:bg-yellow-500 rounded-full py-1 font-semibold"
+                      onClick={() => navigate('/cart')}
+                    >
+                      Go to Cart
+                    </button>
+                  ) : (
+                    <button
+                      className="bg-yellow-400 active:bg-yellow-500 rounded-full py-1 font-semibold"
+                      onClick={() =>
+                        handleAddToCart(
+                          book[0],
+                          cart,
+                          setCart,
+                          setTotal,
+                          total,
+                          navigate
+                        )
+                      }
+                    >
+                      Add to Cart
+                    </button>
+                  )}
+
                   <button className="bg-amber-500/90 active:bg-yellow-600 rounded-full py-1 font-semibold">
                     Buy Now
                   </button>

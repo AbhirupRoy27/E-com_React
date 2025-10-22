@@ -58,11 +58,11 @@ function Products() {
           )}
         </Suspense>
       </div>
-      <div className="flex w-full h-full flex-col bg-[rgba(62,62,62,0.212)] ">
+      <div className="flex w-full h-full flex-col bg-[rgba(62,62,62,0.212)] min-w-[344px]">
         <div className="sm:hidden p-2 flex gap-2">
           <BrandDropList />
         </div>
-        <div className="flex flex-wrap gap-2 p-1 sm:p-2 sm:pl-[3%] sm:pr-[3%] min-h-[90vh] mb-4">
+        <div className="flex flex-wrap gap-2 p-1 sm:p-2 sm:pl-[3%] sm:pr-[3%] min-h-[90vh] mb-4 min-w-[344px]">
           <Outlet />
         </div>
         <Page />

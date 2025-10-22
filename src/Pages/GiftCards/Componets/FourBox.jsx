@@ -45,11 +45,11 @@ const BigCard = () => {
   ]
 
   return (
-    <div className="flex-1 min-w-[655px] max-h-max p-1 sm:p-2 flex flex-nowrap mt-4 gap-[2%] sm:gap-[0.5%] overflow-scroll overflow-y-hidden no-scrollbar">
+    <div className="flex-1 w-full max-h-max p-1 sm:p-2 flex flex-nowrap mt-4 gap-[1%] sm:gap-[0.5%] overflow-scroll overflow-y-hidden no-scrollbar">
       {cards.map((p, i) => (
         <div
           key={i}
-          className="bg-gray-100 flex flex-col border text-sm font-semibold rounded-3xl w-[270px] h-[200px]"
+          className="bg-gray-100 flex flex-col border text-sm font-semibold rounded-3xl w-full h-[200px]"
         >
           <FourBox obj={p} />
         </div>

@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom'
+import handleItem from '../../../Utils/BestSellers/handleItem'
 
 function BsCard({ books }) {
   const truncateText = (text, length = 55) => {
@@ -14,17 +15,17 @@ function BsCard({ books }) {
         src={books.coverImage}
         alt="Loading"
         className="bg-white h-[20rem] sm:h-[30rem] w-full mb-1"
-        onClick={() => navigate(`${books.title}?book-id=${books._id}`)}
+        onClick={() => handleItem(navigate, books)}
       />
       <p
         className="h-14 text-[16px] tracking-[1px] sm:text-[14px] sm:tracking-0 xl:text-[16px] flex "
-        onClick={() => navigate(`${books.title}?book-id=${books._id}`)}
+        onClick={() => handleItem(navigate, books)}
       >
         {books.title}
       </p>
       <p
         className="min-h-[51px] py-1 text-sm sm:text-md lg:text-[15px] hover:underline"
-        onClick={() => navigate(`${books.title}?book-id=${books._id}`)}
+        onClick={() => handleItem(navigate, books)}
       >
         {truncateText(books.description)}
       </p>

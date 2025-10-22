@@ -23,7 +23,7 @@ function BestSellers() {
               Loading....
             </p>
           ) : (
-            <div className="w-full min-h-max">
+            <div className="w-full min-w-[344px] min-h-max">
               {books.length > 0 ? (
                 <>
                   <div className="flex justify-between sm:justify-start sm:p-0 px-0 md:px-10 lg-px-15 flex-wrap">

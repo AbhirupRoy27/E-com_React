@@ -61,7 +61,7 @@ const topDeals = [
 
 function TopDeals() {
   return (
-    <div className="bg-gradient-to-br from-slate-200 to-gray-700 p-3 sm:p-6">
+    <div className="bg-gradient-to-br from-slate-200 to-gray-700 p-3 sm:p-6 min-w-[344px]">
       <p className="text-2xl font-semibold mb-4">Today's Top Deals</p>
       <div className="flex gap-[1rem] overflow-x-auto overflow-y-hidden no-scrollbar scroll-smooth md:scroll-auto bg-gradient-to-br from-slate-200 to-gray-700">
         {topDeals.map((deals) => (
