@@ -4,7 +4,7 @@ function RightCompo() {
   return (
     <div className="bg-slate-200 w-full h-[85vh]">
       <p className="text-center mt-4 font-bold text-2xl">Feedback List</p>
-      <div className="px-[5%] lg:px-[10%] max-h-[78vh] overflow-scroll no-scrollbarx mt-4">
+      <div className="px-[5%] lg:px-[10%] max-h-[75vh] overflow-scroll no-scrollbarx mt-4">
         {['Amit', 'Ajay', 'Sumit', 'Pranav', '', '', '', ' '].map((f, i) => (
           <div
             className="flex flex-col bg-gray-800 rounded-xl p-2 mt-3"

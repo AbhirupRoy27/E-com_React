@@ -1,17 +1,19 @@
 import { useState } from 'react'
 import { handleSubmit } from '../../Utils/BuyNow/handleSubmit'
 import { useBuy } from '../../Contexts/BuyContext'
+import { handlePayment } from '../../Utils/BuyNow/handleClicks'
 
 function PaymentOtions() {
   const [isOpen, setIsOpen] = useState(false)
   const [PaymentMethod, setPaymentMethod] = useState('')
+  const { isDisabled, setIsDisabled } = useBuy()
   return (
     <div className="bg-white p-4 sm:px-6  min-h-[150px]">
       <div className="flex justify-between items-center mb-1">
         <strong className="text-xl">Payment method</strong>
         <p
           className="text-blue-500 hover:text-black text-sm active:scale-103 cursor-pointer"
-          onClick={() => setIsOpen(!isOpen)}
+          onClick={() => handlePayment(setIsOpen, setIsDisabled)}
         >
           {isOpen ? 'Done' : 'Change'}
         </p>
@@ -19,19 +21,30 @@ function PaymentOtions() {
       <p className="text-gray-500 mb-2">
         {PaymentMethod ? PaymentMethod : 'Select Method'}
       </p>
-      <PaymentOtionsItems isOpen={isOpen} setPaymentMethod={setPaymentMethod} />
+      <PaymentOtionsItems
+        isOpen={isOpen}
+        setIsOpen={setIsOpen}
+        setPaymentMethod={setPaymentMethod}
+        setIsDisabled={setIsDisabled}
+        isDisabled={isDisabled}
+      />
     </div>
   )
 }
 
-const PaymentOtionsItems = ({ isOpen, setPaymentMethod }) => {
-  const { isDisabled, setIsDisabled } = useBuy()
+const PaymentOtionsItems = ({
+  isOpen,
+  setIsOpen,
+  setPaymentMethod,
+  setIsDisabled,
+  isDisabled,
+}) => {
   return (
     <form
-      onSubmit={(e) => handleSubmit(e, setIsDisabled)}
+      onSubmit={(e) => handleSubmit(e, setIsDisabled, setIsOpen, isOpen)}
       className={`${
         isOpen ? 'flex' : 'hidden'
-      } transition-all duration-300 ease-in-out border border-gray-400 rounded p-2 sm:py-4 sm:px-6 text-xl flex-col gap-4`}
+      } transition-all duration-300 ease-in-out sm:border border-gray-400 rounded sm:p-2 sm:py-4 sm:px-6 text-xl flex-col gap-4`}
     >
       <div>
         <p className="font-semibold pb-3 border-b border-gray-400">UPI</p>
