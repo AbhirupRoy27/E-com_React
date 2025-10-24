@@ -1,33 +1,34 @@
 import React from 'react'
+import PaymentOtions from '../../Components/BuyNow/PaymentOtions'
+import OrderTotal from '../../Components/BuyNow/OrderTotal'
 
 function BuyNow() {
   return (
-    <div className="flex flex-col min-w-[344px]">
-      <div className="min-h-[8vh] bg-gray-900"></div>
-      <div className="w-full min-h-[92vh] flex flex-col-reverse xl:flex-row justify-end xl:justify-start gap-6 bg-slate-100 px-[5%] py-[1%]">
+    <div className="flex flex-col min-w-[444px]">
+      <div className="min-h-[8vh] bg-gray-900 flex justify-between items-center px-2 sm:px-6">
+        <p className="text-5xl text-gray-300 font-semibold text-shadow-lg text-shadow-white/30 tracking-wide font-mono">
+          NG
+        </p>
+        <p className="text-4xl text-white tracking-widest">Checkout</p>
+        <img
+          src="#"
+          alt="Cart"
+          className="bg-slate-100 rounded-full px-1 py-4"
+        />
+      </div>
+      <div className="w-full min-h-[92vh] flex flex-col-reverse xl:flex-row justify-end xl:justify-start gap-6 bg-slate-100 px-[4%] py-[1%]">
         <div className=" w-full xl:min-w-[70%] flex flex-col gap-6">
-          <div className="bg-white py-4 px-6  min-h-[150px]">
-            <strong className="text-xl">Payment method</strong>
-          </div>
           <div className="bg-white py-4 px-6 min-h-[150px]">
             <div className="flex justify-between items-center mb-2">
               <strong className="text-xl">Delivering to Address</strong>
-              <p className="text-blue-400 hover:text-black">Change</p>
+              <p className="text-blue-500 hover:text-black text-sm">Change</p>
             </div>
-            <div>
-              <p className="text-gray-500">Address Line</p>
-            </div>
+            <p className="text-gray-500">Address Line</p>
           </div>
+          <PaymentOtions />
         </div>
 
-        <div className=" w-full bg-white p-4 xl:min-w-[20%] min-h-[180px] max-h-[200px]">
-          <div className="pb-6 border-b border-slate-300">
-            <button className="bg-yellow-300 w-full rounded-full py-2 font-bold">
-              Deliver to this Address
-            </button>
-          </div>
-          <p>Order Total</p>
-        </div>
+        <OrderTotal />
       </div>
     </div>
   )

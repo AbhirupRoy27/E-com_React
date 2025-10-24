@@ -50,8 +50,8 @@ export default function SearchBar() {
             </p>
             <div
               className={`${
-                open ? 'block' : 'hidden'
-              } sm:group-hover:block bg-gray-100 text-black
+                open && window.innerWidth <= 1280 ? 'block ' : 'hidden'
+              } group-hover:block bg-gray-100 text-black
               absolute top-full right-0 bg-white rounded min-w-[200px] shadow-lg`}
             >
               <p className="py-2 bg-slate-700 pl-2 rounded-t text-white">
@@ -66,7 +66,7 @@ export default function SearchBar() {
                       handleDropDown(navigate, item, setIsLogout, setOpen)
                     }
                   >
-                    {item}
+                    {item === 'Logout' ? 'Login ' : item}
                   </li>
                 ))}
               </ol>

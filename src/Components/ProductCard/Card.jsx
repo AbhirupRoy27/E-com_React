@@ -57,10 +57,10 @@ function Card() {
       {filteredProducts.map((p) => (
         <div
           key={p._id}
-          className="bg-slate-100 2xl:w-[19.5%] xl:w-[24%] md:w-[32%] p-2 sm:p-2 w-[48.5%] h-max rounded-md"
+          className="bg-slate-50/40 2xl:w-[19.5%] xl:w-[24%] md:w-[32%] p-1 w-[49%] h-max rounded-md"
         >
           <div className="text-black sm:pt-2 pb-2 min-h-[40px] flex items-center">
-            <h2 className=" text-md lg:text-xl min-h-[5.5vh] font-semibold ">
+            <h2 className=" text-md lg:text-xl font-semibold ">
               {p.name} {p.sex} {p.producttype}
             </h2>
           </div>
@@ -78,7 +78,7 @@ function Card() {
             className="min-h-[8vh] "
             onClick={() => handleItemPage(p, navigate)}
           >
-            <p className="pb-1 text-gray-600 text-sm sm:text-md">
+            <p className="pb-1 text-gray-600 text-sm sm:text-md min-h-[64px]">
               {p.Model.substring(0, 45)}
               <b
                 role="button"
@@ -101,10 +101,10 @@ function Card() {
 
             <div className="flex gap-1 items-center">
               <h2 className="w-max text-sm">
-                ₹<b className="text-lg lg:text-2xl">{p.price}</b>.00
+                ₹<b className="text-lg lg:text-2xl">{p.price}</b>
               </h2>
               <p className="text-gray-600 line-through text-[12px] mt-1">
-                ₹{p['original-price']}.00
+                ₹{p['original-price']}
               </p>
             </div>
           </div>
