@@ -4,9 +4,10 @@ const BuyContext = createContext()
 
 export const BuyContextProvider = ({ children }) => {
   const [item, setItem] = useState([])
+  const [isDisabled, setIsDisabled] = useState(false)
 
   return (
-    <BuyContext.Provider value={{ item, setItem }}>
+    <BuyContext.Provider value={{ item, setItem, isDisabled, setIsDisabled }}>
       {children}
     </BuyContext.Provider>
   )

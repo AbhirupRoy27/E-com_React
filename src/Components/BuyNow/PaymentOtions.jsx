@@ -1,14 +1,16 @@
 import { useState } from 'react'
+import { handleSubmit } from '../../Utils/BuyNow/handleSubmit'
+import { useBuy } from '../../Contexts/BuyContext'
 
 function PaymentOtions() {
   const [isOpen, setIsOpen] = useState(false)
   const [PaymentMethod, setPaymentMethod] = useState('')
   return (
-    <div className="bg-white py-4 px-6  min-h-[150px]">
+    <div className="bg-white p-4 sm:px-6  min-h-[150px]">
       <div className="flex justify-between items-center mb-1">
         <strong className="text-xl">Payment method</strong>
         <p
-          className="text-blue-500 hover:text-black text-sm active:scale-103"
+          className="text-blue-500 hover:text-black text-sm active:scale-103 cursor-pointer"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? 'Done' : 'Change'}
@@ -23,12 +25,13 @@ function PaymentOtions() {
 }
 
 const PaymentOtionsItems = ({ isOpen, setPaymentMethod }) => {
+  const { isDisabled, setIsDisabled } = useBuy()
   return (
     <form
-      onSubmit={(e) => e.preventDefault()}
+      onSubmit={(e) => handleSubmit(e, setIsDisabled)}
       className={`${
         isOpen ? 'flex' : 'hidden'
-      } transition-all duration-300 ease-in-out border border-gray-400 rounded p-4 px-6 text-xl flex-col gap-4`}
+      } transition-all duration-300 ease-in-out border border-gray-400 rounded p-2 sm:py-4 sm:px-6 text-xl flex-col gap-4`}
     >
       <div>
         <p className="font-semibold pb-3 border-b border-gray-400">UPI</p>
@@ -40,8 +43,8 @@ const PaymentOtionsItems = ({ isOpen, setPaymentMethod }) => {
             value="Pay With UPI"
             onChange={(e) => setPaymentMethod(e.target.value)}
           />
-          <label for="UPI" className="text-sm text-gray-500">
-            Available Credit: ₹30,000
+          <label htmlFor="UPI" className="text-sm text-gray-500">
+            Pay with any UPI
           </label>
         </div>
       </div>
@@ -56,7 +59,10 @@ const PaymentOtionsItems = ({ isOpen, setPaymentMethod }) => {
             className=""
             value="Buy now, Pay later"
           />
-          <label for="CREDIT & DEBIT CARDS" className="text-sm text-gray-500">
+          <label
+            htmlFor="CREDIT & DEBIT CARDS"
+            className="text-sm text-gray-500"
+          >
             Available Credit: ₹30,000
           </label>
         </div>
@@ -73,14 +79,17 @@ const PaymentOtionsItems = ({ isOpen, setPaymentMethod }) => {
             className=""
             value="Buy now, Pay later"
           />
-          <label for="Buy now, Pay later" className="text-sm text-gray-500">
+          <label htmlFor="Buy now, Pay later" className="text-sm text-gray-500">
             Available Credit: ₹30,000
           </label>
         </div>
       </div>
       <button
-        className="bg-yellow-300 py-2 px-1 rounded-full w-[200px] text-lg mt-2"
+        className={`bg-yellow-300 py-2 px-1 rounded-full w-[200px] text-lg mt-2 cursor-pointer ${
+          isDisabled ? 'bg-yellow-300/70' : 'bg-yellow-300'
+        } active:scale-101`}
         type="submit"
+        disabled={isDisabled}
       >
         Pay with this methors
       </button>
