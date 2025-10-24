@@ -35,7 +35,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="sm:overflow-hidden min-w-[344px]">
+      <div className="overflow-hidden w-full min-w-[344px]">
         <div
           className="flex transition-transform duration-500 "
           onTouchStart={handleTouchStart}
@@ -48,7 +48,7 @@ export default function Home() {
           {slides.map((slide, index) => (
             <div
               key={index}
-              className={`h-[200px] min-w-[397px] sm:min-w-[97vw] lg:min-w-[98vw] xl:min-w-[99vw] m-2 rounded-xl ${slide.color}`}
+              className={`h-[200px] min-w-[96vw] sm:min-w-[98vw] xl:min-w-[99.3vw] flex-shrink-0 m-2 rounded-xl ${slide.color}`}
             ></div>
           ))}
         </div>
