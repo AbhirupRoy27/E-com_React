@@ -2,10 +2,10 @@ import React from 'react'
 
 function RightCompo() {
   return (
-    <div className="bg-slate-200 md:w-[30%] h-[90vh] overflow-scroll no-scrollbar">
+    <div className="bg-slate-200 w-full h-[85vh]">
       <p className="text-center mt-4 font-bold text-2xl">Feedback List</p>
-      <div className="px-[10%]">
-        {['Amit', 'Ajay', 'Sumit', 'Pranav'].map((f, i) => (
+      <div className="px-[5%] lg:px-[10%] max-h-[78vh] overflow-scroll no-scrollbarx mt-4">
+        {['Amit', 'Ajay', 'Sumit', 'Pranav', '', '', '', ' '].map((f, i) => (
           <div
             className="flex flex-col bg-gray-800 rounded-xl p-2 mt-3"
             key={i}
@@ -17,7 +17,9 @@ function RightCompo() {
               DescrtiptionForm DescrtiptionForm DescrtiptionForm
               DescrtiptionForm Descrtiption
             </p>
-            <p className="text-gray-200 text-md">Category: </p>
+            <p className="text-gray-200 text-md">
+              Category: <strong>Any</strong>
+            </p>
             <div className="flex gap-2">
               <p className="text-red-300">Like</p>
               <p className="text-red-400">Count</p>

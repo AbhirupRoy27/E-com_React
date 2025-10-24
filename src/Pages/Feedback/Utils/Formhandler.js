@@ -5,7 +5,7 @@ export const handleInput = (e, setFeedBack) => {
 
 export const handleSubmit = (e, feedback, setFeedBack) => {
   e.preventDefault()
-  if (!feedback.Email || !feedback.Feedback) {
+  if (!feedback.Feedback) {
     alert('Error: Empty Fields')
     return
   }
