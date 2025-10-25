@@ -48,7 +48,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="overflow-hidden w-full min-w-[576px] sm:min-w-[1100px]">
+      <div className="overflow-hidden w-full min-w-[430px] sm:min-w-[640px] md:min-w-[768px] lg:min-w-[1024px] xl:min-w-[1280px]">
         <div
           className="flex transition-transform duration-500 mt-2 sm:hidden"
           onTouchStart={handleTouchStart}

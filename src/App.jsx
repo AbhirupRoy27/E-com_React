@@ -33,19 +33,17 @@ const Layout = () => {
   const navigate = useNavigate()
   return (
     <>
-      <div className="">
-        <SearchBar />
+      <SearchBar />
 
-        <NavBar />
-        <SideBar />
+      <NavBar />
+      <SideBar />
 
-        <div className="min-h-[83vh] min-w-[100vw]">
-          <Suspense fallback={<Loading />}>
-            <Outlet />
-          </Suspense>
-        </div>
-        <Footer />
+      <div className="min-h-[83vh] min-w-[430px] sm:min-w-[640px] md:min-w-[768px] lg:min-w-[1024px] xl:min-w-[1280px]">
+        <Suspense fallback={<Loading />}>
+          <Outlet />
+        </Suspense>
       </div>
+      <Footer />
       {isLogout && <Logout setIsLogout={setIsLogout} navigate={navigate} />}
     </>
   )

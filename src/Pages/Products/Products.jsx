@@ -1,4 +1,4 @@
-import { lazy, Suspense, useState } from 'react'
+import { lazy, Suspense } from 'react'
 import { Outlet } from 'react-router-dom'
 import { useProducts } from '../../Contexts/ProductContext'
 import Page from '../../Components/PageNavigation/Page'
@@ -16,7 +16,7 @@ export const BrandDropList = () => {
     )
   }
   return (
-    <div className="flex sm:flex-col items-center sm:items-start gap-[0.4rem] ">
+    <div className="flex items-center gap-[0.4rem] ">
       <p className="font-semibold ">Select Brand:</p>
       <select
         className="p-[0.4rem] min-w-[100px] font-semibold focus:outline-none focus:ring-0 focus:border-transparent bg-[rgba(62,62,62,0.212)] rounded-md"
@@ -33,33 +33,10 @@ export const BrandDropList = () => {
 }
 
 function Products() {
-  const [devComplete, setDevComplete] = useState(false)
   return (
     <div className="w-full flex ">
-      <div className="hidden sm:block p-[1%] bg-yellow-50">
-        <Suspense>
-          {devComplete ? (
-            <>
-              <p
-                className="text-[13px] mb-3"
-                onClick={() => setDevComplete(!devComplete)}
-              >
-                / Close
-              </p>
-              <FilterBar />
-            </>
-          ) : (
-            <p
-              className="min-w-[150px] font-bold"
-              onClick={() => setDevComplete(!devComplete)}
-            >
-              Filters
-            </p>
-          )}
-        </Suspense>
-      </div>
-      <div className="flex w-full h-full flex-col bg-[rgba(62,62,62,0.212)] min-w-[576px] sm:min-w-[1100px]">
-        <div className="sm:hidden p-2 flex gap-2">
+      <div className="flex w-full h-full flex-col bg-[rgba(62,62,62,0.212)] min-w-[430px] sm:min-w-[640px] md:min-w-[768px] lg:min-w-[1024px] xl:min-w-[1280px]">
+        <div className="p-2 flex gap-2">
           <BrandDropList />
         </div>
         <div className="flex flex-wrap gap-1 md:gap-2 p-1 sm:p-2 sm:px-[3%] min-h-[90vh] mb-4 min-w-[344px]">
