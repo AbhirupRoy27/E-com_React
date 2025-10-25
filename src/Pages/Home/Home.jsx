@@ -48,7 +48,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="overflow-hidden w-full min-w-[430px] sm:min-w-[640px] md:min-w-[768px] lg:min-w-[1024px] xl:min-w-[1280px]">
+      <div className="overflow-hidden w-full min-w-[100vw] sm:min-w-[640px] md:min-w-[768px] lg:min-w-[1024px] xl:min-w-[1280px]">
         <div
           className="flex transition-transform duration-500 mt-2 sm:hidden"
           onTouchStart={handleTouchStart}
@@ -102,9 +102,9 @@ export default function Home() {
               <li className="font-bold min-w-[120px] flex justify-center items-center hover:text-yellow-100/90 cursor-pointer">
                 Books
               </li>
-              <li className="font-bold min-w-[140px] flex justify-center items-center hover:text-yellow-100/90 cursor-pointer">
+              {/* <li className="font-bold min-w-[140px] flex justify-center items-center hover:text-yellow-100/90 cursor-pointer">
                 Gift-Cards
-              </li>
+              </li> */}
             </ol>
           </div>
           <div className="flex flex-row-reverse justify-between items-end h-full">

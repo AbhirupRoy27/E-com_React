@@ -2,16 +2,14 @@ import React from 'react'
 
 function Footer() {
   return (
-    <div className="bg-black min-h-[20vh] min-w-[430px] sm:min-w-[640px] md:min-w-[768px] lg:min-w-[1024px] xl:min-w-[1280px] p-6 sm:p-10">
-      <div className="flex justify-between">
-        <div>
-          <h1
-            className="text-3xl sm:text-5xl text-white"
-            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          >
-            NextGen
-          </h1>
-        </div>
+    <div className="bg-black min-h-[20vh] min-w-[100vw] sm:min-w-[640px] md:min-w-[768px] lg:min-w-[1024px] xl:min-w-[1280px] p-6 sm:p-10 overflow-hidden">
+      <div className="flex flex-col sm:flex-row justify-between">
+        <h1
+          className="text-3xl sm:text-5xl text-white mb-2"
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        >
+          NextGen
+        </h1>
         <div className="flex text-white gap-10">
           <div>
             <h3 className="text-xl font-bold mb-2">Connect</h3>

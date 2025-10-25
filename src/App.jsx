@@ -38,7 +38,7 @@ const Layout = () => {
       <NavBar />
       <SideBar />
 
-      <div className="min-h-[83vh] min-w-[430px] sm:min-w-[640px] md:min-w-[768px] lg:min-w-[1024px] xl:min-w-[1280px]">
+      <div className="min-h-[83vh] min-w-[100vw] sm:min-w-[640px] md:min-w-[768px] lg:min-w-[1024px] xl:min-w-[1280px]">
         <Suspense fallback={<Loading />}>
           <Outlet />
         </Suspense>
