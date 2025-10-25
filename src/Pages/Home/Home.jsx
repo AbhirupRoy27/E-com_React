@@ -9,10 +9,22 @@ export default function Home() {
   const [activeIndex, setActiveIndex] = useState(0)
 
   const slides = [
-    { color: 'bg-yellow-200' },
-    { color: 'bg-red-200' },
-    { color: 'bg-green-200' },
-    { color: 'bg-blue-200' },
+    {
+      color: 'bg-yellow-200',
+      url: 'https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760707777/Screenshot_2025-10-17_at_6.56.37_PM_lheter.png',
+    },
+    {
+      color: 'bg-red-200',
+      url: 'https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760782015/Screenshot_2025-10-18_at_3.35.26_PM_sxvkva.png',
+    },
+    {
+      color: 'bg-green-200',
+      url: 'https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760429549/Screenshot_2025-10-14_at_1.41.48_PM_gtjs83.png',
+    },
+    {
+      color: 'bg-blue-200',
+      url: 'https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760711226/DiwaliBanner_fn5acq.png',
+    },
   ]
 
   const nextSlide = () => {
@@ -37,7 +49,7 @@ export default function Home() {
     <>
       <div className="overflow-hidden w-full min-w-[344px]">
         <div
-          className="flex transition-transform duration-500 "
+          className="flex transition-transform duration-500 mt-2 sm:hidden"
           onTouchStart={handleTouchStart}
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
@@ -48,23 +60,17 @@ export default function Home() {
           {slides.map((slide, index) => (
             <div
               key={index}
-              className={`h-[200px] min-w-[96vw] sm:min-w-[98vw] xl:min-w-[99.3vw] flex-shrink-0 m-2 rounded-xl ${slide.color}`}
-            ></div>
+              className={`h-[25vh] sm:h-[40vh] w-full flex-shrink-0 rounded-xl ${slide.color}`}
+            >
+              <img
+                src={slide.url}
+                alt="loading.."
+                className="object-full w-full h-full rounded-xl"
+              />
+            </div>
           ))}
         </div>
-        {/* <button
-          onClick={prevSlide}
-          className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 text-white px-2 py-1 rounded"
-        >
-          ‹
-        </button>
-        <button
-          onClick={nextSlide}
-          className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 text-white px-2 py-1 rounded"
-        >
-          ›
-        </button> */}
-        <div className="flex gap-3 w-full justify-center my-2 items-center">
+        <div className="flex gap-3 w-full justify-center my-2 items-center sm:hidden">
           {slides.map((_, index) => (
             <span
               key={index}
@@ -74,6 +80,12 @@ export default function Home() {
               }`}
             ></span>
           ))}
+        </div>
+        <div className="hidden sm:flex w-full h-[25vh]">
+          <img
+            src="https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760782015/Screenshot_2025-10-18_at_3.35.26_PM_sxvkva.png"
+            className="w-full object-full shadow-lg shadow-black/20"
+          />
         </div>
       </div>
       <MobileCards /> {/* For Mobile */}

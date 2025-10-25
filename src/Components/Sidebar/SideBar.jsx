@@ -16,9 +16,12 @@ export default function SideBar() {
     <div
       className={`fixed top-0 right-0 h-full w-[60%] bg-gray-100 shadow-2xl transform transition-transform duration-500 ease-in-out ${
         sideBar ? 'translate-x-0' : 'translate-x-full'
-      }`}
+      } z-[9999]`}
     >
-      <div className="flex py-4 bg-gray-300 text-black justify-between items-center">
+      <div
+        className="flex py-4 bg-gray-300 text-black justify-between items-center"
+        onClick={() => navigate('/')}
+      >
         <p className="text-lg ml-3 font-light">Categories</p>
         <span
           className="mr-3 text-3xl font-light"

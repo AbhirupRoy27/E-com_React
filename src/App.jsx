@@ -14,6 +14,8 @@ import Feedback from './Pages/Feedback/Feedback'
 import GiftCards from './Pages/GiftCards/GiftCards'
 import { useAuth } from './Contexts/Auth/AuthContext'
 import Logout from './Pages/Account/Logout/Logout'
+import Loading from './Components/Account/Loading'
+import OrderComplete from './Pages/OrderComplete/OrderComplete'
 
 const Home = lazy(() => import('./Pages/Home/Home'))
 const SideBar = lazy(() => import('./Components/Sidebar/SideBar'))
@@ -38,7 +40,7 @@ const Layout = () => {
         <SideBar />
 
         <div className="min-h-[83vh] min-w-[100vw]">
-          <Suspense fallback={<h2>Loading....</h2>}>
+          <Suspense fallback={<Loading />}>
             <Outlet />
           </Suspense>
         </div>
@@ -57,13 +59,7 @@ function App() {
       <Route
         path="buy now"
         element={
-          <Suspense
-            fallback={
-              <p className="flex justify-center items-center text-2xl min-h-[85vh] tracking-[1px]">
-                Loading....
-              </p>
-            }
-          >
+          <Suspense fallback={<Loading />}>
             <BuyNow />
           </Suspense>
         }
@@ -88,31 +84,22 @@ function App() {
         <Route
           path="best sellers/:title"
           element={
-            <Suspense
-              fallback={
-                <p className="flex justify-center items-center text-2xl min-h-[85vh] tracking-[1px]">
-                  Loading....
-                </p>
-              }
-            >
+            <Suspense fallback={<Loading />}>
               <BestSellersItem />
             </Suspense>
           }
         />
-
-        {/* Under Dev: */}
-
         <Route
           path="FeedBack"
           element={
-            <Suspense fallback={<p>Loading...</p>}>
+            <Suspense fallback={<Loading />}>
               <Feedback />
             </Suspense>
           }
         />
-
         <Route path="Gift Cards" element={<GiftCards />} />
         <Route path="product-item/:id" element={<Item />} />
+        <Route path="order complete" element={<OrderComplete />} />
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>
