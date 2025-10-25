@@ -23,7 +23,7 @@ function Item() {
   const discount = filterItem[0].discount.split('%')
 
   return (
-    <div className="w-[100%] bg-blue-50 h-max overflow-hidden  min-w-[344px]">
+    <div className="w-[100%] bg-blue-50 h-max overflow-hidden min-w-[576px] sm:min-w-[1100px]">
       <p
         className="hidden sm:block sm:px-10 sm:pt-4 sm:pb-2 font-semibold"
         onClick={() => navigate('/Products')}

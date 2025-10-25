@@ -19,7 +19,7 @@ function BooksHomeCard() {
   }, [books])
 
   return (
-    <div className="flex sm:hidden bg-slate-200 mx-1 mb-2 flex-col p-2 min-w-[344px]">
+    <div className="flex sm:hidden bg-slate-200 mx-1 mb-2 flex-col p-2 min-w-[576px]">
       <p className="py-1 text-xl text-gray-800 font-semibold tracking-widest">
         Books you might like
       </p>

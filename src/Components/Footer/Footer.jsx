@@ -2,10 +2,46 @@ import React from 'react'
 
 function Footer() {
   return (
-    <div className="bg-gradient-to-r from-slate-500 to-slate-800 text-center p-2 font-bold min-w-[344px] sm:min-w-[1100px]">
-      <p className="tracking-wider text-slate-100">
-        CopyRight 2025 @Abhirup Roy
-      </p>
+    <div className="bg-black min-h-[20vh] mt-20 min-w-[576px] sm:min-w-[1100px] p-6 sm:p-10">
+      <div className="flex justify-between">
+        <div>
+          <h1
+            className="text-5xl text-white"
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          >
+            NextGen
+          </h1>
+        </div>
+        <div className="flex text-white gap-10">
+          <div>
+            <h3 className="text-xl font-bold mb-2">Connect</h3>
+            <p className="hover:text-white text-white/50 cursor-pointer">
+              Instragram
+            </p>
+            <p className="hover:text-white text-white/50 cursor-pointer">
+              twitter{'(X)'}
+            </p>
+          </div>
+          <div>
+            <h3 className="text-xl font-bold mb-2 hover:text-white">Contact</h3>
+            <p className="hover:text-white text-white/50 cursor-pointer">
+              rabhirup605@gamil.com
+            </p>
+            <p className="hover:text-white text-white/50 cursor-pointer">
+              +91 9851253334
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="border-t border-white flex justify-between text-gray-100 pt-2 mt-4 min-w-[350px]">
+        <p className="tracking-wider text-slate-100 text-sm">
+          CopyRight @Abhirup Roy
+        </p>
+        <div className="flex gap-1 sm:gap-4">
+          <p className="text-sm">Terms and Service</p>
+          <p className="text-sm">Privecy Policy</p>
+        </div>
+      </div>
     </div>
   )
 }

@@ -3,7 +3,7 @@ import TopDeals from './TopDeals'
 function TopDeal() {
   return (
     <>
-      <div className="sm:px-[3%] min-w-[344px]">
+      <div className="sm:px-[3%] min-w-[576px] sm:min-w-[1100px]">
         <img
           src="https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760939268/Screenshot_2025-10-20_at_11.15.20_AM_oyn8f0.png"
           className="mb-2"

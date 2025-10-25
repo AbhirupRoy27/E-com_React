@@ -8,7 +8,7 @@ function PaymentOtions() {
   const [PaymentMethod, setPaymentMethod] = useState('')
   const { isDisabled, setIsDisabled } = useBuy()
   return (
-    <div className="bg-white p-4 sm:px-6  min-h-[150px]">
+    <div className="bg-white p-4 sm:px-6 min-h-[150px]">
       <div className="flex justify-between items-center mb-1">
         <strong className="text-xl">Payment method</strong>
         <p

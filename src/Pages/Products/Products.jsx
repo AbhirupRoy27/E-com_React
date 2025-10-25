@@ -58,7 +58,7 @@ function Products() {
           )}
         </Suspense>
       </div>
-      <div className="flex w-full h-full flex-col bg-[rgba(62,62,62,0.212)] min-w-[344px]">
+      <div className="flex w-full h-full flex-col bg-[rgba(62,62,62,0.212)] min-w-[576px] sm:min-w-[1100px]">
         <div className="sm:hidden p-2 flex gap-2">
           <BrandDropList />
         </div>

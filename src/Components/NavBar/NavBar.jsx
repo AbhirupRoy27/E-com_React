@@ -7,7 +7,7 @@ export default function NavBar() {
   const navigate = useNavigate()
 
   return (
-    <div className="flex bg-[#222F3D] min-w-[344px] sm:min-w-[1100px] h-[45px]">
+    <div className="flex bg-[#222F3D] min-w-[576px] sm:min-w-[1100px] h-[45px]">
       <div className="flex items-center w-[10%] pl-[2%] pr-[2%] pb-[3%] pt-[3%] md:hidden ">
         <div
           className="flex flex-col justify-center gap-[0.1rem] ml-[10px]"

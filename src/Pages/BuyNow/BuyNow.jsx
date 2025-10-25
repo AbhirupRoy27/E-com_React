@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom'
 function BuyNow() {
   const navigate = useNavigate()
   return (
-    <div className="flex flex-col min-w-[344px]">
+    <div className="flex flex-col min-w-[576px] sm:min-w-[1100px]">
       <div className="min-h-[8vh] bg-gray-900 flex justify-between items-center px-2 sm:px-6">
         <p className="text-4xl text-gray-300 font-semibold text-shadow-lg text-shadow-white/30 tracking-wide font-mono">
           NG

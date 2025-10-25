@@ -5,7 +5,7 @@ import BigCard from './Componets/FourBox'
 function GiftCards() {
   return (
     <div className="min-w-[344px]">
-      <div className="flex justify-center items-center min-w-[344px] max-h-[15vh] md:max-h-[20vh] overflow-hidden">
+      <div className="flex justify-center items-center min-w-[576px] sm:min-w-[1100px] max-h-[15vh] md:max-h-[20vh] overflow-hidden">
         <img
           src="https://m.media-amazon.com/images/G/31/NAB/PC-Header_1500x300_Jup25_end20.jpg"
           className="min-w-[70vw] max-w-[90vw] max-h-[20vh] object-center object-contain "
@@ -19,7 +19,7 @@ function GiftCards() {
             </div>
           ))}
         </div>
-        <div className="flex flex-col overflow-hidden min-w-[344px] sm:w-full">
+        <div className="flex flex-col overflow-hidden min-w-[576px] sm:min-w-[1100px] sm:w-full">
           <Logo />
           <BigCard />
         </div>

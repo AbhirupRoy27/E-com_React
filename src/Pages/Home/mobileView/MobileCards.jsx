@@ -2,7 +2,7 @@ import icons from '../../../Db/icons.json'
 
 function MobileCards() {
   return (
-    <div className="px-[2%] py-[3%] flex gap-2 overflow-x-auto no-scrollbar overflow-y-hidden sm:hidden min-w-[344px] bg-orange-100">
+    <div className="px-[2%] py-[3%] flex gap-2 overflow-x-auto no-scrollbar overflow-y-hidden sm:hidden min-w-[576px] sm:min-w-[1100px] bg-orange-100">
       <div className=" flex justify-around pt-[3%] px-[2%] bg-gradient-to-br from-gray-400 to-slate-100 rounded-md w-max min-h-fit border-b-2">
         <div className="flex flex-col justify-center items-center min-w-[110px] text-center">
           {icons[0].arr.map((p, i) => (

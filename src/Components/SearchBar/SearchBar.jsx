@@ -14,7 +14,7 @@ export default function SearchBar() {
   // const { cart } = useCart()
   return (
     <>
-      <div className="flex p-2 md:justify-between justify-around items-center bg-[#0f1111] min-w-[344px] sm:min-w-[1100px]">
+      <div className="flex p-2 md:justify-between justify-around items-center bg-[#0f1111] min-w-[576px] sm:min-w-[1100px]">
         <div
           className="hidden lg:flex active:scale-102 active:opacity-75 font-bold text-[#fff] text-md lg:text-xl cursor-pointer"
           onClick={() => navigate('/')}
