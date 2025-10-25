@@ -1,6 +1,5 @@
 export const handleSubmit = (e, setIsDisabled, setIsOpen, isOpen) => {
   e.preventDefault()
-  console.log(e.target)
   setIsOpen(!isOpen)
   setIsDisabled(true)
 }

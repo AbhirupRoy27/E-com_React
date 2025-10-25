@@ -99,9 +99,10 @@ function App() {
         />
         <Route path="Gift Cards" element={<GiftCards />} />
         <Route path="product-item/:id" element={<Item />} />
-        <Route path="order complete" element={<OrderComplete />} />
+
         <Route path="*" element={<NotFound />} />
       </Route>
+      <Route path="order complete" element={<OrderComplete />} />
     </Routes>
   )
 }

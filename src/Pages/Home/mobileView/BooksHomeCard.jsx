@@ -21,7 +21,7 @@ function BooksHomeCard() {
   return (
     <div className="flex sm:hidden bg-slate-200 mx-1 mb-2 flex-col p-2 min-w-[344px]">
       <p className="py-1 text-xl text-gray-800 font-semibold tracking-widest">
-        Best Seller's
+        Books you might like
       </p>
       {images.length <= 0 ? (
         <Loader />
