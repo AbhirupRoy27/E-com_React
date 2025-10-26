@@ -2,7 +2,7 @@ import React from 'react'
 
 function EmptyCart({ navigate }) {
   return (
-    <div className="flex flex-col items-center justify-center min-h-[85vh] min-w-[576px] sm:min-w-[1100px] bg-gradient-to-br from-slate-300 to-slate-50">
+    <div className="flex flex-col items-center justify-center min-h-[85vh] min-w-[100vw] sm:min-w-[640px] md:min-w-[768px] lg:min-w-[1024px] xl:min-w-[1280px] bg-gradient-to-br from-slate-300 to-slate-50">
       <h1 className="text-center text-2xl font-semibold tracking-wide">
         Cart is Empty....
       </h1>

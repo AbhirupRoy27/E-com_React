@@ -30,7 +30,7 @@ function BestSellerItem() {
   return (
     <>
       {book.length > 0 && (
-        <div className="bg-gray-100 min-w-[430px] sm:min-w-[640px] md:min-w-[768px] lg:min-w-[1024px] xl:min-w-[1280px] min-h-[85vh] px-[2%] sm:px-[3%] pt-[4%] flex gap-2 flex-col sm:flex-row justify-center overflow-scroll lg:overflow-hidden ">
+        <div className="bg-gray-100 min-w-[100ve] sm:min-w-[640px] md:min-w-[768px] lg:min-w-[1024px] xl:min-w-[1280px] min-h-[85vh] px-[2%] sm:px-[3%] pt-[4%] flex gap-2 flex-col sm:flex-row justify-center overflow-scroll lg:overflow-hidden ">
           <img
             src={book[0].coverImage}
             alt="Product Image"

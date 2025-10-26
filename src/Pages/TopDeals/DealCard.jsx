@@ -1,7 +1,6 @@
 import React from 'react'
 
 function DealCard({ deals }) {
-  // console.log(deals)
   return (
     <div className="">
       <div className="bg-white min-w-[250px] min-h-[250px] max-h-[320px] ">

@@ -35,7 +35,7 @@ export const BrandDropList = () => {
 function Products() {
   return (
     <div className="w-full flex ">
-      <div className="flex w-full h-full flex-col bg-[rgba(62,62,62,0.212)] min-w-[430px] sm:min-w-[640px] md:min-w-[768px] lg:min-w-[1024px] xl:min-w-[1280px]">
+      <div className="flex w-full h-full flex-col bg-[rgba(62,62,62,0.212)] min-w-[100vw] sm:min-w-[640px] md:min-w-[768px] lg:min-w-[1024px] xl:min-w-[1280px]">
         <div className="p-2 flex gap-2">
           <BrandDropList />
         </div>

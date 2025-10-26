@@ -10,7 +10,7 @@ const BillCard = lazy(() => import('./ComponetntsCart/Bill/BillCard'))
 function CartLayout({ cart, total }) {
   return (
     <>
-      <div className=" flex flex-col md:flex-row justify-center gap-2 items-center sm:items-start px-[1%] lg:px-[2%] 2xl:px-[12%] mt-4 min-w-[576px] sm:min-w-[1100px] overflow-hidden">
+      <div className=" flex flex-col md:flex-row justify-center gap-2 items-center sm:items-start px-[1%] lg:px-[2%] 2xl:px-[12%] min-w-[100vw] sm:min-w-[640px] md:min-w-[768px] lg:min-w-[1024px] xl:min-w-[1280px] overflow-hidden">
         <div className="flex flex-col gap-[0.6rem] mb-2 ">
           {cart.map((item) => (
             <div

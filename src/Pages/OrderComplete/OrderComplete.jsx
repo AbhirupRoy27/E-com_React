@@ -24,7 +24,7 @@ function OrderComplete() {
   }, [counter, navigate])
 
   return (
-    <div className="min-w-[430px] sm:min-w-[640px] md:min-w-[768px] lg:min-w-[1024px] xl:min-w-[1280px] bg-slate-100 h-[100vh]">
+    <div className="min-w-[100vw] sm:min-w-[640px] md:min-w-[768px] lg:min-w-[1024px] xl:min-w-[1280px] bg-slate-100 h-[100vh]">
       <div className="bg-green-700 min-h-[25vh] flex justify-center items-center ">
         <div
           className={`relative transition-all duration-800 ease-in-out w-[100px] h-[100px] bg-white rounded-full p-1 overflow-hidden ${

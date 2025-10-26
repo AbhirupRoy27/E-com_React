@@ -61,9 +61,9 @@ const topDeals = [
 
 function TopDeals() {
   return (
-    <div className="bg-gradient-to-br from-slate-200 to-gray-700 p-3 sm:p-6 min-w-[430px] sm:min-w-[640px] md:min-w-[768px] lg:min-w-[1024px] xl:min-w-[1280px]">
+    <div className="bg-gradient-to-br from-slate-200 to-gray-700 py-4 min-w-[100vw] sm:min-w-[640px] md:min-w-[768px] lg:min-w-[1024px] xl:min-w-[1280px]">
       <p className="text-2xl font-semibold mb-4">Today's Top Deals</p>
-      <div className="flex gap-[1rem] overflow-x-auto overflow-y-hidden no-scrollbar scroll-smooth md:scroll-auto bg-gradient-to-br from-slate-200 to-gray-700">
+      <div className="flex gap-2 px-2 overflow-x-auto overflow-y-hidden no-scrollbar scroll-smooth md:scroll-auto bg-gradient-to-br from-slate-200 to-gray-700 w-full">
         {topDeals.map((deals) => (
           <DealCard deals={deals} key={deals.id} />
         ))}
