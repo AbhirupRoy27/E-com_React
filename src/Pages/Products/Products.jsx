@@ -39,7 +39,7 @@ function Products() {
         <div className="p-2 flex gap-2">
           <BrandDropList />
         </div>
-        <div className="flex flex-wrap gap-1 md:gap-2 p-1 sm:p-2 sm:px-[3%] min-h-[90vh] mb-4 min-w-[344px]">
+        <div className="flex flex-wrap gap-1 md:gap-2 p-1 sm:p-2 sm:px-[3%] min-h-[90vh] mb-4 min-w-[350px]">
           <Outlet />
         </div>
         <Page />

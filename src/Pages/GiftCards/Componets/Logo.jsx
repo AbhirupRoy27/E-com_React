@@ -55,15 +55,13 @@ const topLinks = [
 
 function Logo() {
   return (
-    <>
-      <div className="flex xl:px-[10%] justify-between mt-4 overflow-scroll no-scrollbar">
-        {topLinks.map((p) => (
-          <div key={p.id} className="">
-            <Element text={p.name} link={p.link} />
-          </div>
-        ))}
-      </div>
-    </>
+    <div className="flex xl:px-[10%] justify-between mt-4 overflow-scroll no-scrollbar">
+      {topLinks.map((p) => (
+        <div key={p.id} className="h-max">
+          <Element text={p.name} link={p.link} />
+        </div>
+      ))}
+    </div>
   )
 }
 

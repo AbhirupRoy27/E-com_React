@@ -15,7 +15,7 @@ function MobileButtons({
       {cart && cart.includes(filterItem[0], 0) ? (
         <button
           onClick={() => handleGoToCart(navigate)}
-          className="border border-yellow-400 py-2 px-1 rounded w-[49%] active:bg-yellow-400"
+          className="border border-gray-400  py-2 px-1 rounded w-[49%] active:bg-gray-400"
         >
           Go to cart
         </button>

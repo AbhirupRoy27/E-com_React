@@ -8,7 +8,7 @@ function LeftCompo() {
 
   return (
     <div className="w-full overflow-hidden ">
-      <div className="p-[2vw] flex flex-col gap-4 items-center justify-center bg-slate-50 w-full min-h-[85vh] min-w-[430px] sm:min-w-[640px] md:min-w-[768px] lg:min-w-[1024px] xl:min-w-[1280px]">
+      <div className="p-[2vw] flex flex-col gap-4 items-center justify-center bg-slate-50 w-full min-h-[85vh] min-w-[350px] sm:min-w-[640px] md:min-w-[768px] lg:min-w-[1024px] xl:min-w-[1280px]">
         <p className=" relative top-0 bg-sky-100 py-2 px-3 rounded text-gray-700 w-max text-center mb-2 opacity-60">
           Currenty Under Development
         </p>

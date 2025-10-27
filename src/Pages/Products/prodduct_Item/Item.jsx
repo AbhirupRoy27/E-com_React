@@ -23,7 +23,7 @@ function Item() {
   const discount = filterItem[0].discount.split('%')
 
   return (
-    <div className="w-[100%] bg-blue-50 h-max overflow-hidden min-w-[430px] sm:min-w-[640px] md:min-w-[768px] lg:min-w-[1024px] xl:min-w-[1280px]">
+    <div className="w-[100%] bg-blue-50 h-max overflow-hidden min-w-[350px] sm:min-w-[640px] md:min-w-[768px] lg:min-w-[1024px] xl:min-w-[1280px]">
       <p
         className="hidden sm:block sm:px-10 sm:pt-4 sm:pb-2 font-semibold"
         onClick={() => navigate('/Products')}
@@ -39,7 +39,7 @@ function Item() {
           />
         </div>
         <SideImages filterItem={filterItem} setImg={setImg} />
-        <div className="w-full h-[25%] sm:h-[90%] px-[1%] py-[0%] flex flex-col gap-2">
+        <div className="w-full h-[25%] sm:h-[90%] px-[2%] py-[0%] flex flex-col gap-2">
           <div className="">
             <p className="sm:text-xl inline-block">
               <b className="mr-1">{filterItem[0].name}</b>
@@ -50,7 +50,6 @@ function Item() {
           </div>
 
           <p className="text-sm sm:text-md font-semibold text-white bg-red-800 p-1 w-max text-center">
-            {console.log()}
             {Number(discount[0]) > 79 ? 'All time Low' : 'Best Sale Price'}
           </p>
           <div className="flex gap-2 items-center w-[100%]">
@@ -67,7 +66,7 @@ function Item() {
               </span>
             </p>
           </div>
-          <div className="flex gap-2 p-2 min-h-[50px]">
+          <div className="flex gap-2 ">
             {size.length &&
               size.map((p, i) => (
                 <p
@@ -83,7 +82,7 @@ function Item() {
             {cart && cart.includes(filterItem[0], 0) ? (
               <button
                 onClick={() => handleGoToCart(navigate)}
-                className="border border-yellow-400 py-2 px-1 rounded w-[49%]"
+                className="border border-gray-400 active:bg-gray-200 py-2 px-1 rounded w-[49%]"
               >
                 Go to cart
               </button>
@@ -99,7 +98,7 @@ function Item() {
                     navigate
                   )
                 }
-                className="border border-yellow-400 py-2 px-1 rounded w-[49%]"
+                className="border border-gray-400 active:bg-gray-200 py-2 px-1 rounded w-[49%]"
               >
                 Add to cart
               </button>

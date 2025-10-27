@@ -18,11 +18,10 @@ export default function SideBar() {
         sideBar ? 'translate-x-0' : 'translate-x-full'
       } z-[9999]`}
     >
-      <div
-        className="flex py-4 bg-gray-300 text-black justify-between items-center"
-        onClick={() => navigate('/')}
-      >
-        <p className="text-lg ml-3 font-light">Categories</p>
+      <div className="flex py-4 bg-gray-300 text-black justify-between items-center">
+        <p className="text-lg ml-3 font-light" onClick={() => navigate('/')}>
+          Categories
+        </p>
         <span
           className="mr-3 text-3xl font-light"
           role="button"

@@ -1,4 +1,5 @@
-import DealCard from './DealCard'
+import Desktop from './Desktop'
+import Mobile from './Mobile'
 
 const topDeals = [
   {
@@ -22,52 +23,12 @@ const topDeals = [
     discount: 20,
     link: 'https://res.cloudinary.com/ddu1fpkrw/image/upload/v1758906218/ChatGPT_Image_Sep_26_2025_10_32_55_PM_gnasly.png',
   },
-  {
-    id: 4,
-    name: 'Addids Softmax',
-    price: 220,
-    discount: 20,
-    link: 'https://res.cloudinary.com/ddu1fpkrw/image/upload/v1758906325/ChatGPT_Image_Sep_26_2025_10_34_49_PM_aweoma.png',
-  },
-  {
-    id: 5,
-    name: 'Addids Softmax',
-    price: 220,
-    discount: 20,
-    link: 'https://res.cloudinary.com/ddu1fpkrw/image/upload/v1758906416/Screenshot_2025-09-26_at_10.35.52_PM_jytcwp.png',
-  },
-  {
-    id: 6,
-    name: 'Nike Pro',
-    price: 220,
-    discount: 20,
-    link: 'https://res.cloudinary.com/ddu1fpkrw/image/upload/v1758906218/ChatGPT_Image_Sep_26_2025_10_32_55_PM_gnasly.png',
-  },
-  {
-    id: 7,
-    name: 'Addids Softmax',
-    price: 220,
-    discount: 20,
-    link: 'https://res.cloudinary.com/ddu1fpkrw/image/upload/v1758906400/ChatGPT_Image_Sep_26_2025_10_35_56_PM_pow4j6.png',
-  },
-  {
-    id: 8,
-    name: 'Addids Softmax',
-    price: 220,
-    discount: 20,
-    link: 'https://res.cloudinary.com/ddu1fpkrw/image/upload/v1758906416/Screenshot_2025-09-26_at_10.35.52_PM_jytcwp.png',
-  },
 ]
 
 function TopDeals() {
   return (
-    <div className="bg-gradient-to-br from-slate-200 to-gray-700 py-4 min-w-[100vw] sm:min-w-[640px] md:min-w-[768px] lg:min-w-[1024px] xl:min-w-[1280px]">
-      <p className="text-2xl font-semibold mb-4">Today's Top Deals</p>
-      <div className="flex gap-2 px-2 overflow-x-auto overflow-y-hidden no-scrollbar scroll-smooth md:scroll-auto bg-gradient-to-br from-slate-200 to-gray-700 w-full">
-        {topDeals.map((deals) => (
-          <DealCard deals={deals} key={deals.id} />
-        ))}
-      </div>
+    <div className="min-w-[350px] lg:min-w-[768px] overflow-hidden">
+      {window.innerWidth > 768 ? <Desktop /> : <Mobile />}
     </div>
   )
 }

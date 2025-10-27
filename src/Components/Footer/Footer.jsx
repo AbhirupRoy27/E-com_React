@@ -2,7 +2,7 @@ import React from 'react'
 
 function Footer() {
   return (
-    <div className="bg-black min-h-[20vh] min-w-[100vw] sm:min-w-[640px] md:min-w-[768px] lg:min-w-[1024px] xl:min-w-[1280px] p-6 sm:p-10 overflow-hidden">
+    <div className="bg-black min-h-[20vh] min-w-[350px] sm:min-w-[640px] md:min-w-[768px] lg:min-w-[1024px] xl:min-w-[1280px] p-6 sm:p-10 overflow-hidden">
       <div className="flex flex-col sm:flex-row justify-between">
         <h1
           className="text-3xl sm:text-5xl text-white mb-2"

@@ -2,7 +2,7 @@ import NavBar from './Components/NavBar/NavBar'
 import { Outlet, Route, Routes, useNavigate } from 'react-router-dom'
 import SearchBar from './Components/SearchBar/SearchBar'
 import { lazy, Suspense } from 'react'
-import TopDeal from './Pages/TopDeals/TopDeal'
+import TopDeals from './Pages/TopDeals/TopDeals'
 import Item from './Pages/Products/prodduct_Item/Item'
 import Footer from './Components/Footer/Footer'
 import Login from './Pages/Account/Login/Login'
@@ -38,7 +38,7 @@ const Layout = () => {
       <NavBar />
       <SideBar />
 
-      <div className="min-h-[83vh] min-w-[100vw] sm:min-w-[640px] md:min-w-[768px] lg:min-w-[1024px] xl:min-w-[1280px]">
+      <div className="min-h-[83vh] min-w-[350px] sm:min-w-[640px] md:min-w-[768px] lg:min-w-[1024px] xl:min-w-[1280px]">
         <Suspense fallback={<Loading />}>
           <Outlet />
         </Suspense>
@@ -73,7 +73,7 @@ function App() {
         <Route index element={<Home />} />
         <Route path="Home" element={<Home />} />
         <Route path="cart" element={<Cart />} />
-        <Route path="top deals" element={<TopDeal />} />
+        <Route path="top deals" element={<TopDeals />} />
         <Route path="orders" element={<Orders />} />
         <Route path="products" element={<Products />}>
           <Route index element={<Card />} />
