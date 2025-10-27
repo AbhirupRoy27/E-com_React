@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom'
+import handleNavigateTo from '../../Utils/navigate/navigateTo'
 
 function Desktop() {
   const navigate = useNavigate()
@@ -28,21 +29,21 @@ function Desktop() {
           <img
             src="https://res.cloudinary.com/ddu1fpkrw/image/upload/v1761544722/004_hzcvkg.png"
             className=""
-            onClick={() => navigate('/products')}
+            onClick={() => handleNavigateTo(navigate, 'best sellers')}
           />
         </div>
         <div className="w-full lg:w-[30%] max-h-[800px]  rounded-full overflow-hidden hover:scale-101">
           <img
             src="https://res.cloudinary.com/ddu1fpkrw/image/upload/v1761543991/002_gden4z.png"
             className=""
-            onClick={() => navigate('/best sellers')}
+            onClick={() => handleNavigateTo(navigate, 'best sellers')}
           />
         </div>
         <div className="w-full lg:w-[30%] max-h-[800px] rounded-full overflow-hidden hover:scale-101">
           <img
             src="https://res.cloudinary.com/ddu1fpkrw/image/upload/v1761544432/003_wkevbr.png"
             className=""
-            onClick={() => navigate('/products')}
+            onClick={() => handleNavigateTo(navigate, 'products')}
           />
         </div>
       </div>
@@ -55,7 +56,7 @@ function Desktop() {
         </div>
         <button
           className="bg-yellow-500 hover:bg-yellow-600 active:scale-101 active:shadow-lg w-full sm:w-[30%] py-3 rounded-full font-bold tracking-wide uppercase"
-          onClick={() => navigate('/products')}
+          onClick={() => handleNavigateTo(navigate, 'products')}
         >
           Shop Now ↗
         </button>

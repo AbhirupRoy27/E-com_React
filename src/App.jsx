@@ -16,6 +16,7 @@ import { useAuth } from './Contexts/Auth/AuthContext'
 import Logout from './Pages/Account/Logout/Logout'
 import Loading from './Components/Account/Loading'
 import OrderComplete from './Pages/OrderComplete/OrderComplete'
+import FandQ from './Pages/F&Q/FandQ'
 
 const Home = lazy(() => import('./Pages/Home/Home'))
 const SideBar = lazy(() => import('./Components/Sidebar/SideBar'))
@@ -97,6 +98,7 @@ function App() {
         />
         <Route path="Gift Cards" element={<GiftCards />} />
         <Route path="product-item/:id" element={<Item />} />
+        <Route path="F&Q" element={<FandQ />} />
 
         <Route path="*" element={<NotFound />} />
       </Route>

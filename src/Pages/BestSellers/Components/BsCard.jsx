@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom'
-import handleItem from '../../../Utils/BestSellers/handleItem'
+import handleNavigateTo from '../../../Utils/navigate/navigateTo'
+// import handleItem from '../../../Utils/BestSellers/handleItem'
 import { handleBuy } from '../../../Utils/BuyNow/handleClicks'
 import { useBuy } from '../../../Contexts/BuyContext'
 
@@ -18,17 +19,23 @@ function BsCard({ books }) {
         src={books.coverImage}
         alt="Loading"
         className="bg-white h-[20rem] sm:h-[30rem] w-full mb-1"
-        onClick={() => handleItem(navigate, books)}
+        onClick={() =>
+          handleNavigateTo(navigate, `${books.title}?book-id=${books._id}`)
+        }
       />
       <p
         className="h-14 text-[16px] tracking-[1px] sm:text-[14px] sm:tracking-0 xl:text-[16px] flex "
-        onClick={() => handleItem(navigate, books)}
+        onClick={() =>
+          handleNavigateTo(navigate, `${books.title}?book-id=${books._id}`)
+        }
       >
         {books.title}
       </p>
       <p
         className="min-h-[51px] py-1 text-sm sm:text-md lg:text-[15px] hover:underline"
-        onClick={() => handleItem(navigate, books)}
+        onClick={() =>
+          handleNavigateTo(navigate, `${books.title}?book-id=${books._id}`)
+        }
       >
         {truncateText(books.description)}
       </p>

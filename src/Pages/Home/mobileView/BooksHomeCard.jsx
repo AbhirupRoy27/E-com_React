@@ -1,10 +1,8 @@
 import React, { useState, useEffect, Suspense } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useBestSellers } from '../../../Contexts/BooksContext'
-import {
-  handlebestSellers,
-  handleCardClick,
-} from '../../../Utils/Home/Mobile/handlebestSellers'
+import { handleCardClick } from '../../../Utils/Home/Mobile/handlebestSellers'
+import handleNavigateTo from '../../../Utils/navigate/navigateTo'
 
 function BooksHomeCard() {
   const navigate = useNavigate()
@@ -42,7 +40,7 @@ function BooksHomeCard() {
       )}
       <p
         className="text-black/80 active:text-black px-2 mb-2 underline"
-        onClick={() => handlebestSellers(navigate)}
+        onClick={() => handleNavigateTo(navigate, '/best sellers')}
       >
         Looking for best sellers
       </p>

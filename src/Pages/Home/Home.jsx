@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom'
+import handleNavigateTo from '../../Utils/navigate/navigateTo'
 import BooksHomeCard from './mobileView/BooksHomeCard'
-import DiwaliLaptop from './mobileView/DiwaliLaptop'
 import MobileCards from './mobileView/MobileCards'
 import { useState } from 'react'
 import DesktopFlex from './Components/DesktopFlex'
@@ -11,20 +11,20 @@ export default function Home() {
 
   const slides = [
     {
-      color: 'bg-yellow-200',
       url: 'https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760707777/Screenshot_2025-10-17_at_6.56.37_PM_lheter.png',
+      link: 'products',
     },
     {
-      color: 'bg-red-200',
-      url: 'https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760782015/Screenshot_2025-10-18_at_3.35.26_PM_sxvkva.png',
+      url: 'https://res.cloudinary.com/ddu1fpkrw/image/upload/v1761346054/Screenshot_2025-10-25_at_4.15.29_AM_dglhgh.png',
+      link: 'top deals',
     },
     {
-      color: 'bg-green-200',
       url: 'https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760429549/Screenshot_2025-10-14_at_1.41.48_PM_gtjs83.png',
+      link: 'best sellers',
     },
     {
-      color: 'bg-blue-200',
       url: 'https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760711226/DiwaliBanner_fn5acq.png',
+      link: 'gift cards',
     },
   ]
 
@@ -61,7 +61,8 @@ export default function Home() {
           {slides.map((slide, index) => (
             <div
               key={index}
-              className={`h-[25vh] sm:h-[40vh] w-full flex-shrink-0 rounded-xl ${slide.color}`}
+              className={`h-[25vh] sm:h-[40vh] w-full flex-shrink-0 rounded-xl p-1`}
+              onClick={() => handleNavigateTo(navigate, `/${slide.link}`)}
             >
               <img
                 src={slide.url}
@@ -119,7 +120,7 @@ export default function Home() {
               </p>
               <button
                 className="bg-white py-3 px-4 rounded-full"
-                onClick={() => navigate('/Products')}
+                onClick={() => handleNavigateTo(navigate, '/products')}
               >
                 Shop Now →
               </button>
@@ -140,7 +141,6 @@ export default function Home() {
         </div>
       </div>
       <MobileCards /> {/* For Mobile */}
-      <>{/* <DiwaliLaptop navigate={navigate} /> */}</>
       <DesktopFlex />
       <BooksHomeCard />
     </>

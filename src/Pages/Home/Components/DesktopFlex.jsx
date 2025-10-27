@@ -1,16 +1,10 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
+import handleNavigateTo from '../../../Utils/navigate/navigateTo'
 
 function DesktopFlex() {
   const navigate = useNavigate()
 
-  const handleClick = () => {
-    navigate('/products')
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    })
-  }
   return (
     <>
       <div className="w-full min-h-[20vh] min-w-[100vw] sm:min-w-[640px] md:min-w-[768px] lg:min-w-[1024px] xl:min-w-[1280px] flex flex-col sm:flex-row gap-2 justify-center my-2 px-2 sm:px-7">
@@ -23,7 +17,7 @@ function DesktopFlex() {
                 </p>
                 <button
                   className="w-max bg-yellow-300 py-3 px-4 rounded-full hover:bg-yellow-300/90 cursor-pointer"
-                  onClick={() => handleClick()}
+                  onClick={() => handleNavigateTo(navigate, '/best sellers')}
                 >
                   Get Now →
                 </button>
@@ -40,7 +34,7 @@ function DesktopFlex() {
                   </p>
                   <button
                     className="w-max bg-yellow-300 py-3 px-4 rounded-full hover:bg-yellow-300/90 cursor-pointer"
-                    onClick={() => handleClick()}
+                    onClick={() => handleNavigateTo(navigate, '/products')}
                   >
                     Shop Now →
                   </button>
@@ -57,7 +51,7 @@ function DesktopFlex() {
               </p>
               <button
                 className="w-max bg-yellow-300 py-3 px-4 rounded-full hover:bg-yellow-300/90 cursor-pointer"
-                onClick={() => handleClick()}
+                onClick={() => handleNavigateTo(navigate, '/products')}
               >
                 Shop Now →
               </button>
