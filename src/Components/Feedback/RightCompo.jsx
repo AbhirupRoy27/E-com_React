@@ -1,5 +1,3 @@
-import React from 'react'
-
 function RightCompo() {
   return (
     <div className="bg-slate-200 w-full h-[85vh]">

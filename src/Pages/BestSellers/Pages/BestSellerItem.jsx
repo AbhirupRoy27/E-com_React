@@ -3,6 +3,7 @@ import { useBestSellers } from '../../../Contexts/BooksContext'
 import { useCart } from '../../../Contexts/CartContext'
 import { handleAddToCart } from '../../../Components/ProductCard/utils/handleClicks'
 import { useNavigate } from 'react-router-dom'
+import handleNavigateTo from '../../../Utils/navigate/navigateTo'
 
 function BestSellerItem() {
   const { books } = useBestSellers()
@@ -142,7 +143,7 @@ function BestSellerItem() {
                   {cart.includes(book[0], 0) ? (
                     <button
                       className="bg-yellow-400 active:bg-yellow-500 rounded-full py-1 font-semibold"
-                      onClick={() => navigate('/cart')}
+                      onClick={() => handleNavigateTo(navigate, '/cart')}
                     >
                       Go to Cart
                     </button>
@@ -166,7 +167,7 @@ function BestSellerItem() {
 
                   <button
                     className="bg-amber-500/90 active:bg-yellow-600 rounded-full py-1 font-semibold"
-                    onClick={() => navigate('/buy now')}
+                    onClick={() => handleNavigateTo(navigate, '/buy now')}
                   >
                     Buy Now
                   </button>

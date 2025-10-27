@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { handleSubmit, handleInput } from '../Utils/Formhandler'
+import { useState } from 'react'
+import { handleSubmit, handleInput } from '../../Utils/Feedback/Formhandler'
 
 function LeftCompo() {
   const [feedback, setFeedBack] = useState({

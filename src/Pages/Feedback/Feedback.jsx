@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import LeftCompo from './Componets/LeftCompo'
-import RightCompo from './Componets/RightCompo'
+import LeftCompo from '../../Components/Feedback/LeftCompo'
+import RightCompo from '../../Components/Feedback/RightCompo'
 
 function Feedback() {
   const [isActive, setIsActive] = useState(true)
