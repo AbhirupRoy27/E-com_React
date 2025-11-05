@@ -3,15 +3,13 @@ import Bar from './Components/Search/Bar'
 import { handleDropDown } from './Utils/handleClicks'
 import { useAuth } from '../../Contexts/Auth/AuthContext'
 import { useState } from 'react'
-
-// import { useCart } from '../../Contexts/CartContext'
+import { BookHeart } from 'lucide-react'
 
 export default function SearchBar() {
   const navigate = useNavigate()
-  const { setIsLogout } = useAuth()
+  const { isLogin, setIsLogout } = useAuth()
   const [open, setOpen] = useState(false)
 
-  // const { cart } = useCart()
   return (
     <>
       <div className="flex p-2 md:justify-between justify-around items-center bg-[#0f1111] min-w-[350px] sm:min-w-[640px] md:min-w-[768px] lg:min-w-[1024px] xl:min-w-[1280px]">
@@ -21,8 +19,12 @@ export default function SearchBar() {
         >
           NextGen
         </div>
-        <div className="hidden xl:flex text-white cursor-pointer text-xl">
-          Location
+        <div
+          className="hidden xl:flex text-white cursor-pointer text-lg gap-2 items-center"
+          onClick={() => navigate('/WishList')}
+        >
+          <BookHeart />
+          Wishlist
         </div>
         <Bar navigate={navigate} />
         <div className="flex p-1 gap-2 md:gap-6">
@@ -51,22 +53,38 @@ export default function SearchBar() {
             <div
               className={`${
                 open && window.innerWidth <= 1280 ? 'block ' : 'hidden'
-              } group-hover:block bg-gray-100 text-black
+              } group-hover:block text-black
               absolute top-full right-0 bg-white rounded min-w-[200px] shadow-lg`}
             >
               <p className="py-2 bg-slate-700 pl-2 rounded-t text-white">
                 Account Name
               </p>
               <ol>
-                {['Orders', 'WishList', 'Setting', 'Logout'].map((item, i) => (
+                {['Orders', 'WishList', 'Setting', ''].map((item, i) => (
                   <li
                     key={i}
                     className="py-2 text-slate-700 hover:bg-gray-100 pl-2 cursor-pointer hover:font-semibold active:scale-101"
-                    onClick={() =>
+                    onClick={() => {
+                      if (isLogin) {
+                        return handleDropDown(
+                          navigate,
+                          (item = 'Logout'),
+                          setIsLogout,
+                          setOpen
+                        )
+                      }
+                      if (item === '') {
+                        return handleDropDown(
+                          navigate,
+                          (item = 'Login'),
+                          setIsLogout,
+                          setOpen
+                        )
+                      }
                       handleDropDown(navigate, item, setIsLogout, setOpen)
-                    }
+                    }}
                   >
-                    {item === 'Logout' ? 'Login ' : item}
+                    {item === '' ? <>{isLogin ? 'Logout' : 'Login'}</> : item}
                   </li>
                 ))}
               </ol>

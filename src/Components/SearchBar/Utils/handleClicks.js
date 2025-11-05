@@ -10,8 +10,6 @@ export const handleDropDown = (navigate, item, setIsLogout, setOpen) => {
 }
 
 export const handleLogout = (setIsLogout, navigate) => {
-  // if (window.confirm('Are you sure you want to log out?')) {
   setIsLogout(false)
   navigate('/login')
-  // }
 }
