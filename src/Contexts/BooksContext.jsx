@@ -12,11 +12,10 @@ export const BooksProvider = ({ children }) => {
   const currentPage = Number(searchParams.get('page')) || 1
 
   useEffect(() => {
+    let isCancelled = false
     const fetchBooks = async () => {
+      isLoading(true)
       try {
-        if (loading === false) {
-          isLoading(true)
-        }
         const res = await fetch(
           `https://abhi-ecomserver.vercel.app/api/books?page=${currentPage}&limit=10`
         )
@@ -24,14 +23,21 @@ export const BooksProvider = ({ children }) => {
           throw new Error(`HTTP error! status: ${res.status}`)
         }
         const data = await res.json()
-        setBooks(data.allBooks) // store data in state
-        isLoading(false)
+        if (!isCancelled) {
+          setBooks(data.allBooks || [])
+        }
       } catch (err) {
         console.error('Custom Error', err)
+      } finally {
+        if (!isCancelled) {
+          isLoading(false)
+        }
       }
     }
-
     fetchBooks()
+    return () => {
+      isCancelled = true
+    }
   }, [currentPage])
 
   return (
