@@ -33,21 +33,21 @@ function Desktop() {
           </div>
         </div>
         <div className="min-h-max flex justify-center w-full my-4 sm:my-10 gap-[1%] p-1">
-          <div className="w-full lg:w-[30%] max-h-[800px] rounded-full overflow-hidden hover:scale-101">
+          <div className="w-full lg:w-[30%] max-h-[800px] rounded-full overflow-hidden hover:scale-101 transition-all duration-300 ease-in-out hover:shadow-lg shadow-black/30">
             <img
               src="https://res.cloudinary.com/ddu1fpkrw/image/upload/v1761544722/004_hzcvkg.png"
               className=""
               onClick={() => handleNavigateTo(navigate, 'best sellers')}
             />
           </div>
-          <div className="w-full lg:w-[30%] max-h-[800px]  rounded-full overflow-hidden hover:scale-101">
+          <div className="w-full lg:w-[30%] max-h-[800px] rounded-full overflow-hidden hover:scale-101 transition-all duration-300 ease-in-out hover:shadow-lg shadow-black/30">
             <img
               src="https://res.cloudinary.com/ddu1fpkrw/image/upload/v1761543991/002_gden4z.png"
               className=""
               onClick={() => handleNavigateTo(navigate, 'best sellers')}
             />
           </div>
-          <div className="w-full lg:w-[30%] max-h-[800px] rounded-full overflow-hidden hover:scale-101">
+          <div className="w-full lg:w-[30%] max-h-[800px] rounded-full overflow-hidden hover:scale-101 transition-all duration-300 ease-in-out hover:shadow-lg shadow-black/30">
             <img
               src="https://res.cloudinary.com/ddu1fpkrw/image/upload/v1761544432/003_wkevbr.png"
               className=""
@@ -57,14 +57,14 @@ function Desktop() {
         </div>
         <div className="p-2 px-4 sm:p-4 flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-0">
           <div className="sm:max-w-[58%]">
-            <p className="text-lg sm:text-xl px-2 sm:px-6 font-semibold uppercase text-base/2">
+            <p className="text-lg sm:text-xl px-2 sm:px-6 font-semibold uppercase ">
               Good deals aren’t just about saving — they’re about that
               unstoppable feeling when you know you nailed it.
             </p>
           </div>
           <button
-            className="bg-yellow-500 hover:bg-yellow-600 active:scale-101 active:shadow-lg w-full sm:w-[30%] py-3 rounded-full font-bold tracking-wide uppercase"
-            onClick={() => handleNavigateTo(navigate, 'products')}
+            className="bg-yellow-500 hover:bg-yellow-600 active:scale-95 active:shadow-lg transform transition-all duration-300 ease-in-out w-full sm:w-[30%] py-3 rounded-full font-bold tracking-wide uppercase"
+            onClick={() => handleNavigateTo(navigate, '/products')}
           >
             Shop Now ↗
           </button>

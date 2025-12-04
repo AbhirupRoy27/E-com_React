@@ -52,7 +52,7 @@ function BsCard({ books }) {
       </div>
       <div className="py-2">
         <button
-          className="bg-white/20 py-1 active:bg-yellow-400 sm:active:bg-yellow-500 sm:active:scale-102 hover:bg-yellow-400 w-[99%] rounded-full border border-yellow-400 hover:bg-yellow-400 ease-in-out tracking-[1px]"
+          className="bg-white/20 py-1 active:bg-yellow-400 sm:active:bg-yellow-500 sm:active:scale-102 hover:bg-yellow-400 w-[99%] rounded-full border border-yellow-400 ease-in-out tracking-[1px]"
           onClick={() => handleBuy(navigate, books, setItem)}
         >
           Buy Now

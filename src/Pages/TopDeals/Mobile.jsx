@@ -33,14 +33,14 @@ function Mobile() {
           </div>
         </div>
         <div className="min-h-max flex flex-col sm:flex-row justify-center w-full my-4 sm:my-10 sm:gap-1 p-1">
-          <div className="w-full lg:w-[30%] max-h-[600px] sm:max-h-[800px] rounded-full overflow-hidden active:scale-101 mb-2">
+          <div className="w-full lg:w-[30%] max-h-[600px] sm:max-h-[800px] rounded-full overflow-hidden active:scale-101 mb-2 shadow-lg shadow-black/30">
             <img
               src="https://res.cloudinary.com/ddu1fpkrw/image/upload/v1761544722/004_hzcvkg.png"
               className="h-full w-full"
               onClick={() => navigate('/products')}
             />
           </div>
-          <div className="flex gap-1 lg:w-[60%] max-h-[600px] sm:max-h-[800px]">
+          <div className="flex gap-1 lg:w-[60%] max-h-[600px] sm:max-h-[800px] mt-4">
             <div className="w-full rounded-full overflow-hidden active:scale-101 mb-2">
               <img
                 src="https://res.cloudinary.com/ddu1fpkrw/image/upload/v1761543991/002_gden4z.png"
