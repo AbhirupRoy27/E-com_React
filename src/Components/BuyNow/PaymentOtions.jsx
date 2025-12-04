@@ -27,6 +27,7 @@ function PaymentOtions() {
         setPaymentMethod={setPaymentMethod}
         setIsDisabled={setIsDisabled}
         isDisabled={isDisabled}
+        PaymentMethod={PaymentMethod}
       />
     </div>
   )
@@ -38,10 +39,20 @@ const PaymentOtionsItems = ({
   setPaymentMethod,
   setIsDisabled,
   isDisabled,
+  PaymentMethod,
 }) => {
+  const handleFormSubmit = (e) => {
+    e.preventDefault()
+    if (!PaymentMethod) {
+      alert('Please select a payment method.')
+      return
+    }
+    handleSubmit(e, setIsDisabled, setIsOpen, isOpen)
+  }
+
   return (
     <form
-      onSubmit={(e) => handleSubmit(e, setIsDisabled, setIsOpen, isOpen)}
+      onSubmit={handleFormSubmit}
       className={`${
         isOpen ? 'flex' : 'hidden'
       } transition-all duration-300 ease-in-out sm:border border-gray-400 rounded sm:p-2 sm:py-4 sm:px-6 text-xl flex-col gap-4`}
@@ -51,9 +62,10 @@ const PaymentOtionsItems = ({
         <div className="flex gap-2 items-center mt-2">
           <input
             id="UPI"
+            name="paymentMethod"
             type="radio"
-            className=""
             value="Pay With UPI"
+            checked={PaymentMethod === 'Pay With UPI'}
             onChange={(e) => setPaymentMethod(e.target.value)}
           />
           <label htmlFor="UPI" className="text-sm text-gray-500">
@@ -68,9 +80,11 @@ const PaymentOtionsItems = ({
         <div className="flex gap-2 items-center mt-2">
           <input
             id="CREDIT & DEBIT CARDS"
+            name="paymentMethod"
             type="radio"
-            className=""
-            value="Buy now, Pay later"
+            value="Credit & Debit Cards"
+            checked={PaymentMethod === 'Credit & Debit Cards'}
+            onChange={(e) => setPaymentMethod(e.target.value)}
           />
           <label
             htmlFor="CREDIT & DEBIT CARDS"
@@ -88,9 +102,11 @@ const PaymentOtionsItems = ({
         <div className="flex gap-2 items-center mt-2">
           <input
             id="Buy now, Pay later"
+            name="paymentMethod"
             type="radio"
-            className=""
             value="Buy now, Pay later"
+            checked={PaymentMethod === 'Buy now, Pay later'}
+            onChange={(e) => setPaymentMethod(e.target.value)}
           />
           <label htmlFor="Buy now, Pay later" className="text-sm text-gray-500">
             Available Credit: ₹30,000
@@ -104,7 +120,7 @@ const PaymentOtionsItems = ({
         type="submit"
         disabled={isDisabled}
       >
-        Pay with this methors
+        Pay with this method
       </button>
     </form>
   )
