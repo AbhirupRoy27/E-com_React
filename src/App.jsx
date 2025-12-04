@@ -56,7 +56,7 @@ function App() {
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
       <Route
-        path="buy now"
+        path="buy-now"
         element={
           <Suspense fallback={<Loading />}>
             <BuyNow />

@@ -1,6 +1,6 @@
 export const handleBuy = (navigate, books, setItem) => {
   setItem([books])
-  navigate('/Buy Now')
+  navigate('/buy-Now')
 }
 
 export const handlePayment = (setIsOpen, setIsDisabled) => {

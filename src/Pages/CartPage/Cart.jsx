@@ -1,8 +1,7 @@
 import { lazy, Suspense } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { useCart } from '../../Contexts/CartContext'
 import CartCard from './ComponetntsCart/CartCard'
-// import './styles.css'
-import { useNavigate } from 'react-router-dom'
 import EmptyCart from './ComponetntsCart/EmptyCart'
 
 const BillCard = lazy(() => import('./ComponetntsCart/Bill/BillCard'))
