@@ -4,15 +4,29 @@ const BuyContext = createContext()
 
 export const BuyContextProvider = ({ children }) => {
   const [item, setItem] = useState([])
-  const [isDisabled, setIsDisabled] = useState(false)
+  const [isPaymentMethodSelected, setIsPaymentMethodSelected] = useState(false)
 
   return (
-    <BuyContext.Provider value={{ item, setItem, isDisabled, setIsDisabled }}>
+    <BuyContext.Provider
+      value={{
+        item,
+        setItem,
+        isPaymentMethodSelected,
+        setIsPaymentMethodSelected,
+        // Keep legacy name for backward compatibility during migration
+        isDisabled: isPaymentMethodSelected,
+        setIsDisabled: setIsPaymentMethodSelected,
+      }}
+    >
       {children}
     </BuyContext.Provider>
   )
 }
 
 export const useBuy = () => {
-  return useContext(BuyContext)
+  const context = useContext(BuyContext)
+  if (!context) {
+    throw new Error('useBuy must be used within a BuyContextProvider')
+  }
+  return context
 }

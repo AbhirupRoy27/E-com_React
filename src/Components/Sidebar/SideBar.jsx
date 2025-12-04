@@ -4,11 +4,11 @@ import { useNavLinks } from '../../Contexts/NaclinkContext/NavLinksContext'
 
 export default function SideBar() {
   const navigate = useNavigate()
-  const { sideBar, isSideBar } = useSideBar()
+  const { sideBar, setSideBar } = useSideBar()
   const { navLinkss } = useNavLinks()
 
   const handleClick = (link) => {
-    isSideBar(false)
+    setSideBar(false)
     navigate(`${link}`)
   }
 
@@ -25,7 +25,7 @@ export default function SideBar() {
         <span
           className="mr-3 text-3xl font-light"
           role="button"
-          onClick={() => isSideBar(false)}
+          onClick={() => setSideBar(false)}
         >
           X
         </span>

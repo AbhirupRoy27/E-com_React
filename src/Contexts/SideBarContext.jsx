@@ -4,10 +4,10 @@ import { createContext, useContext, useState } from 'react'
 const SideBarContext = createContext()
 
 export const SideBarProvider = ({ children }) => {
-  const [sideBar, isSideBar] = useState(false)
+  const [sideBar, setSideBar] = useState(false)
 
   return (
-    <SideBarContext.Provider value={{ sideBar, isSideBar }}>
+    <SideBarContext.Provider value={{ sideBar, setSideBar }}>
       {children}
     </SideBarContext.Provider>
   )
@@ -15,5 +15,9 @@ export const SideBarProvider = ({ children }) => {
 
 // Custom Hook
 export const useSideBar = () => {
-  return useContext(SideBarContext)
+  const context = useContext(SideBarContext)
+  if (!context) {
+    throw new Error('useSideBar must be used within a SideBarProvider')
+  }
+  return context
 }

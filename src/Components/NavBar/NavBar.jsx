@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { useSideBar } from '../../Contexts/SideBarContext'
 
 export default function NavBar() {
-  const { isSideBar } = useSideBar()
+  const { setSideBar } = useSideBar()
   const navigate = useNavigate()
 
   return (
@@ -12,7 +12,7 @@ export default function NavBar() {
         <div
           className="flex flex-col justify-center gap-[0.1rem] ml-[10px]"
           role="button"
-          onClick={() => isSideBar(true)}
+          onClick={() => setSideBar(true)}
         >
           {[1, 2, 3].map((s, i) => (
             <span className="bg-[#f0f8ff] w-[30px] h-[5px]" key={i}></span>
