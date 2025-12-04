@@ -1,9 +1,7 @@
-import { lazy, Suspense } from 'react'
 import { Outlet } from 'react-router-dom'
 import { useProducts } from '../../Contexts/ProductContext'
 import Page from '../../Components/PageNavigation/Page'
 
-const FilterBar = lazy(() => import('../../Components/SideFilterBar/index'))
 
 export const BrandDropList = () => {
   const { setFilteredProducts, products } = useProducts()
