@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Logo() {
+function Logo(): React.JSX.Element {
   return (
     <div className="mb-8 flex flex-col items-center w-full gap-1">
       <p className="text-3xl text-slate-700 font-bold tracking-wide">
@@ -25,3 +25,4 @@ function Logo() {
 }
 
 export default Logo
+
