@@ -48,8 +48,8 @@ export default function Home() {
   }
 
   return (
-    <div className="bg-gray-950">
-      <div className="overflow-hidden w-full min-w-[354px] xl:px-30 bg-gray-950">
+    <div className="sm:bg-gray-950">
+      <div className="overflow-hidden w-full min-w-[354px] xl:px-30">
         <div
           className="flex transition-transform duration-500 mt-2 sm:hidden"
           onTouchStart={handleTouchStart}
@@ -117,9 +117,9 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <MobileCards /> {/* For Mobile */}
+      {/* <MobileCards /> For Mobile */}
       <HomeProducts />
-      <DesktopFlex />
+      {window.innerWidth >= 450 && <DesktopFlex />}
       <BooksHomeCard />
     </div>
   )
