@@ -1,4 +1,3 @@
-import React, { useState, useEffect, Suspense } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useBestSellers } from '../../../Contexts/BooksContext'
 import { handleCardClick } from '../../../Utils/Home/Mobile/handlebestSellers'
@@ -8,38 +7,28 @@ function BooksHomeCard() {
   const navigate = useNavigate()
 
   const { books } = useBestSellers()
-  const [images, setImages] = useState([])
-
-  useEffect(() => {
-    if (books && books.length > 0) {
-      setImages(books)
-    }
-  }, [books])
+  if (books.length <= 0) return
 
   return (
-    <div className="flex sm:hidden bg-slate-200 mb-2 flex-col p-2 min-w-[100vw] sm:min-w-[640px] md:min-w-[768px] lg:min-w-[1024px] xl:min-w-[1280px]">
-      <p className="py-1 text-xl text-gray-800 font-semibold tracking-widest">
+    <div className="flex bg-gray-950 flex-col min-w-[354px] px-2 xl:px-30 pt-10 pb-5">
+      <p className=" text-gray-50 font-mono uppercase tracking-widest py-4 text-center text-xl sm:text-2xl">
         Books you might like
       </p>
-      {images.length <= 0 ? (
-        <Loader />
-      ) : (
-        <div className="flex flex-wrap py-2">
-          <div className="flex gap-2 w-full overflow-scroll no-scrollbar ease h-[300px] mb-2">
-            {images.map((img, i) => (
-              <img
-                key={i}
-                src={img.coverImage}
-                alt="Book Home image"
-                className="bg-white min-w-[49%] max-w-[49%] sm:max-w-[30%] h-full"
-                onClick={() => handleCardClick(navigate, img)}
-              />
-            ))}
-          </div>
-        </div>
-      )}
+
+      <div className="flex gap-2 w-full overflow-scroll no-scrollbar ease h-[300px] mb-2 ">
+        {books.map((img, i) => (
+          <img
+            key={i}
+            src={img.coverImage}
+            alt="Book Home image"
+            className="bg-white h-full"
+            onClick={() => handleCardClick(navigate, img)}
+          />
+        ))}
+      </div>
+
       <p
-        className="text-black/80 active:text-black px-2 mb-2 underline"
+        className="w-fit active:text-black mt-2 px-4 py-2 text-gray-50 cursor-pointer border border-amber-50/10 hover:bg-amber-50/10 transition-colors duration-300 "
         onClick={() => handleNavigateTo(navigate, '/best sellers')}
       >
         Looking for best sellers
