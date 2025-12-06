@@ -4,6 +4,7 @@ import BooksHomeCard from './mobileView/BooksHomeCard'
 import MobileCards from './mobileView/MobileCards'
 import { useState } from 'react'
 import DesktopFlex from './Components/DesktopFlex'
+import HomeProducts from './Components/HomeProducts'
 
 export default function Home() {
   const navigate = useNavigate()
@@ -47,8 +48,8 @@ export default function Home() {
   }
 
   return (
-    <>
-      <div className="overflow-hidden w-full min-w-[100vw] sm:min-w-[640px] md:min-w-[768px] lg:min-w-[1024px] xl:min-w-[1280px]">
+    <div className="bg-gray-950">
+      <div className="overflow-hidden w-full min-w-[354px] xl:px-30 bg-gray-950">
         <div
           className="flex transition-transform duration-500 mt-2 sm:hidden"
           onTouchStart={handleTouchStart}
@@ -84,30 +85,6 @@ export default function Home() {
           ))}
         </div>
         <div className="hidden m-2 rounded-xl sm:flex flex-col h-[65vh] bg-[url(https://res.cloudinary.com/ddu1fpkrw/image/upload/v1761401435/Gemini_Generated_Image_g6eun0g6eun0g6eu_lff80c.png)] bg-center bg-no-repeat bg-cover min-w-[750px] ">
-          <div className="h-max w-full flex justify-between items-center">
-            <h1 className="ml-4 lg:ml-8 text-yellow-100 text-shadow-lg text-3xl font-bold tracking-widest ">
-              NextGen
-            </h1>
-
-            <ol
-              className="flex lg:gap-4 items-center px-5 py-4 
-              text-yellow-100 tracking-widest text-2xl text-shadow-lg lg:text-3xl font-semibold 
-              rounded-md"
-            >
-              <li className="font-bold min-w-[120px] flex justify-center items-center hover:text-yellow-100/90 cursor-pointer">
-                Quick
-              </li>
-              <li className="font-bold min-w-[120px] flex justify-center items-center hover:text-yellow-100/90 cursor-pointer">
-                Shoes
-              </li>
-              <li className="font-bold min-w-[120px] flex justify-center items-center hover:text-yellow-100/90 cursor-pointer">
-                Books
-              </li>
-              {/* <li className="font-bold min-w-[140px] flex justify-center items-center hover:text-yellow-100/90 cursor-pointer">
-                Gift-Cards
-              </li> */}
-            </ol>
-          </div>
           <div className="flex flex-row-reverse justify-between items-end h-full">
             <div className="p-6 pb-20 text-end m-2">
               <p className="text-4xl sm:text-5xl font-bold tracking-wide text-yellow-100 text-shadow-xl mb-2">
@@ -141,8 +118,9 @@ export default function Home() {
         </div>
       </div>
       <MobileCards /> {/* For Mobile */}
+      <HomeProducts />
       <DesktopFlex />
       <BooksHomeCard />
-    </>
+    </div>
   )
 }

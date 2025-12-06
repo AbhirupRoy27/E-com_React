@@ -1,4 +1,3 @@
-import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import handleNavigateTo from '../../../Utils/navigate/navigateTo'
 
@@ -7,7 +6,7 @@ function DesktopFlex() {
 
   return (
     <>
-      <div className="w-full min-h-[20vh] min-w-[100vw] sm:min-w-[640px] md:min-w-[768px] lg:min-w-[1024px] xl:min-w-[1280px] flex flex-col sm:flex-row gap-2 justify-center my-2 px-2 sm:px-7">
+      <div className="w-full min-w-[354px] flex flex-col sm:flex-row gap-2 justify-center py-2 px-2 xl:px-30">
         <div className="sm:w-[50%] flex flex-col gap-2">
           <div className="h-[50%] min-h-[200px] sm:min-h-[400px] bg-[url(https://res.cloudinary.com/ddu1fpkrw/image/upload/v1761405210/04_yfcybw.png)] bg-cover bg-center bg-no-repeat rounded-lg">
             <div className="w-full flex justify-end">
