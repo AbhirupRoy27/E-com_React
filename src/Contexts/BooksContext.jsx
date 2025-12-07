@@ -17,7 +17,7 @@ export const BooksProvider = ({ children }) => {
       isLoading(true)
       try {
         const res = await fetch(
-          `https://abhi-ecomserver.vercel.app/api/books?page=${currentPage}&limit=10`
+          `https://apimain-service.vercel.app/api/books?page=${currentPage}&limit=10 `
         )
         if (!res.ok) {
           throw new Error(`HTTP error! status: ${res.status}`)

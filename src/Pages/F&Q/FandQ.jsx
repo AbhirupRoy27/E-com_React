@@ -1,9 +1,6 @@
-import React from 'react'
-import Logout from '../Account/Logout/Logout'
-
 function FandQ() {
   return (
-    <div>
+    <div className="h-screen bg-gray-950">
       <h1>F&Q</h1>
     </div>
   )
