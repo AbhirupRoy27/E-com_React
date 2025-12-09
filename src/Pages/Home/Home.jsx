@@ -84,7 +84,7 @@ export default function Home() {
             ></span>
           ))}
         </div>
-        <div className="hidden m-2 rounded-xl sm:flex flex-col h-[65vh] bg-[url(https://res.cloudinary.com/ddu1fpkrw/image/upload/v1761401435/Gemini_Generated_Image_g6eun0g6eun0g6eu_lff80c.png)] bg-center bg-no-repeat bg-cover min-w-[750px] ">
+        <div className="hidden m-2 rounded-xl sm:flex flex-col h-[65vh] bg-white/10 bg-[url(https://res.cloudinary.com/ddu1fpkrw/image/upload/v1761401435/Gemini_Generated_Image_g6eun0g6eun0g6eu_lff80c.png)] bg-center bg-no-repeat bg-cover min-w-[750px] ">
           <div className="flex flex-row-reverse justify-between items-end h-full">
             <div className="p-6 pb-20 text-end m-2">
               <p className="text-4xl sm:text-5xl font-bold tracking-wide text-yellow-100 text-shadow-xl mb-2">
