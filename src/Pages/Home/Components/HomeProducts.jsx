@@ -9,7 +9,7 @@ function HomeProducts() {
 
   if (list.length < 1) return
 
-  console.log(list)
+  // console.log(list)
   return (
     <div className="bg-gray-950 px-2 xl:px-30 py-4">
       <h1 className="uppercase text-gray-50 text-center font-mono tracking-wider py-4 text-2xl">
@@ -47,9 +47,11 @@ export default HomeProducts
 const getData = async (setList) => {
   try {
     const res = await axios.get(
-      'http://localhost:4000/api/products/all-product?page=1&limit=10'
+      'https://apiproducts-service-nu.vercel.app/api/products/all-product?page=1&limit=10'
+      // 'http://localhost:4000/api/products/all-product?page=1&limit=10'
     )
-    if (res.statusText) {
+
+    if (res.status == 200) {
       return setList(res.data.response)
     }
   } catch (error) {
