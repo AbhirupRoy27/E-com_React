@@ -20,11 +20,11 @@ export default function Home() {
       link: 'top deals',
     },
     {
-      url: 'https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760429549/Screenshot_2025-10-14_at_1.41.48_PM_gtjs83.png',
+      url: 'https://m.media-amazon.com/images/S/aplus-media/vc/9d4a5cc4-899e-4683-9960-91c5a6130368.__CR19,0,1213,375_PT0_SX970_V1___.jpg',
       link: 'best sellers',
     },
     {
-      url: 'https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760711226/DiwaliBanner_fn5acq.png',
+      url: 'https://res.cloudinary.com/dfuhnqbap/image/upload/v1765263857/000000001_tn2s0h.png',
       link: 'gift cards',
     },
   ]

@@ -20,7 +20,7 @@ function HomeProducts() {
           <div className="text-white" key={p._id}>
             <img
               src={p.coverImage}
-              className="bg-white/10 min-w-[250px] h-[300px] border-0 cursor-pointer shrink-0"
+              className="bg-white/10 min-w-[250px] h-[300px] border-0 cursor-pointer shrink-0 active:scale-97 transition-all duration-300"
               alt="product name"
             />
             <div className="mt-2 p-1">
@@ -31,7 +31,7 @@ function HomeProducts() {
               <p className="text-[12px] text-gray-400 capitalize mb-2 line-clamp-3">
                 {p.description}
               </p>
-              <button className="text-center mt-2 w-full border border-amber-50/10 rounded-4xl py-2 hover:bg-amber-50/10 uppercase text-sm tracking-wide cursor-pointer">
+              <button className="text-center mt-2 w-full border border-amber-50/10 rounded-4xl py-2 hover:bg-amber-50/10 uppercase text-sm tracking-wide cursor-pointer active:scale-97 active:bg-amber-50/25 transition-all duration-300">
                 View Product
               </button>
             </div>

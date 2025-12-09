@@ -28,10 +28,10 @@ function BooksHomeCard() {
       </div>
 
       <p
-        className="w-fit active:text-black mt-2 px-4 py-2 text-gray-50 cursor-pointer border border-amber-50/10 hover:bg-amber-50/10 transition-colors duration-300 "
+        className="uppercase w-fit active:text-black mt-2 px-4 py-2 text-gray-50 cursor-pointer border border-amber-50/10 hover:bg-amber-50/10 transition-colors duration-300 "
         onClick={() => handleNavigateTo(navigate, '/best sellers')}
       >
-        Looking for best sellers
+        more best sellers
       </p>
     </div>
   )
