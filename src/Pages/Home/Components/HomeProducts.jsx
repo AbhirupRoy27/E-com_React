@@ -25,10 +25,10 @@ function HomeProducts() {
             />
             <div className="mt-2 p-1">
               <span></span>
-              <h3 className="capitalize hover:underline underline-offset-2 mb-2 cursor-pointer">
+              <h3 className="capitalize hover:underline underline-offset-2 mb-2 cursor-pointer line-clamp-2">
                 {p.title}
               </h3>
-              <p className="text-[12px] text-gray-400 capitalize mb-2">
+              <p className="text-[12px] text-gray-400 capitalize mb-2 line-clamp-3">
                 {p.description}
               </p>
               <button className="text-center mt-2 w-full border border-amber-50/10 rounded-4xl py-2 hover:bg-amber-50/10 uppercase text-sm tracking-wide cursor-pointer">
