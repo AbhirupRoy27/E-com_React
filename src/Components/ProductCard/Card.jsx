@@ -6,46 +6,7 @@ import {
   handleGoToCart,
   handleItemPage,
 } from './utils/handleClicks'
-
-const carticon = (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 24 24"
-    width="20"
-    height="28"
-    fill="currentColor"
-  >
-    <path
-      d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10 
-           0c-1.1 0-1.99.9-1.99 2S15.9 22 17 22s2-.9 2-2-.9-2-2-2zM7.16 
-           14l.84-2h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49A.996.996 
-           0 0019 3H6.21l-.94-2H1v2h2l3.6 
-           7.59-1.35 2.44C4.52 14.37 5.48 
-           16 7 16h12v-2H7.42c-.14 0-.25-.11-.26-.24z"
-    />
-  </svg>
-)
-
-const wishlist = (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 24 24"
-    width="20"
-    height="28"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-  >
-    <path
-      d="M12.1 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5
-           2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 
-           4.5 2.09C13.09 3.81 14.76 3 16.5 
-           3 19.58 3 22 5.42 22 8.5c0 
-           3.78-3.4 6.86-8.65 11.54l-1.25 
-           1.31z"
-    />
-  </svg>
-)
+import { Heart, ShoppingCart } from 'lucide-react'
 
 function Card() {
   const { cart, setCart, total, setTotal } = useCart()
@@ -55,10 +16,7 @@ function Card() {
   return filteredProducts?.length > 0 ? (
     <>
       {filteredProducts.map((p) => (
-        <div
-          key={p._id}
-          className="bg-slate-50/40 2xl:w-[19.5%] xl:w-[24%] md:w-[32%] p-1 w-[49%] h-max rounded-md"
-        >
+        <div key={p._id} className="bg-slate-50/40 p-2 h-max rounded-md">
           <div className="text-black sm:pt-2 pb-2 min-h-[40px] flex items-center">
             <h2 className=" text-md lg:text-xl font-semibold ">
               {p.name} {p.sex} {p.producttype}
@@ -114,7 +72,7 @@ function Card() {
                 onClick={() => handleGoToCart(navigate)}
                 className="w-full text-sm flex gap-[1rem] py-[8px] items-center justify-center border-0 font-semibold rounded-md bg-yellow-400"
               >
-                Go to Cart {carticon}
+                Go to Cart <ShoppingCart />
               </button>
             ) : (
               <button
@@ -123,12 +81,12 @@ function Card() {
                 }
                 className="w-full text-sm flex gap-[1rem] py-[8px] items-center justify-center border-0 font-semibold rounded-md bg-yellow-400"
               >
-                Add to Cart {carticon}
+                Add to Cart <ShoppingCart />
               </button>
             )}
 
             <button className="w-full text-sm flex gap-[1rem] py-[8px] items-center justify-center border-0 font-semibold rounded-md bg-amber-600">
-              Wishlist Item {wishlist}
+              Wishlist Item <Heart />
             </button>
           </div>
         </div>
