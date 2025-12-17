@@ -13,7 +13,7 @@ function Products() {
         <div className="p-2 flex gap-2">
           <BrandDropList />
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-1 md:gap-3 px-2 sm:px-10 min-h-[90vh] mb-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2 md:gap-3 px-2 sm:px-10 min-h-[90vh] mb-4">
           <Suspense fallback={<h1>Loading....</h1>}>
             <ProductCards />
           </Suspense>

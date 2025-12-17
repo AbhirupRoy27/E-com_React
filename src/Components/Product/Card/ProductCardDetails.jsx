@@ -4,14 +4,14 @@ import handleGoToItemPage from '../utils/handleGoToItemPage'
 function ProductCardDetails({ product }) {
   const navigate = useNavigate()
   return (
-    <div className="p-2 bg-white rounded-bl-md rounded-br-md">
+    <div className="p-1 sm:p-2 bg-white rounded-bl-md rounded-br-md">
       <div className="text-black flex items-center">
-        <h2 className=" text-md lg:text-xl font-semibold line-clamp-2">
+        <h2 className="text-sm lg:text-xl font-semibold line-clamp-2">
           {product.description}
         </h2>
       </div>
 
-      <div className="text-sm ">
+      <div className="text-[12px]">
         {product.stock < 10 ? (
           <p className="bg-red-900 text-white font-semibold py-1 px-3 w-max rounded my-2">
             !! only few remaining
@@ -22,8 +22,9 @@ function ProductCardDetails({ product }) {
           </p>
         )}
       </div>
+
       <div onClick={() => handleGoToItemPage(product, navigate)}>
-        <p className="pb-1 text-gray-600 text-sm sm:text-md line-clamp-2 min-h-[44px]">
+        <p className="pb-3 text-gray-600 text-sm sm:text-md line-clamp-2 min-h-[44px]">
           {/* {product.description.substring(0, 45)} */}
           {product.description}
           <b
@@ -35,8 +36,9 @@ function ProductCardDetails({ product }) {
           </b>
         </p>
       </div>
+
       <div
-        className="flex gap-2 items-center "
+        className="mt-3 flex gap-2 items-center"
         onClick={() => navigate(`/product-item/${product._id}`)}
       >
         <p className="text-red-600 text-lg lg:text-xl font-light">

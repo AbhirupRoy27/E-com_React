@@ -22,7 +22,9 @@ export const BrandDropList = () => {
   }
   return (
     <div className="flex items-center gap-1 px-3 py-2 lg:px-10 text-white">
-      <p className="font-semibold font-mono text-xl ">Select Brand:</p>
+      <p className="font-semibold font-mono text-md sm:text-lg mr-2">
+        Select Brand:
+      </p>
       <div className="hidden sm:flex gap-2 overflow-x-scroll no-scrollbar">
         {Brands.map((b, idx) => (
           <button
@@ -35,7 +37,7 @@ export const BrandDropList = () => {
         ))}
       </div>
       <select
-        className="sm:hidden p-[0.4rem] min-w-[100px] font-semibold focus:outline-none focus:ring-0 focus:border-transparent bg-[rgba(62,62,62,0.212)] rounded-md"
+        className="sm:hidden p-[0.4rem] min-w-[100px] font-semibold focus:outline-none focus:ring-0 focus:border-transparent bg-white/70 text-gray-950 rounded-md"
         onChange={getBrands}
       >
         <option defaultValue={'All'}>All</option>

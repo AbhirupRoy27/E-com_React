@@ -8,7 +8,7 @@ function CoverImage({ product }) {
   const navigate = useNavigate()
   return (
     <div className="w-full">
-      <div className="relative w-full h-90 rounded-tr-md rounded-tl-md overflow-hidden">
+      <div className="relative w-full h-70 rounded-tr-md rounded-tl-md overflow-hidden">
         <img
           src={product.mainimg}
           alt="cover"

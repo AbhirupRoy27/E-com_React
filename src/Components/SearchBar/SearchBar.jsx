@@ -3,7 +3,7 @@ import Bar from './Components/Search/Bar'
 import { handleDropDown } from './Utils/handleClicks'
 import { useAuth } from '../../Contexts/Auth/AuthContext'
 import { useState } from 'react'
-import { BookHeart } from 'lucide-react'
+import { BookHeart, CircleUser, ShoppingCart } from 'lucide-react'
 
 export default function SearchBar() {
   const navigate = useNavigate()
@@ -12,7 +12,7 @@ export default function SearchBar() {
 
   return (
     <>
-      <div className="flex p-2 md:justify-between justify-around items-center bg-[#0f1111] min-w-[350px] sm:min-w-[640px] md:min-w-[768px] lg:min-w-[1024px] xl:min-w-[1280px]">
+      <div className="flex p-2 md:justify-between justify-around items-center bg-[#0f1111] min-w-[354px] ]">
         <div
           className="hidden lg:flex active:scale-102 active:opacity-75 font-bold text-[#fff] text-md lg:text-xl cursor-pointer"
           onClick={() => navigate('/')}
@@ -32,21 +32,15 @@ export default function SearchBar() {
             className="flex text-white items-center md:gap-2 cursor-pointer active:opacity-75"
             onClick={() => navigate('Cart')}
           >
-            <img
-              className="max-h-[30px]"
-              src="https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760806250/cart_enj1xf.svg"
-            />
+            <ShoppingCart size={30} />
             <p className="hidden md:flex ">Cart</p>
           </div>
           <div
-            className={`relative flex text-white items-center md:gap-2 cursor-pointer md:mr-5 group`}
+            className={`relative flex text-white items-center md:gap-2 cursor-pointer md:mr-5 group z-50`}
           >
-            <img
-              className="max-h-[30px]"
-              src="https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760806250/account_c9nkzm.svg"
-              alt="Account"
-              onClick={() => setOpen(!open)}
-            />
+            <button onClick={() => setOpen(!open)}>
+              <CircleUser size={30} />
+            </button>
             <p className="hidden md:flex" onClick={() => setOpen(!open)}>
               Account
             </p>
@@ -54,7 +48,7 @@ export default function SearchBar() {
               className={`${
                 open && window.innerWidth <= 1280 ? 'block ' : 'hidden'
               } group-hover:block text-black
-              absolute top-full right-0 bg-white rounded min-w-[200px] shadow-lg`}
+              absolute top-full right-0 bg-white rounded min-w-[200px] shadow-lg z-0`}
             >
               <p className="py-2 bg-slate-700 pl-2 rounded-t text-white">
                 Account Name

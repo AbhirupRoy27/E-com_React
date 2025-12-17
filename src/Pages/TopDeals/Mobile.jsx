@@ -12,9 +12,9 @@ function Mobile() {
           className="lg:px-[5%] w-full h-full object-fill "
         />
       </div>
-      <div className="min-w-[351px] bg-gray-300 overflow-hidden min-h-[83vh]">
+      <div className="min-w-[351px] bg-gray-300 overflow-hidden min-h-[83vh] text-gray-950">
         <div className="w-hull flex flex-col w-full xl:flex-row p-2">
-          <div className="min-w-[75%] min-h-max text-3xl sm:text-5xl lg:text-7xl font-bold">
+          <div className="min-w-[75%] min-h-max text-3xl sm:text-5xl lg:text-7xl font-bold ">
             <p className="">DEALS ON HIGH-QUALITY</p>
             <p>MATERIALS AND </p>
             <p>CUTTING-EDGE DESIGN</p>
