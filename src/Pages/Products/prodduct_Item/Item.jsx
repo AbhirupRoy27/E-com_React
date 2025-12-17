@@ -4,45 +4,32 @@ import {
   handleAddToCart,
   handleGoToCart,
 } from '../../../Components/ProductCard/utils/handleClicks'
-import { size } from '../../../Components/ProductCard/utils/size'
 import { useCart } from '../../../Contexts/CartContext'
 import { useNavigate } from 'react-router-dom'
-import { useState } from 'react'
-import SideImages from '../Components/SideImages'
-import MobileButtons from '../Components/MobileButtons'
+import BackButton from '../Components/ProductItem/BackButton'
+import SizeChart from '../Components/ProductItem/SizeChart'
+import ProductImages from '../Components/ProductItem/ProductImages'
 
 function Item() {
   const { id } = useParams()
   const { cart, setCart, total, setTotal } = useCart()
-
   const navigate = useNavigate()
 
   const filterItem = Products.filter((i) => i._id === Number(id))
 
-  const [img, setImg] = useState(filterItem[0].imageurl)
   const discount = filterItem[0].discount.split('%')
 
   return (
-    <div className="w-[100%] bg-blue-50 h-max overflow-hidden min-w-[350px] sm:min-w-[640px] md:min-w-[768px] lg:min-w-[1024px] xl:min-w-[1280px]">
-      <p
-        className="hidden sm:block sm:px-10 sm:pt-4 sm:pb-2 font-semibold"
-        onClick={() => navigate('/Products')}
-      >
-        / Go Back
-      </p>
-      <div className="flex flex-col sm:flex-row w-[100%] min-h-[85vh] sm:px-[3%] md:px-[5%] lg:px-[7%] xl:px-[9%] 2xl:px-[11%]">
-        <div className=" md:w-[55%] lg:w-[45%] h-[55%] sm:p-2  ">
-          <img
-            src={img}
-            alt="Loading...."
-            className="w-[100%] h-[50vh] sm:h-[100%] bg-white sm:rounded-md"
-          />
-        </div>
-        <SideImages filterItem={filterItem} setImg={setImg} />
-        <div className="w-full h-[25%] sm:h-[90%] px-[2%] py-[0%] flex flex-col gap-2">
-          <div className="">
-            <p className="sm:text-xl inline-block">
-              <b className="mr-1">{filterItem[0].name}</b>
+    <div className="w-screen bg-gray-950 text-white overflow-hidden min-w-[354px] px-2 sm:px-6 lg:px-15 xl:px-30 sm:min-h-[80vh]">
+      <BackButton />
+      <div className="flex flex-col lg:flex-row gap-2">
+        <ProductImages />
+        <div className="flex flex-col gap-2 lg:p-4">
+          <div>
+            <h3 className="text-2xl tracking-wider font-mono mt-2">
+              <b>{filterItem[0].name}</b>
+            </h3>
+            <p className="sm:text-xl inline-block text-white/70">
               {filterItem[0].Model}
               {filterItem[0].Model}
               {filterItem[0].Model}
@@ -59,26 +46,15 @@ function Item() {
             <p className="text-xl sm:text-2xl font-semibold ">
               Rs. <b>{filterItem[0].price}</b>
             </p>
-            <p className="text-md ">
+            <p className="text-md">
               M.R.P.{' '}
               <span className="line-through">
                 {filterItem[0]['original-price']}
               </span>
             </p>
           </div>
-          <div className="flex gap-2 ">
-            {size.length &&
-              size.map((p, i) => (
-                <p
-                  className="bg-white px-3 py-1 rounded active:shadow-md shadow-black/30 focus:border border-blue-800"
-                  tabIndex="0"
-                  key={i}
-                >
-                  {p}
-                </p>
-              ))}
-          </div>
-          <div className="hidden sm:flex gap-2 p-2 h-[8%] mt-10">
+          <SizeChart />
+          <div className="flex gap-2 p-2 mt-10">
             {cart && cart.includes(filterItem[0], 0) ? (
               <button
                 onClick={() => handleGoToCart(navigate)}
@@ -108,16 +84,6 @@ function Item() {
             </button>
           </div>
         </div>
-        <MobileButtons
-          cart={cart}
-          handleAddToCart={handleAddToCart}
-          handleGoToCart={handleGoToCart}
-          navigate={navigate}
-          filterItem={filterItem}
-          setCart={setCart}
-          setTotal={setTotal}
-          total={total}
-        />
       </div>
     </div>
   )
