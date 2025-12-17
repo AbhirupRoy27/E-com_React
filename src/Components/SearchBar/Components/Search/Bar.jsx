@@ -23,7 +23,7 @@ export default function Bar({ navigate }) {
         className="w-[15%] md:w-[10%] flex items-center justify-center search-button bg-[#febd68] min-w-[20px] rounded-tr-sm rounded-br-sm cursor-pointer"
         onClick={handleSearch}
       >
-        <SearchIcon />
+        <SearchIcon color={'black'} />
       </div>
     </div>
   )

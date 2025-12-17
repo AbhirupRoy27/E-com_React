@@ -1,9 +1,9 @@
-const SearchIcon = () => (
+const SearchIcon = ({ color }) => (
   <svg
     viewBox="0 0 512 512"
     height="25px"
     fill="none"
-    stroke="currentColor"
+    stroke={color || 'black'}
     strokeWidth="42"
   >
     <circle cx="221.09" cy="221.09" r="157.09" />

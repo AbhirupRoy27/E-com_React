@@ -1,34 +1,38 @@
 [
   {
     "id": 1,
+    "name": "Quick"
+  },
+  {
+    "id": 1,
     "name": "Home"
   },
   {
-    "id": 7,
+    "id": 2,
     "name": "Top Deals"
   },
   {
-    "id": 2,
+    "id": 3,
     "name": "Products"
   },
   {
-    "id": 3,
+    "id": 4,
     "name": "Best Sellers"
   },
   {
-    "id": 4,
+    "id": 5,
     "name": "Gift Cards"
   },
   {
-    "id": 5,
+    "id": 6,
     "name": "Orders"
   },
   {
-    "id": 6,
+    "id": 7,
     "name": "FeedBack"
   },
   {
-    "id": 71,
+    "id": 8,
     "name": "F&Q"
   }
 ]

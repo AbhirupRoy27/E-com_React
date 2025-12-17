@@ -4,7 +4,7 @@ import handleNavigateTo from '../../Utils/navigate/navigateTo'
 function Desktop() {
   const navigate = useNavigate()
   return (
-    <>
+    <div className="text-gray-950">
       <div className="h-[50vh] xl:h-[60vh] overflow-hidden flex justify-center items-center bg-purple-950/90">
         <img
           src="https://res.cloudinary.com/ddu1fpkrw/image/upload/v1761566859/Gemini_Generated_Image_jp72rmjp72rmjp72_lmuajp.jpg"
@@ -70,7 +70,7 @@ function Desktop() {
           </button>
         </div>
       </div>
-    </>
+    </div>
   )
 }
 

@@ -13,4 +13,5 @@
 html,
 body {
   background-color: oklch(13% 0.028 261.692);
+  color: white;
 }

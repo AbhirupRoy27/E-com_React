@@ -31,10 +31,10 @@ function ProductDetails() {
               <small>.00</small>
             </p>
 
-            <p className=" text-2xl text-white/70">
-              <span className="line-through ">
+            <p className="text-xl text-white/70">
+              <span className="line-through">
                 {filterItem[0]['original-price']}
-                <small>.00</small>
+                .00
               </span>
             </p>
           </div>
