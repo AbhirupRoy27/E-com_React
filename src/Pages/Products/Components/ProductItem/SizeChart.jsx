@@ -6,7 +6,7 @@ function SizeChart() {
       {size.length &&
         size.map((p, i) => (
           <p
-            className="min-w-[50px] px-3 py-1 rounded active:shadow-md shadow-white/30 border border-white/20 focus:border-white/80 text-center"
+            className="min-w-[50px] px-3 py-1 rounded active:shadow-md shadow-white/30 border border-white/20 focus:border-white/80 text-center text-xl"
             tabIndex="0"
             key={i}
           >
