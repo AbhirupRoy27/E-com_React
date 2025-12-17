@@ -11,7 +11,6 @@ export const BrandDropList = () => {
     if (e.target.localName == 'button') {
       let text =
         e.target.innerText.charAt(0) + e.target.innerText.slice(1).toLowerCase()
-      // console.log(text)
       return setFilteredProducts(
         text === 'All' ? products : products.filter((i) => i.name === text)
       )
@@ -24,14 +23,14 @@ export const BrandDropList = () => {
     )
   }
   return (
-    <div className="flex items-center gap-[0.4rem] px-3 lg:px-10">
+    <div className="flex items-center gap-[0.4rem] px-3 lg:px-10 text-white">
       <p className="font-semibold font-mono text-xl ">Select Brand:</p>
       <div className="hidden sm:flex gap-2 overflow-x-scroll no-scrollbar">
         {Brands.map((b, idx) => (
           <button
             key={idx}
             onClick={getBrands}
-            className="bg-gray-900/20 hover:bg-gray-900/30 min-w-[100px] text-black font-semibold py-2 rounded-2xl border-dashed border-2 border-black/40 uppercase active:scale-95"
+            className="bg-gray-900/20 hover:bg-gray-900/30 min-w-[100px] font-semibold py-2 rounded-2xl border-dashed border-2 border-white/40 uppercase active:scale-95"
           >
             {b}
           </button>
