@@ -1,357 +1,327 @@
 [
   {
     "_id": 1,
-    "name": "Nike",
+    "brand": "Nike",
     "price": 700,
-    "Model": "Female Solid Polo Neck Pure Cotton White T-Shirt",
-    "productName": "Nike jorden X-2321 Shoe",
+    "description": "Female Solid Polo Neck Pure Cotton White T-Shirt",
+    "title": "Nike jorden X-2321 Shoe",
     "discount": "50%",
-    "imageurl": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1758906793/Gemini_Generated_Image_m3z37xm3z37xm3z3_rgzbbm.png",
-    "sideUrl": [
+    "mainimg": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1758906793/Gemini_Generated_Image_m3z37xm3z37xm3z3_rgzbbm.png",
+    "coverimg": [
       {
         "id": 101,
-        "sideUrl1": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760424880/Untitled_design_nhrcce.jpg"
+        "link": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760424880/Untitled_design_nhrcce.jpg"
       },
       {
         "id": 102,
-        "sideUrl1": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760375486/Screenshot_2025-10-13_at_10.40.41_PM_rdojix.png"
+        "link": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760375486/Screenshot_2025-10-13_at_10.40.41_PM_rdojix.png"
       },
       {
         "id": 103,
-        "sideUrl1": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760420882/Right_yjiatd.jpg"
+        "link": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760420882/Right_yjiatd.jpg"
       }
     ],
-    "original-price": 1400,
+    "originalPrice": 1400,
     "sex": "Female",
-    "lessStock": false,
-    "producttype": "T-shirt"
+    "stock": 55,
+    "category": "T-shirt",
+    "rating": 4.5,
+    "noOfRating": 12
   },
   {
     "_id": 2,
-    "name": "Zara",
+    "brand": "Zara",
     "price": 2500,
-    "Model": "Women’s designer stiletto heels | Trending Design ",
-    "productName": "Zudio male Casual Shoe",
+    "description": "Women’s designer stiletto heels | Trending Design",
+    "title": "Zudio male Casual Shoe",
     "discount": "48%",
-    "imageurl": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1758907479/ChatGPT_Image_Sep_26_2025_10_54_12_PM_uw2neh.png",
-    "sideUrl": [
+    "mainimg": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1758907479/ChatGPT_Image_Sep_26_2025_10_54_12_PM_uw2neh.png",
+    "coverimg": [
       {
         "id": 101,
-        "sideUrl1": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760375485/Screenshot_2025-10-13_at_10.41.10_PM_obl6qd.png"
+        "link": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760375485/Screenshot_2025-10-13_at_10.41.10_PM_obl6qd.png"
       },
       {
         "id": 102,
-        "sideUrl1": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760375486/Screenshot_2025-10-13_at_10.40.41_PM_rdojix.png"
+        "link": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760375486/Screenshot_2025-10-13_at_10.40.41_PM_rdojix.png"
       },
       {
         "id": 103,
-        "sideUrl1": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760420882/Right_yjiatd.jpg"
+        "link": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760420882/Right_yjiatd.jpg"
       }
     ],
-    "original-price": 5200,
+    "originalPrice": 5200,
     "sex": "Male",
-    "lessStock": true,
-    "producttype": "T-shirt"
+    "stock": 7,
+    "category": "T-shirt",
+    "rating": 4.2,
+    "noOfRating": 9
   },
   {
     "_id": 3,
-    "name": "Nike",
+    "brand": "Nike",
     "price": 680,
-    "Model": "Men Solid Round Neck Pure Cotton White T-Shirt",
-    "productName": "Men Solid Round Neck Pure Cotton White T-Shirt",
+    "description": "Men Solid Round Neck Pure Cotton White T-Shirt",
+    "title": "Men Solid Round Neck Pure Cotton White T-Shirt",
     "discount": "52%",
-    "imageurl": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1759561396/Screenshot_2025-10-04_at_12.33.03_PM_sib4nj.png",
-    "sideUrl": [
+    "mainimg": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1759561396/Screenshot_2025-10-04_at_12.33.03_PM_sib4nj.png",
+    "coverimg": [
       {
         "id": 101,
-        "sideUrl1": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760375485/Screenshot_2025-10-13_at_10.41.10_PM_obl6qd.png"
+        "link": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760375485/Screenshot_2025-10-13_at_10.41.10_PM_obl6qd.png"
       },
       {
         "id": 102,
-        "sideUrl1": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760375486/Screenshot_2025-10-13_at_10.40.41_PM_rdojix.png"
+        "link": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760375486/Screenshot_2025-10-13_at_10.40.41_PM_rdojix.png"
       },
       {
         "id": 103,
-        "sideUrl1": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760420882/Right_yjiatd.jpg"
+        "link": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760420882/Right_yjiatd.jpg"
       }
     ],
-    "original-price": 1400,
+    "originalPrice": 1400,
     "sex": "Male",
-    "lessStock": true,
-    "producttype": "T-shirt"
+    "stock": 5,
+    "category": "T-shirt",
+    "rating": 4.7,
+    "noOfRating": 18
   },
   {
     "_id": 4,
-    "name": "Zudio",
+    "brand": "Zudio",
     "price": 380,
-    "Model": "2714 Men Solid Round Neck Cotton Blend White T-Shirt",
-    "productName": "Zudio male Casual Shoe",
+    "description": "2714 Men Solid Round Neck Cotton Blend White T-Shirt",
+    "title": "Zudio male Casual Shoe",
     "discount": "80%",
-    "imageurl": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1752359370/samples/shoe.jpg",
-    "sideUrl": [
+    "mainimg": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1752359370/samples/shoe.jpg",
+    "coverimg": [
       {
         "id": 101,
-        "sideUrl1": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760375485/Screenshot_2025-10-13_at_10.41.10_PM_obl6qd.png"
+        "link": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760375485/Screenshot_2025-10-13_at_10.41.10_PM_obl6qd.png"
       },
       {
         "id": 102,
-        "sideUrl1": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760375486/Screenshot_2025-10-13_at_10.40.41_PM_rdojix.png"
+        "link": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760375486/Screenshot_2025-10-13_at_10.40.41_PM_rdojix.png"
       },
       {
         "id": 103,
-        "sideUrl1": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760420882/Right_yjiatd.jpg"
+        "link": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760420882/Right_yjiatd.jpg"
       }
     ],
-    "original-price": 1400,
+    "originalPrice": 1400,
     "sex": "Male",
-    "lessStock": false,
-    "producttype": "T-shirt"
+    "stock": 48,
+    "category": "T-shirt",
+    "rating": 4.1,
+    "noOfRating": 11
   },
   {
     "_id": 5,
-    "name": "Puma",
+    "brand": "Puma",
     "price": 1200,
-    "Model": "Female Solid Round Neck Cotton Blend White T-Shirt",
-    "productName": "Zudio male Casual Shoe",
+    "description": "Female Solid Round Neck Cotton Blend White T-Shirt",
+    "title": "Zudio male Casual Shoe",
     "discount": "50%",
-    "imageurl": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1758908062/Screenshot_2025-09-26_at_11.03.40_PM_tqerut.png",
-    "sideUrl": [
+    "mainimg": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1758908062/Screenshot_2025-09-26_at_11.03.40_PM_tqerut.png",
+    "coverimg": [
       {
         "id": 101,
-        "sideUrl1": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760375485/Screenshot_2025-10-13_at_10.41.10_PM_obl6qd.png"
+        "link": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760375485/Screenshot_2025-10-13_at_10.41.10_PM_obl6qd.png"
       },
       {
         "id": 102,
-        "sideUrl1": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760375486/Screenshot_2025-10-13_at_10.40.41_PM_rdojix.png"
+        "link": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760375486/Screenshot_2025-10-13_at_10.40.41_PM_rdojix.png"
       },
       {
         "id": 103,
-        "sideUrl1": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760420882/Right_yjiatd.jpg"
+        "link": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760420882/Right_yjiatd.jpg"
       }
     ],
-    "original-price": 2400,
+    "originalPrice": 2400,
     "sex": "Female",
-    "lessStock": true,
-    "producttype": "T-shirt"
+    "stock": 6,
+    "category": "T-shirt",
+    "rating": 4.4,
+    "noOfRating": 14
   },
   {
     "_id": 6,
-    "name": "Nike",
+    "brand": "Nike",
     "price": 6800,
-    "Model": "Men Solid Round Neck Pure Cotton White T-Shirt",
-    "productName": "Zudio male Casual Shoe",
+    "description": "Men Solid Round Neck Pure Cotton White T-Shirt",
+    "title": "Zudio male Casual Shoe",
     "discount": "52%",
-    "imageurl": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1758907941/Gemini_Generated_Image_zieoxbzieoxbzieo_hwsot5.png",
-    "sideUrl": [
+    "mainimg": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1758907941/Gemini_Generated_Image_zieoxbzieoxbzieo_hwsot5.png",
+    "coverimg": [
       {
         "id": 101,
-        "sideUrl1": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760375485/Screenshot_2025-10-13_at_10.41.10_PM_obl6qd.png"
+        "link": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760375485/Screenshot_2025-10-13_at_10.41.10_PM_obl6qd.png"
       },
       {
         "id": 102,
-        "sideUrl1": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760375486/Screenshot_2025-10-13_at_10.40.41_PM_rdojix.png"
+        "link": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760375486/Screenshot_2025-10-13_at_10.40.41_PM_rdojix.png"
       },
       {
         "id": 103,
-        "sideUrl1": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760420882/Right_yjiatd.jpg"
+        "link": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760420882/Right_yjiatd.jpg"
       }
     ],
-    "original-price": 14000,
+    "originalPrice": 14000,
     "sex": "Male",
-    "lessStock": true,
-    "producttype": "T-shirt"
+    "stock": 3,
+    "category": "T-shirt",
+    "rating": 4.8,
+    "noOfRating": 16
   },
   {
     "_id": 7,
-    "name": "Zudio",
+    "brand": "Zudio",
     "price": 380,
-    "Model": "2714 Running Shoes For Men (Cream, 8)",
-    "productName": "Zudio male Casual Shoe",
+    "description": "2714 Running Shoes For Men (Cream, 8)",
+    "title": "Zudio male Casual Shoe",
     "discount": "80%",
-    "imageurl": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1758906831/ChatGPT_Image_Sep_26_2025_10_43_29_PM_oh36de.png",
-    "sideUrl": [
+    "mainimg": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1758906831/ChatGPT_Image_Sep_26_2025_10_43_29_PM_oh36de.png",
+    "coverimg": [
       {
         "id": 100,
-        "sideUrl1": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1758906831/ChatGPT_Image_Sep_26_2025_10_43_29_PM_oh36de.png"
+        "link": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1758906831/ChatGPT_Image_Sep_26_2025_10_43_29_PM_oh36de.png"
       },
       {
         "id": 101,
-        "sideUrl1": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760375485/Screenshot_2025-10-13_at_10.41.10_PM_obl6qd.png"
-      },
-      {
-        "id": 102,
-        "sideUrl1": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760375486/Screenshot_2025-10-13_at_10.40.41_PM_rdojix.png"
-      },
-      {
-        "id": 103,
-        "sideUrl1": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760420882/Right_yjiatd.jpg"
+        "link": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760375485/Screenshot_2025-10-13_at_10.41.10_PM_obl6qd.png"
       }
     ],
-    "original-price": 1400,
+    "originalPrice": 1400,
     "sex": "Male",
-    "lessStock": false,
-    "producttype": "Shoes"
+    "stock": 50,
+    "category": "Shoes",
+    "rating": 4.3,
+    "noOfRating": 15
   },
   {
     "_id": 8,
-    "name": "Puma",
+    "brand": "Puma",
     "price": 1200,
-    "Model": "Women’s Solid Lightweight Lace-Up Casual Sneakers with Breathable Fabric Upper",
-    "productName": "Puma Women Casual Shoe",
+    "description": "Women’s Solid Lightweight Lace-Up Casual Sneakers with Breathable Fabric Upper",
+    "title": "Puma Women Casual Shoe",
     "discount": "50%",
-    "imageurl": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1752359370/samples/shoe.jpg",
-    "sideUrl": [
+    "mainimg": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1752359370/samples/shoe.jpg",
+    "coverimg": [
       {
         "id": 101,
-        "sideUrl1": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760375485/Screenshot_2025-10-13_at_10.41.10_PM_obl6qd.png"
-      },
-      {
-        "id": 102,
-        "sideUrl1": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760375486/Screenshot_2025-10-13_at_10.40.41_PM_rdojix.png"
-      },
-      {
-        "id": 103,
-        "sideUrl1": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760420882/Right_yjiatd.jpg"
+        "link": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760375485/Screenshot_2025-10-13_at_10.41.10_PM_obl6qd.png"
       }
     ],
-    "original-price": 2400,
+    "originalPrice": 2400,
     "sex": "Female",
-    "lessStock": true,
-    "producttype": "T-shirt"
+    "stock": 4,
+    "category": "T-shirt",
+    "rating": 4.6,
+    "noOfRating": 17
   },
   {
     "_id": 9,
-    "name": "Zudio",
+    "brand": "Zudio",
     "price": 380,
-    "Model": "2714 Men Solid Round Neck Cotton Blend White T-Shirt",
-    "productName": "Zudio male Casual Shoe",
+    "description": "2714 Men Solid Round Neck Cotton Blend White T-Shirt",
+    "title": "Zudio male Casual Shoe",
     "discount": "80%",
-    "imageurl": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1758906400/ChatGPT_Image_Sep_26_2025_10_35_56_PM_pow4j6.png",
-    "sideUrl": [
+    "mainimg": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1758906400/ChatGPT_Image_Sep_26_2025_10_35_56_PM_pow4j6.png",
+    "coverimg": [
       {
         "id": 101,
-        "sideUrl1": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760375485/Screenshot_2025-10-13_at_10.41.10_PM_obl6qd.png"
-      },
-      {
-        "id": 102,
-        "sideUrl1": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760375486/Screenshot_2025-10-13_at_10.40.41_PM_rdojix.png"
-      },
-      {
-        "id": 103,
-        "sideUrl1": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760420882/Right_yjiatd.jpg"
+        "link": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760375485/Screenshot_2025-10-13_at_10.41.10_PM_obl6qd.png"
       }
     ],
-    "original-price": 1400,
+    "originalPrice": 1400,
     "sex": "Male",
-    "lessStock": false,
-    "producttype": "T-shirt"
+    "stock": 44,
+    "category": "T-shirt",
+    "rating": 4.0,
+    "noOfRating": 8
   },
   {
     "_id": 10,
-    "name": "Muscle Max",
+    "brand": "Muscle Max",
     "price": 2200,
-    "Model": "Whey Protein Isolate, 27g of Protein per Scoop",
-    "productName": "Zudio male Casual Shoe",
+    "description": "Whey Protein Isolate, 27g of Protein per Scoop",
+    "title": "Zudio male Casual Shoe",
     "discount": "50%",
-    "imageurl": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1759561252/Screenshot_2025-10-04_at_12.30.36_PM_aiwlib.png",
-    "sideUrl": [
+    "mainimg": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1759561252/Screenshot_2025-10-04_at_12.30.36_PM_aiwlib.png",
+    "coverimg": [
       {
         "id": 101,
-        "sideUrl1": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760375485/Screenshot_2025-10-13_at_10.41.10_PM_obl6qd.png"
-      },
-      {
-        "id": 102,
-        "sideUrl1": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760375486/Screenshot_2025-10-13_at_10.40.41_PM_rdojix.png"
-      },
-      {
-        "id": 103,
-        "sideUrl1": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760420882/Right_yjiatd.jpg"
+        "link": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760375485/Screenshot_2025-10-13_at_10.41.10_PM_obl6qd.png"
       }
     ],
-    "original-price": 1100,
+    "originalPrice": 1100,
     "sex": "",
-    "lessStock": true,
-    "producttype": "Protein"
+    "stock": 2,
+    "category": "Protein",
+    "rating": 4.9,
+    "noOfRating": 19
   },
   {
     "_id": 11,
-    "name": "Addidas",
+    "brand": "Addidas",
     "price": 5200,
-    "Model": "Women’s designer stiletto heels | Trending Design ",
-    "productName": "Zudio male Casual Shoe",
+    "description": "Women’s designer stiletto heels | Trending Design",
+    "title": "Zudio male Casual Shoe",
     "discount": "48%",
-    "imageurl": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1758907479/ChatGPT_Image_Sep_26_2025_10_54_12_PM_uw2neh.png",
-    "sideUrl": [
+    "mainimg": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1758907479/ChatGPT_Image_Sep_26_2025_10_54_12_PM_uw2neh.png",
+    "coverimg": [
       {
         "id": 101,
-        "sideUrl1": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760375485/Screenshot_2025-10-13_at_10.41.10_PM_obl6qd.png"
-      },
-      {
-        "id": 102,
-        "sideUrl1": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760375486/Screenshot_2025-10-13_at_10.40.41_PM_rdojix.png"
-      },
-      {
-        "id": 103,
-        "sideUrl1": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760420882/Right_yjiatd.jpg"
+        "link": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760375485/Screenshot_2025-10-13_at_10.41.10_PM_obl6qd.png"
       }
     ],
-    "original-price": 10400,
+    "originalPrice": 10400,
     "sex": "Male",
-    "lessStock": true,
-    "producttype": "T-shirt"
+    "stock": 5,
+    "category": "T-shirt",
+    "rating": 4.4,
+    "noOfRating": 13
   },
   {
     "_id": 12,
-    "name": "Zudio",
+    "brand": "Zudio",
     "price": 380,
-    "Model": "2714 Men Cream Blend Sneakers",
-    "productName": "Zudio male Casual Shoe",
+    "description": "2714 Men Cream Blend Sneakers",
+    "title": "Zudio male Casual Shoe",
     "discount": "80%",
-    "imageurl": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1758907679/ChatGPT_Image_Sep_26_2025_10_57_33_PM_g0v1bl.png",
-    "sideUrl": [
+    "mainimg": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1758907679/ChatGPT_Image_Sep_26_2025_10_57_33_PM_g0v1bl.png",
+    "coverimg": [
       {
         "id": 101,
-        "sideUrl1": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760375485/Screenshot_2025-10-13_at_10.41.10_PM_obl6qd.png"
-      },
-      {
-        "id": 102,
-        "sideUrl1": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760375486/Screenshot_2025-10-13_at_10.40.41_PM_rdojix.png"
-      },
-      {
-        "id": 103,
-        "sideUrl1": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760420882/Right_yjiatd.jpg"
+        "link": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760375485/Screenshot_2025-10-13_at_10.41.10_PM_obl6qd.png"
       }
     ],
-    "original-price": 1400,
+    "originalPrice": 1400,
     "sex": "Male",
-    "lessStock": false,
-    "producttype": "T-shirt"
+    "stock": 58,
+    "category": "T-shirt",
+    "rating": 4.1,
+    "noOfRating": 10
   },
   {
     "_id": 13,
-    "name": "Zudio",
+    "brand": "Zudio",
     "price": 380,
-    "Model": "Women’s Solid Lightweight Lace-Up Casual Sneakers with Breathable Fabric Upper",
-    "productName": "Zudio male Casual Shoe",
+    "description": "Women’s Solid Lightweight Lace-Up Casual Sneakers with Breathable Fabric Upper",
+    "title": "Zudio male Casual Shoe",
     "discount": "80%",
-    "imageurl": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1759562668/Screenshot_2025-10-04_at_12.54.13_PM_zau72g.png",
-    "sideUrl": [
+    "mainimg": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1759562668/Screenshot_2025-10-04_at_12.54.13_PM_zau72g.png",
+    "coverimg": [
       {
         "id": 101,
-        "sideUrl1": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760375485/Screenshot_2025-10-13_at_10.41.10_PM_obl6qd.png"
-      },
-      {
-        "id": 102,
-        "sideUrl1": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760375486/Screenshot_2025-10-13_at_10.40.41_PM_rdojix.png"
-      },
-      {
-        "id": 103,
-        "sideUrl1": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760420882/Right_yjiatd.jpg"
+        "link": "https://res.cloudinary.com/ddu1fpkrw/image/upload/v1760375485/Screenshot_2025-10-13_at_10.41.10_PM_obl6qd.png"
       }
     ],
-    "original-price": 1400,
+    "originalPrice": 1400,
     "sex": "Male",
-    "lessStock": false,
-    "producttype": "T-shirt"
+    "stock": 42,
+    "category": "T-shirt",
+    "rating": 4.3,
+    "noOfRating": 14
   }
 ]
