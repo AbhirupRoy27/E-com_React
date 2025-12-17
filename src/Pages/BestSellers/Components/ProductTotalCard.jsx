@@ -1,8 +1,7 @@
-import React from 'react'
-import { handleAddToCart } from '../../../Components/ProductCard/utils/handleClicks'
 import handleNavigateTo from '../../../Utils/navigate/navigateTo'
 import { useNavigate } from 'react-router-dom'
 import { useCart } from '../../../Contexts/CartContext'
+import handleAddToCart from '../../../Components/Product/utils/handleAddToCart'
 
 function ProductTotalCard({ DeliveryBy, book }) {
   const { cart, setCart, total, setTotal } = useCart()

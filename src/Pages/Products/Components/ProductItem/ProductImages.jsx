@@ -31,7 +31,7 @@ export default function ProductImages() {
         <img
           src={img}
           alt="Loading...."
-          className="bg-white sm:rounded-md object-cover overflow-hidden h-[54vh] w-full lg:min-w-[30vw]"
+          className="bg-white sm:rounded-md object-cover object-top overflow-hidden h-[64vh] w-full lg:min-w-[30vw]"
         />
       </div>
       <button

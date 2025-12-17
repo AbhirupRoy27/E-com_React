@@ -18,7 +18,7 @@ function Products() {
             <ProductCards />
           </Suspense>
         </div>
-        <Page />
+        <Page bgcolor={'bg-gray-950'} />
       </div>
     </div>
   )

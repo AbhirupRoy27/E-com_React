@@ -10,7 +10,7 @@ export const BrandDropList = () => {
       let text =
         e.target.innerText.charAt(0) + e.target.innerText.slice(1).toLowerCase()
       return setFilteredProducts(
-        text === 'All' ? products : products.filter((i) => i.name === text)
+        text === 'All' ? products : products.filter((i) => i.brand === text)
       )
     }
 
