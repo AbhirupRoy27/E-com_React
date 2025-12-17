@@ -8,7 +8,7 @@ export default function ProductImages() {
   const filterItem = Products.filter((i) => i._id === Number(id))
 
   const [imageIndex, setImageIndex] = useState(0)
-  const [img, setImg] = useState(filterItem[0].imageurl)
+  const [img, setImg] = useState(filterItem[0].mainimg)
 
   return (
     <div className="flex items-center">
@@ -18,11 +18,12 @@ export default function ProductImages() {
           handleImage(
             'dec',
             setImg,
-            filterItem[0].sideUrl,
+            filterItem[0].coverimg,
             setImageIndex,
             imageIndex
           )
         }
+        disabled={imageIndex == 0}
       >
         <ArrowLeft color="black" />
       </button>
@@ -30,7 +31,7 @@ export default function ProductImages() {
         <img
           src={img}
           alt="Loading...."
-          className="bg-white sm:rounded-md object-contain overflow-hidden h-[54vh] w-full lg:min-w-[30vw]"
+          className="bg-white sm:rounded-md object-cover overflow-hidden h-[54vh] w-full lg:min-w-[30vw]"
         />
       </div>
       <button
@@ -39,11 +40,12 @@ export default function ProductImages() {
           handleImage(
             'asc',
             setImg,
-            filterItem[0].sideUrl,
+            filterItem[0].coverimg,
             setImageIndex,
             imageIndex
           )
         }
+        disabled={imageIndex > 1}
       >
         <ArrowRight color="black" />
       </button>
@@ -53,15 +55,17 @@ export default function ProductImages() {
 
 function handleImage(action, setImg, list, setImageIndex, imageIndex) {
   if (action == 'asc') {
-    if (imageIndex < 0 || imageIndex >= 3) {
-      return
+    if (imageIndex == 0) {
+      setImageIndex((prev) => prev + 1)
+      return setImg(list[0].link)
     }
     setImageIndex((prev) => prev + 1)
-    return setImg(list[imageIndex].sideUrl1, imageIndex)
+    return setImg(list[1].link)
   }
-  if (imageIndex <= 0 || imageIndex > 3) {
-    return
-  }
+
+  console.log(action, list, imageIndex)
+  if (imageIndex == 0) return
+
   setImageIndex((prev) => prev - 1)
-  return setImg(list[imageIndex].sideUrl1)
+  return setImg(list[imageIndex].link)
 }

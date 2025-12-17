@@ -21,7 +21,6 @@ import FandQ from './Pages/F&Q/FandQ'
 const Home = lazy(() => import('./Pages/Home/Home'))
 const SideBar = lazy(() => import('./Components/Sidebar/SideBar'))
 const NotFound = lazy(() => import('./Pages/NotFound/NotFound'))
-const Card = lazy(() => import('./Components/ProductCard/Card'))
 const Cart = lazy(() => import('./Pages/CartPage/Cart'))
 const Products = lazy(() => import('./Pages/Products/Products'))
 const BestSellersItem = lazy(() =>
@@ -76,9 +75,7 @@ function App() {
         <Route path="cart" element={<Cart />} />
         <Route path="top deals" element={<TopDeals />} />
         <Route path="orders" element={<Orders />} />
-        <Route path="products" element={<Products />}>
-          <Route index element={<Card />} />
-        </Route>
+        <Route path="products" element={<Products />} />
         <Route path="best sellers" element={<BestSellers />} />
         <Route
           path="best sellers/:title"

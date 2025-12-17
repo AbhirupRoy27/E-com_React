@@ -4,17 +4,16 @@ import Products from '../../../../Db/Products.json'
 function ProductDetails() {
   const { id } = useParams()
   const filterItem = Products.filter((i) => i._id === Number(id))
+  // console.log(filterItem)
   const discount = filterItem[0].discount.split('%')
   return (
     <div className="flex flex-col gap-4">
       <div className="flex flex-col gap-2">
         <h3 className="text-2xl tracking-wider font-mono mt-2">
-          <b>{filterItem[0].name}</b>
+          <b>{filterItem[0].brand}</b>
         </h3>
         <p className="sm:text-xl inline-block text-white/70">
-          {filterItem[0].Model}
-          {filterItem[0].Model}
-          {filterItem[0].Model}
+          {filterItem[0].description + ' '} {filterItem[0].title}
         </p>
       </div>
 
@@ -33,7 +32,7 @@ function ProductDetails() {
 
             <p className="text-xl text-white/70">
               <span className="line-through">
-                {filterItem[0]['original-price']}
+                {filterItem[0].originalPrice}
                 .00
               </span>
             </p>

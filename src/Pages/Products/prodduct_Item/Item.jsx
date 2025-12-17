@@ -1,15 +1,13 @@
 import { useParams } from 'react-router-dom'
 import Products from '../../../Db/Products.json'
-import {
-  handleAddToCart,
-  handleGoToCart,
-} from '../../../Components/ProductCard/utils/handleClicks'
 import { useCart } from '../../../Contexts/CartContext'
 import { useNavigate } from 'react-router-dom'
 import BackButton from '../Components/ProductItem/BackButton'
 import SizeChart from '../Components/ProductItem/SizeChart'
 import ProductImages from '../Components/ProductItem/ProductImages'
 import ProductDetails from '../Components/ProductItem/ProductDetails'
+import handleGoToCart from '../../../Components/Product/utils/handleGoToCart'
+import handleAddToCart from '../../../Components/Product/utils/handleAddToCart'
 
 function Item() {
   const { id } = useParams()
