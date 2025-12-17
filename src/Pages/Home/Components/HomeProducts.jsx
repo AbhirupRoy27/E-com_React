@@ -1,11 +1,7 @@
-import axios from 'axios'
-import { useEffect, useState } from 'react'
+import { useTrending } from '../../../Contexts/Home/TrendingProducts'
 
 function HomeProducts() {
-  const [list, setList] = useState([1, 2, 3, 4, 5, 6, 7, 8])
-  useEffect(() => {
-    getData(setList)
-  }, [])
+  const { list } = useTrending()
 
   if (list[0] == 1)
     return (
@@ -75,28 +71,3 @@ function HomeProducts() {
 }
 
 export default HomeProducts
-
-const getData = async (setList) => {
-  try {
-    const res = await axios.get(
-      'https://apiproducts-service-nu.vercel.app/api/products/all-product?page=1&limit=10'
-      // 'http://localhost:4000/api/products/all-product?page=1&limit=10'
-    )
-
-    if (res.status == 200) {
-      return setList(res.data.response)
-    }
-  } catch (error) {
-    if (axios.isAxiosError(error)) {
-      if (error.response) {
-        console.log('Server error:', error.response.status, error.response.data)
-      } else if (error.request) {
-        console.log('No response received:', error.request)
-      } else {
-        console.log('Axios config error:', error.message)
-      }
-    } else {
-      console.log('Unknown error:', error)
-    }
-  }
-}

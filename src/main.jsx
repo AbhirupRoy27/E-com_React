@@ -9,6 +9,7 @@ import { ProductProvider } from './Contexts/ProductContext.jsx'
 import { AuthProvider } from './Contexts/Auth/AuthContext.jsx'
 import { BooksProvider } from './Contexts/BooksContext.jsx'
 import { BuyContextProvider } from './Contexts/BuyContext.jsx'
+import TrendingProductsProvider from './Contexts/Home/TrendingProducts.jsx'
 
 createRoot(document.getElementById('root')).render(
   // <StrictMode>
@@ -19,7 +20,9 @@ createRoot(document.getElementById('root')).render(
           <AuthProvider>
             <BooksProvider>
               <BuyContextProvider>
-                <App />
+                <TrendingProductsProvider>
+                  <App />
+                </TrendingProductsProvider>
               </BuyContextProvider>
             </BooksProvider>
           </AuthProvider>
