@@ -24,9 +24,15 @@
     "originalPrice": 1400,
     "sex": "Female",
     "stock": 55,
-    "category": "T-shirt",
+    "category": "Shoes",
     "rating": 4.5,
-    "noOfRating": 12
+    "noOfRating": 12,
+    "size": [
+      6,
+      7,
+      8,
+      9
+    ]
   },
   {
     "_id": 2,
@@ -53,9 +59,15 @@
     "originalPrice": 5200,
     "sex": "Male",
     "stock": 7,
-    "category": "T-shirt",
+    "category": "Shoes",
     "rating": 4.2,
-    "noOfRating": 9
+    "noOfRating": 9,
+    "size": [
+      6,
+      7,
+      8,
+      9
+    ]
   },
   {
     "_id": 3,
@@ -84,7 +96,14 @@
     "stock": 5,
     "category": "T-shirt",
     "rating": 4.7,
-    "noOfRating": 18
+    "noOfRating": 18,
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "2XL"
+    ]
   },
   {
     "_id": 4,
@@ -113,7 +132,14 @@
     "stock": 48,
     "category": "T-shirt",
     "rating": 4.1,
-    "noOfRating": 11
+    "noOfRating": 11,
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "2XL"
+    ]
   },
   {
     "_id": 5,
@@ -142,7 +168,14 @@
     "stock": 6,
     "category": "T-shirt",
     "rating": 4.4,
-    "noOfRating": 14
+    "noOfRating": 14,
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "2XL"
+    ]
   },
   {
     "_id": 6,
@@ -171,7 +204,14 @@
     "stock": 3,
     "category": "T-shirt",
     "rating": 4.8,
-    "noOfRating": 16
+    "noOfRating": 16,
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "2XL"
+    ]
   },
   {
     "_id": 7,
@@ -196,7 +236,13 @@
     "stock": 50,
     "category": "Shoes",
     "rating": 4.3,
-    "noOfRating": 15
+    "noOfRating": 15,
+    "size": [
+      6,
+      7,
+      8,
+      9
+    ]
   },
   {
     "_id": 8,
@@ -215,9 +261,15 @@
     "originalPrice": 2400,
     "sex": "Female",
     "stock": 4,
-    "category": "T-shirt",
+    "category": "Shoes",
     "rating": 4.6,
-    "noOfRating": 17
+    "noOfRating": 17,
+    "size": [
+      6,
+      7,
+      8,
+      9
+    ]
   },
   {
     "_id": 9,
@@ -238,7 +290,14 @@
     "stock": 44,
     "category": "T-shirt",
     "rating": 4.0,
-    "noOfRating": 8
+    "noOfRating": 8,
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "2XL"
+    ]
   },
   {
     "_id": 10,
@@ -259,7 +318,13 @@
     "stock": 2,
     "category": "Protein",
     "rating": 4.9,
-    "noOfRating": 19
+    "noOfRating": 19,
+    "size": [
+      "500g",
+      "1kg",
+      "2kg",
+      "5kg"
+    ]
   },
   {
     "_id": 11,
@@ -278,9 +343,15 @@
     "originalPrice": 10400,
     "sex": "Male",
     "stock": 5,
-    "category": "T-shirt",
+    "category": "Shoes",
     "rating": 4.4,
-    "noOfRating": 13
+    "noOfRating": 13,
+    "size": [
+      6,
+      7,
+      8,
+      9
+    ]
   },
   {
     "_id": 12,
@@ -299,9 +370,15 @@
     "originalPrice": 1400,
     "sex": "Male",
     "stock": 58,
-    "category": "T-shirt",
+    "category": "Shoes",
     "rating": 4.1,
-    "noOfRating": 10
+    "noOfRating": 10,
+    "size": [
+      6,
+      7,
+      8,
+      9
+    ]
   },
   {
     "_id": 13,
@@ -320,8 +397,14 @@
     "originalPrice": 1400,
     "sex": "Male",
     "stock": 42,
-    "category": "T-shirt",
+    "category": "Shoes",
     "rating": 4.3,
-    "noOfRating": 14
+    "noOfRating": 14,
+    "size": [
+      6,
+      7,
+      8,
+      9
+    ]
   }
 ]

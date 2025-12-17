@@ -2,12 +2,13 @@ import { useParams } from 'react-router-dom'
 import Products from '../../../Db/Products.json'
 import { useCart } from '../../../Contexts/CartContext'
 import { useNavigate } from 'react-router-dom'
-import BackButton from '../Components/ProductItem/BackButton'
-import SizeChart from '../Components/ProductItem/SizeChart'
-import ProductImages from '../Components/ProductItem/ProductImages'
-import ProductDetails from '../Components/ProductItem/ProductDetails'
+
 import handleGoToCart from '../../../Components/Product/utils/handleGoToCart'
 import handleAddToCart from '../../../Components/Product/utils/handleAddToCart'
+import BackButton from './Components/BackButton'
+import ProductImages from './Components/ProductImages'
+import ProductDetails from './Components/ProductDetails'
+import SizeChart from './Components/SizeChart'
 
 function Item() {
   const { id } = useParams()
@@ -24,7 +25,7 @@ function Item() {
         <div className="flex flex-col justify-between gap-2 lg:p-4">
           <ProductDetails />
           <div className="py-10">
-            <SizeChart />
+            <SizeChart product={filterItem[0]} />
             <div className="flex gap-2 p-2 mt-4">
               {cart && cart.includes(filterItem[0], 0) ? (
                 <button

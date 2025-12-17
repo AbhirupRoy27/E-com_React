@@ -24,16 +24,9 @@ function ProductCardDetails({ product }) {
       </div>
 
       <div onClick={() => handleGoToItemPage(product, navigate)}>
-        <p className="pb-3 text-gray-600 text-sm sm:text-md line-clamp-2 min-h-[44px]">
+        <p className="pb-3 text-gray-600 text-sm sm:text-md line-clamp-2 min-h-[52px] h-max">
           {/* {product.description.substring(0, 45)} */}
           {product.description}
-          <b
-            role="button"
-            onClick={() => handleGoToItemPage(product, navigate)}
-            className="text-black"
-          >
-            ...more
-          </b>
         </p>
       </div>
 
