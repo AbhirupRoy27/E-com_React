@@ -1,11 +1,10 @@
 import { useSideBar } from '../../Contexts/SideBarContext'
 import { useNavigate } from 'react-router-dom'
-import { useNavLinks } from '../../Contexts/NaclinkContext/NavLinksContext'
+import navLinkss from '../../Db/NavLinks.json'
 
 export default function SideBar() {
   const navigate = useNavigate()
   const { sideBar, setSideBar } = useSideBar()
-  const { navLinkss } = useNavLinks()
 
   const handleClick = (link) => {
     setSideBar(false)
