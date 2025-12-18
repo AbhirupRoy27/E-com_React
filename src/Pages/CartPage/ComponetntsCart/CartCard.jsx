@@ -5,17 +5,17 @@ function CartCard({ item }) {
   const { cart, setCart, total, setTotal } = useCart()
 
   return (
-    <div className="flex flex-col bg-blue-50 px-1 py-3 sm:px-2 sm:py-4 gap-[0.5rem] w-full">
+    <div className="flex flex-col bg-gray-900 px-1 py-3 sm:px-2 sm:py-4 gap-[0.5rem] w-full rounded-md">
       <h2 className="item-heading text-xl tracking-wide font-semibold w-full">
-        {item.name} {item.sex} {item.producttype}
+        {item.brand} {item.sex} {item.category}
       </h2>
 
       <div className="flex gap-1 flex-col lg:flex-row px-2">
         <div className="min-w-max h-55 sm:h-60 md:h-62 lg:h-74 flex rounded justify-center">
           <img
-            src={item.imageurl || item.coverImage}
+            src={item.mainimg || item.coverImage}
             alt="Example"
-            className="min-w-[180px] max-w-[180px] w-full object-contain bg-white rounded"
+            className="min-w-[180px] max-w-[180px] w-full object-cover bg-white/10 rounded"
           />
         </div>
 
@@ -32,6 +32,12 @@ function CartCard({ item }) {
             </p>
           </span>
           <button
+            id="wish-button"
+            className="bg-rose-900 border rounded-full py-[2%] font-semibold text-white"
+          >
+            Move to Wishlist
+          </button>
+          <button
             onClick={() =>
               RemoveFromCart({
                 id: item.id || item._id,
@@ -45,12 +51,6 @@ function CartCard({ item }) {
             className="bg-transparent border border-rose-900 font-semibold rounded-full py-[2%]"
           >
             Remove from Cart
-          </button>
-          <button
-            id="wish-button"
-            className="bg-rose-900 border rounded-full py-[2%] font-semibold text-white"
-          >
-            Move to Wishlist
           </button>
         </div>
       </div>

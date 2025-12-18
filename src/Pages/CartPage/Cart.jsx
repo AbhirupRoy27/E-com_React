@@ -22,8 +22,8 @@ function CartLayout({ cart, total }) {
 
       <div className="">
         {cart.length > 0 && (
-          <Suspense>
-            <div className="flex justify-center w-full md:w-max rounded-md bg-gray-100 h-fit px-4 py-2">
+          <Suspense fallback={<BillCard total={0} />}>
+            <div className="flex justify-center w-full md:w-max rounded-md bg-gray-800 text-white/80 h-fit px-4 py-2">
               <BillCard total={total} />
             </div>
           </Suspense>
