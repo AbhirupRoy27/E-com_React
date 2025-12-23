@@ -5,6 +5,8 @@ import MobileCards from './mobileView/MobileCards'
 import { useState } from 'react'
 import DesktopFlex from './Components/DesktopFlex'
 import HomeProducts from './Components/HomeProducts'
+import HeroBanner from './Components/HeroBanner'
+import HeroFilter from './Components/HeroFilter'
 
 export default function Home() {
   const navigate = useNavigate()
@@ -49,6 +51,7 @@ export default function Home() {
 
   return (
     <div className="sm:bg-gray-950">
+      <HeroFilter />
       <div className="overflow-hidden w-full min-w-[354px] xl:px-30">
         <div
           className="flex transition-transform duration-500 mt-2 sm:hidden"
@@ -84,43 +87,15 @@ export default function Home() {
             ></span>
           ))}
         </div>
-        <div className="hidden m-2 rounded-xl sm:flex flex-col h-[65vh] bg-white/10 bg-[url(https://res.cloudinary.com/ddu1fpkrw/image/upload/v1761401435/Gemini_Generated_Image_g6eun0g6eun0g6eu_lff80c.png)] bg-center bg-no-repeat bg-cover min-w-[750px] ">
-          <div className="flex flex-row-reverse justify-between items-end h-full">
-            <div className="p-6 pb-20 text-end m-2">
-              <p className="text-4xl sm:text-5xl font-bold tracking-wide text-yellow-100 text-shadow-xl mb-2">
-                Explore the best products
-              </p>
-              <p className="text-xl tracking-wide text-gray-300 text-shadow-lg text-shadow-xl mb-2">
-                Explore the best Price on the best products, Explore the best
-                Price on the best products Explore the best Price on the best
-                products Explore the best Price on the best products
-              </p>
-              <button
-                className="bg-white py-3 px-4 rounded-full"
-                onClick={() => handleNavigateTo(navigate, '/products')}
-              >
-                Shop Now →
-              </button>
-            </div>
-            <div className="bg-white/30 w-[200px] h-[200px] m-10 flex justify-center items-center rounded-xl">
-              <div className="bg-black/50 w-[196px] h-[196px] rounded-xl backdrop-blur-sm ">
-                <div className="text-sm text-yellow-100 p-2 flex flex-col justify-between h-full ">
-                  <div className="flex flex-col gap-1">
-                    <p>Best Price,</p>
-                    <p>Best Quality,</p>
-                    <p>Best Experience,</p>
-                  </div>
-                  <div className="text-6xl text-yellow-100 p-2 italic">96%</div>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div className="hidden m-2 rounded-xl sm:flex flex-col h-[65vh] bg-white/10  bg-center bg-no-repeat bg-cover min-w-[750px] ">
+          <HeroBanner />
         </div>
       </div>
       {/* <MobileCards /> For Mobile */}
       <HomeProducts />
-      {window.innerWidth >= 450 && <DesktopFlex />}
+
       <BooksHomeCard />
+      {window.innerWidth >= 450 && <DesktopFlex />}
     </div>
   )
 }
