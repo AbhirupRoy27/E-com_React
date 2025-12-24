@@ -1,8 +1,7 @@
 import { useNavigate } from 'react-router-dom'
-import handleNavigateTo from '../../../Utils/navigate/navigateTo'
-// import handleItem from '../../../Utils/BestSellers/handleItem'
-import { handleBuy } from '../../../Utils/BuyNow/handleClicks'
-import { useBuy } from '../../../Contexts/BuyContext'
+import handleNavigateTo from '../../../../Utils/navigate/navigateTo'
+import { handleBuy } from '../../../../Utils/BuyNow/handleClicks'
+import { useBuy } from '../../../../Contexts/BuyContext'
 import { CircleArrowOutUpRight } from 'lucide-react'
 
 function BsCard({ books }) {
