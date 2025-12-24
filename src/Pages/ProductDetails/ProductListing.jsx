@@ -29,7 +29,7 @@ function ProductListing({ item, book }) {
           />
           <Buttons book={product} />
         </div>
-        <div className="px-6 sm:px-10 pt-10 bg-white/10 mx-2 rounded-tl-2xl rounded-tr-2xl sm:h-fit sm:rounded-2xl md:w-1/2 min-w-[322px]">
+        <div className="px-3 sm:px-6 lg:px-10 pt-10 bg-white/10 mx-2 rounded-tl-2xl rounded-tr-2xl sm:h-fit sm:rounded-2xl md:w-1/2 min-w-[322px]">
           <h3 className="font font-semibold text-2xl">{product.title}</h3>
           <div className="flex justify-between items-center py-3">
             <div>

@@ -14,12 +14,12 @@ function BsCard({ books }) {
   const { setItem } = useBuy()
 
   return (
-    <div className=" mt-2">
+    <div className="">
       <div>
         <img
           src={books.coverImage}
           alt="Loading"
-          className="bg-white h-[20rem] sm:h-[30rem] w-full mb-1"
+          className="bg-white h-[30vh] sm:h-[25rem] w-full mb-1"
           onClick={() =>
             handleNavigateTo(navigate, `${books.title}?product-id=${books._id}`)
           }

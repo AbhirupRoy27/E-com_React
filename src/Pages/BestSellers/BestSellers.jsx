@@ -21,7 +21,7 @@ function BestSellers() {
                   <h1 className="ml-3 capitalize text-4xl pb-5 tracking-wider font-light">
                     Best sellers
                   </h1>
-                  <div className="px-3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3">
+                  <div className="sm:px-3 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2 sm:gap-3">
                     {books.map((p) => (
                       <BsCard key={p._id} books={p} />
                     ))}

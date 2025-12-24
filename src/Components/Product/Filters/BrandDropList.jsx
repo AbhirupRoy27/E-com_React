@@ -1,4 +1,4 @@
-import { useProducts } from '../../../../Contexts/ProductContext'
+import { useProducts } from '../../../Contexts/ProductContext'
 
 const Brands = ['All', 'Zudio', 'Puma', 'Nike', 'Addidas', 'Zara', 'Campus']
 

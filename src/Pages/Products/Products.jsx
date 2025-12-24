@@ -1,6 +1,6 @@
-import Page from '../../../Components/PageNavigation/Page'
-import { BrandDropList } from '../Components/ProductListing/BrandDropList'
-import ProductCards from '../Components/ProductListing/ProductCards'
+import Page from '../../Components/PageNavigation/Page'
+import { BrandDropList } from '../../Components/Product/Filters/BrandDropList'
+import ProductCards from './ProductCards'
 
 function Products() {
   return (

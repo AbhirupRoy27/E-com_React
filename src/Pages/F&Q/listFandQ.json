@@ -1,0 +1,77 @@
+[
+  {
+    "id": "a1f3c2b4-9d71-4c1e-8c45-11a8b8f2c001",
+    "question": "How long does shipping take and how can I track my order?",
+    "answer": "Shipping times depend on your location and the shipping method selected at checkout. Standard shipping usually takes between 5–7 business days, while expedited options may arrive within 2–3 business days. Once your order ships, you’ll receive a confirmation email with a tracking number and a link to the carrier’s tracking page. You can also track your order by logging into your account and viewing the order details. Please note that delivery times may be impacted by holidays, weather conditions, or carrier-related delays."
+  },
+  {
+    "id": "b2e7d8a9-3f44-4e52-9a01-22c9e3d4f102",
+    "question": "What is your return and refund policy?",
+    "answer": "We offer a 30-day return policy starting from the day you receive your order. Items must be unused, unwashed, and returned in their original packaging to qualify. After we receive and inspect the returned item, approved refunds will be issued to your original payment method within 5–10 business days. Shipping fees are non-refundable unless the return is due to a defective or incorrect item sent by us."
+  },
+  {
+    "id": "c3a9f6e1-7b9a-4d21-8f44-33d8b7c6a203",
+    "question": "Do you ship internationally?",
+    "answer": "Yes, we ship to many international destinations. Shipping costs and delivery times vary depending on the destination and will be calculated at checkout. International orders may be subject to customs duties, taxes, or import fees imposed by the destination country. These additional charges are the customer’s responsibility, and we recommend checking with your local customs office for details before ordering."
+  },
+  {
+    "id": "d4f2a8b7-5e91-49a6-bc88-44a2c1d9e304",
+    "question": "What payment methods do you accept?",
+    "answer": "We accept major credit and debit cards including Visa, Mastercard, and American Express, as well as PayPal, Apple Pay, and Google Pay. All payments are processed through secure, encrypted payment gateways to ensure your financial information remains protected. We do not store your full payment details on our servers."
+  },
+  {
+    "id": "e5c8b2d1-6f34-4d90-8f71-55e1a2b4c405",
+    "question": "Can I change or cancel my order after placing it?",
+    "answer": "Orders are processed quickly to ensure timely delivery, so changes or cancellations are only possible shortly after placing the order. If you need to make a change, contact customer support immediately with your order number. Once an order has shipped, it cannot be modified or canceled, but it may still be eligible for return under our return policy."
+  },
+  {
+    "id": "f6a1e9c3-2b88-47d3-9e12-66b5c7d8a506",
+    "question": "What should I do if I receive a damaged or defective item?",
+    "answer": "If you receive a damaged or defective item, please contact us within 48 hours of delivery. Provide your order number along with clear photos of the issue and packaging. After review, we will arrange a replacement or refund at no extra cost. Our team works quickly to ensure such issues are resolved smoothly."
+  },
+  {
+    "id": "07b2c1a9-3f55-4d8b-92c1-77d9e1b6f607",
+    "question": "Do I need an account to place an order?",
+    "answer": "You can place an order as a guest without creating an account. However, creating an account allows you to track orders, save shipping details, view order history, and receive exclusive promotions. Account creation is free and only takes a few minutes."
+  },
+  {
+    "id": "18c9d7e2-6b14-4a8f-a134-88a1b9c3d708",
+    "question": "How do I apply a promo or discount code?",
+    "answer": "Promo codes can be applied during checkout by entering the code into the designated discount field before completing your purchase. Once applied, the discount will automatically update your order total. Please note that promo codes are subject to expiration dates and cannot always be combined with other offers."
+  },
+  {
+    "id": "29d1b8f3-9a55-4e2c-b421-99c7a2e1f809",
+    "question": "Is my personal and payment information secure?",
+    "answer": "Yes, protecting your data is a top priority. Our website uses SSL encryption and follows industry security standards to safeguard your personal and payment information. All transactions are processed securely, and we never sell or share your data with third parties without your consent."
+  },
+  {
+    "id": "3a8f9c2d-1b64-4f91-9e33-a0d1c2b4e910",
+    "question": "How can I check if a product is in stock?",
+    "answer": "Product availability is displayed on each product page. If an item is available, you can add it to your cart. If it’s out of stock, you may see an option to sign up for restock notifications. Inventory levels are updated frequently, but availability is not guaranteed until checkout is complete."
+  },
+  {
+    "id": "4b1e8c7a-5f92-41d8-bd21-b1c2a9d3e011",
+    "question": "Do you offer bulk or wholesale orders?",
+    "answer": "Yes, we offer bulk and wholesale purchasing options for qualified customers. If you are interested in large-quantity orders or wholesale pricing, please contact our sales team with details about your business and the products you’re interested in. We’ll provide pricing, minimum quantities, and next steps."
+  },
+  {
+    "id": "5c7a1d9e-2f34-4c88-9b11-c2d3a4e5f112",
+    "question": "What happens if my package is lost?",
+    "answer": "If your package does not arrive within the expected delivery window, please reach out to our support team. We will investigate the issue with the carrier. If the package is confirmed lost, we will offer a replacement or a refund based on product availability and your preference."
+  },
+  {
+    "id": "6d2b9c1a-7f55-4e8a-8c21-d3e4a5b6f213",
+    "question": "Can I update my shipping address after ordering?",
+    "answer": "Shipping address changes may be possible if your order has not yet been processed. Contact customer support immediately with your updated address and order number. Once the order has shipped, we are unable to change the delivery address."
+  },
+  {
+    "id": "7e3c1a9b-8d44-49b2-a211-e4f5c6d7a314",
+    "question": "Do you offer gift wrapping or gift receipts?",
+    "answer": "We offer gift wrapping and gift receipt options on select products. These options can be chosen during checkout when available. Gift receipts exclude pricing information, making them perfect for sending items directly to friends or family."
+  },
+  {
+    "id": "8f4d1c2a-9b66-4e91-bc12-f5e6d7a8c415",
+    "question": "How can I contact customer support?",
+    "answer": "You can contact our customer support team via email, live chat, or the contact form on our website. Our support hours are listed on the Contact Us page, and we aim to respond to all inquiries within one business day."
+  }
+]

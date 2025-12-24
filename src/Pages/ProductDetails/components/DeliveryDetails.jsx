@@ -59,27 +59,27 @@ function DeliveryDetails() {
           : 'Jan'}
       </p>
       <h2 className="py-3 text-xl font-semibold">Delivery Details</h2>
-      <div className="sm:px-3 flex justify-between w-full  overflow-auto no-scrollbar gap-2">
-        <div className="sm:min-w-[70px] max-w-[100px] min-h-[70px] flex flex-col items-center justify-center py-3 shrink-0 gap-2">
+      <div className=" flex w-full  overflow-auto no-scrollbar gap-2">
+        <div className="sm:min-w-[70px] max-w-[90px] min-h-[70px] flex flex-col items-center justify-center py-3 shrink-0 gap-2">
           <RotateCcw size={30} />
           <h4 className="text-center font-extralight sm:font-light">
             10 days return
           </h4>
         </div>
 
-        <div className="sm:min-w-[70px] max-w-[100px] min-h-[70px] flex flex-col items-center justify-center py-3 shrink-0 gap-2">
+        <div className="sm:min-w-[70px] max-w-[90px] min-h-[70px] flex flex-col items-center justify-center py-3 shrink-0 gap-2">
           <ShieldCheck size={30} />
           <h4 className="text-center font-extralight sm:font-light">
             NextGen Assured
           </h4>
         </div>
-        <div className="sm:min-w-[70px] max-w-[100px] min-h-[70px] flex flex-col items-center justify-center py-3 shrink-0 gap-2">
+        <div className="sm:min-w-[70px] max-w-[90px] min-h-[70px] flex flex-col items-center justify-center py-3 shrink-0 gap-2">
           <HandCoinsIcon size={30} />
           <h4 className="text-center font-extralight sm:font-light">
             Easy Payments
           </h4>
         </div>
-        <div className="sm:min-w-[70px] max-w-[100px] min-h-[70px] flex flex-col items-center justify-center py-3 shrink-0 gap-2">
+        <div className="sm:min-w-[70px] max-w-[90px] min-h-[70px] flex flex-col items-center justify-center py-3 shrink-0 gap-2">
           <BsCashCoin size={30} />
           <h4 className="text-center font-extralight sm:font-light">
             COD Available

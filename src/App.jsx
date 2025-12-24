@@ -22,7 +22,7 @@ const Home = lazy(() => import('./Pages/Home/Home'))
 const SideBar = lazy(() => import('./Components/Sidebar/SideBar'))
 const NotFound = lazy(() => import('./Pages/NotFound/NotFound'))
 const Cart = lazy(() => import('./Pages/CartPage/Cart'))
-const Products = lazy(() => import('./Pages/Products/Product-Listing/Products'))
+const Products = lazy(() => import('./Pages/Products/Products'))
 const BuyNow = lazy(() => import('./Pages/BuyNow/BuyNow'))
 
 const Layout = () => {
