@@ -10,23 +10,19 @@ function BestSellers() {
   return (
     <>
       <div className="flex w-full">
-        <div className="hidden min-w-[15%] min-h-full lg:flex flex-col px-2 py-3 items-center bg-slate-200 ">
-          {['Category', 'Price'].map((c, i) => (
-            <div className="w-full mb-3" key={i}>
-              <FilterItem filter={c} />
-            </div>
-          ))}
-        </div>
         <div className="w-full">
           {loading ? (
             <p className="flex justify-center items-center text-2xl min-h-[85vh] tracking-[1px]">
               Loading....
             </p>
           ) : (
-            <div className="w-full min-w-[350px] sm:min-w-[640px] md:min-w-[768px] lg:min-w-[1024px] xl:min-w-[1280px] min-h-max">
+            <div className="w-full min-w-[354px] min-h-max px-1 sm:px-6 md:px-10 xl:px-30 py-5">
               {books.length > 0 ? (
                 <>
-                  <div className="flex justify-between sm:justify-start sm:p-0 px-0 md:px-10 lg-px-15 flex-wrap">
+                  <h1 className="ml-3 capitalize text-4xl pb-5 tracking-wider font-light">
+                    Best sellers
+                  </h1>
+                  <div className="px-3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3">
                     {books.map((p) => (
                       <BsCard key={p._id} books={p} />
                     ))}

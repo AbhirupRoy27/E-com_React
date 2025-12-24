@@ -9,7 +9,7 @@ function Page({ setSearchParams, onPage, bgcolor }) {
   return (
     <div
       className={`flex justify-center py-4 items-center ${
-        bgcolor || 'bg-gray-100'
+        bgcolor || 'bg-gray-900'
       }`}
     >
       <div className="flex justify-around gap-2 p-2 px-6 rounded-lg">
@@ -17,7 +17,9 @@ function Page({ setSearchParams, onPage, bgcolor }) {
           <p
             key={i}
             className={`flex items-center justify-center  font-semibold px-3 py-1 bg-gray-300 ${
-              p === onPage ? 'bg-gray-800 text-white' : 'text-gray-950'
+              p === onPage
+                ? 'bg-gray-950 text-white border border-white'
+                : 'text-gray-950'
             } rounded-full`}
             onClick={() => handleClick(p)}
           >
