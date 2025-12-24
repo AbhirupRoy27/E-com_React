@@ -1,7 +1,7 @@
 import Page from '../../Components/PageNavigation/Page'
 import { useBestSellers } from '../../Contexts/BooksContext'
-import BsCard from './Components/Main/BsCard'
-import NoBooks from './Components/Main/NoBooks'
+import BsCard from './Components/BsCard'
+import NoBooks from './Components/NoBooks'
 
 function BestSellers() {
   const { loading, books, currentPage, setSearchParams } = useBestSellers()

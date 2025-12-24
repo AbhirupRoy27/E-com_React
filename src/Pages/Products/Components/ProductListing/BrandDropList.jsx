@@ -21,7 +21,7 @@ export const BrandDropList = () => {
     )
   }
   return (
-    <div className="flex items-center gap-1 px-3 py-2 lg:px-10 text-white">
+    <div className="flex items-center gap-1 py-3 text-white">
       <p className="font-semibold font-mono text-md sm:text-lg mr-2">
         Select Brand:
       </p>

@@ -25,24 +25,26 @@ function ProductListing({ item, book }) {
           <img
             src={product.coverImage}
             alt="Product"
-            className=" object-center object-contain max-h-[600px]"
+            className=" object-center object-contain max-h-[500px]"
           />
           <Buttons book={product} />
         </div>
         <div className="px-6 sm:px-10 pt-10 bg-white/10 mx-2 rounded-tl-2xl rounded-tr-2xl sm:h-fit sm:rounded-2xl md:w-1/2 min-w-[322px]">
           <h3 className="font font-semibold text-2xl">{product.title}</h3>
-          {/* <div className="flex justify-between items-center py-3">
+          <div className="flex justify-between items-center py-3">
             <div>
-              <b className="text-[14px]">Written by, </b>
-              <h4 className="text-sky-500 text-sm">{book[0].author}</h4>
+              <b className="text-[14px]">by, </b>
+              <h4 className="text-sky-500 text-sm">
+                {product.author || product.brand}
+              </h4>
             </div>
             <div className="flex items-center gap-2">
-              <h4 className="text-xl sm:text-2xl">₹ {book[0].price}</h4>
+              <h4 className="text-xl sm:text-2xl">₹ {product.price}</h4>
               <h6 className="line-through font-extralight text-sm sm:text-md text-white/50">
-                ₹ {Math.ceil(book[0].price + (book[0].price * Discount) / 100)}
+                ₹ {Math.ceil(product.price + (product.price * Discount) / 100)}
               </h6>
             </div>
-          </div> */}
+          </div>
 
           {product.sideImages && (
             <div className="flex gap-1 py-5 ">

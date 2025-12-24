@@ -1,8 +1,8 @@
 import { useNavigate } from 'react-router-dom'
-import handleNavigateTo from '../../../../Utils/navigate/navigateTo'
-import { handleBuy } from '../../../../Utils/BuyNow/handleClicks'
-import { useBuy } from '../../../../Contexts/BuyContext'
 import { CircleArrowOutUpRight } from 'lucide-react'
+import handleNavigateTo from '../../../Utils/navigate/navigateTo'
+import { handleBuy } from '../../../Utils/BuyNow/handleClicks'
+import { useBuy } from '../../../Contexts/BuyContext'
 
 function BsCard({ books }) {
   const truncateText = (text, length = 55) => {
