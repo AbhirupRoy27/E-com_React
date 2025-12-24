@@ -21,14 +21,17 @@ function BsCard({ books }) {
           alt="Loading"
           className="bg-white h-[20rem] sm:h-[30rem] w-full mb-1"
           onClick={() =>
-            handleNavigateTo(navigate, `${books.title}?book-id=${books._id}`)
+            handleNavigateTo(navigate, `${books.title}?product-id=${books._id}`)
           }
         />
         <div className="py-5 flex flex-col gap-2 min-h-[156px]">
           <p
             className="min-h-[42px] text-[16px] tracking-[1px] sm:text-[14px] sm:tracking-0 xl:text-[16px] flex "
             onClick={() =>
-              handleNavigateTo(navigate, `${books.title}?book-id=${books._id}`)
+              handleNavigateTo(
+                navigate,
+                `${books.title}?product-id=${books._id}`
+              )
             }
           >
             {books.title}
@@ -36,7 +39,10 @@ function BsCard({ books }) {
           <p
             className="min-h-[51px] py-1 text-sm sm:text-md lg:text-[15px] hover:underline"
             onClick={() =>
-              handleNavigateTo(navigate, `${books.title}?book-id=${books._id}`)
+              handleNavigateTo(
+                navigate,
+                `${books.title}?product-id=${books._id}`
+              )
             }
           >
             {truncateText(books.description)}

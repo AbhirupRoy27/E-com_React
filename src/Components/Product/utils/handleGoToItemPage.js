@@ -3,7 +3,7 @@ const handleGoToItemPage = (p, navigate) => {
     top: 0,
     behavior: 'smooth',
   })
-  navigate(`/product-item/${p._id}`)
+  navigate(`/product/${p.category}?product-id=${p._id}`)
 }
 
 export default handleGoToItemPage

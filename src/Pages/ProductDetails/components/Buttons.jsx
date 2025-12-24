@@ -1,9 +1,8 @@
-import React from 'react'
-import { useCart } from '../../../../Contexts/CartContext'
-import handleNavigateTo from '../../../../Utils/navigate/navigateTo'
-import { useNavigate } from 'react-router-dom'
-import handleAddToCart from '../../../../Components/Product/utils/handleAddToCart'
 import { ChevronRight, ShoppingCart } from 'lucide-react'
+import { useCart } from '../../../Contexts/CartContext'
+import { useNavigate } from 'react-router-dom'
+import handleNavigateTo from '../../../Utils/navigate/navigateTo'
+import handleAddToCart from '../../../Utils/Cart/handleAddToCart'
 
 function Buttons({ book }) {
   const { cart, setCart, total, setTotal } = useCart()

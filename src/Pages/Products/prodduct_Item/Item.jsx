@@ -4,13 +4,14 @@ import { useCart } from '../../../Contexts/CartContext'
 import { useNavigate } from 'react-router-dom'
 
 import handleGoToCart from '../../../Components/Product/utils/handleGoToCart'
-import handleAddToCart from '../../../Components/Product/utils/handleAddToCart'
-import BackButton from './Components/BackButton'
+import handleAddToCart from '../../../Utils/Cart/handleAddToCart'
+
 import ProductImages from './Components/ProductImages'
 import ProductDetails from './Components/ProductDetails'
 import SizeChart from './Components/SizeChart'
 import ProductDescription from './Components/ProductDescription'
 import ProductReview from './Components/ProductReview'
+import BackButton from '../../../Components/BackButton/BackButton'
 
 function Item() {
   const { id } = useParams()

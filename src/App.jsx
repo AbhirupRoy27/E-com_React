@@ -3,7 +3,6 @@ import { Outlet, Route, Routes, useNavigate } from 'react-router-dom'
 import SearchBar from './Components/SearchBar/SearchBar'
 import { lazy, Suspense } from 'react'
 import TopDeals from './Pages/TopDeals/TopDeals'
-import Item from './Pages/Products/prodduct_Item/Item'
 import Footer from './Components/Footer/Footer'
 import Login from './Pages/Account/Login/Login'
 import Signup from './Pages/Account/Signup/Signup'
@@ -17,15 +16,13 @@ import Logout from './Pages/Account/Logout/Logout'
 import Loading from './Components/Account/Loading'
 import OrderComplete from './Pages/OrderComplete/OrderComplete'
 import FandQ from './Pages/F&Q/FandQ'
+import ProductDetailPage from './Pages/ProductDetails/ProductDetailPage'
 
 const Home = lazy(() => import('./Pages/Home/Home'))
 const SideBar = lazy(() => import('./Components/Sidebar/SideBar'))
 const NotFound = lazy(() => import('./Pages/NotFound/NotFound'))
 const Cart = lazy(() => import('./Pages/CartPage/Cart'))
-const Products = lazy(() => import('./Pages/Products/Products'))
-const BestSellersItem = lazy(() =>
-  import('./Pages/BestSellers/Pages/BestSellerItem')
-)
+const Products = lazy(() => import('./Pages/Products/Product-Listing/Products'))
 const BuyNow = lazy(() => import('./Pages/BuyNow/BuyNow'))
 
 const Layout = () => {
@@ -77,14 +74,8 @@ function App() {
         <Route path="orders" element={<Orders />} />
         <Route path="products" element={<Products />} />
         <Route path="best sellers" element={<BestSellers />} />
-        <Route
-          path="best sellers/:title"
-          element={
-            <Suspense fallback={<Loading />}>
-              <BestSellersItem />
-            </Suspense>
-          }
-        />
+        <Route path="product/:id" element={<ProductDetailPage />} />
+        <Route path="best sellers/:title" element={<ProductDetailPage />} />
         <Route
           path="FeedBack"
           element={
@@ -94,9 +85,7 @@ function App() {
           }
         />
         <Route path="Gift Cards" element={<GiftCards />} />
-        <Route path="product-item/:id" element={<Item />} />
         <Route path="F&Q" element={<FandQ />} />
-
         <Route path="*" element={<NotFound />} />
       </Route>
       <Route path="order complete" element={<OrderComplete />} />

@@ -10,7 +10,7 @@ function CoverImage({ product }) {
     <div className="w-full">
       <div className="relative w-full h-70 rounded-tr-md rounded-tl-md overflow-hidden">
         <img
-          src={product.mainimg}
+          src={product.coverImage}
           alt="cover"
           className="absolute inset-0 w-full h-full object-fill object-top"
           onClick={() => handleGoToItemPage(product, navigate)}
