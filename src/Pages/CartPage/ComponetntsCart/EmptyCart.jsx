@@ -6,7 +6,7 @@ function EmptyCart({ navigate }) {
       <img
         src="https://res.cloudinary.com/dfuhnqbap/image/upload/v1766043602/shopping_zzfc1r.png"
         alt="Empty Cart"
-        className="rounded-full bg-white/10 p-10"
+        className="rounded-full bg-white/10 p-10 min-h-[60vh]"
       />
       <div className="flex flex-col gap-4">
         <h1 className="text-center text-4xl font-semibold tracking-wide">

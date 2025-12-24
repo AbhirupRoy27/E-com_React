@@ -8,6 +8,7 @@ function Orders() {
       <img
         src="https://res.cloudinary.com/dfuhnqbap/image/upload/v1766037817/delivery-order_hnrum6.png"
         alt="order"
+        className="min-h-[60vh]"
       />
       <p className="text-4xl pb-1 font-bold tracking-wider">
         Make Your First Order with NextGen
