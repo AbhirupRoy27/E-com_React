@@ -1,11 +1,9 @@
 import { useNavigate } from 'react-router-dom'
 import handleNavigateTo from '../../Utils/navigate/navigateTo'
 import BooksHomeCard from './mobileView/BooksHomeCard'
-import MobileCards from './mobileView/MobileCards'
 import { useState } from 'react'
 import DesktopFlex from './Components/DesktopFlex'
 import HomeProducts from './Components/HomeProducts'
-import HeroBanner from './Components/HeroBanner'
 import HeroNavigation from './Components/HeroNavigation'
 
 export default function Home() {
@@ -81,17 +79,13 @@ export default function Home() {
             <span
               key={index}
               onClick={() => setActiveIndex(index)}
-              className={`bg-black rounded-full transition-all duration-300 cursor-pointer ${
+              className={`bg-white rounded-full transition-all duration-300 cursor-pointer ${
                 activeIndex === index ? 'w-3 h-3' : 'w-2 h-2 opacity-70'
               }`}
             ></span>
           ))}
         </div>
-        <div className="hidden m-2 rounded-xl sm:flex flex-col h-[65vh] bg-white/10  bg-center bg-no-repeat bg-cover min-w-[750px] ">
-          <HeroBanner />
-        </div>
       </div>
-      {/* <MobileCards /> For Mobile */}
       <HomeProducts />
 
       <BooksHomeCard />

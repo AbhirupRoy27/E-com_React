@@ -1,15 +1,14 @@
+import { ChevronRight } from 'lucide-react'
 import { useTrending } from '../../../Contexts/Home/TrendingProducts'
+import { useNavigate } from 'react-router-dom'
 
 function HomeProducts() {
   const { list } = useTrending()
+  const navigate = useNavigate()
 
   if (list[0] == 1)
     return (
       <div className="bg-gray-950 px-2 xl:px-30 py-4">
-        <h1 className="uppercase bg-amber-50/ text-gray-50 text-center font-mono tracking-wider py-4 text-2xl">
-          Trending
-        </h1>
-
         <div className="flex overflow-scroll gap-3 no-scrollbar mt-2 shrink-0">
           {list.map((p) => (
             <div className="text-white" key={p}>
@@ -34,9 +33,6 @@ function HomeProducts() {
   console.log(list)
   return (
     <div className="bg-gray-950 px-2 xl:px-30 py-4">
-      <h1 className="uppercase text-gray-50 text-center font-mono tracking-wider py-4 text-2xl">
-        Trending
-      </h1>
       <div className="flex overflow-scroll gap-3 no-scrollbar mt-2 shrink-0">
         {list.map((p) => (
           <div className="text-white" key={p._id}>
@@ -65,6 +61,15 @@ function HomeProducts() {
             </div>
           </div>
         ))}
+        <div
+          className="bg-white/10 border-0 cursor-pointer shrink-0 flex justify-center flex-col rounded-tr-2xl rounded-br-2xl px-4"
+          onClick={() => navigate('/products')}
+        >
+          <div className="flex justify-center">
+            <ChevronRight size={80} />
+          </div>
+          <b className="text-2xl">See More</b>
+        </div>
       </div>
     </div>
   )
