@@ -1,9 +1,9 @@
 import { useSearchParams } from 'react-router-dom'
 import { useBestSellers } from '../../../Contexts/BooksContext'
-import Buttons from '../Components/V2/Buttons'
-import DeliveryDetails from '../Components/V2/DeliveryDetails'
-import Offers from '../Components/V2/Offers'
-import ProductDetails from '../Components/V2/ProductDetails'
+import Buttons from '../Components/BookListing/Buttons'
+import DeliveryDetails from '../Components/BookListing/DeliveryDetails'
+import Offers from '../Components/BookListing/Offers'
+import ProductDetails from '../Components/BookListing/ProductDetails'
 
 function BookListing() {
   const { books } = useBestSellers()
