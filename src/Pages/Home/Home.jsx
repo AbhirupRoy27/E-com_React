@@ -50,7 +50,7 @@ export default function Home() {
   return (
     <div className="sm:bg-gray-950">
       <HeroNavigation />
-      <div className="overflow-hidden w-full min-w-[354px] xl:px-30">
+      <div className="overflow-hidden w-full min-w-[354px] ">
         <div
           className="flex transition-transform duration-500 mt-2 sm:hidden"
           onTouchStart={handleTouchStart}

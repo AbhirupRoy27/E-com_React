@@ -4,7 +4,7 @@ function Orders() {
   // setOrders('Make Your First Order with NextGen')
   const navigate = useNavigate()
   return (
-    <div className="min-h-screen flex justify-center items-center flex-col min-w-screen">
+    <div className="min-h-screen flex justify-center items-center flex-col">
       <img
         src="https://res.cloudinary.com/dfuhnqbap/image/upload/v1766037817/delivery-order_hnrum6.png"
         alt="order"

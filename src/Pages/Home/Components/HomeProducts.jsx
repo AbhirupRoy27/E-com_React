@@ -8,7 +8,7 @@ function HomeProducts() {
 
   if (list[0] == 1)
     return (
-      <div className="bg-gray-950 px-2 xl:px-30 py-4">
+      <div className="bg-gray-950 py-4">
         <div className="flex overflow-scroll gap-3 no-scrollbar mt-2 shrink-0">
           {list.map((p) => (
             <div className="text-white" key={p}>
@@ -32,7 +32,7 @@ function HomeProducts() {
     )
   console.log(list)
   return (
-    <div className="bg-gray-950 px-2 xl:px-30 py-4">
+    <div className="bg-gray-950 py-4">
       <div className="flex overflow-scroll gap-3 no-scrollbar mt-2 shrink-0">
         {list.map((p) => (
           <div className="text-white" key={p._id}>

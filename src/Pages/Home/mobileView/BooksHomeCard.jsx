@@ -10,7 +10,7 @@ function BooksHomeCard() {
   if (books.length <= 0) return
 
   return (
-    <div className="flex bg-gray-950 flex-col min-w-[354px] px-2 xl:px-30 py-10">
+    <div className="flex bg-gray-950 flex-col min-w-[354px] py-10">
       <p className=" text-gray-50 font-mono uppercase tracking-widest py-4 text-center text-xl sm:text-2xl">
         Books you might like
       </p>

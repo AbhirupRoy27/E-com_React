@@ -15,7 +15,7 @@ function BestSellers() {
               Loading....
             </p>
           ) : (
-            <div className="w-full min-w-[354px] min-h-max px-1 sm:px-6 md:px-10 xl:px-30 py-5">
+            <div className="w-full min-w-[354px] min-h-max  py-5">
               {books.length > 0 ? (
                 <>
                   <h1 className="ml-3 capitalize text-4xl pb-5 tracking-wider font-light">

@@ -14,7 +14,7 @@ function ProductDetailPage() {
 
   if (book.length < 1 && product.length < 1) {
     return (
-      <div className="px-2 sm:px-6 md:px-10 xl:px-30 py-5 min-w-[354px] bg-gray-900/40 min-h-[80vh]">
+      <div className="py-5 min-w-[354px] bg-gray-900/40 min-h-[80vh]">
         <div className="h-[80vh] flex justify-center items-center">
           <h1>No Such Book</h1>
         </div>
@@ -24,14 +24,14 @@ function ProductDetailPage() {
 
   if (book.length < 1) {
     return (
-      <div className="px-2 sm:px-6 md:px-10 xl:px-30 py-5 min-w-[354px] bg-gray-900/40 min-h-screen">
+      <div className="py-5 min-w-[354px]  min-h-screen">
         <ProductListing item={product[0]} />
       </div>
     )
   }
 
   return (
-    <div className="px-2 sm:px-6 md:px-10 xl:px-30 py-5 min-w-[354px] bg-gray-900/40 min-h-screen">
+    <div className="py-5 min-w-[354px] min-h-screen">
       <ProductListing book={book[0]} />
     </div>
   )

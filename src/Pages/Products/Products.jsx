@@ -5,7 +5,7 @@ import ProductCards from './ProductCards'
 function Products() {
   return (
     <>
-      <div className="w-full min-w-[354px] min-h-max px-2 sm:px-6 md:px-10 xl:px-30 pt-5 bg-[rgba(62,62,62,0.212)]">
+      <div className="w-full min-w-[354px] min-h-max  pt-5">
         <h1 className=" capitalize text-4xl pb-3 tracking-wider font-light text-nowrap">
           Products
         </h1>
