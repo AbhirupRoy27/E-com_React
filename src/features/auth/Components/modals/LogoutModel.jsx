@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom'
-import { handleLogout } from '../../../Components/SearchBar/Utils/handleClicks'
-import { useAuth } from '../../../Contexts/Auth/AuthContext'
+import { handleLogout } from '../../../../Components/SearchBar/Utils/handleClicks'
+import { useAuth } from '../../context/AuthContext'
 
 function Logout() {
   const { setIsLogout } = useAuth()

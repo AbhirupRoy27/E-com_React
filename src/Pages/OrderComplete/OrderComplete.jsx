@@ -24,7 +24,7 @@ function OrderComplete() {
   }, [counter, navigate])
 
   return (
-    <div className="min-w-[100vw] sm:min-w-[640px] md:min-w-[768px] lg:min-w-[1024px] xl:min-w-[1280px] bg-slate-100 h-[100vh]">
+    <div className="min-w-[354px] h-screen">
       <div className="bg-green-700 min-h-[25vh] flex justify-center items-center ">
         <div
           className={`relative transition-all duration-800 ease-in-out w-[100px] h-[100px] bg-white rounded-full p-1 overflow-hidden ${
@@ -42,10 +42,10 @@ function OrderComplete() {
         </p>
       </div>
       <div className="flex gap-4 justify-center flex-col sm:flex-row mt-4 px-2 sm:px-5">
-        <div className="min-w-[70%] xl:min-w-[600px] min-h-[300px] p-2 shadow-lg shadow-black/10 rounded-xl border-t-4">
+        <div className="min-w-[70%] xl:min-w-[600px] min-h-[300px] p-4 shadow-lg shadow-black/10 rounded-tl-4xl rounded-tr-4xl border-t-4 bg-gray-700">
           Delivery details
         </div>
-        <div className="min-w-[30%] xl:min-w-[600px] min-h-[300px] p-2 shadow-lg shadow-black/10 rounded-xl border-t-4">
+        <div className="min-w-[30%] xl:min-w-[600px] min-h-[300px] p-2 shadow-lg shadow-black/10 rounded-xl border-t-4 bg-gray-700">
           Paymet Details
         </div>
       </div>

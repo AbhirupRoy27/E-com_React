@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router-dom'
 import { handleLogin } from '../utils/handleLogin'
 import { handleAuthInputs } from '../utils/handleAuthInputs'
 import { useState } from 'react'
-import { useAuth } from '../../../Contexts/Auth/AuthContext'
+import { useAuth } from '../context/AuthContext'
 
 function LoginForm() {
   const navigate = useNavigate()

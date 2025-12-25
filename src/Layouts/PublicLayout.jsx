@@ -3,8 +3,8 @@ import SearchBar from '../Components/SearchBar/SearchBar'
 import NavBar from '../Components/NavBar/NavBar'
 import SideBar from '../Components/Sidebar/SideBar'
 import Footer from '../Components/Footer/Footer'
-import { useAuth } from '../Contexts/Auth/AuthContext'
-import Logout from '../Pages/Account/Logout/Logout'
+import { useAuth } from '../features/auth/context/AuthContext'
+import Logout from '../features/auth/Components/modals/LogoutModel'
 
 const PublicLayout = () => {
   const { isLogout } = useAuth()

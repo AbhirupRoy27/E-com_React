@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import Bar from './Components/Search/Bar'
 import { handleDropDown } from './Utils/handleClicks'
-import { useAuth } from '../../Contexts/Auth/AuthContext'
+import { useAuth } from '../../features/auth/context/AuthContext'
 import { useState } from 'react'
 import { BookHeart, CircleUser, ShoppingCart } from 'lucide-react'
 
