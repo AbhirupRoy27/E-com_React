@@ -31,7 +31,7 @@ function Buttons({ book }) {
 
       <button
         className="hover:bg-white/10 transition border py-3 w-full cursor-pointer flex justify-center gap-2"
-        onClick={() => handleNavigateTo(navigate, '/buy-now')}
+        onClick={() => handleNavigateTo(navigate, '/app/buy-now')}
       >
         Buy Now
         <ChevronRight />

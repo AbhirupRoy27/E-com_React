@@ -27,7 +27,7 @@ export default function NavBar() {
           <div
             key={links.id}
             className="text-[#f0f8ff] tracking-widest sm:py-[0.7%] sm:px-[0.4%] active:scale-103 hover:border border-white rounded cursor-pointer"
-            onClick={() => navigate(`${links.name}`)}
+            onClick={() => navigate(`/${links.name}`)}
           >
             <p>{links.name}</p>
           </div>

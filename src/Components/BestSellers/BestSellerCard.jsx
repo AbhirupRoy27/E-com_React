@@ -1,10 +1,10 @@
 import { useNavigate } from 'react-router-dom'
 import { CircleArrowOutUpRight } from 'lucide-react'
-import handleNavigateTo from '../../../Utils/navigate/navigateTo'
-import { handleBuy } from '../../../Utils/BuyNow/handleClicks'
-import { useBuy } from '../../../Contexts/BuyContext'
+import { useBuy } from '../../Contexts/BuyContext'
+import handleNavigateTo from '../../Utils/navigate/navigateTo'
+import { handleBuy } from '../../Utils/BuyNow/handleClicks'
 
-function BsCard({ books }) {
+function BestSellerCard({ books }) {
   const truncateText = (text, length = 55) => {
     if (!text) return ''
     return text.length > length ? text.substring(0, length) + '...' : text
@@ -68,4 +68,4 @@ function BsCard({ books }) {
   )
 }
 
-export default BsCard
+export default BestSellerCard

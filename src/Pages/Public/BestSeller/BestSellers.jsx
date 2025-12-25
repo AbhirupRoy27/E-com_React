@@ -1,7 +1,7 @@
-import Page from '../../Components/PageNavigation/Page'
-import { useBestSellers } from '../../Contexts/BooksContext'
-import BsCard from './Components/BsCard'
-import NoBooks from './Components/NoBooks'
+import BestSellerCard from '../../../Components/BestSellers/BestSellerCard'
+import NoBooks from '../../../Components/BestSellers/NoBooks'
+import Page from '../../../Components/PageNavigation/Page'
+import { useBestSellers } from '../../../Contexts/BooksContext'
 
 function BestSellers() {
   const { loading, books, currentPage, setSearchParams } = useBestSellers()
@@ -23,7 +23,7 @@ function BestSellers() {
                   </h1>
                   <div className="sm:px-3 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2 sm:gap-3">
                     {books.map((p) => (
-                      <BsCard key={p._id} books={p} />
+                      <BestSellerCard key={p._id} books={p} />
                     ))}
                   </div>
                 </>

@@ -68,7 +68,10 @@ function Login() {
               Login
             </button>
           </div>
-          <div className="flex justify-center">
+          <div
+            className="flex justify-center cursor-pointer"
+            onClick={() => alert('Contect admin')}
+          >
             <h4 className="py-2 text-red-600 font-bold tracking-widest">
               Forgot Password
             </h4>

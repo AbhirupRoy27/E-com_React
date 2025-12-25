@@ -4,7 +4,7 @@ export const handleDropDown = (navigate, item, setIsLogout, setOpen) => {
     setOpen(false)
     // handleLogout(navigate, setIsLogout)
   } else {
-    navigate(item)
+    navigate(`/${item}`)
     setOpen(false)
   }
 }

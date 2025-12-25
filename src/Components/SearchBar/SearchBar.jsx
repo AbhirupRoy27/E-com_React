@@ -30,7 +30,7 @@ export default function SearchBar() {
         <div className="flex p-1 gap-2 md:gap-6">
           <div
             className="flex text-white items-center md:gap-2 cursor-pointer active:opacity-75"
-            onClick={() => navigate('Cart')}
+            onClick={() => navigate('/Cart')}
           >
             <ShoppingCart size={30} />
             <p className="hidden md:flex ">Cart</p>
