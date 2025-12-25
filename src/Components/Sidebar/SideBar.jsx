@@ -9,7 +9,7 @@ export default function SideBar() {
 
   const handleClick = (link) => {
     setSideBar(false)
-    navigate(`${link}`)
+    navigate(`/${link}`)
   }
 
   return (
