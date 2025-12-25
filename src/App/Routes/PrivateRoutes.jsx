@@ -1,13 +1,15 @@
 import { Routes, Route, Navigate } from 'react-router-dom'
 import { lazy } from 'react'
 import PrivateLayout from '../../Layouts/PrivateLayout'
-import NotFound from '../../Pages/NotFound/NotFound'
+import PageNotFound from '../../shared/Error/PageNotFound'
 
 // import { useAuth } from '../Contexts/Auth/AuthContext'
 
-const BuyNow = lazy(() => import('../../Pages/BuyNow/BuyNow'))
+const CheckoutPage = lazy(() =>
+  import('../../features/Payment/Pages/CheckoutPage')
+)
 const OrderComplete = lazy(() =>
-  import('../../Pages/OrderComplete/OrderComplete')
+  import('../../features/shop/Pages/Order-Complete/OrderComplete')
 )
 
 export default function PrivateRoutes() {
@@ -20,10 +22,10 @@ export default function PrivateRoutes() {
   return (
     <Routes>
       <Route element={<PrivateLayout />}>
-        <Route path="buy-now" element={<BuyNow />} />
+        <Route path="buy-now" element={<CheckoutPage />} />
         <Route path="order complete" element={<OrderComplete />} />
         {/* <Route path="/" element={<h1>Working</h1>} /> */}
-        <Route path="*" element={<NotFound />} />
+        <Route path="*" element={<PageNotFound />} />
       </Route>
     </Routes>
   )

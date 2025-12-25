@@ -1,0 +1,51 @@
+import { useProducts } from '../Context/ProductContext'
+
+const Brands = ['All', 'Zudio', 'Puma', 'Nike', 'Addidas', 'Zara', 'Campus']
+
+export const BrandDropList = () => {
+  const { setFilteredProducts, products } = useProducts()
+
+  const getBrands = (e) => {
+    if (e.target.localName == 'button') {
+      let text =
+        e.target.innerText.charAt(0) + e.target.innerText.slice(1).toLowerCase()
+      return setFilteredProducts(
+        text === 'All' ? products : products.filter((i) => i.brand === text)
+      )
+    }
+
+    setFilteredProducts(
+      e.target.value === 'All'
+        ? products
+        : products.filter((i) => i.name === e.target.value)
+    )
+  }
+  return (
+    <div className="flex items-center gap-1 py-3 text-white">
+      <p className="font-semibold font-mono text-md sm:text-lg mr-2">
+        Select Brand:
+      </p>
+      <div className="hidden sm:flex gap-2 overflow-x-scroll no-scrollbar">
+        {Brands.map((b, idx) => (
+          <button
+            key={idx}
+            onClick={getBrands}
+            className="bg-gray-900/20 hover:bg-gray-900/30 min-w-[100px] font-semibold py-2 rounded-2xl border-dashed border-2 border-white/40 uppercase active:scale-95"
+          >
+            {b}
+          </button>
+        ))}
+      </div>
+      <select
+        className="sm:hidden p-[0.4rem] min-w-[100px] font-semibold focus:outline-none focus:ring-0 focus:border-transparent bg-white/70 text-gray-950 rounded-md"
+        onChange={getBrands}
+      >
+        <option defaultValue={'All'}>All</option>
+        <option>Zudio</option>
+        <option>Puma</option>
+        <option>Nike</option>
+        <option>Addidas</option>
+      </select>
+    </div>
+  )
+}

@@ -65,7 +65,7 @@ function RegisterForm() {
         </div>
         <div
           className="flex justify-center cursor-pointer"
-          onClick={() => alert('Contect admin')}
+          onClick={() => navigate('/auth/reset-pass')}
         >
           <h4 className="py-2 text-gray-300 hover:scale-105 transition duration-300 font-bold tracking-widest">
             Forgot Password

@@ -1,8 +1,12 @@
 import { Routes, Route, Outlet } from 'react-router-dom'
 import { lazy } from 'react'
 import PublicLayout from '../../Layouts/PublicLayout'
-import DevLayout from '../../Layouts/DevLayout'
+import PageNotFound from '../../shared/Error/PageNotFound'
 
+const WishlistPage = lazy(() =>
+  import('../../features/wishlist/Pages/WishlistPage')
+)
+const ResetPass = lazy(() => import('../../features/auth/Pages/ResetPass'))
 const LoginForm = lazy(() => import('../../features/auth/Components/LoginForm'))
 const RegisterForm = lazy(() =>
   import('../../features/auth/Components/RegisterForm')
@@ -10,51 +14,52 @@ const RegisterForm = lazy(() =>
 const AuthLayout = lazy(() => import('../../features/auth/Pages/AuthPage'))
 const FandQ = lazy(() => import('../../Pages/Public/FandQ/FandQ'))
 const BestSellers = lazy(() =>
-  import('../../Pages/Public/BestSeller/BestSellers')
+  import('../../features/shop/Pages/Books/Pages/BestSellersListing')
 )
 const GiftCardsPage = lazy(() =>
-  import('../../Pages/Public/Gift-CardV2/GiftCardsV2')
+  import('../../features/shop/Pages/GiftCrds/GiftCardsV2')
 )
-
-//
-//
-
-const Home = lazy(() => import('../../Pages/Home/Home'))
-const NotFound = lazy(() => import('../../Pages/NotFound/NotFound'))
-const Cart = lazy(() => import('../../Pages/CartPage/Cart'))
-const TopDeals = lazy(() => import('../../Pages/TopDeals/TopDeals'))
-const Products = lazy(() => import('../../Pages/Products/Products'))
+const ProductGrid = lazy(() =>
+  import('../../features/shop/Pages/Product/ProductGrid')
+)
 const ProductDetailPage = lazy(() =>
-  import('../../Pages/ProductDetails/ProductDetailPage')
+  import('../../features/shop/Pages/Product/ProductDetails')
+)
+const Home = lazy(() => import('../../features/home/pages/Home'))
+
+const TopDealsLayout = lazy(() =>
+  import('../../features/shop/Pages/TopDeals/Layout/TopDealsLayout')
 )
 
-const Orders = lazy(() => import('../../Pages/Orders/Orders'))
-const FeedBack = lazy(() => import('../../Pages/Feedback/Feedback'))
-
-const HomeLayout = () => {}
+const Cart = lazy(() => import('../../features/Cart/pages/CartLayout'))
+const Orders = lazy(() => import('../../features/dashboard/Pages/Orders'))
+const FeedBack = lazy(() =>
+  import('../../features/dashboard/Pages/Feedback/Feedback')
+)
 
 export default function PublicRoutes() {
   return (
     <Routes>
       <Route element={<PublicLayout />}>
         <Route path="/" element={<Home />} />
-        <Route path="/cart" element={<Cart />} />
-        <Route path="top deals" element={<TopDeals />} />
-        <Route path="products" element={<Products />} />
-        <Route path="product/:id" element={<ProductDetailPage />} />
+        <Route path="Gift Cards" element={<GiftCardsPage />} />
         <Route path="best sellers" element={<BestSellers />} />
+        <Route path="products" element={<ProductGrid />} />
+        <Route path="product/:id" element={<ProductDetailPage />} />
         <Route path="best sellers/:title" element={<ProductDetailPage />} />
+        <Route path="top deals" element={<TopDealsLayout />} />
         <Route path="F&Q" element={<FandQ />} />
         <Route path="Orders" element={<Orders />} />
         <Route path="FeedBack" element={<FeedBack />} />
-        <Route path="Gift Cards" element={<GiftCardsPage />} />
-
-        <Route path="*" element={<NotFound />} />
-        <Route path="dev" element={<DevLayout />} />
+        <Route path="cart" element={<Cart />} />
+        <Route path="wishlist" element={<WishlistPage />} />
+        <Route path="*" element={<PageNotFound />} />
       </Route>
-      <Route path="/auth" element={<AuthLayout />}>
+
+      <Route path="auth" element={<AuthLayout />}>
         <Route path="login" element={<LoginForm />} />
         <Route path="signup" element={<RegisterForm />} />
+        <Route path="reset-pass" element={<ResetPass />} />
       </Route>
     </Routes>
   )
