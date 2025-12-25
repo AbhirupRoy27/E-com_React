@@ -9,5 +9,5 @@ export const handleCheckout = (navigate, setIsDisabled, isDisabled) => {
     return alert('Choose a Payment method.')
   }
   setIsDisabled(false)
-  navigate('/order complete')
+  navigate('/app/order complete')
 }

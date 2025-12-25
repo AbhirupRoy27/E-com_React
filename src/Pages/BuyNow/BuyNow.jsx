@@ -1,10 +1,8 @@
 import React from 'react'
 import PaymentOtions from '../../Components/BuyNow/PaymentOtions'
 import OrderTotal from '../../Components/BuyNow/OrderTotal'
-import { useNavigate } from 'react-router-dom'
 
 function BuyNow() {
-  const navigate = useNavigate()
   return (
     <div className="flex flex-col min-w-[100vw] sm:min-w-[640px] md:min-w-[768px] lg:min-w-[1024px] xl:min-w-[1280px]">
       <div className="min-h-[8vh] bg-gray-900 flex justify-between items-center px-2 sm:px-6">
@@ -34,7 +32,7 @@ function BuyNow() {
           <PaymentOtions />
         </div>
 
-        <OrderTotal navigate={navigate} />
+        <OrderTotal />
       </div>
     </div>
   )

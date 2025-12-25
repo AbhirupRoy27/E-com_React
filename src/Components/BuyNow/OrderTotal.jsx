@@ -1,7 +1,9 @@
 import { handleCheckout } from '../../Utils/BuyNow/handleSubmit'
 import { useBuy } from '../../Contexts/BuyContext'
+import { useNavigate } from 'react-router-dom'
 
-function OrderTotal({ navigate }) {
+function OrderTotal() {
+  const navigate = useNavigate()
   const { isDisabled, setIsDisabled, item } = useBuy()
 
   // Calculate totals
