@@ -14,7 +14,7 @@ const ProductDetailPage = lazy(() =>
   import('../Pages/ProductDetails/ProductDetailPage')
 )
 const BestSellers = lazy(() => import('../Pages/Public/BestSeller/BestSellers'))
-const FandQ = lazy(() => import('../Pages/F&Q/FandQ'))
+const FandQ = lazy(() => import('../Pages/Public/FandQ/FandQ'))
 const Orders = lazy(() => import('../Pages/Orders/Orders'))
 const FeedBack = lazy(() => import('../Pages/Feedback/Feedback'))
 const GiftCardsPage = lazy(() =>
