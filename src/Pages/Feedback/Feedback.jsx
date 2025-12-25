@@ -6,7 +6,10 @@ function Feedback() {
   const [isActive, setIsActive] = useState(true)
   return (
     <>
-      <div className="h-[50px] bg-gray-400 flex min-w-screen text-white font-bold">
+      <div
+        className="h-[50px] bg-gray-400 flex text-white font-bold "
+        style={{ padding: 0 }}
+      >
         <button
           className={`w-[50%] flex justify-center items-center ${
             isActive && 'border-b-4 font-semibold bg-gray-500 border-white'
@@ -24,7 +27,7 @@ function Feedback() {
           Other's Feedback
         </button>
       </div>
-      <div className="flex flex-col xl:flex-row min-w-screen">
+      <div className="flex flex-col xl:flex-row">
         {isActive ? <LeftCompo /> : <RightCompo />}
       </div>
     </>

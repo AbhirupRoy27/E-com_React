@@ -14,7 +14,7 @@ function LeftCompo() {
           Currenty Under Development
         </p>
       </div> */}
-      <div className="w-full overflow-hidden flex flex-col sm:flex-row min-w-screen px-2 sm:px-10 xl:px-30">
+      <div className="w-full overflow-hidden flex flex-col sm:flex-row">
         <div className="flex justify-center items-center sm:w-1/4 px-4 pt-5 sm:py-0">
           <img
             src="https://res.cloudinary.com/dfuhnqbap/image/upload/v1766039430/feedback_ui_logo_tnuum7.png"
@@ -22,9 +22,9 @@ function LeftCompo() {
             className="w-[200px] h-[200px] sm:w-auto sm:h-auto"
           />
         </div>
-        <div className="sm:w-3/4 pb-5">
+        <div className="pb-5 w-full">
           <div className="flex flex-col gap-4 items-center justify-start sm:justify-center bg-gray-950 min-w-[354px] sm:min-h-[85vh] ">
-            <h1 className="text-4xl sm:text-5xl font-bold pb-4 sm:border-b-2 border-white/10 w-full text-center">
+            <h1 className="text-4xl sm:text-5xl font-bold pb-4 sm:border-b-2 border-white/10 w-[70%] text-center">
               Feedback
             </h1>
             <div className="flex flex-col justify-center items-center py-4">

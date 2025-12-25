@@ -4,11 +4,13 @@ import { useState } from 'react'
 function RightCompo() {
   const [isClicked, setIsClicked] = useState(false)
   return (
-    <div className="bg-gray-950 w-full min-h-[85vh] px-2 sm:px-10 xl:px-30 pb-10">
-      <p className="text-center pt-10 pb-5 font-bold text-3xl sm:text-5xl border-b-2 border-white/10">
-        Feedback List
-      </p>
-      <div className="px-[5%] lg:px-[10%] max-h-[75vh] overflow-scroll no-scrollbar mt-4 ">
+    <div className="bg-gray-950 w-full min-h-[85vh] pb-10">
+      <div className="flex justify-center">
+        <p className="text-center pt-10 pb-5 font-bold text-3xl sm:text-5xl border-b-2 border-white/10 w-[70%]">
+          Feedback List
+        </p>
+      </div>
+      <div className="px-2 sm:px-10 max-h-[75vh] overflow-scroll no-scrollbar mt-4 ">
         {['Amit', 'Ajay', 'Sumit', 'Pranav'].map((f, i) => (
           <div
             className="flex flex-col bg-gray-800 rounded-xl p-2 mt-3"
