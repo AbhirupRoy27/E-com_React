@@ -4,7 +4,7 @@ import { lazy, Suspense } from 'react'
 
 const PublicRoutes = lazy(() => import('./Routes/PublicRoutes'))
 const PrivateRoutes = lazy(() => import('./Routes/PrivateRoutes'))
-import Loading from './Components/Account/Loading'
+import Loading from '../Components/Account/Loading'
 
 function App() {
   return (

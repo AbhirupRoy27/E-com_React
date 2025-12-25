@@ -1,12 +1,14 @@
 import { Routes, Route, Navigate } from 'react-router-dom'
 import { lazy } from 'react'
-import PrivateLayout from '../Layouts/PrivateLayout'
-import NotFound from '../Pages/NotFound/NotFound'
+import PrivateLayout from '../../Layouts/PrivateLayout'
+import NotFound from '../../Pages/NotFound/NotFound'
 
 // import { useAuth } from '../Contexts/Auth/AuthContext'
 
-const BuyNow = lazy(() => import('../Pages/BuyNow/BuyNow'))
-const OrderComplete = lazy(() => import('../Pages/OrderComplete/OrderComplete'))
+const BuyNow = lazy(() => import('../../Pages/BuyNow/BuyNow'))
+const OrderComplete = lazy(() =>
+  import('../../Pages/OrderComplete/OrderComplete')
+)
 
 export default function PrivateRoutes() {
   // const { isAuthenticated } = useAuth()
