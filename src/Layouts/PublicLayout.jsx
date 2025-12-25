@@ -13,7 +13,9 @@ const PublicLayout = () => {
       <SearchBar />
       <NavBar />
       <SideBar />
-      <Outlet />
+      <div className=" p-2 sm:px-6 lg:px-10 xl:px-30 ">
+        <Outlet />
+      </div>
       <Footer />
       {isLogout && <Logout />}
     </div>
