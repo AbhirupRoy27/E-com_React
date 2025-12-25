@@ -1,7 +1,6 @@
 import { useNavigate } from 'react-router-dom'
 import { useState } from 'react'
-import { handleLogin, handleEmail } from '../../../Utils/Account/handleClick'
-import Logo from '../../../Components/Account/Logo'
+import { handleLogin, handleInput } from '../../../Utils/Account/handleClick'
 import { useAuth } from '../../../Contexts/Auth/AuthContext'
 
 function Login() {
@@ -11,67 +10,71 @@ function Login() {
     pass: '',
   })
   const { isLogin, setIsLogin } = useAuth()
+  const [isChecked, setIsChecked] = useState(false)
 
   return (
-    <div className="bg-gradient-to-br from-slate-300 to-slate-50 h-[100vh] flex justify-center items-center flex-col">
-      <Logo />
-      <form
-        className="bg-white rounded-md w-[95vw] md:w-max md:p-4 lg:p-6 xl:p-8"
-        onSubmit={(e) => handleLogin(e, navigate, cred, isLogin, setIsLogin)}
-      >
-        <p className="text-center py-4 text-3xl font-bold bg-gradient-to-br from-slate-500 to-slate-900 bg-clip-text text-transparent tracking-wide">
-          Login
-        </p>
-        <div className=" flex flex-col gap-2 items-center justify-between mb-4 ">
-          <div className="flex md:w-full md:flex-row flex-col md:items-center md:justify-between gap-1 sm:gap-2">
-            <label htmlFor="name" className="font-semibold tracking-wide">
-              Email
-            </label>
-            <input
-              id="name"
-              placeholder="Enter Email"
-              className="w-[290px] p-2 bg-slate-100 rounded tracking-widest"
-              maxLength={23}
-              type="email"
-              value={cred.email}
-              onChange={(e) => handleEmail(e, setCred)}
-              name="email"
-            />
-          </div>
-          <div className="flex md:flex-row flex-col md:items-center md:justify-between gap-1 sm:gap-2">
-            <label htmlFor="Password" className="font-semibold ">
-              Password
-            </label>
-            <input
-              id="Password"
-              placeholder="Enter Password"
-              className="w-[290px] p-2 bg-slate-100 rounded tracking-wide"
-              minLength={6}
-              type="password"
-              value={cred.pass}
-              onChange={(e) => handleEmail(e, setCred)}
-              name="pass"
-            />
-          </div>
-        </div>
-        <div className="py-2 flex justify-center">
-          <button
-            className="bg-[#febd68] p-2 rounded active:scale-103 font-bold min-w-[100px] tracking-wider"
-            type="submit"
-          >
-            Login
+    <div className="w-screen min-w-[354px] h-screen bg-gray-900 px-2 sm:px-6 md:px-10 xl:px-30 pt-5">
+      <div className="flex justify-between items-center">
+        <h1 className="text-3xl font-bold tracking-widest text-gray-50/80">
+          NextGen
+        </h1>
+        <div className="flex gap-2">
+          <button className="py-3 px-5 border">Login</button>
+          <button className="py-3 px-5 bg-gray-100 text-gray-950">
+            Signup
           </button>
         </div>
-        <div className="flex justify-center py-2 gap-1">
-          <p className="text-sm">New user</p>
-          <p
-            className="text-sm font-bold text-blue-800"
-            onClick={() => navigate('/signup')}
-          >
-            Sign Up
-          </p>
-        </div>
-      </form>
+      </div>
+      <div className="flex justify-center items-center h-[90vh]">
+        <form
+          className="bg-gray-700 px-3 sm:px-10 py-4 w-full sm:w-fit"
+          onSubmit={(e) => handleLogin(e, navigate, cred, isLogin, setIsLogin)}
+        >
+          <div className="flex flex-col items-center gap-2 pb-5 border-b-1 border-white/30">
+            <h2 className="text-2xl pb-3 mb-5 border-b-1 border-white/30">
+              Login Form
+            </h2>
+            <div className="flex flex-col sm:flex-row gap-2 items-start sm:items-center w-full justify-between">
+              <label className="tracking-widest">Email</label>
+              <input
+                onChange={(e) => handleInput(e, setCred)}
+                placeholder="Enter Email"
+                className="bg-white/10 py-2 px-2 w-full sm:w-auto sm:min-w-[300px] focus:outline-0 focus:bg-white/30"
+                name="email"
+                maxLength={30}
+              />
+            </div>
+            <div className="flex flex-col sm:flex-row gap-2 items-start sm:items-center w-full justify-between">
+              <label className="tracking-widest">Password</label>
+              <input
+                onChange={(e) => handleInput(e, setCred)}
+                placeholder="Password"
+                className="bg-white/10 py-2 px-2 w-full sm:w-auto sm:min-w-[300px] focus:outline-0 focus:bg-white/30"
+                type={isChecked ? 'text' : 'password'}
+                name="pass"
+              />
+            </div>
+            <div className="flex w-full justify-end gap-1 py-2">
+              <input
+                type="checkbox"
+                onChange={() => setIsChecked(!isChecked)}
+              />
+              <label className="text-sm">{isChecked ? 'Hide' : 'Show'}</label>
+            </div>
+            <button
+              className="bg-sky-900 py-2 px-5 w-full font-semibold"
+              type="submit"
+            >
+              Login
+            </button>
+          </div>
+          <div className="flex justify-center">
+            <h4 className="py-2 text-red-600 font-bold tracking-widest">
+              Forgot Password
+            </h4>
+          </div>
+        </form>
+      </div>
     </div>
   )
 }

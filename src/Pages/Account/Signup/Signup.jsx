@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom'
-import { handleSignup, handleEmail } from '../../../Utils/Account/handleClick'
+import { handleSignup, handleInput } from '../../../Utils/Account/handleClick'
 import { useState } from 'react'
 
 function Signup() {
@@ -27,7 +27,7 @@ function Signup() {
               type="email"
               maxLength={30}
               value={cred.email}
-              onChange={(e) => handleEmail(e, setCred)}
+              onChange={(e) => handleInput(e, setCred)}
               name="email"
             />
           </div>
@@ -38,7 +38,7 @@ function Signup() {
               className="w-[290px] p-2 bg-slate-100 rounded tracking-wide"
               type={showPass ? 'text' : 'password'}
               value={cred.pass}
-              onChange={(e) => handleEmail(e, setCred)}
+              onChange={(e) => handleInput(e, setCred)}
               name="pass"
               maxLength={30}
               minLength={6}
@@ -51,7 +51,7 @@ function Signup() {
               className="w-[290px] p-2 bg-slate-100 rounded tracking-wide"
               type={showPass ? 'text' : 'password'}
               value={cred.rePass}
-              onChange={(e) => handleEmail(e, setCred)}
+              onChange={(e) => handleInput(e, setCred)}
               name="rePass"
               maxLength={30}
               minLength={6}

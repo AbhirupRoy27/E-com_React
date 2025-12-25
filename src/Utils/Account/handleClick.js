@@ -41,7 +41,7 @@ export const handleSignup = (e, navigate, cred) => {
   }
 }
 
-export const handleEmail = (e, setCred) => {
+export const handleInput = (e, setCred) => {
   const { name, value } = e.target
   setCred((prev) => ({ ...prev, [name]: value }))
 }
