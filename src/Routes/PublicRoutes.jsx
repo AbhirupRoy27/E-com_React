@@ -1,6 +1,7 @@
 import { Routes, Route, Outlet } from 'react-router-dom'
 import { lazy } from 'react'
 import PublicLayout from '../Layouts/PublicLayout'
+import DevLayout from '../Layouts/DevLayout'
 
 const Login = lazy(() => import('../Pages/Account/Login/Login'))
 const Signup = lazy(() => import('../Pages/Account/Signup/Signup'))
@@ -16,7 +17,9 @@ const BestSellers = lazy(() => import('../Pages/Public/BestSeller/BestSellers'))
 const FandQ = lazy(() => import('../Pages/F&Q/FandQ'))
 const Orders = lazy(() => import('../Pages/Orders/Orders'))
 const FeedBack = lazy(() => import('../Pages/Feedback/Feedback'))
-const GiftCards = lazy(() => import('../Pages/GiftCards/GiftCards'))
+const GiftCardsPage = lazy(() =>
+  import('../Pages/Public/Gift-CardV2/GiftCardsV2')
+)
 
 const HomeLayout = () => {}
 
@@ -35,7 +38,9 @@ export default function PublicRoutes() {
         <Route path="*" element={<NotFound />} />
         <Route path="Orders" element={<Orders />} />
         <Route path="FeedBack" element={<FeedBack />} />
-        <Route path="Gift Cards" element={<GiftCards />} />
+        <Route path="Gift Cards" element={<GiftCardsPage />} />
+
+        <Route path="dev" element={<DevLayout />} />
       </Route>
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
