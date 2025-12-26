@@ -5,7 +5,7 @@ function HeroNavigation() {
   const navigate = useNavigate()
 
   return (
-    <div className="flex gap-5 sm:gap-5 overflow-auto px-3 sm:px-10 py-1 bg-amber-50 sm:my-4">
+    <div className="flex gap-5 sm:gap-5 overflow-auto px-3 sm:px-10 py-1 bg-amber-50/5 rounded-2xl sm:my-4">
       {filters.map((item) => (
         <div
           className="text-black py-2 shrink-0"
@@ -20,7 +20,9 @@ function HeroNavigation() {
               width={70}
             />
           </div>
-          <p className="text-center font-semibold pt-1">{item.name}</p>
+          <p className="text-center font-semibold pt-1 text-white">
+            {item.name}
+          </p>
         </div>
       ))}
     </div>

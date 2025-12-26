@@ -11,7 +11,7 @@ function HomeProducts() {
       <div className="bg-gray-950 py-4">
         <div className="flex overflow-scroll gap-3 no-scrollbar mt-2 shrink-0">
           {list.map((p) => (
-            <div className="text-white" key={p}>
+            <div className="text-white animate-pulse space-x-4" key={p}>
               <div className="bg-white/5 min-w-[250px] h-[300px] border-0 cursor-not-allowed shrink-0 active:scale-97 transition-all duration-300" />
               <div className="mt-2 p-1">
                 <span></span>
