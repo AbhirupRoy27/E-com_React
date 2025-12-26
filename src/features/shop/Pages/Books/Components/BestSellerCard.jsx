@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useSearchParams } from 'react-router-dom'
 import { CircleArrowOutUpRight } from 'lucide-react'
 import { useBuy } from '../../../../Payment/Context/BuyContext'
 import handleNavigateTo from '../../../../home/utils/handleNavigateTo'
@@ -12,6 +12,8 @@ function BestSellerCard({ books }) {
 
   const navigate = useNavigate()
   const { setItem } = useBuy()
+  const [searchParams] = useSearchParams()
+  const currentPage = Number(searchParams.get('page')) || 1
 
   return (
     <div className="">
@@ -21,7 +23,10 @@ function BestSellerCard({ books }) {
           alt="Loading"
           className="bg-white h-[30vh] sm:h-[25rem] w-full mb-1"
           onClick={() =>
-            handleNavigateTo(navigate, `${books.title}?product-id=${books._id}`)
+            handleNavigateTo(
+              navigate,
+              `${books.title}?product-id=${books._id}&page=${currentPage}`
+            )
           }
         />
         <div className="py-5 flex flex-col gap-2 min-h-[156px]">
@@ -30,7 +35,7 @@ function BestSellerCard({ books }) {
             onClick={() =>
               handleNavigateTo(
                 navigate,
-                `${books.title}?product-id=${books._id}`
+                `${books.title}?product-id=${books._id}&page=${currentPage}`
               )
             }
           >
@@ -41,7 +46,7 @@ function BestSellerCard({ books }) {
             onClick={() =>
               handleNavigateTo(
                 navigate,
-                `${books.title}?product-id=${books._id}`
+                `${books.title}?product-id=${books._id}&page=${currentPage}`
               )
             }
           >

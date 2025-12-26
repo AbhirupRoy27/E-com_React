@@ -11,7 +11,7 @@ function ProductListing({ item, book }) {
   }
 
   const product = item || book
-  console.log(product)
+  // console.log(product)
   const Discount = Math.ceil(Math.random() * 40)
 
   return (

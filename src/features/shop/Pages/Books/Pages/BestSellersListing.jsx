@@ -2,18 +2,17 @@ import BestSellerCard from '../Components/BestSellerCard'
 import NoBooks from '../Components/NoBooks'
 import Page from '../../../../../shared/components/PageNavigation'
 import { useBestSellers } from '../../../../home/Context/BooksContext'
+import BestSellerSkelition from './BestSellerSkelition'
 
 function BestSellers() {
-  const { loading, books, currentPage, setSearchParams } = useBestSellers()
+  const { loading, books } = useBestSellers()
 
   return (
     <>
       <div className="flex w-full">
         <div className="w-full">
           {loading ? (
-            <p className="flex justify-center items-center text-2xl min-h-[85vh] tracking-[1px]">
-              Loading....
-            </p>
+            <BestSellerSkelition />
           ) : (
             <div className="w-full min-w-[354px] min-h-max  py-5">
               {books.length > 0 ? (
@@ -35,7 +34,7 @@ function BestSellers() {
         </div>
       </div>
 
-      <Page setSearchParams={setSearchParams} onPage={currentPage} />
+      <Page />
     </>
   )
 }

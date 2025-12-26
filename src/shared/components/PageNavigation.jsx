@@ -1,6 +1,11 @@
+import { useSearchParams } from 'react-router-dom'
+
 const page = [1, 2, 3, 4]
 
-function PageNavigation({ setSearchParams, onPage, bgcolor }) {
+function PageNavigation({ bgcolor }) {
+  const [searchParams, setSearchParams] = useSearchParams()
+  const currentPage = Number(searchParams.get('page')) || 1
+
   const handleClick = (page) => {
     setSearchParams({ page })
     window.scrollTo({ top: 0, behavior: 'smooth' })
@@ -17,7 +22,7 @@ function PageNavigation({ setSearchParams, onPage, bgcolor }) {
           <p
             key={i}
             className={`flex items-center justify-center  font-semibold px-3 py-1 bg-gray-300 ${
-              p === onPage
+              p === currentPage
                 ? 'bg-gray-950 text-white border border-white'
                 : 'text-gray-950'
             } rounded-full`}

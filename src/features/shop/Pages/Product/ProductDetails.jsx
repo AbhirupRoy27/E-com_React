@@ -12,7 +12,7 @@ function ProductDetailPage() {
   const book = books.filter((p) => p._id == _id)
   const product = products.filter((p) => p._id == _id)
 
-  console.log(product)
+  // console.log(product)
 
   if (book.length < 1 && product.length < 1) {
     return (

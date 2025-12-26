@@ -8,7 +8,7 @@ export const BooksProvider = ({ children }) => {
   const [books, setBooks] = useState([])
   const [loading, isLoading] = useState(true)
 
-  const [searchParams, setSearchParams] = useSearchParams()
+  const [searchParams] = useSearchParams()
   const currentPage = Number(searchParams.get('page')) || 1
 
   useEffect(() => {
@@ -24,6 +24,7 @@ export const BooksProvider = ({ children }) => {
         }
         const data = await res.json()
         if (!isCancelled) {
+          // console.log(data.allBooks)
           setBooks(data.allBooks || [])
         }
       } catch (err) {
@@ -45,8 +46,6 @@ export const BooksProvider = ({ children }) => {
       value={{
         loading,
         books,
-        currentPage,
-        setSearchParams,
       }}
     >
       {children}
