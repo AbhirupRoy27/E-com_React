@@ -1,8 +1,10 @@
 import { ChevronRight, Heart } from 'lucide-react'
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 function GiftCardsPage() {
-  const [openSection, setOpenSection] = useState('')
+  const [openSection, setOpenSection] = useState('Design')
+  const [gId, setGId] = useState(0)
 
   const sectionHandler = (value) => {
     if (value == 'Design' && openSection == 'Design') return setOpenSection('')
@@ -10,6 +12,8 @@ function GiftCardsPage() {
       return setOpenSection('')
     setOpenSection(value)
   }
+
+  const navigate = useNavigate()
   return (
     <>
       <div className="min-w-[354px] min-h-screen pt-5 px-3">
@@ -42,10 +46,20 @@ function GiftCardsPage() {
                   />
                 </div>
                 <div className="flex items-center justify-between px-2 pt-4">
-                  <button>
-                    <Heart color="pink" />
+                  <button
+                    onClick={() => {
+                      if (gId != 0) return setGId(0)
+                      setGId(item)
+                    }}
+                  >
+                    <Heart color="pink" fill={`${gId == item && 'pink'}`} />
                   </button>
-                  <button className="flex gap-1">
+                  <button
+                    className="flex gap-1"
+                    onClick={() =>
+                      navigate(`/product/${item}?product-id=${item}`)
+                    }
+                  >
                     Select
                     <ChevronRight />
                   </button>
@@ -65,7 +79,7 @@ function GiftCardsPage() {
           <div
             className={`${
               openSection == 'common-Cards' ? 'grid' : 'hidden'
-            } grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2 py-4`}
+            } grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3  gap-2 py-4`}
           >
             {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((item) => (
               <div
@@ -80,10 +94,20 @@ function GiftCardsPage() {
                   />
                 </div>
                 <div className="flex items-center justify-between px-2 pt-4">
-                  <button>
-                    <Heart color="pink" />
+                  <button
+                    onClick={() => {
+                      if (gId != 0) return setGId(0)
+                      setGId(item)
+                    }}
+                  >
+                    <Heart color="pink" fill={`${gId == item && 'pink'}`} />
                   </button>
-                  <button className="flex gap-1">
+                  <button
+                    className="flex gap-1"
+                    onClick={() =>
+                      navigate(`/product/${item}?product-id=${item}`)
+                    }
+                  >
                     Select
                     <ChevronRight />
                   </button>
