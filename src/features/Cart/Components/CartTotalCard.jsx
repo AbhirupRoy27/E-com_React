@@ -26,7 +26,7 @@ function CartTotalCard({ total }) {
       <div className="flex justify-end  mt-[7%]">
         <button
           className="bg-yellow-400 p-[2%] font-medium tracking-wide rounded-lg"
-          onClick={() => navigate('/buy-now')}
+          onClick={() => navigate('/app/buy-now')}
         >
           CheckOut
         </button>

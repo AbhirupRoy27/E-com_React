@@ -13,7 +13,7 @@ function EmptyCart({ navigate }) {
           You're Cart is Empty....
         </h1>
         <button
-          onClick={() => navigate('/Products')}
+          onClick={() => navigate('/')}
           className="bg-blue-950 text-white rounded-md text-lg px-6 py-2"
         >
           Continue Shopping
