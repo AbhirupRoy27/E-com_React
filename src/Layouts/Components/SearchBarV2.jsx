@@ -54,7 +54,7 @@ function SearchBarV2() {
                 <li
                   key={i}
                   className="py-2 text-slate-700 hover:bg-gray-100 pl-2 cursor-pointer hover:font-semibold active:scale-101"
-                  onClick={(e) => handleDropDown(e, navigate)}
+                  onClick={(e) => handleDropDown(e, navigate, setOpen)}
                 >
                   {item === '' ? <>{'Login'}</> : item}
                 </li>

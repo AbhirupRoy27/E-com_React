@@ -9,7 +9,8 @@
 //   }
 // }
 
-const handleDropDown = (e, navigate) => {
+const handleDropDown = (e, navigate, setOpen) => {
+  setOpen(false)
   if (e.target.innerHTML == 'Login') {
     return navigate(`/auth/${e.target.innerHTML}`)
   }
