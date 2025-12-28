@@ -2,10 +2,11 @@ import { X } from 'lucide-react'
 import NoItemWishlist from '../Components/NoItemWishlist'
 import { useWishlist } from '../Context/WishlistContext'
 import WishlistHeading from '../Components/WishlistHeading'
+import handleRemoveItem from '../utils/handleRemoveItem'
 
 function WishlistPage() {
-  const { wishlistItems } = useWishlist()
-  console.log(wishlistItems)
+  const { wishlistItems, setWishlistItems } = useWishlist()
+  // console.log(wishlistItems)
   return (
     <div className="h-[70vh] min-w-[354px] sm:mt-5 overflow-x-scroll">
       <h1 className="capitalize text-4xl pb-3 tracking-wider font-light text-nowrap">
@@ -21,9 +22,13 @@ function WishlistPage() {
             {wishlistItems.map((item) => (
               <div
                 className="grid grid-cols-[80px_120px_300px_200px_160px_200px] lg:grid-cols-[80px_160px_500px_250px_200px_250px] border-b-1 border-white/20 text-center py-5 gap-3 no-scrollbar"
-                key={item}
+                key={item._id}
               >
-                <button>
+                <button
+                  onClick={() =>
+                    handleRemoveItem(setWishlistItems, wishlistItems, item._id)
+                  }
+                >
                   <X />
                 </button>
                 <div className="flex justify-center items-center w-full h-[160px] overflow-hidden">
