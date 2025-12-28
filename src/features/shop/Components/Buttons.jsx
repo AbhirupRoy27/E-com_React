@@ -2,7 +2,7 @@ import { ChevronRight, ShoppingCart } from 'lucide-react'
 import { useCart } from '../../Cart/Context/CartContext'
 import { useNavigate } from 'react-router-dom'
 import handleNavigateTo from '../../../shared/utils/handleNavigateTo'
-import handleAddToCart from '../../../Utils/Cart/handleAddToCart'
+import handleAddToCart from '../../Cart/utils/handleAddToCart'
 
 function Buttons({ book }) {
   const { cart, setCart, total, setTotal } = useCart()

@@ -1,4 +1,4 @@
-import { RemoveFromCart } from '../../../Utils/Cart/RemovefromCart'
+import { RemoveFromCart } from '../utils/RemovefromCart'
 import { useCart } from '../Context/CartContext'
 
 function CartItemCard({ item }) {
