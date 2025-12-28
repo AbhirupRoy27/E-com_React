@@ -10,6 +10,7 @@ import { BooksProvider } from '../features/home/Context/BooksContext.jsx'
 import { BuyContextProvider } from '../features/Payment/Context/BuyContext.jsx'
 import TrendingProductsProvider from '../features/home/Context/TrendingProducts.jsx'
 import { AuthProvider } from '../features/auth/context/AuthContext.jsx'
+import WishlistContexProvider from '../features/wishlist/Context/WishlistContext.jsx'
 
 createRoot(document.getElementById('root')).render(
   // <StrictMode>
@@ -21,7 +22,9 @@ createRoot(document.getElementById('root')).render(
             <ProductProvider>
               <CartProvider>
                 <AuthProvider>
-                  <App />
+                  <WishlistContexProvider>
+                    <App />
+                  </WishlistContexProvider>
                 </AuthProvider>
               </CartProvider>
             </ProductProvider>
