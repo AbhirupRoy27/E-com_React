@@ -8,7 +8,7 @@ export const BrandDropList = () => {
   const [currentBrand, setCurrentBrand] = useState('All')
 
   useEffect(() => {
-    console.log(currentBrand)
+    // console.log(currentBrand)
     const getBrands = () => {
       return setFilteredProducts(
         currentBrand === 'All'
