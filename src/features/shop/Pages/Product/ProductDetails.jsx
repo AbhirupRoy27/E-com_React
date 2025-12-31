@@ -3,18 +3,21 @@ import { useSearchParams } from 'react-router-dom'
 import products from '../../mock/Products.json'
 import ProductListing from './ProductListing'
 import React from 'react'
+import { useTrending } from '../../../home/Context/TrendingProducts'
 
 function ProductDetailPage() {
   const { books } = useBestSellers()
+  const { list } = useTrending()
   const [searchParams] = useSearchParams()
   const _id = searchParams.get('product-id')
 
   const book = books.filter((p) => p._id == _id)
   const product = products.filter((p) => p._id == _id)
+  const trending = list.filter((p) => p._id == _id)
 
-  // console.log(product)
+  // console.log(trending)
 
-  if (book.length < 1 && product.length < 1) {
+  if (book.length < 1 && product.length < 1 && trending.length < 1) {
     return (
       <div className="py-5 min-w-[354px] bg-gray-900/40 min-h-[80vh]">
         <div className="h-[80vh] flex justify-center items-center">
@@ -26,8 +29,8 @@ function ProductDetailPage() {
 
   if (book.length < 1) {
     return (
-      <div className="py-5 min-w-[354px]  min-h-screen">
-        <ProductListing item={product[0]} />
+      <div className="py-5 min-w-[354px] min-h-screen">
+        <ProductListing item={product[0] || trending[0]} />
       </div>
     )
   }
