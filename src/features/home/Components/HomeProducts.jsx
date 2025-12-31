@@ -55,7 +55,18 @@ function HomeProducts() {
               <p className="text-[12px] text-gray-400 capitalize mb-2 line-clamp-3">
                 {p.description}
               </p>
-              <button className="text-center mt-2 w-full border border-amber-50/10 rounded-4xl py-2 hover:bg-amber-50/10 uppercase text-sm tracking-wide cursor-pointer active:scale-97 active:bg-amber-50/25 transition-all duration-300">
+              <button
+                className="text-center mt-2 w-full border border-amber-50/10 rounded-4xl py-2 
+              hover:bg-amber-50/10 uppercase text-sm tracking-wide cursor-pointer active:scale-97 
+              active:bg-amber-50/25 transition-all duration-300"
+                onClick={() => {
+                  window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth',
+                  })
+                  navigate(`/product/${p.title}?product-id=${p._id}`)
+                }}
+              >
                 View Product
               </button>
             </div>
