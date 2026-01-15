@@ -6,9 +6,6 @@ import CheckOutLayout from '../../features/Payment/Layout/CheckOutLayout'
 
 // import { useAuth } from '../Contexts/Auth/AuthContext'
 
-const CheckoutPage = lazy(() =>
-  import('../../features/Payment/Pages/CheckoutPage')
-)
 const OrderComplete = lazy(() =>
   import('../../features/shop/Pages/Order-Complete/OrderComplete')
 )
