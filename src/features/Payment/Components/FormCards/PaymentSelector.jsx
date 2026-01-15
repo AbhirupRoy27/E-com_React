@@ -1,10 +1,13 @@
 import { useState } from 'react'
+import { useBuy } from '../../Context/BuyContext'
 
 function PaymentSelector() {
   const [checkoutDetails, setCheckoutDetails] = useState({
     address: '',
     paymentMode: '',
   })
+
+  const { setIsDisabled } = useBuy()
 
   return (
     <div className="text-black pt-3">
@@ -13,6 +16,7 @@ function PaymentSelector() {
         onSubmit={(e) => {
           e.preventDefault()
           console.log(checkoutDetails)
+          if (checkoutDetails.paymentMode.length > 0) return setIsDisabled(true)
         }}
       >
         <div className="flex gap-3 items-center border-black/30 py-3">
