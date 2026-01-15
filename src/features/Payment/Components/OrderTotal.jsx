@@ -19,7 +19,7 @@ function OrderTotal() {
   }
 
   return (
-    <div className="w-full sm:w-[450px] bg-white px-3 sm:px-4 py-4 min-h-[180px] max-h-[260px]">
+    <div className="w-full sm:w-[450px] bg-white text-black px-3 sm:px-4 py-4 min-h-[180px] max-h-[260px]">
       <div className="pb-4 border-b border-slate-300">
         <button
           className={`w-full rounded-full py-2 font-bold mb-1 ${
