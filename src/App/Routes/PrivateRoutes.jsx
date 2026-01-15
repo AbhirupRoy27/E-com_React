@@ -2,6 +2,7 @@ import { Routes, Route, Navigate } from 'react-router-dom'
 import { lazy } from 'react'
 import PrivateLayout from '../../Layouts/PrivateLayout'
 import PageNotFound from '../../shared/Error/PageNotFound'
+import CheckOutLayout from '../../features/Payment/Layout/CheckOutLayout'
 
 // import { useAuth } from '../Contexts/Auth/AuthContext'
 
@@ -22,7 +23,7 @@ export default function PrivateRoutes() {
   return (
     <Routes>
       <Route element={<PrivateLayout />}>
-        <Route path="buy-now" element={<CheckoutPage />} />
+        <Route path="buy-now" element={<CheckOutLayout />} />
         <Route path="order complete" element={<OrderComplete />} />
         {/* <Route path="/" element={<h1>Working</h1>} /> */}
         <Route path="*" element={<PageNotFound />} />
