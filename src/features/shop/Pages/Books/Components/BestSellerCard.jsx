@@ -2,7 +2,7 @@ import { useNavigate, useSearchParams } from 'react-router-dom'
 import { CircleArrowOutUpRight } from 'lucide-react'
 import { useBuy } from '../../../../Payment/Context/BuyContext'
 import handleNavigateTo from '../../../../home/utils/handleNavigateTo'
-import { handleBuy } from '../../../../../Utils/BuyNow/handleClicks'
+import handleBuy from '../../../../../Utils/BuyNow/handleBuy'
 
 function BestSellerCard({ books }) {
   const truncateText = (text, length = 55) => {
