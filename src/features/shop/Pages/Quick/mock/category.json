@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "category": "Fruits & Vegetables",
+    "coverimg": "https://cdn.yourapp.com/categories/fruits_vegetables.png"
+  },
+  {
+    "id": 2,
+    "category": "Dairy, Bread & Eggs",
+    "coverimg": "https://cdn.yourapp.com/categories/dairy_bread_eggs.png"
+  },
+  {
+    "id": 3,
+    "category": "Snacks & Munchies",
+    "coverimg": "https://cdn.yourapp.com/categories/snacks.png"
+  },
+  {
+    "id": 4,
+    "category": "Instant & Ready-to-Eat",
+    "coverimg": "https://cdn.yourapp.com/categories/instant_food.png"
+  },
+  {
+    "id": 5,
+    "category": "Beverages",
+    "coverimg": "https://cdn.yourapp.com/categories/beverages.png"
+  },
+  {
+    "id": 6,
+    "category": "Breakfast & Cereals",
+    "coverimg": "https://cdn.yourapp.com/categories/breakfast.png"
+  },
+  {
+    "id": 7,
+    "category": "Personal Care",
+    "coverimg": "https://cdn.yourapp.com/categories/personal_care.png"
+  },
+  {
+    "id": 8,
+    "category": "Home Cleaning",
+    "coverimg": "https://cdn.yourapp.com/categories/home_cleaning.png"
+  },
+  {
+    "id": 9,
+    "category": "Health & Wellness",
+    "coverimg": "https://cdn.yourapp.com/categories/health_wellness.png"
+  },
+  {
+    "id": 10,
+    "category": "Baby Care",
+    "coverimg": "https://cdn.yourapp.com/categories/baby_care.png"
+  },
+  {
+    "id": 11,
+    "category": "Pet Supplies",
+    "coverimg": "https://cdn.yourapp.com/categories/pet_supplies.png"
+  },
+  {
+    "id": 12,
+    "category": "Party & Stationery",
+    "coverimg": "https://cdn.yourapp.com/categories/party_stationery.png"
+  }
+]
