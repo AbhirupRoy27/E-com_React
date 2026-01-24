@@ -1,5 +1,6 @@
 import React from 'react'
 import { TbMarquee } from 'react-icons/tb'
+import ScrollBar from '../Components/ScrollBar'
 
 const marqueeTaglines = [
   {
@@ -50,20 +51,21 @@ function QuickLayout() {
       <h1 className="text-4xl tracking-wider font-extralight w-full border-b border-white/30 pb-4">
         Quick
       </h1>
-      <div>
-        <marquee
-          direction="left"
-          className="bg-white text-black py-1 whitespace-nowrap"
-          scrollamount="20"
-          scrolldelay="50"
-        >
-          {marqueeTaglines.map((item) => (
-            <span key={item.id} className="text-2xl font-bold mx-8">
-              {item.text}
-            </span>
-          ))}
-        </marquee>
-      </div>
+
+      <marquee
+        direction="left"
+        className="bg-white text-black py-1 whitespace-nowrap"
+        scrollamount="20"
+        scrolldelay="50"
+      >
+        {marqueeTaglines.map((item) => (
+          <span key={item.id} className="text-2xl font-bold mx-8">
+            {item.text}
+          </span>
+        ))}
+      </marquee>
+
+      <ScrollBar />
     </div>
   )
 }
