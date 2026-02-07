@@ -13,7 +13,7 @@ function SearchBarV2() {
         className="hidden lg:flex active:scale-102 active:opacity-75 font-bold text-[#fff] text-md lg:text-xl cursor-pointer"
         onClick={() => navigate('/')}
       >
-        NextGen
+        StarProMart
       </div>
       <div
         className="hidden xl:flex text-white cursor-pointer text-lg gap-2 items-center"

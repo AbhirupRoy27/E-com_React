@@ -8,7 +8,7 @@ function Footer() {
           className="text-3xl sm:text-5xl text-white mb-2"
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         >
-          NextGen
+          StarProMart
         </h1>
         <div className="flex text-white gap-10">
           <div>

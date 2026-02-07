@@ -31,6 +31,7 @@ function LoginForm() {
               className="bg-white/10 py-2 px-2 w-full sm:w-auto sm:min-w-[300px] focus:outline-0 focus:bg-white/30"
               name="email"
               maxLength={30}
+              required
             />
           </div>
           <div className="flex flex-col sm:flex-row gap-2 items-start sm:items-center w-full justify-between">
@@ -41,6 +42,7 @@ function LoginForm() {
               className="bg-white/10 py-2 px-2 w-full sm:w-auto sm:min-w-[300px] focus:outline-0 focus:bg-white/30"
               type={isChecked ? 'text' : 'password'}
               name="pass"
+              required
             />
           </div>
           <div className="flex w-full justify-end gap-1 py-2">

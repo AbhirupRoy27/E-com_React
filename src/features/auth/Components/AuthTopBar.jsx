@@ -5,7 +5,7 @@ function AuthTopBar() {
   return (
     <div className="flex justify-between items-center">
       <h1 className="text-3xl font-bold tracking-widest text-gray-50/80">
-        NextGen
+        StarProMart
       </h1>
       <div className="flex gap-2">
         <button className="py-3 px-5 border" onClick={() => navigate('login')}>
