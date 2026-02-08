@@ -90,7 +90,13 @@ function HomeProducts() {
         ))}
         <div
           className="bg-white/10 border-0 cursor-pointer shrink-0 flex justify-center flex-col rounded-tr-2xl rounded-br-2xl px-4"
-          onClick={() => navigate('/products')}
+          onClick={() => {
+            window.scrollTo({
+              top: 0,
+              behavior: 'smooth',
+            })
+            navigate('/products')
+          }}
         >
           <div className="flex justify-center">
             <ChevronRight size={80} />
