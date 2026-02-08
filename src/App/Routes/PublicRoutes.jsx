@@ -34,9 +34,6 @@ const TopDealsLayout = lazy(
 
 const Cart = lazy(() => import('../../features/Cart/pages/CartLayout'))
 const Orders = lazy(() => import('../../features/dashboard/Pages/Orders'))
-const FeedBack = lazy(
-  () => import('../../features/dashboard/Pages/Feedback/Feedback'),
-)
 
 export default function PublicRoutes() {
   return (
@@ -52,7 +49,6 @@ export default function PublicRoutes() {
         <Route path="top deals" element={<TopDealsLayout />} />
         <Route path="F&Q" element={<FandQ />} />
         <Route path="Orders" element={<Orders />} />
-        <Route path="FeedBack" element={<FeedBack />} />
         <Route path="cart" element={<Cart />} />
         <Route path="wishlist" element={<WishlistPage />} />
         <Route path="*" element={<PageNotFound />} />
