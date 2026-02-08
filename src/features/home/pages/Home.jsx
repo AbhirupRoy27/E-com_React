@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom'
 import HomeProducts from '../Components/HomeProducts'
 import BooksHomeCard from '../Components/BooksHomeCard'
 import DesktopFlex from '../Components/DesktopFlex'
+import TopHighlights from '../../../shared/components/TopHighlights'
 
 function Home() {
   const navigate = useNavigate()
@@ -72,6 +73,8 @@ function Home() {
 
       <BooksHomeCard />
       {window.innerWidth >= 450 && <DesktopFlex />}
+
+      <TopHighlights />
     </div>
   )
 }
