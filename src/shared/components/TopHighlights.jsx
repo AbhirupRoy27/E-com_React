@@ -9,7 +9,7 @@ function TopHighlights() {
         <p className="my-2">
           <b>Wear Your Statement.</b>
         </p>
-        <p>
+        <p className="font-extralight tracking-wider">
           We believe style should feel as effortless as it looks. Our pieces are
           designed for those quiet, powerful moments — the entrance that turns
           heads, the detail that doesn’t shout but never goes unnoticed.
