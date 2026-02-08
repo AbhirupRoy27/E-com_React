@@ -40,6 +40,13 @@ function HomeProducts() {
               src={p.coverImage}
               className="bg-white/10 min-w-[250px] h-[300px] border-0 cursor-pointer shrink-0 active:scale-97 transition-all duration-300"
               alt="product name"
+              onClick={() => {
+                window.scrollTo({
+                  top: 0,
+                  behavior: 'smooth',
+                })
+                navigate(`/product/${p.title}?product-id=${p._id}`)
+              }}
             />
             <div className="p-1">
               <span
@@ -49,7 +56,16 @@ function HomeProducts() {
               >
                 {p.stock <= 10 ? 'Only Few Left' : `${'Best Price'}`}
               </span>
-              <h3 className="mt-2 capitalize hover:underline underline-offset-2 mb-2 cursor-pointer line-clamp-2">
+              <h3
+                className="mt-2 capitalize hover:underline underline-offset-2 mb-2 cursor-pointer line-clamp-2"
+                onClick={() => {
+                  window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth',
+                  })
+                  navigate(`/product/${p.title}?product-id=${p._id}`)
+                }}
+              >
                 {p.title}
               </h3>
               <p className="text-[12px] text-gray-400 capitalize mb-2 line-clamp-3">
