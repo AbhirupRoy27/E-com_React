@@ -17,11 +17,11 @@ function OrderComplete() {
     }
   }, [])
 
-  useEffect(() => {
-    if (counter <= 0) {
-      navigate('/')
-    }
-  }, [counter, navigate])
+  // useEffect(() => {
+  //   if (counter <= 0) {
+  //     navigate('/')
+  //   }
+  // }, [counter, navigate])
 
   return (
     <div className="min-w-[354px] h-screen">
@@ -41,12 +41,49 @@ function OrderComplete() {
           Going home in {counter} sec...
         </p>
       </div>
+
       <div className="flex gap-4 justify-center flex-col sm:flex-row mt-4 px-2 sm:px-5">
-        <div className="min-w-[70%] xl:min-w-[600px] min-h-[300px] p-4 shadow-lg shadow-black/10 rounded-tl-4xl rounded-tr-4xl border-t-4 bg-gray-700">
-          Delivery details
+        <div className="sm:min-w-[400px] p-3 shadow-lg shadow-white/10 rounded-xl border-t-4 bg-gray-700">
+          <div className="flex justify-between text-xl items-center border-b border-white/30">
+            <span className="block text-2xl font-extralight p-2 ">
+              Delivery details
+            </span>
+            <button className="text-3xl">+</button>
+          </div>
+
+          <div className="w-full my-3 ">
+            <div>{/* Add Address */}</div>
+            <div>{/* Add Expected date */}</div>
+          </div>
         </div>
-        <div className="min-w-[30%] xl:min-w-[600px] min-h-[300px] p-2 shadow-lg shadow-black/10 rounded-xl border-t-4 bg-gray-700">
-          Paymet Details
+
+        <div className="sm:min-w-[400px] p-3 shadow-lg shadow-white/10 rounded-xl border-t-4 bg-gray-700">
+          <div className="flex justify-between text-xl items-center border-b border-white/30">
+            <span className="block text-2xl font-extralight p-2 ">
+              Payment Details
+            </span>
+            <button className="text-3xl">+</button>
+          </div>
+
+          <div className="w-full my-3 flex flex-col px-2 gap-2">
+            <div className="flex justify-between">
+              <span>Subtotal:</span>
+              <span>--</span>
+            </div>
+            <div className="flex justify-between">
+              <span>Shipping:</span>
+              <span>--</span>
+            </div>
+            <div className="flex justify-between">
+              <span>Payment:</span>
+              <span>--</span>
+            </div>
+          </div>
+          <hr color="white" className="h-[0.2px]" />
+          <div className="p-2 text-xl font-semibold flex justify-between items-center">
+            <span>Total:</span>
+            <span className="text-2xl">--</span>
+          </div>
         </div>
       </div>
     </div>
