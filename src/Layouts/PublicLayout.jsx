@@ -10,7 +10,7 @@ import { useAuth } from '../features/auth/context/AuthContext'
 const PublicLayout = () => {
   const { isLogout } = useAuth()
   return (
-    <div className="min-w-[354px]">
+    <div className="min-w-full sm:min-w-[354px]">
       <SearchBarV2 />
       <NavBar />
       <SideBar />
