@@ -21,11 +21,11 @@ function BestSellerCard({ books }) {
         <img
           src={books.coverImage}
           alt="Loading"
-          className="bg-white h-[30vh] sm:h-[25rem] w-full mb-1"
+          className=" h-[30vh] sm:h-[25rem] w-full mb-1 bg-amber-50/10"
           onClick={() =>
             handleNavigateTo(
               navigate,
-              `${books.title}?product-id=${books._id}&page=${currentPage}`
+              `${books.title}?product-id=${books._id}&page=${currentPage}`,
             )
           }
         />
@@ -35,7 +35,7 @@ function BestSellerCard({ books }) {
             onClick={() =>
               handleNavigateTo(
                 navigate,
-                `${books.title}?product-id=${books._id}&page=${currentPage}`
+                `${books.title}?product-id=${books._id}&page=${currentPage}`,
               )
             }
           >
@@ -46,7 +46,7 @@ function BestSellerCard({ books }) {
             onClick={() =>
               handleNavigateTo(
                 navigate,
-                `${books.title}?product-id=${books._id}&page=${currentPage}`
+                `${books.title}?product-id=${books._id}&page=${currentPage}`,
               )
             }
           >
