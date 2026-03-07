@@ -14,7 +14,7 @@ const PublicLayout = () => {
       <SearchBarV2 />
       <NavBar />
       <SideBar />
-      <div className=" p-2 sm:px-6 lg:px-10 xl:px-30 ">
+      <div className="p-2 sm:px-6 lg:px-10 xl:px-30 ">
         <Outlet />
       </div>
       <Footer />
