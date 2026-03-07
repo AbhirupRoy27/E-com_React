@@ -38,7 +38,8 @@ function HomeProducts() {
           <div className="text-white" key={p._id}>
             <img
               src={p.coverImage}
-              className="bg-white/10 min-w-[250px] h-[300px] border-0 cursor-pointer shrink-0 active:scale-97 transition-all duration-300"
+              className="bg-white/10 min-w-[250px] h-[300px] border-0 cursor-pointer shrink-0 active:scale-97 transition-all duration-300 rounded"
+              title={p.title}
               alt="product name"
               onClick={() => {
                 window.scrollTo({
@@ -58,6 +59,7 @@ function HomeProducts() {
               </span>
               <h3
                 className="mt-2 capitalize hover:underline underline-offset-2 mb-2 cursor-pointer line-clamp-2"
+                title={p.title}
                 onClick={() => {
                   window.scrollTo({
                     top: 0,
@@ -68,7 +70,10 @@ function HomeProducts() {
               >
                 {p.title}
               </h3>
-              <p className="text-[12px] text-gray-400 capitalize mb-2 line-clamp-3">
+              <p
+                className="text-[12px] text-gray-400 capitalize mb-2 line-clamp-2"
+                title={p.description}
+              >
                 {p.description}
               </p>
               <button
