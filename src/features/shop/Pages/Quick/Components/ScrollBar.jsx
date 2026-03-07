@@ -8,7 +8,7 @@ function ScrollBar() {
           <img
             alt={c.category}
             src={c.coverimg}
-            className="max-w-[80px] sm:min-w-[100px] min-h-[80px] sm:min-h-[100px] bg-amber-50 rounded-full object-cover overflow-hidden hover:scale-105 transition-all duration-200"
+            className="max-w-[80px] sm:min-w-[100px] h-[80px] sm:min-h-[100px] bg-amber-50 rounded-full object-cover overflow-hidden hover:scale-105 transition-all duration-200"
             width={100}
           />
           <span className="text-[10px] sm:text-sm text-center font-mono tracking-wider">

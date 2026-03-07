@@ -22,41 +22,41 @@
   {
     "id": 5,
     "category": "Beverages",
-    "coverimg": "https://cdn.yourapp.com/categories/beverages.png"
+    "coverimg": "https://images.pexels.com/photos/109275/pexels-photo-109275.jpeg"
   },
   {
     "id": 6,
     "category": "Breakfast & Cereals",
-    "coverimg": "https://cdn.yourapp.com/categories/breakfast.png"
+    "coverimg": "https://images.pexels.com/photos/101533/pexels-photo-101533.jpeg"
   },
   {
     "id": 7,
     "category": "Personal Care",
-    "coverimg": "https://cdn.yourapp.com/categories/personal_care.png"
+    "coverimg": "https://images.pexels.com/photos/2536965/pexels-photo-2536965.jpeg"
   },
   {
     "id": 8,
     "category": "Home Cleaning",
-    "coverimg": "https://cdn.yourapp.com/categories/home_cleaning.png"
+    "coverimg": "https://images.pexels.com/photos/4239035/pexels-photo-4239035.jpeg"
   },
   {
     "id": 9,
     "category": "Health & Wellness",
-    "coverimg": "https://cdn.yourapp.com/categories/health_wellness.png"
+    "coverimg": "https://images.pexels.com/photos/4210607/pexels-photo-4210607.jpeg"
   },
   {
     "id": 10,
     "category": "Baby Care",
-    "coverimg": "https://cdn.yourapp.com/categories/baby_care.png"
+    "coverimg": "https://images.pexels.com/photos/2797865/pexels-photo-2797865.jpeg"
   },
   {
     "id": 11,
     "category": "Pet Supplies",
-    "coverimg": "https://cdn.yourapp.com/categories/pet_supplies.png"
+    "coverimg": "https://images.pexels.com/photos/1313254/pexels-photo-1313254.jpeg"
   },
   {
     "id": 12,
     "category": "Party & Stationery",
-    "coverimg": "https://cdn.yourapp.com/categories/party_stationery.png"
+    "coverimg": "https://images.pexels.com/photos/796606/pexels-photo-796606.jpeg"
   }
 ]
