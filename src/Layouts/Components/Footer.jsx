@@ -60,7 +60,7 @@ export default function Footer() {
   }, [])
 
   return (
-    <footer className="bg-black w-full p-6 sm:p-10">
+    <footer className="bg-black w-full p-6 sm:p-10 min-w-[300px] w-full">
       <div className="max-w-screen">
         {/* Top row */}
         <div className="flex flex-col sm:flex-row justify-between gap-6 sm:gap-0">
@@ -82,7 +82,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom row */}
-        <div className="border-t border-white flex flex-col sm:flex-row justify-between items-center text-gray-100 pt-2 mt-4 gap-2 sm:gap-0">
+        <div className="border-t border-white flex flex-col sm:flex-row justify-between items-center text-gray-100 pt-2 mt-4 gap-2 sm:gap-0 min-w-[300px]">
           <p className="tracking-wider text-slate-100 text-sm text-center sm:text-start">
             &copy; {new Date().getFullYear()} Abhirup Roy
           </p>

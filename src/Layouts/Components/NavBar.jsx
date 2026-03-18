@@ -25,7 +25,7 @@ export default function NavBar() {
   return (
     <nav
       aria-label="Main navigation"
-      className="flex bg-[#222F3D] w-full h-[45px]"
+      className="flex bg-[#222F3D] w-full h-[45px] "
     >
       {/* Mobile: hamburger + "All" label */}
       <div className="flex items-center px-3 md:hidden">
