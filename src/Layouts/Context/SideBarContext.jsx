@@ -13,7 +13,6 @@ export const SideBarProvider = ({ children }) => {
   )
 }
 
-// Custom Hook
 export const useSideBar = () => {
   const context = useContext(SideBarContext)
   if (!context) {
