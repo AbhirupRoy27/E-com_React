@@ -5,7 +5,7 @@ export const handleSignup = (e, navigate, cred) => {
       if (cred.pass.length > 0) {
         if (cred.rePass.length > 0) {
           setTimeout(() => {
-            navigate('/login')
+            navigate('/')
           }, 1000)
         } else {
           throw new Error('Re-Entered Password is empty')
