@@ -1,10 +1,10 @@
-import { useNavigate } from 'react-router-dom'
-import { useAuth } from '../../context/AuthContext'
-import { handleLogout } from '../../utils/handleLogout'
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "../../context/AuthContext";
+import { handleLogout } from "../../utils/handleLogout";
 
 function Logout() {
-  const { setIsLogout } = useAuth()
-  const navigate = useNavigate()
+  const { setIsLogout } = useAuth();
+  const navigate = useNavigate();
 
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black/60 bg-opacity-50 z-50">
@@ -26,8 +26,24 @@ function Logout() {
           </button>
         </div>
       </div>
+
+      <div class="flex flex-col items-center gap-3 bg-slate-900/30 text-gray py-6 px-14 rounded-xl">
+        <div class="min-w-26 min-h-26 bg-white rounded-full flex items-center justify-center">
+          <i
+            class="fa-solid fa-right-from-bracket"
+            style="font-size: 70px; color: gray;"
+          ></i>
+        </div>
+        <h2 class="text-2xl font-bold">Are You Sure ?</h2>
+        <div class="flex gap-3">
+          <button class="py-3 px-4 bg-slate-500 rounded">Cancel</button>
+          <button class="py-3 px-4 bg-red-700 text-white rounded">
+            Logout
+          </button>
+        </div>
+      </div>
     </div>
-  )
+  );
 }
 
-export default Logout
+export default Logout;
