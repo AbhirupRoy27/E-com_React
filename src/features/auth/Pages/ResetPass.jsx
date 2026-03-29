@@ -1,11 +1,16 @@
 import { ArrowLeft } from "lucide-react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function ResetPass() {
   const [email, setEmail] = useState("");
+  const navigate = useNavigate();
   return (
     <div className="p-2 sm:px-6 lg:px-10 xl:px-30 h-screen">
-      <button className="flex gap-2 bg-white/20 py-2 px-3 rounded-md text-sm font-medium text-gray-300 hover:bg-white/30 transition-colors mt-4">
+      <button
+        className="flex gap-2 bg-white/20 py-2 px-3 rounded-md text-sm font-medium text-gray-300 hover:bg-white/30 transition-colors mt-4"
+        onClick={() => navigate("/auth/login")}
+      >
         <ArrowLeft />
         Go Back
       </button>
@@ -44,7 +49,7 @@ function ResetPass() {
             disabled={!email.length}
             type="submit"
           >
-            Send Reset Link
+            Send Reset Code
           </button>
         </form>
       </div>
