@@ -1,15 +1,20 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import CheckMail from "../Components/modals/CheckMail";
 
 function ResetPass() {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
+  const [isCheckMailOpen, setIsCheckMailOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleResetSubmit = (e) => {
     e.preventDefault();
-    // Handle password reset
-    alert(`Reset link sent to ${email}`);
-    navigate("/auth/login");
+    setIsLoading(true);
+    setTimeout(() => {
+      setIsLoading(false);
+      setIsCheckMailOpen(true);
+    }, 3000);
   };
 
   return (
@@ -47,10 +52,11 @@ function ResetPass() {
           </div>
 
           <button
-            className="w-full mt-2 bg-gray-900 hover:bg-gray-800 text-white py-2.5 rounded-lg font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2 active:scale-[0.99]"
+            className="w-full mt-2 bg-gray-900 hover:bg-gray-800 text-white py-2.5 rounded-lg font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2 active:scale-[0.99] disabled:opacity-70 disabled:cursor-not-allowed"
             type="submit"
+            disabled={isLoading}
           >
-            Send Reset Code
+            {isLoading ? "Sending..." : "Send Reset Code"}
           </button>
         </div>
 
@@ -65,6 +71,15 @@ function ResetPass() {
           </button>
         </p>
       </form>
+
+      <CheckMail
+        isOpen={isCheckMailOpen}
+        isLoading={isLoading}
+        onClose={() => {
+          setIsCheckMailOpen(false);
+          navigate("/auth/login");
+        }}
+      />
     </div>
   );
 }
