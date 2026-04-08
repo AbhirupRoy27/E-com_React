@@ -43,7 +43,7 @@ function TopHighlights() {
             TOP <br className="hidden sm:block" />
             HIGHLIGHTS
           </h1>
-          <p className="text-base sm:text-lg font-semibold text-gray-400 mb-4">
+          <p className="text-base sm:text-lg font-semibold text-gray-600 mb-4">
             Wear Your Statement.
           </p>
           <p className="text-sm sm:text-base text-gray-600 leading-relaxed font-light">
@@ -62,7 +62,7 @@ function TopHighlights() {
                 className="min-w-[280px] sm:min-w-[320px] flex-shrink-0 group"
               >
                 {/* Image Container */}
-                <div className="relative overflow-hidden bg-gray-100 rounded-lg mb-3 h-80 sm:h-96">
+                <div className="relative overflow-hidden rounded-lg mb-4 h-72 sm:h-80 w-full">
                   <img
                     src={product.image}
                     alt={product.alt}
