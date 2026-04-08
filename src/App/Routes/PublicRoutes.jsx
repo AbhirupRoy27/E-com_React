@@ -1,45 +1,47 @@
-import { Routes, Route, Outlet } from 'react-router-dom'
-import { lazy } from 'react'
-import PublicLayout from '../../Layouts/PublicLayout'
-import PageNotFound from '../../shared/Error/PageNotFound'
-import QuickLayout from '../../features/shop/Pages/Quick/Layouts/QuickLayout'
+import { Routes, Route, Outlet } from "react-router-dom";
+import { lazy } from "react";
+import PublicLayout from "../../Layouts/PublicLayout";
+import PageNotFound from "../../shared/Error/PageNotFound";
+import QuickLayout from "../../features/shop/Pages/Quick/Layouts/QuickLayout";
+import HomePage from "../../features/home/pages/HomePage";
 
 const WishlistPage = lazy(
-  () => import('../../features/wishlist/Pages/WishlistPage'),
-)
-const ResetPass = lazy(() => import('../../features/auth/Pages/ResetPass'))
-const LoginForm = lazy(() => import('../../features/auth/Components/LoginForm'))
+  () => import("../../features/wishlist/Pages/WishlistPage"),
+);
+const ResetPass = lazy(() => import("../../features/auth/Pages/ResetPass"));
+const LoginForm = lazy(
+  () => import("../../features/auth/Components/LoginForm"),
+);
 const RegisterForm = lazy(
-  () => import('../../features/auth/Components/RegisterForm'),
-)
-const AuthLayout = lazy(() => import('../../features/auth/Pages/AuthPage'))
-const FandQ = lazy(() => import('../../Pages/Public/FandQ/FandQ'))
+  () => import("../../features/auth/Components/RegisterForm"),
+);
+const AuthLayout = lazy(() => import("../../features/auth/Pages/AuthPage"));
+const FandQ = lazy(() => import("../../Pages/Public/FandQ/FandQ"));
 const BestSellers = lazy(
-  () => import('../../features/shop/Pages/Books/Pages/BestSellersListing'),
-)
+  () => import("../../features/shop/Pages/Books/Pages/BestSellersListing"),
+);
 const GiftCardsPage = lazy(
-  () => import('../../features/shop/Pages/GiftCrds/GiftCardsV2'),
-)
+  () => import("../../features/shop/Pages/GiftCrds/GiftCardsV2"),
+);
 const ProductGrid = lazy(
-  () => import('../../features/shop/Pages/Product/ProductGrid'),
-)
+  () => import("../../features/shop/Pages/Product/ProductGrid"),
+);
 const ProductDetailPage = lazy(
-  () => import('../../features/shop/Pages/Product/ProductDetails'),
-)
-const Home = lazy(() => import('../../features/home/pages/Home'))
+  () => import("../../features/shop/Pages/Product/ProductDetails"),
+);
 
 const TopDealsLayout = lazy(
-  () => import('../../features/shop/Pages/TopDeals/Layout/TopDealsLayout'),
-)
+  () => import("../../features/shop/Pages/TopDeals/Layout/TopDealsLayout"),
+);
 
-const Cart = lazy(() => import('../../features/Cart/pages/CartLayout'))
-const Orders = lazy(() => import('../../features/dashboard/Pages/Orders'))
+const Cart = lazy(() => import("../../features/Cart/pages/CartLayout"));
+const Orders = lazy(() => import("../../features/dashboard/Pages/Orders"));
 
 export default function PublicRoutes() {
   return (
     <Routes>
       <Route element={<PublicLayout />}>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<HomePage />} />
         <Route path="Gift Cards" element={<GiftCardsPage />} />
         <Route path="best sellers" element={<BestSellers />} />
         <Route path="products" element={<ProductGrid />} />
@@ -60,5 +62,5 @@ export default function PublicRoutes() {
         <Route path="reset-pass" element={<ResetPass />} />
       </Route>
     </Routes>
-  )
+  );
 }
