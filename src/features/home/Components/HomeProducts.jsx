@@ -101,7 +101,7 @@ function HomeProducts({ heading }) {
 
   return (
     <div className="bg-gray-950 py-4">
-      <SectionHeading heading={heading} />
+      {heading && <SectionHeading heading={heading} />}
       <div className="flex overflow-scroll gap-3 no-scrollbar mt-2 shrink-0">
         {isLoading
           ? list.map((id) => <SkeletonCard key={id} id={id} />)
