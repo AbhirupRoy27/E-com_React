@@ -1,14 +1,14 @@
-import { X } from 'lucide-react'
-import NoItemWishlist from '../Components/NoItemWishlist'
-import { useWishlist } from '../Context/WishlistContext'
-import WishlistHeading from '../Components/WishlistHeading'
-import handleRemoveItem from '../utils/handleRemoveItem'
+import { X } from "lucide-react";
+import NoItemWishlist from "../Components/NoItemWishlist";
+import { useWishlist } from "../Context/WishlistContext";
+import WishlistHeading from "../Components/WishlistHeading";
+import handleRemoveItem from "../utils/handleRemoveItem";
 
 function WishlistPage() {
-  const { wishlistItems, setWishlistItems } = useWishlist()
+  const { wishlistItems, setWishlistItems } = useWishlist();
   // console.log(wishlistItems)
   return (
-    <div className="h-[70vh] min-w-[354px] sm:mt-5 overflow-x-scroll">
+    <div className="min-h-[70vh] min-w-[354px] sm:mt-5 overflow-x-scroll no-scrollbar">
       <h1 className="capitalize text-4xl pb-3 tracking-wider font-light text-nowrap">
         My Wishlist
       </h1>
@@ -45,7 +45,7 @@ function WishlistPage() {
                   </span>
                 </h3>
                 <h3 className="flex justify-center items-center w-full text-xl tracking-wider">
-                  {item.stock == 0 ? 'Out Of Stock' : 'In Stock'}
+                  {item.stock == 0 ? "Out Of Stock" : "In Stock"}
                 </h3>
                 <div className="flex justify-center items-center w-full">
                   <button className="bg-white/90 hover:bg-white py-2 px-5 text-gray-950 font-bold">
@@ -58,7 +58,7 @@ function WishlistPage() {
         )}
       </section>
     </div>
-  )
+  );
 }
 
-export default WishlistPage
+export default WishlistPage;

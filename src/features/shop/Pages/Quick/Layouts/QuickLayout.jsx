@@ -1,6 +1,6 @@
-import ScrollBar from '../Components/ScrollBar'
-import OfferBanner from '../Components/OfferBanner'
-import HomeProducts from '../../../../home/Components/HomeProducts'
+import ScrollBar from "../Components/ScrollBar";
+import OfferBanner from "../Components/OfferBanner";
+import HomeProducts from "../../../../home/Components/HomeProducts";
 
 function QuickLayout() {
   return (
@@ -13,7 +13,7 @@ function QuickLayout() {
 
       <OfferBanner
         img={
-          'https://media.licdn.com/dms/image/v2/D4D12AQE5gMgqUjiEFg/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1701778399122?e=2147483647&v=beta&t=5srl6YaNxbai6kQNMgjaIiTst1GEew5EUuaopAVsMuI'
+          "https://res.cloudinary.com/dfuhnqbap/image/upload/v1783093698/Screenshot_2026-07-03_at_9.13.55_PM_1_wlubw1.png"
         }
       />
       <h2 className="mt-5 sm:mt-10 border-b border-white/30 pb-5 text-3xl font-extralight">
@@ -21,7 +21,7 @@ function QuickLayout() {
       </h2>
       <HomeProducts />
     </div>
-  )
+  );
 }
 
-export default QuickLayout
+export default QuickLayout;

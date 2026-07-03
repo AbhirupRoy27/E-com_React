@@ -1,6 +1,6 @@
-import Page from '../../../../shared/components/PageNavigation'
-import { BrandDropList } from '../../Filters/BrandDropList'
-import ProductCards from '../../Components/ProductCard'
+import Page from "../../../../shared/components/PageNavigation";
+import { BrandDropList } from "../../Filters/BrandDropList";
+import ProductCards from "../../Components/ProductCard";
 
 function Products() {
   return (
@@ -11,14 +11,14 @@ function Products() {
         </h1>
         <div className="flex w-full h-full flex-col min-w-[354px] overflow-hidden">
           <BrandDropList />
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-1 sm:gap-2 md:gap-3 min-h-[90vh] mb-4">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 gap-1 sm:gap-2 md:gap-3 min-h-[90vh] mb-4">
             <ProductCards />
           </div>
         </div>
       </div>
-      <Page bgcolor={'bg-gray-800'} />
+      {/* <Page bgcolor={"bg-gray-800"} /> */}
     </>
-  )
+  );
 }
 
-export default Products
+export default Products;

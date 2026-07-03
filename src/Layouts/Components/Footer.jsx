@@ -1,66 +1,76 @@
-import React, { useCallback } from 'react'
+import React, { useCallback } from "react";
 
 const SOCIAL_LINKS = [
   {
-    label: 'Instagram',
-    href: 'https://www.instagram.com/ig__abhirup/',
+    label: "Instagram",
+    href: "https://www.instagram.com/ig__abhirup/",
+    icon: "https://res.cloudinary.com/dfuhnqbap/image/upload/v1783094232/instagram_ljm4ka.png",
     external: true,
   },
   {
-    label: 'Twitter (X)',
-    href: 'https://twitter.com',
+    label: "Twitter",
+    href: "https://twitter.com",
+    icon: "https://res.cloudinary.com/dfuhnqbap/image/upload/v1783094476/twitter_zlpl5g.png",
     external: true,
   },
-]
+];
 
 const CONTACT_LINKS = [
   {
-    label: 'Email',
-    href: 'mailto:rabhirup605@gmail.com',
+    label: "Email",
+    href: "mailto:rabhirup605@gmail.com",
+    icon: "https://res.cloudinary.com/dfuhnqbap/image/upload/v1783094679/communication_ygfms2.png",
     external: false,
   },
   {
-    label: '+91 9851253334',
-    href: 'tel:+919851253334',
+    label: "Phone",
+    href: "tel:+919851253334",
+    icon: "https://res.cloudinary.com/dfuhnqbap/image/upload/v1783094639/mobile_tlzd93.png",
     external: false,
   },
-]
+];
 
 const LEGAL_LINKS = [
-  { label: 'Terms of Service', href: '#' },
-  { label: 'Privacy Policy', href: '#' },
-]
+  { label: "Terms of Service", href: "#" },
+  { label: "Privacy Policy", href: "#" },
+];
 
-function LinkItem({ href, label, external }) {
+function LinkItem({ href, label, external, icon }) {
   return (
-    <a
-      href={href}
-      className="block text-white/50 hover:text-white transition-colors duration-200 focus-visible:outline-none focus-visible:text-white"
-      {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-    >
-      {label}
-    </a>
-  )
+    <div className="flex items-center gap-2">
+      <img
+        src={icon}
+        className="w-7 h-7 object-cover bg-amber-50 rounded-2xl"
+      />
+      <a
+        href={href}
+        className="block text-white/50 hover:text-white transition-colors duration-200 focus-visible:outline-none focus-visible:text-white tracking-wide"
+        {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+      >
+        {label}
+      </a>
+    </div>
+  );
 }
 
 function FooterLinkGroup({ title, links }) {
   return (
-    <div className="flex flex-col gap-1">
-      <h3 className="text-xl font-bold mb-1 text-white">{title}</h3>
+    <div className="flex flex-col gap-2">
+      <h3 className="text-xl font-bold text-white mb-2">{title}</h3>
       {links.map((link) => (
         <LinkItem key={link.label} {...link} />
       ))}
     </div>
-  )
+  );
 }
 
 export default function Footer() {
   const scrollToTop = useCallback(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' })
-  }, [])
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
 
   return (
-    <footer className="bg-black w-full p-6 sm:p-10 min-w-[300px] w-full">
+    <footer className="bg-black p-6 sm:p-10 min-w-[300px] w-full">
       <div className="max-w-screen">
         {/* Top row */}
         <div className="flex flex-col sm:flex-row justify-between gap-6 sm:gap-0">
@@ -104,5 +114,5 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }
